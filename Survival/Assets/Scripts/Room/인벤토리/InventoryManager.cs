@@ -7,7 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public string inventory_state;
     public GameObject info_window;
-    
+    public GameObject canvas;
 
     void Start()
     {
@@ -44,13 +44,24 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
                 int eq = 0;
+                int head_eq = GameManager.gameManager.head_inventory.FindIndex(x => x == GameManager.gameManager.equip_head);
+                int hand_eq = GameManager.gameManager.hand_inventory.FindIndex(x => x == GameManager.gameManager.equip_hand);
+                int body_eq = GameManager.gameManager.body_inventory.FindIndex(x => x == GameManager.gameManager.equip_body);
                 foreach (string name in GameManager.gameManager.head_inventory)
                 {
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
-                    transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "赣府";
 
+                    if (eq == head_eq)
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
+                    }
+                    else
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "赣府";
+                    }
+                        
                     eq++;
                 }
                 foreach (string name in GameManager.gameManager.hand_inventory)
@@ -58,7 +69,15 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
-                    transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "颊";
+
+                    if(eq == hand_eq + GameManager.gameManager.head_inventory.Count)
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
+                    }
+                    else
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "颊";
+                    }
 
                     eq++;
                 }
@@ -67,7 +86,15 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
-                    transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "个";
+
+                    if (eq == body_eq + GameManager.gameManager.head_inventory.Count + GameManager.gameManager.hand_inventory.Count)
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
+                    }
+                    else
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "个";
+                    }
 
                     eq++;
                 }
@@ -114,5 +141,12 @@ public class InventoryManager : MonoBehaviour
     public void OnExitClicked()
     {
         info_window.SetActive(false);
+    }
+
+    public void OnCloseClicked()
+    {
+        OnExitClicked();
+        inventory_state = "Expend";
+        canvas.SetActive(false);
     }
 }

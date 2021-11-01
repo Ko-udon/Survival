@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, int> ingred_inventory;
     public List<string> recipe_inventory;
 
+    public string equip_head;
+    public string equip_hand;
+    public string equip_body;
+
     public List<Sprite> item_images;
     public Dictionary<string, Sprite> name_image;
 
@@ -66,6 +70,10 @@ public class GameManager : MonoBehaviour
         addInventory(ingred_inventory, "JJJ", 2);
 
         addInventory(recipe_inventory, "KKK");
+
+        equip_head = "";
+        equip_hand = "";
+        equip_body = "";
     }
 
 
@@ -141,7 +149,18 @@ public class GameManager : MonoBehaviour
         if(inventory.Contains(name))
         {
             //아이템 장착하기
-            Debug.Log(name + "장착함.");
+            if(inventory.Equals(head_inventory))
+            {
+                equip_head = name;
+            }
+            else if(inventory.Equals(hand_inventory))
+            {
+                equip_hand = name;
+            }
+            else if(inventory.Equals(body_inventory))
+            {
+                equip_body = name;
+            }
             return "장착 완료";
         }
         else
@@ -178,6 +197,18 @@ public class GameManager : MonoBehaviour
     {
         if(inventory.Contains(name))
         {
+            if(equip_head == name)
+            {
+                equip_head = "";
+            }
+            else if(equip_hand == name)
+            {
+                equip_hand = "";
+            }
+            else if(equip_body == name)
+            {
+                equip_body = "";
+            }
             inventory.Remove(name);
             return "제거 완료";
         }

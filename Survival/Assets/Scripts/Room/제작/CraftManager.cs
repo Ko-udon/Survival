@@ -11,6 +11,8 @@ public class CraftManager : MonoBehaviour
 
     public int buttonNum = 100; //레시피, 재료 선택 시 어느 칸에 전달할 지에 대한 정보(100은 초기화 값)
 
+    public GameObject canvas;
+
     public GameObject numWindow;
     public List<string> select_list;
     public Sprite defaultImage;
@@ -127,5 +129,16 @@ public class CraftManager : MonoBehaviour
 
             window.SetActive(true);
         }
+    }
+
+    public void OnExitClicked()
+    {
+        select_list[0] = "";
+        select_list[1] = "";
+        select_list[2] = "";
+        select_list[3] = "";
+        select_list[4] = "";
+        craft_num = 1;
+        canvas.SetActive(false);
     }
 }

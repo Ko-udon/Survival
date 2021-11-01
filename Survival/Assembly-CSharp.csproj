@@ -53,12 +53,16 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\인벤토리\ItemInfo.cs" />
-    <Compile Include="Assets\Scripts\인벤토리\InformationWindow.cs" />
-    <Compile Include="Assets\Scripts\인벤토리\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Room\인벤토리\ItemInfo.cs" />
+    <Compile Include="Assets\Scripts\Room\옷장\EquipInventory.cs" />
+    <Compile Include="Assets\Scripts\Room\옷장\EquipInformation.cs" />
+    <Compile Include="Assets\Scripts\Room\제작\ChooseInventory.cs" />
+    <Compile Include="Assets\Scripts\Room\제작\CraftManager.cs" />
+    <Compile Include="Assets\Scripts\Room\옷장\HangerManager.cs" />
+    <Compile Include="Assets\Scripts\Room\인벤토리\InformationWindow.cs" />
+    <Compile Include="Assets\Scripts\Room\인벤토리\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\제작\CraftManager.cs" />
-    <Compile Include="Assets\Scripts\제작\ChooseInventory.cs" />
+    <Compile Include="Assets\Scripts\Room\RoomStageManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
