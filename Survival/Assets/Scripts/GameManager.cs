@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     public List<string> head_inventory;
     public List<string> hand_inventory;
     public List<string> body_inventory;
+    public List<string> shoes_inventory;
     public Dictionary<string, int> ingred_inventory;
     public List<string> recipe_inventory;
 
     public string equip_head;
     public string equip_hand;
     public string equip_body;
+    public string equip_shoes;
     public string equip_skill;
 
     public float hp;
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
         head_inventory = new List<string>();
         hand_inventory = new List<string>();
         body_inventory = new List<string>();
+        shoes_inventory = new List<string>();
         ingred_inventory = new Dictionary<string, int>();
         name_image = new Dictionary<string, Sprite>();
         recipe_inventory = new List<string>();
@@ -75,6 +78,10 @@ public class GameManager : MonoBehaviour
         addInventory(hand_inventory, "EEE");
         addInventory(hand_inventory, "FFF");
         addInventory(body_inventory, "GGG");
+        addInventory(shoes_inventory, "AAA");
+        addInventory(shoes_inventory, "BBB");
+        addInventory(shoes_inventory, "CCC");
+        addInventory(shoes_inventory, "DDD");
 
         addInventory(ingred_inventory, "HHH", 6);
         addInventory(ingred_inventory, "III", 4);
@@ -85,6 +92,7 @@ public class GameManager : MonoBehaviour
         equip_head = "";
         equip_hand = "";
         equip_body = "";
+        equip_shoes = "";
         equip_skill = "";
     }
 
@@ -129,9 +137,9 @@ public class GameManager : MonoBehaviour
     }
     public string addInventory(List<string> inventory, string name)
     {
-        if(inventory.Equals(head_inventory) || inventory.Equals(hand_inventory) || inventory.Equals(body_inventory))
+        if(inventory.Equals(head_inventory) || inventory.Equals(hand_inventory) || inventory.Equals(body_inventory) || inventory.Equals(shoes_inventory))
         {
-            if (head_inventory.Count + hand_inventory.Count + body_inventory.Count < MAX_SIZE)
+            if (head_inventory.Count + hand_inventory.Count + body_inventory.Count + shoes_inventory.Count < MAX_SIZE)
             {
                 inventory.Add(name);
                 return "추가 완료";
@@ -187,6 +195,10 @@ public class GameManager : MonoBehaviour
             {
                 equip_body = name;
             }
+            else if(inventory.Equals(shoes_inventory))
+            {
+                equip_shoes = name;
+            }
             return "장착 완료";
         }
         else
@@ -234,6 +246,10 @@ public class GameManager : MonoBehaviour
             else if(equip_body == name)
             {
                 equip_body = "";
+            }
+            else if (equip_shoes == name)
+            {
+                equip_shoes = "";
             }
             inventory.Remove(name);
             return "제거 완료";

@@ -70,6 +70,18 @@ public class EquipInformation : MonoBehaviour
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_body;
                 }
                 break;
+
+            case "shoes":
+                if (GameManager.gameManager.equip_shoes == "" || GameManager.gameManager.equip_shoes == item_name)
+                {
+                    equip_window.SetActive(false);
+                }
+                else
+                {
+                    equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_shoes];
+                    equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_shoes;
+                }
+                break;
         }
         
 

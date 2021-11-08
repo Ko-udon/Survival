@@ -98,6 +98,32 @@ public class EquipInventory : MonoBehaviour
                 }
                 break;
 
+            case "shoes":
+                for (int i = 0; i < 16; i++)
+                {
+                    transform.GetChild(i).gameObject.SetActive(false);
+                }
+                int shoes = 0;
+                int shoes_eq = GameManager.gameManager.shoes_inventory.FindIndex(x => x == GameManager.gameManager.equip_shoes);
+                foreach (string name in GameManager.gameManager.shoes_inventory)
+                {
+                    transform.GetChild(shoes).gameObject.SetActive(true);
+                    transform.GetChild(shoes).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
+                    transform.GetChild(shoes).GetComponent<EquipInformation>().item_name = name;
+
+                    if (shoes == shoes_eq)
+                    {
+                        transform.GetChild(shoes).GetChild(0).GetComponent<Text>().text = "E";
+                    }
+                    else
+                    {
+                        transform.GetChild(shoes).GetChild(0).GetComponent<Text>().text = "";
+                    }
+
+                    shoes++;
+                }
+                break;
+
             case "skill":
                 for (int i = 0; i < 16; i++)
                 {
@@ -122,6 +148,10 @@ public class EquipInventory : MonoBehaviour
             case "body":
                 GameManager.gameManager.equipInventory(GameManager.gameManager.body_inventory, select_item);
                 break;
+
+            case "shoes":
+                GameManager.gameManager.equipInventory(GameManager.gameManager.shoes_inventory, select_item);
+                break;
         }
         OnCloseClicked();
     }
@@ -140,6 +170,10 @@ public class EquipInventory : MonoBehaviour
 
             case "body":
                 GameManager.gameManager.deleteInventory(GameManager.gameManager.body_inventory, select_item);
+                break;
+
+            case "shoes":
+                GameManager.gameManager.deleteInventory(GameManager.gameManager.shoes_inventory, select_item);
                 break;
         }
         OnCloseClicked();

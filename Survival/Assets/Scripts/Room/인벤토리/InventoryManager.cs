@@ -47,6 +47,7 @@ public class InventoryManager : MonoBehaviour
                 int head_eq = GameManager.gameManager.head_inventory.FindIndex(x => x == GameManager.gameManager.equip_head);
                 int hand_eq = GameManager.gameManager.hand_inventory.FindIndex(x => x == GameManager.gameManager.equip_hand);
                 int body_eq = GameManager.gameManager.body_inventory.FindIndex(x => x == GameManager.gameManager.equip_body);
+                int shoes_eq = GameManager.gameManager.shoes_inventory.FindIndex(x => x == GameManager.gameManager.equip_shoes);
                 foreach (string name in GameManager.gameManager.head_inventory)
                 {
                     transform.GetChild(eq).gameObject.SetActive(true);
@@ -94,6 +95,23 @@ public class InventoryManager : MonoBehaviour
                     else
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "¸ö";
+                    }
+
+                    eq++;
+                }
+                foreach (string name in GameManager.gameManager.shoes_inventory)
+                {
+                    transform.GetChild(eq).gameObject.SetActive(true);
+                    transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
+                    transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
+
+                    if (eq == shoes_eq + GameManager.gameManager.head_inventory.Count + GameManager.gameManager.hand_inventory.Count + GameManager.gameManager.body_inventory.Count)
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
+                    }
+                    else
+                    {
+                        transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "½Å¹ß";
                     }
 
                     eq++;

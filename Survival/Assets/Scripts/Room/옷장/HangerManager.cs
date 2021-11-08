@@ -49,13 +49,24 @@ public class HangerManager : MonoBehaviour
             transform.GetChild(3).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_body];
         }
 
-        if(GameManager.gameManager.equip_skill == "")
+        if (GameManager.gameManager.equip_shoes == "")
         {
             transform.GetChild(4).GetComponent<Image>().sprite = defultImage;
+            transform.GetChild(5).GetComponent<Image>().sprite = defultImage;
         }
         else
         {
-            transform.GetChild(4).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_skill];
+            transform.GetChild(4).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_shoes];
+            transform.GetChild(5).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_shoes];
+        }
+
+        if (GameManager.gameManager.equip_skill == "")
+        {
+            transform.GetChild(6).GetComponent<Image>().sprite = defultImage;
+        }
+        else
+        {
+            transform.GetChild(6).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_skill];
         }
     }
 
