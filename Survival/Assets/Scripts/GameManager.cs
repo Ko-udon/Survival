@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
     public string equip_head;
     public string equip_hand;
     public string equip_body;
+    public string equip_skill;
+
+    public float hp;
+    public float mt;
+    public float time;
+    public int day;
 
     public List<Sprite> item_images;
     public Dictionary<string, Sprite> name_image;
@@ -42,6 +48,11 @@ public class GameManager : MonoBehaviour
         ingred_inventory = new Dictionary<string, int>();
         name_image = new Dictionary<string, Sprite>();
         recipe_inventory = new List<string>();
+
+        hp = 50;
+        mt = 50;
+        time = 6;
+        day = 1;
 
         name_image.Add("AAA", item_images[0]);
         name_image.Add("BBB", item_images[1]);
@@ -74,12 +85,27 @@ public class GameManager : MonoBehaviour
         equip_head = "";
         equip_hand = "";
         equip_body = "";
+        equip_skill = "";
     }
 
 
     void Update()
     {
+        if(time <= 0)
+        {
+            day++;
+            time = 24;
+        }
 
+        if(hp > 100)
+        {
+            hp = 100;
+        }
+
+        if(mt > 100)
+        {
+            mt = 100;
+        }
     }
 
     public string addInventory(Dictionary<string, int> inventory, string name, int num)

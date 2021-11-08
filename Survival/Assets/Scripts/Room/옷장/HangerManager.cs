@@ -48,6 +48,15 @@ public class HangerManager : MonoBehaviour
         {
             transform.GetChild(3).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_body];
         }
+
+        if(GameManager.gameManager.equip_skill == "")
+        {
+            transform.GetChild(4).GetComponent<Image>().sprite = defultImage;
+        }
+        else
+        {
+            transform.GetChild(4).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_skill];
+        }
     }
 
     public void OnOpenClicked(string parts)

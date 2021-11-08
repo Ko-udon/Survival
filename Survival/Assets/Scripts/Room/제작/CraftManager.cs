@@ -53,10 +53,18 @@ public class CraftManager : MonoBehaviour
             if(select_list[i] == "")
             {
                 transform.GetChild(i).GetComponent<Image>().sprite = defaultImage;
+                if(i != 0)
+                {
+                    transform.GetChild(i).GetChild(1).GetComponent<Text>().text = "";
+                }
             }
             else
             {
                 transform.GetChild(i).GetComponent<Image>().sprite = GameManager.gameManager.name_image[select_list[i]];
+                if (i != 0)
+                {
+                    transform.GetChild(i).GetChild(1).GetComponent<Text>().text = craft_num + "/" + GameManager.gameManager.ingred_inventory[select_list[i]];
+                }
             }
 
             if ((!GameManager.gameManager.ingred_inventory.ContainsKey(select_list[i]) || craft_num > GameManager.gameManager.ingred_inventory[select_list[i]]) && select_list[i] != "")

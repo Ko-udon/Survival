@@ -97,6 +97,13 @@ public class EquipInventory : MonoBehaviour
                     body++;
                 }
                 break;
+
+            case "skill":
+                for (int i = 0; i < 16; i++)
+                {
+                    transform.GetChild(i).gameObject.SetActive(false);
+                }
+                break;
         }
     }
 
