@@ -91,10 +91,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(time <= 0)
+        if(time >= 24)
         {
             day++;
-            time = 24;
+            time -= 24;
         }
 
         if(hp > 100)

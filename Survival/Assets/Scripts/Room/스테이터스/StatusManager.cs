@@ -21,7 +21,14 @@ public class StatusManager : MonoBehaviour
     void Update()
     {
         dayText.text = "Day " + GameManager.gameManager.day;
-        timeText.text = (24 - GameManager.gameManager.time) + "½Ã";
+        if(GameManager.gameManager.time == 24)
+        {
+            timeText.text = "0½Ã";
+        }
+        else
+        {
+            timeText.text = GameManager.gameManager.time + "½Ã";
+        }
         HPGauge.fillAmount = GameManager.gameManager.hp / 100;
         MTGauge.fillAmount = GameManager.gameManager.mt / 100;
     }
