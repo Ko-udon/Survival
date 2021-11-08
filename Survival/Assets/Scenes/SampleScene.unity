@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3900fbeeff61cc40b27982e63012c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dayText: {fileID: 0}
   timeText: {fileID: 0}
   HPGauge: {fileID: 0}
   MTGauge: {fileID: 0}
@@ -14118,6 +14119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea25c85ee58e41b4ca97856a35ff29fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryWindow: {fileID: 896761763}
+  CraftWindow: {fileID: 554502021}
+  HangerWindow: {fileID: 1544525809}
+  BedWindow: {fileID: 331567882}
 --- !u!1 &1426546899
 GameObject:
   m_ObjectHideFlags: 0
