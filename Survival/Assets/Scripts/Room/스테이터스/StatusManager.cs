@@ -21,13 +21,15 @@ public class StatusManager : MonoBehaviour
     void Update()
     {
         dayText.text = "Day " + GameManager.gameManager.day;
-        if(GameManager.gameManager.time == 24)
+        if(GameManager.gameManager.time == 0)
         {
-            timeText.text = "0½Ã";
+            timeText.text = "24 : 00";
         }
         else
         {
-            timeText.text = GameManager.gameManager.time + "½Ã";
+            string time = GameManager.gameManager.time.ToString("00.00");
+            time = time.Replace(".", " : ");
+            timeText.text = time;
         }
         HPGauge.fillAmount = GameManager.gameManager.hp / 100;
         MTGauge.fillAmount = GameManager.gameManager.mt / 100;
