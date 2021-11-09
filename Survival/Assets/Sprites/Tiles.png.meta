@@ -214,9 +214,9 @@ TextureImporter:
       name: Gress 0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 85
-        width: 16
+        x: 51
+        y: 34
+        width: 50
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -657,13 +657,21 @@ TextureImporter:
         serializedVersion: 2
         x: 51
         y: 34
-        width: 16
+        width: 50
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: -16, y: -2}
+        - {x: -2, y: -2}
+        - {x: -2, y: -8}
+      - - {x: -23, y: -1}
+        - {x: -23, y: 7}
+        - {x: -11, y: 7}
+        - {x: -11, y: -1}
       tessellationDetail: 0
       bones: []
       spriteID: 6fc4354bb6a385ba0800000000000000
