@@ -54,8 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Room\침대\BedManager.cs" />
+    <Compile Include="Assets\Scripts\Outside\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\Room\RoomStageManager.cs" />
     <Compile Include="Assets\Scripts\Room\인벤토리\ItemInfo.cs" />
+    <Compile Include="Assets\Scripts\Outside\Enemy.cs" />
     <Compile Include="Assets\Scripts\Room\옷장\EquipInventory.cs" />
     <Compile Include="Assets\Scripts\Room\옷장\EquipInformation.cs" />
     <Compile Include="Assets\Scripts\Room\제작\ChooseInventory.cs" />
@@ -65,8 +67,6 @@
     <Compile Include="Assets\Scripts\Room\인벤토리\InformationWindow.cs" />
     <Compile Include="Assets\Scripts\Room\인벤토리\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Outside\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\Outside\Enemy.cs" />
     <Compile Include="Assets\Sprites\UI_Simple Vector Icons\Sample\IconPreview.cs" />
   </ItemGroup>
   <ItemGroup>
