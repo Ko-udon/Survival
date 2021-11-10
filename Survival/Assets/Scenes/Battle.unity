@@ -244,7 +244,7 @@ Transform:
   m_Children:
   - {fileID: 187992211}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &20562726
 MonoBehaviour:
@@ -273,9 +273,11 @@ MonoBehaviour:
   isAttack: 0
   isCritical: 0
   canMove: 0
+  isBattle: 0
   exp: 0
   HpBar: {fileID: 1143366782}
   damage_player_text: {fileID: 1861496304}
+  enemy: {fileID: 0}
 --- !u!1 &187992210
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +292,7 @@ GameObject:
   - component: {fileID: 187992212}
   m_Layer: 0
   m_Name: PlayerUI
-  m_TagString: Untagged
+  m_TagString: PlayerUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,7 +982,7 @@ Transform:
   m_Children:
   - {fileID: 495080373}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1084603695
 MonoBehaviour:
@@ -1164,7 +1166,7 @@ Transform:
   m_LocalScale: {x: 17.776789, y: 2.6159427, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1198901324
 Rigidbody2D:
@@ -1293,7 +1295,7 @@ Transform:
   m_LocalScale: {x: 17.681326, y: 10.039277, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314311710
 GameObject:
@@ -1454,7 +1456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.02352941, g: 0.52857757, b: 0.93333334, a: 1}
   m_FlipX: 0
@@ -1474,7 +1476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420245422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: 1.28, z: 0}
+  m_LocalPosition: {x: 4.56, y: 1.36, z: 0}
   m_LocalScale: {x: 0.775108, y: 7.501106, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1509,7 +1511,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560676354
 MonoBehaviour:
@@ -2071,7 +2073,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1838569026
 GameObject:

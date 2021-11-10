@@ -13,6 +13,7 @@ public class BattleGameManager : MonoBehaviour
     {
         player=GameObject.FindWithTag("Player").GetComponent<PlayerCharacter>();
         enemy=GameObject.FindWithTag("Enemy").GetComponent<EnemyCharacter>();
+        player.isBattle=true;
 
     }
     // Start is called before the first frame update

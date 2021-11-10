@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PlayerCharacter : MonoBehaviour
     public bool isAttack;
     public bool isCritical;
     public bool canMove;
+    public bool isBattle;
 
     public int exp;
     
@@ -31,19 +33,25 @@ public class PlayerCharacter : MonoBehaviour
     public Text damage_player_text;
 
     Rigidbody2D rigid;
-    EnemyCharacter enemy;
+    public EnemyCharacter enemy;
     // Start is called before the first frame update
     void Awake() 
     {
+        
         rigid = GetComponent<Rigidbody2D>();
-        enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyCharacter>();
         AtkDamage = power;
         canMove = true;
         isAttack = true;
+        
     }
     void Start()
     {
-        
+        if (isBattle==true){
+            enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyCharacter>();           
+        }
+        else{
+            rigid.gravityScale=0;
+        }
     }
     void GetVictoryReward()
     {
@@ -194,6 +202,12 @@ public class PlayerCharacter : MonoBehaviour
             isRun = true;
         }
 
+        else if (other.gameObject.tag=="EnemyCheck")
+        {
+            isBattle=true;
+            SceneManager.LoadScene("Battle");
+        }
+
     }
     
     void Move()
@@ -203,28 +217,25 @@ public class PlayerCharacter : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
-            }
-
-            /*
-            if (Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                isAttacking = false;
-                transform.position = new Vector3(-5, -0.4f, 0);
-            }*/
-
-            
+            }     
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
-            /*if (Input.GetKey(KeyCode.UpArrow))
+
+            //전투씬이 아닌곳에서만 위아래 이동가능 
+            if (isBattle==false)
             {
-                transform.Translate(Vector3.up * speed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    transform.Translate(Vector3.up * speed * Time.deltaTime);
+                }
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    transform.Translate(Vector3.down * speed * Time.deltaTime);
+                }    
             }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                transform.Translate(Vector3.down * speed * Time.deltaTime);
-            }*/
+            
         }
 
 

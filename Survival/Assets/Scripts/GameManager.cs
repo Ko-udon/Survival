@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
+    public static PlayerCharacter player;
 
     const int MAX_SIZE = 20;
     public Dictionary<string, int> expend_inventory;
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> item_images;
     public Dictionary<string, Sprite> name_image;
 
-    void Awake() //¾ÀÀÌ ¹Ù²î¾îµµ ÆÄ±«µÇÁö ¾ÊÀ½
+    void Awake() //ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½îµµ ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
         if (gameManager == null)
             gameManager = this;
@@ -43,6 +45,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //player ì˜¤ë¸Œì íŠ¸ ìˆ˜ì§‘
+        player=GameObject.FindWithTag("Player").GetComponent<PlayerCharacter>();
+
         expend_inventory = new Dictionary<string, int>();
         head_inventory = new List<string>();
         hand_inventory = new List<string>();
@@ -119,6 +124,11 @@ public class GameManager : MonoBehaviour
         {
             mt = 100;
         }
+
+        // if(player.isBattle==true)
+        // {
+        //     SceneManager.LoadScene("Battle");
+        // }
     }
 
     public string addInventory(Dictionary<string, int> inventory, string name, int num)
@@ -133,11 +143,11 @@ public class GameManager : MonoBehaviour
             {
                 inventory.Add(name, num);
             }
-            return "Ãß°¡ ¿Ï·á";
+            return "ï¿½ß°ï¿½ ï¿½Ï·ï¿½";
         }
         else
         {
-            return "Ãß°¡ ½ÇÆĞ";
+            return "ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½";
         }
     }
     public string addInventory(List<string> inventory, string name)
@@ -147,11 +157,11 @@ public class GameManager : MonoBehaviour
             if (head_inventory.Count + hand_inventory.Count + body_inventory.Count + shoes_inventory.Count < MAX_SIZE)
             {
                 inventory.Add(name);
-                return "Ãß°¡ ¿Ï·á";
+                return "ï¿½ß°ï¿½ ï¿½Ï·ï¿½";
             }
             else
             {
-                return "Ãß°¡ ½ÇÆĞ";
+                return "ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½";
             }
         }
         else
@@ -159,11 +169,11 @@ public class GameManager : MonoBehaviour
             if(recipe_inventory.Count < MAX_SIZE && !recipe_inventory.Contains(name))
             {
                 inventory.Add(name);
-                return "Ãß°¡ ¿Ï·á";
+                return "ï¿½ß°ï¿½ ï¿½Ï·ï¿½";
             }
             else
             {
-                return "Ãß°¡ ½ÇÆĞ";
+                return "ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½";
             }
         }
     }
@@ -172,14 +182,14 @@ public class GameManager : MonoBehaviour
     {
         if(inventory.ContainsKey(name))
         {
-            //ÀÔ·Â¹ŞÀº ÀÌ¸§¿¡ µû¶ó »ç¿ë È¿°ú ½ÇÇà
-            Debug.Log(name + "»ç¿ëÇÔ.");
+            //ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            Debug.Log(name + "ï¿½ï¿½ï¿½ï¿½ï¿½.");
             deleteInventory(inventory, name, 1);
-            return "»ç¿ë ¿Ï·á";
+            return "ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½";
         }
         else
         {
-            return "»ç¿ë ½ÇÆĞ";
+            return "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
         }
     }
 
@@ -187,7 +197,7 @@ public class GameManager : MonoBehaviour
     {
         if(inventory.Contains(name))
         {
-            //¾ÆÀÌÅÛ ÀåÂøÇÏ±â
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
             if(inventory.Equals(head_inventory))
             {
                 equip_head = name;
@@ -204,11 +214,11 @@ public class GameManager : MonoBehaviour
             {
                 equip_shoes = name;
             }
-            return "ÀåÂø ¿Ï·á";
+            return "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½";
         }
         else
         {
-            return "ÀåÂø ½ÇÆĞ";
+            return "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
         }
     }
 
@@ -218,22 +228,22 @@ public class GameManager : MonoBehaviour
         {
             if (inventory[name] < num)
             {
-                return "Á¦°Å ½ÇÆĞ";
+                return "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
             }
             else if(inventory[name] == num)
             {
                 inventory.Remove(name);
-                return "Á¦°Å ¿Ï·á";
+                return "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½";
             }
             else
             {
                 inventory[name] -= num;
-                return "Á¦°Å ¿Ï·á";
+                return "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½";
             }
         }
         else
         {
-            return "Á¦°Å ½ÇÆĞ";
+            return "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
         }
     }
     public string deleteInventory(List<string> inventory, string name)
@@ -257,11 +267,11 @@ public class GameManager : MonoBehaviour
                 equip_shoes = "";
             }
             inventory.Remove(name);
-            return "Á¦°Å ¿Ï·á";
+            return "ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½";
         }
         else
         {
-            return "Á¦°Å ½ÇÆĞ";
+            return "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
         }
     }
 }
