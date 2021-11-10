@@ -8,6 +8,10 @@ TagManager:
   - RunTrigger
   - PlayerUI
   - EnemyCheck
+  - Inventory
+  - Craft
+  - Hanger
+  - Bed
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public string inventory_state;
     public GameObject info_window;
+    public GameObject info_background;
     public GameObject canvas;
 
     void Start()
@@ -22,7 +23,7 @@ public class InventoryManager : MonoBehaviour
         switch(inventory_state)
         {
             case "Expend":
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
@@ -39,7 +40,7 @@ public class InventoryManager : MonoBehaviour
                 break;
 
             case "Equip":
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
@@ -119,7 +120,7 @@ public class InventoryManager : MonoBehaviour
                 break;
 
             case "Ingred":
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
@@ -140,24 +141,25 @@ public class InventoryManager : MonoBehaviour
 
     public void OnExpendClick()
     {
-        info_window.SetActive(false);
+        OnExitClicked();
         inventory_state = "Expend";
     }
 
     public void OnEquipClick()
     {
-        info_window.SetActive(false);
+        OnExitClicked();
         inventory_state = "Equip";
     }
 
     public void OningredClick()
     {
-        info_window.SetActive(false);
+        OnExitClicked();
         inventory_state = "Ingred";
     }
 
     public void OnExitClicked()
     {
+        info_background.SetActive(false);
         info_window.SetActive(false);
     }
 

@@ -7,6 +7,7 @@ public class EquipInventory : MonoBehaviour
 {
     public GameObject info_window;
     public GameObject equip_window;
+    public GameObject backgroundButton;
     public string parts;
     public string select_item;
 
@@ -181,6 +182,7 @@ public class EquipInventory : MonoBehaviour
 
     public void OnCloseClicked()
     {
+        backgroundButton.SetActive(false);
         info_window.SetActive(false);
         equip_window.SetActive(false);
     }

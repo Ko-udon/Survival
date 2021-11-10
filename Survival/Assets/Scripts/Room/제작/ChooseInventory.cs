@@ -8,6 +8,7 @@ public class ChooseInventory : MonoBehaviour
     private CraftManager craftManager;
 
     public GameObject useWindow;
+    public GameObject backgroundButton;
     public string selectItem;
 
     void Start()
@@ -17,7 +18,7 @@ public class ChooseInventory : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 16; i++)
         {
             transform.GetChild(i).gameObject.SetActive(false);
         }
@@ -36,14 +37,14 @@ public class ChooseInventory : MonoBehaviour
 
     public void OnItemClicked(GameObject item)
     {
+        backgroundButton.SetActive(true);
         useWindow.SetActive(true);
         selectItem = item.name;
     }
 
     public void OnUseClicked()
     {
-        useWindow.SetActive(false);
-        this.gameObject.SetActive(false);
+        OnExitClicked();
 
         if(craftManager.buttonNum == 0)
         {
@@ -62,5 +63,17 @@ public class ChooseInventory : MonoBehaviour
         }
         selectItem = "";
         craftManager.buttonNum = 100;
+    }
+
+    public void OnCloseClicked()
+    {
+        backgroundButton.SetActive(false);
+        useWindow.SetActive(false);
+    }
+
+    public void OnExitClicked()
+    {
+        OnCloseClicked();
+        this.gameObject.SetActive(false);
     }
 }

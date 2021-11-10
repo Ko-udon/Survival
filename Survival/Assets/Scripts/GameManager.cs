@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public static PlayerCharacter player;
 
-    const int MAX_SIZE = 20;
+    const int MAX_SIZE = 16;
     public Dictionary<string, int> expend_inventory;
     public List<string> head_inventory;
     public List<string> hand_inventory;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public List<Sprite> item_images;
     public Dictionary<string, Sprite> name_image;
+
+    public int maxLayer;
 
     void Awake() //���� �ٲ� �ı����� ����
     {
@@ -99,6 +101,8 @@ public class GameManager : MonoBehaviour
         equip_body = "";
         equip_shoes = "";
         equip_skill = "";
+
+        maxLayer = 0;
     }
 
 

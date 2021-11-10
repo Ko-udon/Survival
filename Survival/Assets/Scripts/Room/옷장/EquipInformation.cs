@@ -8,6 +8,7 @@ public class EquipInformation : MonoBehaviour
 {
     public GameObject info_window;
     public GameObject equip_window;
+    public GameObject backgroundButton;
     public string item_name;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class EquipInformation : MonoBehaviour
     {
         GameObject.Find("EquipInventory").GetComponent<EquipInventory>().select_item = item_name;
 
+        backgroundButton.SetActive(true);
         info_window.SetActive(true);
         equip_window.SetActive(true);
 

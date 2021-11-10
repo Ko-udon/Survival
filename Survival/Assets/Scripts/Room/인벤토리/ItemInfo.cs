@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemInfo : MonoBehaviour
 {
     public GameObject info_window;
+    public GameObject info_background;
     public string item_name;
 
     void Start()
@@ -21,6 +22,7 @@ public class ItemInfo : MonoBehaviour
 
     public void OnClicked()
     {
+        info_background.SetActive(true);
         info_window.SetActive(true);
         info_window.transform.position = this.transform.position;
         info_window.transform.GetChild(0).GetComponent<Image>().sprite = this.GetComponent<Image>().sprite;

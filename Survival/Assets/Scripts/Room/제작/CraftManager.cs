@@ -14,9 +14,12 @@ public class CraftManager : MonoBehaviour
     public GameObject canvas;
 
     public GameObject numWindow;
+    public GameObject succesWindow;
+    public GameObject backgroundButton;
     public List<string> select_list;
     public Sprite defaultImage;
 
+    
     
     void Start()
     {
@@ -94,10 +97,12 @@ public class CraftManager : MonoBehaviour
 
     public void OnOpenClicked(GameObject window)
     {
+        backgroundButton.SetActive(true);
         window.SetActive(true);
     }
     public void OnCloseClicked(GameObject window)
     {
+        backgroundButton.SetActive(false);
         window.SetActive(false);
     }
 
@@ -135,6 +140,7 @@ public class CraftManager : MonoBehaviour
                 select_list[i] = "";
             }
 
+            backgroundButton.SetActive(true);
             window.SetActive(true);
         }
     }
@@ -147,6 +153,8 @@ public class CraftManager : MonoBehaviour
         select_list[3] = "";
         select_list[4] = "";
         craft_num = 1;
+        numWindow.SetActive(false);
+        succesWindow.SetActive(false);
         canvas.SetActive(false);
     }
 }

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class InformationWindow : MonoBehaviour
 {
     private InventoryManager invenManager;
-    
+
+    public GameObject useButton;
+
     void Start()
     {
         invenManager = GameObject.Find("InventoryImage").GetComponent<InventoryManager>();
@@ -15,7 +17,22 @@ public class InformationWindow : MonoBehaviour
     
     void Update()
     {
-        
+        switch (invenManager.inventory_state)
+        {
+            case "Expend":
+                useButton.SetActive(true);
+                useButton.transform.GetChild(0).GetComponent<Text>().text = "사용하기";
+                break;
+
+            case "Equip":
+                useButton.SetActive(true);
+                useButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                break;
+
+            case "Ingred":
+                useButton.SetActive(false);
+                break;
+        }       
     }
 
     public void OnUseClicked()
