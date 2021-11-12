@@ -1137,8 +1137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &180556616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,8 +1367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &220993036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,8 +1967,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &281759114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3278,8 +3285,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &358222877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,8 +3437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &371657681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,8 +4313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &452501396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,9 +6205,13 @@ MonoBehaviour:
   shoes_inventory: []
   recipe_inventory: []
   equip_head: 
+  equip_head_index: 0
   equip_hand: 
+  equip_hand_index: 0
   equip_body: 
+  equip_body_index: 0
   equip_shoes: 
+  equip_shoes_index: 0
   equip_skill: 
   hp: 0
   mt: 0
@@ -6279,8 +6299,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &638038987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7025,8 +7047,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &689408954
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,8 +7199,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &693842785
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,8 +7412,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &730166115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8681,8 +8711,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &833255387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9003,8 +9035,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &873469919
 GameObject:
   m_ObjectHideFlags: 0
@@ -10243,8 +10278,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &996031581
 GameObject:
   m_ObjectHideFlags: 0
@@ -10323,6 +10361,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996031581}
+  m_CullTransparentMesh: 1
+--- !u!1 &1002362428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002362429}
+  - component: {fileID: 1002362431}
+  - component: {fileID: 1002362430}
+  m_Layer: 5
+  m_Name: Item_Image
+  m_TagString: Inventory
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1002362429
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002362428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1595722624}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -130, y: 190}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1002362430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002362428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1002362431
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002362428}
   m_CullTransparentMesh: 1
 --- !u!1 &1007378438
 GameObject:
@@ -11051,8 +11164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1087175394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13499,8 +13614,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1315490565
 GameObject:
   m_ObjectHideFlags: 0
@@ -14340,8 +14458,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1417002669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14569,8 +14689,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1419562420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14939,8 +15061,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1437352079
 GameObject:
   m_ObjectHideFlags: 0
@@ -15751,6 +15876,8 @@ MonoBehaviour:
   backgroundButton: {fileID: 114430119}
   parts: 
   select_item: 
+  isEquip: 0
+  index: 0
 --- !u!1 &1502356717
 GameObject:
   m_ObjectHideFlags: 0
@@ -15963,8 +16090,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1512808133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17264,6 +17393,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589671090}
   m_CullTransparentMesh: 1
+--- !u!1 &1595722623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595722624}
+  - component: {fileID: 1595722627}
+  - component: {fileID: 1595722626}
+  m_Layer: 5
+  m_Name: EquipInformation
+  m_TagString: Inventory
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1595722624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595722623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1002362429}
+  - {fileID: 1763391067}
+  m_Father: {fileID: 1710508013}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -710, y: 76}
+  m_SizeDelta: {x: 456, y: 558.1439}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1595722626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595722623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.8113208, b: 0.78134507, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1595722627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595722623}
+  m_CullTransparentMesh: 1
 --- !u!1 &1600166861
 GameObject:
   m_ObjectHideFlags: 0
@@ -17547,8 +17753,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1623773022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17932,8 +18140,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1655517225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18387,8 +18597,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1677764520
 GameObject:
   m_ObjectHideFlags: 0
@@ -18668,8 +18881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1694866370
 GameObject:
   m_ObjectHideFlags: 0
@@ -19009,6 +19225,7 @@ RectTransform:
   - {fileID: 676163931}
   - {fileID: 1677764521}
   - {fileID: 1947422990}
+  - {fileID: 1595722624}
   m_Father: {fileID: 896761767}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19069,6 +19286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory_state: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   canvas: {fileID: 1710508012}
 --- !u!1 &1712132264
@@ -19265,6 +19483,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723943942}
+  m_CullTransparentMesh: 1
+--- !u!1 &1763391066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763391067}
+  - component: {fileID: 1763391069}
+  - component: {fileID: 1763391068}
+  m_Layer: 5
+  m_Name: Item_Name
+  m_TagString: Inventory
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1763391067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763391066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1595722624}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 20.803705, y: 230.844}
+  m_SizeDelta: {x: 133.6073, y: 68.3122}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1763391068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763391066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1763391069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763391066}
   m_CullTransparentMesh: 1
 --- !u!1 &1772505515
 GameObject:
@@ -19970,8 +20267,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1820111901
 GameObject:
   m_ObjectHideFlags: 0
@@ -20342,8 +20642,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1890288559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20664,8 +20966,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &1922360772
 GameObject:
   m_ObjectHideFlags: 0
@@ -20720,8 +21025,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &1922360775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21201,7 +21508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -530, y: 320}
+  m_AnchoredPosition: {x: -254, y: 76}
   m_SizeDelta: {x: 456, y: 558.1439}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1947422991
@@ -21255,6 +21562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useButton: {fileID: 1589671090}
+  isEquip: 0
+  index: 0
 --- !u!1 &1964396648
 GameObject:
   m_ObjectHideFlags: 0
@@ -21906,8 +22215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0
 --- !u!1 &2014890814
 GameObject:
   m_ObjectHideFlags: 0
@@ -22557,8 +22869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &2063267082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22861,8 +23175,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &2079296275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23384,8 +23700,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info_window: {fileID: 1204982513}
   equip_window: {fileID: 781034215}
+  equipButton: {fileID: 427409901}
   backgroundButton: {fileID: 114430119}
   item_name: 
+  index: 0
 --- !u!114 &2111285310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24078,5 +24396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info_window: {fileID: 1947422989}
+  equip_window: {fileID: 1595722623}
   info_background: {fileID: 1677764520}
   item_name: 
+  state: 
+  index: 0

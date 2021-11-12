@@ -18,9 +18,13 @@ public class GameManager : MonoBehaviour
     public List<string> recipe_inventory;
 
     public string equip_head;
+    public int equip_head_index;
     public string equip_hand;
+    public int equip_hand_index;
     public string equip_body;
+    public int equip_body_index;
     public string equip_shoes;
+    public int equip_shoes_index;
     public string equip_skill;
 
     public float hp;
@@ -82,13 +86,14 @@ public class GameManager : MonoBehaviour
 
         addInventory(head_inventory, "CCC");
         addInventory(head_inventory, "DDD");
+        addInventory(head_inventory, "DDD");
         addInventory(hand_inventory, "EEE");
         addInventory(hand_inventory, "FFF");
         addInventory(body_inventory, "GGG");
-        addInventory(shoes_inventory, "AAA");
-        addInventory(shoes_inventory, "BBB");
-        addInventory(shoes_inventory, "CCC");
-        addInventory(shoes_inventory, "DDD");
+        addInventory(shoes_inventory, "HHH");
+        addInventory(shoes_inventory, "III");
+        addInventory(shoes_inventory, "JJJ");
+        addInventory(shoes_inventory, "KKK");
 
         addInventory(ingred_inventory, "HHH", 6);
         addInventory(ingred_inventory, "III", 4);
@@ -97,9 +102,13 @@ public class GameManager : MonoBehaviour
         addInventory(recipe_inventory, "KKK");
 
         equip_head = "";
+        equip_head_index = -1;
         equip_hand = "";
+        equip_hand_index = -1;
         equip_body = "";
+        equip_body_index = -1;
         equip_shoes = "";
+        equip_shoes_index = -1;
         equip_skill = "";
 
         maxLayer = 0;
@@ -137,22 +146,25 @@ public class GameManager : MonoBehaviour
 
     public string addInventory(Dictionary<string, int> inventory, string name, int num)
     {
-        if(inventory.Count < MAX_SIZE)
+        if (inventory.ContainsKey(name))
         {
-            if (inventory.ContainsKey(name))
-            {
-                inventory[name] += num;
-            }
-            else
-            {
-                inventory.Add(name, num);
-            }
-            return "�߰� �Ϸ�";
+            inventory[name] += num;
+            return "succes";
         }
         else
         {
-            return "�߰� ����";
+            if (inventory.Count < MAX_SIZE)
+            {
+                inventory.Add(name, num);
+                return "succes";
+            }
+            else
+            {
+                return "fail";
+            }
         }
+
+        
     }
     public string addInventory(List<string> inventory, string name)
     {
@@ -161,11 +173,11 @@ public class GameManager : MonoBehaviour
             if (head_inventory.Count + hand_inventory.Count + body_inventory.Count + shoes_inventory.Count < MAX_SIZE)
             {
                 inventory.Add(name);
-                return "�߰� �Ϸ�";
+                return "succes";
             }
             else
             {
-                return "�߰� ����";
+                return "fail";
             }
         }
         else
@@ -173,11 +185,11 @@ public class GameManager : MonoBehaviour
             if(recipe_inventory.Count < MAX_SIZE && !recipe_inventory.Contains(name))
             {
                 inventory.Add(name);
-                return "�߰� �Ϸ�";
+                return "succes";
             }
             else
             {
-                return "�߰� ����";
+                return "fail";
             }
         }
     }
@@ -187,42 +199,77 @@ public class GameManager : MonoBehaviour
         if(inventory.ContainsKey(name))
         {
             //�Է¹��� �̸��� ���� ��� ȿ�� ����
-            Debug.Log(name + "�����.");
-            deleteInventory(inventory, name, 1);
-            return "��� �Ϸ�";
+            Debug.Log(name + " use");
+            return deleteInventory(inventory, name, 1);
         }
         else
         {
-            return "��� ����";
+            return "fail";
         }
     }
 
-    public string equipInventory(List<string> inventory, string name)
+    public string equipInventory(List<string> inventory, string name, bool isEquip, int index)
     {
         if(inventory.Contains(name))
         {
             //������ �����ϱ�
             if(inventory.Equals(head_inventory))
             {
-                equip_head = name;
+                if(isEquip)
+                {
+                    equip_head = "";
+                    equip_head_index = -1;
+                }
+                else
+                {
+                    equip_head = name;
+                    equip_head_index = index;
+                }
             }
             else if(inventory.Equals(hand_inventory))
             {
-                equip_hand = name;
+                if(isEquip)
+                {
+                    equip_hand = "";
+                    equip_hand_index = -1;
+                }
+                else
+                {
+                    equip_hand = name;
+                    equip_hand_index = index;
+                }
             }
             else if(inventory.Equals(body_inventory))
             {
-                equip_body = name;
+                if (isEquip)
+                {
+                    equip_body = "";
+                    equip_body_index = -1;
+                }
+                else
+                {
+                    equip_body = name;
+                    equip_body_index = index;
+                }
             }
             else if(inventory.Equals(shoes_inventory))
             {
-                equip_shoes = name;
+                if (isEquip)
+                {
+                    equip_shoes = "";
+                    equip_shoes_index = -1;
+                }
+                else
+                {
+                    equip_shoes = name;
+                    equip_shoes_index = index;
+                }
             }
-            return "���� �Ϸ�";
+            return "succes";
         }
         else
         {
-            return "���� ����";
+            return "fail";
         }
     }
 
@@ -232,50 +279,89 @@ public class GameManager : MonoBehaviour
         {
             if (inventory[name] < num)
             {
-                return "���� ����";
+                return "fail";
             }
             else if(inventory[name] == num)
             {
                 inventory.Remove(name);
-                return "���� �Ϸ�";
+                return "succes";
             }
             else
             {
                 inventory[name] -= num;
-                return "���� �Ϸ�";
+                return "succes";
             }
         }
         else
         {
-            return "���� ����";
+            return "fail";
         }
     }
-    public string deleteInventory(List<string> inventory, string name)
+    public string deleteInventory(List<string> inventory, string name, int index)
     {
         if(inventory.Contains(name))
         {
             if(equip_head == name)
             {
                 equip_head = "";
+                equip_head_index = -1;
             }
             else if(equip_hand == name)
             {
                 equip_hand = "";
+                equip_hand_index = -1;
             }
             else if(equip_body == name)
             {
                 equip_body = "";
+                equip_body_index = -1;
             }
             else if (equip_shoes == name)
             {
                 equip_shoes = "";
+                equip_shoes_index = -1;
             }
             inventory.Remove(name);
-            return "���� �Ϸ�";
+
+            if(inventory.Equals(head_inventory))
+            {
+                if(equip_head_index > index)
+                {
+                    equip_head_index -= 1;
+                }
+                equip_hand_index -= 1;
+                equip_body_index -= 1;
+                equip_shoes_index -= 1;
+            }
+            else if(inventory.Equals(hand_inventory))
+            {
+                if (equip_hand_index > index)
+                {
+                    equip_hand_index -= 1;
+                }
+                equip_body_index -= 1;
+                equip_shoes_index -= 1;
+            }
+            else if (inventory.Equals(body_inventory))
+            {
+                if (equip_body_index > index)
+                {
+                    equip_body_index -= 1;
+                }
+                equip_shoes_index -= 1;
+            }
+            else if (inventory.Equals(shoes_inventory))
+            {
+                if (equip_shoes_index > index)
+                {
+                    equip_shoes_index -= 1;
+                }
+            }
+            return "succes";
         }
         else
         {
-            return "���� ����";
+            return "fail";
         }
     }
 }

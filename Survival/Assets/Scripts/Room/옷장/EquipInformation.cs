@@ -8,8 +8,10 @@ public class EquipInformation : MonoBehaviour
 {
     public GameObject info_window;
     public GameObject equip_window;
+    public GameObject equipButton;
     public GameObject backgroundButton;
     public string item_name;
+    public int index;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,20 @@ public class EquipInformation : MonoBehaviour
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_head];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_head;
                 }
+
+                if (transform.GetChild(0).GetComponent<Text>().text == "E")
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "해제하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = true;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
+                else
+                {
+                    Debug.Log("asdasdasd");
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = false;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
                 break;
 
             case "hand":
@@ -58,6 +74,19 @@ public class EquipInformation : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_hand];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_hand;
+                }
+
+                if (transform.GetChild(0).GetComponent<Text>().text == "E")
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "해제하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = true;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
+                else
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = false;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
                 }
                 break;
 
@@ -71,6 +100,19 @@ public class EquipInformation : MonoBehaviour
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_body];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_body;
                 }
+
+                if (transform.GetChild(0).GetComponent<Text>().text == "E")
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "해제하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = true;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
+                else
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = false;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
                 break;
 
             case "shoes":
@@ -82,6 +124,19 @@ public class EquipInformation : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_shoes];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_shoes;
+                }
+
+                if (transform.GetChild(0).GetComponent<Text>().text == "E")
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "해제하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = true;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
+                }
+                else
+                {
+                    equipButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().isEquip = false;
+                    GameObject.Find("EquipInventory").GetComponent<EquipInventory>().index = index;
                 }
                 break;
         }

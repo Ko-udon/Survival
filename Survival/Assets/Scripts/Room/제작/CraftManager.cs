@@ -132,7 +132,8 @@ public class CraftManager : MonoBehaviour
                 GameManager.gameManager.deleteInventory(GameManager.gameManager.ingred_inventory, select_list[i], craft_num);
                 
             }
-            //GameManager.gameManager.addInventory()
+            string isSucces = GameManager.gameManager.addInventory(GameManager.gameManager.expend_inventory, "CCC", craft_num);
+           
 
             craft_num = 1;
             for(int i = 0; i < 5; i++)
@@ -142,6 +143,14 @@ public class CraftManager : MonoBehaviour
 
             backgroundButton.SetActive(true);
             window.SetActive(true);
+            if (isSucces == "succes")
+            {
+                window.transform.GetChild(0).GetComponent<Text>().text = "제작 성공!";
+            }
+            else
+            {
+                window.transform.GetChild(0).GetComponent<Text>().text = "인벤토리 공간이 부족하여 제작에 실패했습니다.";
+            }
         }
     }
 

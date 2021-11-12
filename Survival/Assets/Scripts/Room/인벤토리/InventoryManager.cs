@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public string inventory_state;
     public GameObject info_window;
+    public GameObject equip_window;
     public GameObject info_background;
     public GameObject canvas;
 
@@ -15,6 +16,7 @@ public class InventoryManager : MonoBehaviour
         inventory_state = "Expend";
 
         info_window.SetActive(false);
+        equip_window.SetActive(false);
     }
 
 
@@ -33,6 +35,7 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(ex).gameObject.SetActive(true);
                     transform.GetChild(ex).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name.Key];
                     transform.GetChild(ex).GetComponent<ItemInfo>().item_name = name.Key;
+                    transform.GetChild(ex).GetComponent<ItemInfo>().state = inventory_state;
                     transform.GetChild(ex).GetChild(0).GetComponent<Text>().text = name.Value.ToString();
 
                     ex++;
@@ -45,17 +48,14 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
                 int eq = 0;
-                int head_eq = GameManager.gameManager.head_inventory.FindIndex(x => x == GameManager.gameManager.equip_head);
-                int hand_eq = GameManager.gameManager.hand_inventory.FindIndex(x => x == GameManager.gameManager.equip_hand);
-                int body_eq = GameManager.gameManager.body_inventory.FindIndex(x => x == GameManager.gameManager.equip_body);
-                int shoes_eq = GameManager.gameManager.shoes_inventory.FindIndex(x => x == GameManager.gameManager.equip_shoes);
                 foreach (string name in GameManager.gameManager.head_inventory)
                 {
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
+                    transform.GetChild(eq).GetComponent<ItemInfo>().state = inventory_state;
 
-                    if (eq == head_eq)
+                    if (eq == GameManager.gameManager.equip_head_index)
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
                     }
@@ -63,7 +63,8 @@ public class InventoryManager : MonoBehaviour
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "머리";
                     }
-                        
+                    transform.GetChild(eq).GetComponent<ItemInfo>().index = eq;
+
                     eq++;
                 }
                 foreach (string name in GameManager.gameManager.hand_inventory)
@@ -71,8 +72,9 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
+                    transform.GetChild(eq).GetComponent<ItemInfo>().state = inventory_state;
 
-                    if(eq == hand_eq + GameManager.gameManager.head_inventory.Count)
+                    if (eq == GameManager.gameManager.equip_hand_index)
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
                     }
@@ -80,6 +82,7 @@ public class InventoryManager : MonoBehaviour
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "손";
                     }
+                    transform.GetChild(eq).GetComponent<ItemInfo>().index = eq;
 
                     eq++;
                 }
@@ -88,8 +91,9 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
+                    transform.GetChild(eq).GetComponent<ItemInfo>().state = inventory_state;
 
-                    if (eq == body_eq + GameManager.gameManager.head_inventory.Count + GameManager.gameManager.hand_inventory.Count)
+                    if (eq == GameManager.gameManager.equip_body_index)
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
                     }
@@ -97,6 +101,7 @@ public class InventoryManager : MonoBehaviour
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "몸";
                     }
+                    transform.GetChild(eq).GetComponent<ItemInfo>().index = eq;
 
                     eq++;
                 }
@@ -105,8 +110,9 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(eq).gameObject.SetActive(true);
                     transform.GetChild(eq).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
                     transform.GetChild(eq).GetComponent<ItemInfo>().item_name = name;
+                    transform.GetChild(eq).GetComponent<ItemInfo>().state = inventory_state;
 
-                    if (eq == shoes_eq + GameManager.gameManager.head_inventory.Count + GameManager.gameManager.hand_inventory.Count + GameManager.gameManager.body_inventory.Count)
+                    if (eq == GameManager.gameManager.equip_shoes_index)
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "E";
                     }
@@ -114,6 +120,7 @@ public class InventoryManager : MonoBehaviour
                     {
                         transform.GetChild(eq).GetChild(0).GetComponent<Text>().text = "신발";
                     }
+                    transform.GetChild(eq).GetComponent<ItemInfo>().index = eq;
 
                     eq++;
                 }
@@ -131,6 +138,7 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(ing).gameObject.SetActive(true);
                     transform.GetChild(ing).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name.Key];
                     transform.GetChild(ing).GetComponent<ItemInfo>().item_name = name.Key;
+                    transform.GetChild(ing).GetComponent<ItemInfo>().state = inventory_state;
                     transform.GetChild(ing).GetChild(0).GetComponent<Text>().text = name.Value.ToString();
 
                     ing++;
@@ -161,6 +169,7 @@ public class InventoryManager : MonoBehaviour
     {
         info_background.SetActive(false);
         info_window.SetActive(false);
+        equip_window.SetActive(false);
     }
 
     public void OnCloseClicked()

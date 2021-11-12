@@ -8,10 +8,14 @@ public class InformationWindow : MonoBehaviour
     private InventoryManager invenManager;
 
     public GameObject useButton;
+    public bool isEquip;
+    public int index;
 
     void Start()
     {
         invenManager = GameObject.Find("InventoryImage").GetComponent<InventoryManager>();
+        isEquip = false;
+        index = -1;
     }
 
     
@@ -26,7 +30,15 @@ public class InformationWindow : MonoBehaviour
 
             case "Equip":
                 useButton.SetActive(true);
-                useButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                string item = transform.GetChild(1).GetComponent<Text>().text;
+                if (isEquip)
+                {
+                    useButton.transform.GetChild(0).GetComponent<Text>().text = "해제하기";
+                }
+                else
+                {
+                    useButton.transform.GetChild(0).GetComponent<Text>().text = "장착하기";
+                }
                 break;
 
             case "Ingred":
@@ -46,15 +58,19 @@ public class InformationWindow : MonoBehaviour
             case "Equip":
                 if (GameManager.gameManager.head_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.equipInventory(GameManager.gameManager.head_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.equipInventory(GameManager.gameManager.head_inventory, this.transform.GetChild(1).GetComponent<Text>().text, isEquip, index);
                 }
                 else if (GameManager.gameManager.hand_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.equipInventory(GameManager.gameManager.hand_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.equipInventory(GameManager.gameManager.hand_inventory, this.transform.GetChild(1).GetComponent<Text>().text, isEquip, index);
                 }
                 else if (GameManager.gameManager.body_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.equipInventory(GameManager.gameManager.body_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.equipInventory(GameManager.gameManager.body_inventory, this.transform.GetChild(1).GetComponent<Text>().text, isEquip, index);
+                }
+                else if (GameManager.gameManager.shoes_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
+                {
+                    GameManager.gameManager.equipInventory(GameManager.gameManager.shoes_inventory, this.transform.GetChild(1).GetComponent<Text>().text, isEquip, index);
                 }
                 break;
 
@@ -63,7 +79,7 @@ public class InformationWindow : MonoBehaviour
                 break;
         }
 
-        this.gameObject.SetActive(false);
+        invenManager.OnExitClicked();
     }
     
     public void OnDeleteClicked()
@@ -77,15 +93,19 @@ public class InformationWindow : MonoBehaviour
             case "Equip":
                 if(GameManager.gameManager.head_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.deleteInventory(GameManager.gameManager.head_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.head_inventory, this.transform.GetChild(1).GetComponent<Text>().text, index);
                 }
                 else if(GameManager.gameManager.hand_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.deleteInventory(GameManager.gameManager.hand_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.hand_inventory, this.transform.GetChild(1).GetComponent<Text>().text, index);
                 }
                 else if (GameManager.gameManager.body_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
                 {
-                    GameManager.gameManager.deleteInventory(GameManager.gameManager.body_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.body_inventory, this.transform.GetChild(1).GetComponent<Text>().text, index);
+                }
+                else if (GameManager.gameManager.shoes_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
+                {
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.shoes_inventory, this.transform.GetChild(1).GetComponent<Text>().text, index);
                 }
                 break;
 
@@ -94,6 +114,6 @@ public class InformationWindow : MonoBehaviour
                 break;
         }
 
-        this.gameObject.SetActive(false);
+        invenManager.OnExitClicked();
     }
 }
