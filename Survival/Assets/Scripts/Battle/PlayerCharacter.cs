@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public int Hp;
-    public int Mt;
-    public int totalAir;
+    public PlayerCharacter player;
+
+    public GameObject playerUI;
+    public float Hp;
+    public float Mt;
+    public float totalAir;
     public float Air;
 
     public int power;
@@ -25,8 +28,12 @@ public class PlayerCharacter : MonoBehaviour
     public bool isCritical;
     public bool canMove;
     public bool isBattle;
+    public bool isWin;
+    public bool isHome;
 
     public int exp;
+
+    public string booty_item;
     
 
     public Image HpBar;
@@ -35,23 +42,57 @@ public class PlayerCharacter : MonoBehaviour
     Rigidbody2D rigid;
     public EnemyCharacter enemy;
     // Start is called before the first frame update
+
+
+    //playerMove
+
+    public float maxSpeed;
+    public bool isFarming;
+    public bool isFarmDone;
+    public bool isblocked;
+    private int farmingTimer;
+    //public GameObject farm;
+    //public GameObject farmEnd;
+    //public GameObject AIR;
+
+    SpriteRenderer spriteRenderer;
+    Animator anim;
+
     void Awake() 
     {
-        
+        if (player == null)
+            player = this;
+
+        else if (player != this)
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+
         rigid = GetComponent<Rigidbody2D>();
         AtkDamage = power;
         canMove = true;
         isAttack = true;
+
+        
+
+
+
+        //playerMove
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+
+        //farmEnd.gameObject.SetActive(false);
+
+        maxSpeed = 1.0f;
+
+        isFarming = false;
+        isblocked = false;
+        isFarmDone = false;
+        farmingTimer = 0;
         
     }
     void Start()
     {
-        if (isBattle==true){
-            enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyCharacter>();           
-        }
-        else{
-            rigid.gravityScale=0;
-        }
+        
     }
     void GetVictoryReward()
     {
@@ -69,9 +110,10 @@ public class PlayerCharacter : MonoBehaviour
     }
     void Dead()
     {
-        if ((Hp <= 0)||(Mt <= 0))
+        if ((Hp <= 0)||(Mt <= 0)||(Air<=0))
         {
             isDead = true;
+            Time.timeScale=0;
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }
@@ -208,6 +250,27 @@ public class PlayerCharacter : MonoBehaviour
             SceneManager.LoadScene("Battle");
         }
 
+        else if(other.gameObject.tag=="EnemyBlock")
+        {
+            isWin=true;
+            SceneManager.LoadScene("Outside");
+        }
+
+        else if(other.gameObject.tag=="Home")
+        {
+            //isHome=true;
+
+            SceneManager.LoadScene("Home");
+        }
+
+        else if(other.gameObject.tag=="trap")
+        {
+            isblocked=true;
+        }
+
+
+
+
     }
     
     void Move()
@@ -224,15 +287,19 @@ public class PlayerCharacter : MonoBehaviour
             }
 
             //전투씬이 아닌곳에서만 위아래 이동가능 
-            if (isBattle==false)
+            if ((isBattle==false)&(SceneManager.GetActiveScene().name=="Outside"))
             {
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
                     transform.Translate(Vector3.up * speed * Time.deltaTime);
+                    //anim.SetBool("isWalking", true);
+
                 }
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
                     transform.Translate(Vector3.down * speed * Time.deltaTime);
+                    //anim.SetBool("isWalking", true);
+
                 }    
             }
             
@@ -249,5 +316,118 @@ public class PlayerCharacter : MonoBehaviour
         decreaseAir();
         
 
+        if(SceneManager.GetActiveScene().name=="Battle"){
+            if(GameObject.FindGameObjectWithTag("Enemy")!=null){
+                enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
+            }
+            playerUI.SetActive(true);
+            rigid.gravityScale=1;
+        }
+
+
+        if(SceneManager.GetActiveScene().name=="Outside"){
+            playerUI.SetActive(false);
+            
+            rigid.gravityScale=0;
+            
+        }
+
+        if(SceneManager.GetActiveScene().name=="Home"){
+            playerUI.SetActive(false);
+            
+            rigid.gravityScale=0;
+        }
+
+
+
+
+        // //playerMove
+        // if (Input.GetButton("Horizontal"))
+        // {
+        //     rigid.velocity = new Vector2(0, rigid.velocity.y);
+        // }
+        // else if (Input.GetButton("Vertical"))
+        // {
+        //     rigid.velocity = new Vector2(rigid.velocity.x, 0);
+        // }
+
+        // //Direction Sprite
+        // if (Input.GetButton("Horizontal"))
+        // {
+        //     spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        // }
+
+        // if (Input.GetButtonUp("Horizontal"))
+
+        //     if (rigid.velocity.normalized.x == 0)
+        //     {
+        //         anim.SetBool("isWalking", false);
+
+        //     }
+        //     else
+        //     {
+        //         anim.SetBool("isWalking", true);
+        //     }
+
+        if (isblocked)
+        {
+            getBack();
+            isblocked = false;
+        }
+        if (isFarming)
+        {
+            if (farmingTimer > 3000)
+            {
+                Invoke("getItem", 3);
+                isFarming = false;
+                isFarmDone = true;
+                farmingTimer = 0;
+
+            }
+
+            else
+            {
+                farmingTimer++;
+                Debug.Log(farmingTimer);
+            }
+        }
+
+
+    }
+
+    //playerMove
+    void getItem()
+    {
+        int item = 3;
+        //farmEnd.gameObject.SetActive(true);
+        //farm.gameObject.SetActive(false);
+        Debug.Log("itemȹ��" + item);
+    }
+    void getBack()
+    {
+        rigid.position = new Vector2(rigid.position.x - 2.5f, rigid.position.y);
+    }
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "trap")
+    //     {
+    //         isblocked = true;
+    //     }
+
+    // }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "farm")
+        {
+            if (!isFarmDone) isFarming = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "farm")
+        {
+            isFarming = false;
+            farmingTimer = 0;
+        }
     }
 }

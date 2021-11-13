@@ -28,6 +28,9 @@ public class EnemyCharacter : MonoBehaviour
     PlayerCharacter player;
     public Image HPbar;
     public Text damage_enemy_text;
+
+    public GameObject booty;
+    public string booty_item;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -48,6 +51,7 @@ public class EnemyCharacter : MonoBehaviour
         if (Hp <= 0)
         {
             isDead = true;
+            Instantiate(booty,new Vector2(gameObject.transform.position.x+1,gameObject.transform.position.y),Quaternion.identity);
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }

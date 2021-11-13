@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public static PlayerCharacter player;
 
+    public GameObject Player;
+
     const int MAX_SIZE = 16;
     public Dictionary<string, int> expend_inventory;
     public List<string> head_inventory;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public float hp;
     public float mt;
+    public float air;
     public float time;
     public int day;
 
@@ -37,8 +40,9 @@ public class GameManager : MonoBehaviour
 
     public int maxLayer;
 
-    void Awake() //���� �ٲ� �ı����� ����
+    void Awake() 
     {
+        
         if (gameManager == null)
             gameManager = this;
 
@@ -47,11 +51,18 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        hp = 50;
+        mt = 50;
+        air=100;
+        
+
     }
 
     void Start()
     {
         //player 오브젝트 수집
+        Player.SetActive(true);
+
         player=GameObject.FindWithTag("Player").GetComponent<PlayerCharacter>();
 
         expend_inventory = new Dictionary<string, int>();
@@ -63,8 +74,10 @@ public class GameManager : MonoBehaviour
         name_image = new Dictionary<string, Sprite>();
         recipe_inventory = new List<string>();
 
-        hp = 50;
-        mt = 50;
+        player.Hp=hp;
+        player.Mt=mt;
+        player.Air=air;
+
         time = 6;
         day = 1;
 
@@ -138,10 +151,7 @@ public class GameManager : MonoBehaviour
             mt = 100;
         }
 
-        // if(player.isBattle==true)
-        // {
-        //     SceneManager.LoadScene("Battle");
-        // }
+        
     }
 
     public string addInventory(Dictionary<string, int> inventory, string name, int num)

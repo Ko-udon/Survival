@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &20562722
 Rigidbody2D:
   serializedVersion: 4
@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b429fb29a3df827499535421421932e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   Hp: 100
   Mt: 100
   totalAir: 100
@@ -274,10 +275,17 @@ MonoBehaviour:
   isCritical: 0
   canMove: 0
   isBattle: 0
+  isWin: 0
+  isHome: 0
   exp: 0
+  booty_item: 
   HpBar: {fileID: 1143366782}
   damage_player_text: {fileID: 1861496304}
   enemy: {fileID: 0}
+  maxSpeed: 0
+  isFarming: 0
+  isFarmDone: 0
+  isblocked: 0
 --- !u!1 &187992210
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084603690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.77, y: -1.88, z: 0}
+  m_LocalPosition: {x: 2.67, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 495080373}
@@ -996,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e368e0b71ae2d4d8eff914ace41655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  Hp: 30
   power: 20
   AtkDamage: 20
   defense: 5
@@ -1009,6 +1017,8 @@ MonoBehaviour:
   canMove: 0
   HPbar: {fileID: 1689607764}
   damage_enemy_text: {fileID: 2008703824}
+  booty: {fileID: 6977394827644080807, guid: 5eb2ec6b23170844fa7db7dbec6a9089, type: 3}
+  booty_item: items
 --- !u!1 &1143366780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1375,7 @@ GameObject:
   - component: {fileID: 1420245423}
   m_Layer: 0
   m_Name: EnemyBlock
-  m_TagString: Untagged
+  m_TagString: EnemyBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
