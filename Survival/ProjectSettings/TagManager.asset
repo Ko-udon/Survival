@@ -12,6 +12,8 @@ TagManager:
   - Craft
   - Hanger
   - Bed
+  - Trap
+  - Farming
   layers:
   - Default
   - TransparentFX

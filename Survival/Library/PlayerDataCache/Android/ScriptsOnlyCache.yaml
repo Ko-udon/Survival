@@ -1,16 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ChooseInventory
-    - CraftManager
-    - EquipInformation
-    - EquipInventory
-    - GameManager
-    - HangerManager
-    - InformationWindow
-    - InventoryManager
-    - ItemInfo
-    - RoomStageManager
+    - PlayerCharacter
+    - StatusManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -19,9 +11,13 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -37,13 +33,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Outside.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -56,44 +51,34 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1510}
+      Script: {instanceID: 618}
     - Class: 114
-      Script: {instanceID: 2198}
+      Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 2310}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 2340}
+      Script: {instanceID: 2208}
     - Class: 114
-      Script: {instanceID: 2418}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2798}
     - Class: 114
-      Script: {instanceID: 2620}
+      Script: {instanceID: 3018}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 2850}
-    - Class: 114
-      Script: {instanceID: 2998}
-    - Class: 114
-      Script: {instanceID: 3242}
-    - Class: 114
-      Script: {instanceID: 3280}
-    - Class: 114
-      Script: {instanceID: 3356}
-    - Class: 114
-      Script: {instanceID: 3800}
-    - Class: 114
-      Script: {instanceID: 3876}
-    - Class: 114
-      Script: {instanceID: 4120}
-    - Class: 114
-      Script: {instanceID: 4564}
+      Script: {instanceID: 3566}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -102,6 +87,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -109,6 +96,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -129,6 +122,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: a0fe6fe11ab471f17ed0678f3a30470e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyCharacter
+  - hash:
+      serializedVersion: 2
+      Hash: 08a203aee01a7dc10c8773ce1a0db05b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerCharacter
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -197,6 +202,18 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: b7512264d05400c061c5f81d8ffddd41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BedManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMove
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -227,13 +244,13 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6b7e3696f04f6150b2780c1c0a5ca790
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoomStageManager
   - hash:
       serializedVersion: 2
-      Hash: 447cd604ec6c81d22d2ea641106fbe70
+      Hash: d89c56053c839c120147c22b47ddd1ec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemInfo
@@ -245,7 +262,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 2bd26e4cd34976c6ca321d0e447f4179
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy
+  - hash:
+      serializedVersion: 2
+      Hash: bbff5f711f9c602eb6c916a3994544a0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EquipInventory
@@ -257,7 +280,19 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 60187dd94ae29b759f8cc63b5d4b4759
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
+  - hash:
+      serializedVersion: 2
+      Hash: c82331fd092e7d91fc9d962c275d95e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WindowManager
+  - hash:
+      serializedVersion: 2
+      Hash: 8e451d1eee92e2ef299b1e41011b95e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EquipInformation
@@ -305,7 +340,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: a803f407dd3a9ec1d725373f222d1c63
+      Hash: 021fbb1460645441d882e54edd0575a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChooseInventory
@@ -353,6 +388,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: f27afd7b5de54356ef60c31a02a5d77f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -377,7 +418,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: aca0ec8f109ec03dcab12c38c405d40b
+      Hash: c0086bfb4c552afc474b922f73c9ddb2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CraftManager
@@ -413,6 +454,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 5bdeea208a37ef8d15e111cee926859b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StatusManager
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -423,6 +470,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BattleGameManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -455,7 +508,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5b24ce77256f72a0165a05c57372bc17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InformationWindow
@@ -509,7 +562,7 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
-      Hash: 30d42869947178e69a03e35908e122b1
+      Hash: e223c72d44ea40caa5144fa29e4ab960
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryManager
@@ -587,7 +640,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 54f66e8a7a7e4613b016d56b4d7dd97e
+      Hash: 827f3ac9f1933826fa82916afb428983
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -659,6 +712,12 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
+      Hash: 946ba6d4a5bcec9d6a0f4f14b020563d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IconPreview
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -689,5 +748,5 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/leejungbin/Desktop/survival 0.1.apk
+  - Assets/Scenes/Outside.unity
+  playerPath: E:/Personnel/Study/2021_02/TeamProject/test_v0.1.apk
