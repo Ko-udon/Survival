@@ -17,6 +17,8 @@ public class EnemyCharacter : MonoBehaviour
     public int critical;
     public int speed;
 
+    public int exp;
+    
     private bool isDead;
     private bool isRun;
     public bool isAttack;

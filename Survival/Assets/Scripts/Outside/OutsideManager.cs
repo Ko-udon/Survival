@@ -17,10 +17,15 @@ public class OutsideManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(player.isHome==true){
-        //     player.isHome=false;
+        if(player.isHome==true){
+            player.isHome=false;
             
-        //     SceneManager.LoadScene("Home");
-        // }
+            SceneManager.LoadScene("Home");
+        }
+
+        if(player.isBattle==true){
+            player.isBattle=false;
+            SceneManager.LoadScene("Battle");
+        }
     }
 }

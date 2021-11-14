@@ -5,6 +5,7 @@ using UnityEngine;
 public class Booty : MonoBehaviour
 {
     public string item;
+    public int exp;
 
     public PlayerCharacter player;
     public EnemyCharacter enemy;
@@ -26,6 +27,7 @@ public class Booty : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag=="Player"){
             player.booty_item=item;
+            player.exp+=exp;
             gameObject.SetActive(false);
         }
     }

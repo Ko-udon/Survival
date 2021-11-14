@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class PlayerMove : MonoBehaviour
     public bool isFarmDone;
     public bool isblocked;
     private int farmingTimer;
-   /// public GameObject farm;
-   /// public GameObject farmClean;
+    // public GameObject farm;
+    // public GameObject farmClean;
     //public GameObject AIR;
 
     Rigidbody2D rigid;
@@ -41,6 +42,14 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if(SceneManager.GetActiveScene().name=="Battle"){
+        //     gameObject.GetComponent<PlayerMove>().enabled=false;
+        // }
+
+        // if(SceneManager.GetActiveScene().name=="Battle"){
+        //     gameObject.GetComponent<PlayerMove>().enabled=true;
+        // }
+
         //Move Value
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
@@ -73,14 +82,14 @@ public class PlayerMove : MonoBehaviour
         else
             anim.SetBool("isChange", false);
 
-        //Trap¿¡ ÀÇÇØ ¸·Çû´ÂÁö Ã¼Å©
+        //Trapï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
         if (isblocked)
         {
             getBack();
             isblocked = false;
         }
 
-        //Farming Å¸ÀÏ¿¡ Player ÀÖ´ÂÁö Ã¼Å©
+        //Farming Å¸ï¿½Ï¿ï¿½ Player ï¿½Ö´ï¿½ï¿½ï¿½ Ã¼Å©
         if (isFarming)
         {
             if (farmingTimer > 300)
@@ -101,9 +110,9 @@ public class PlayerMove : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate() //1ÃÊ¿¡ 50¹ø Á¤µµ ¹ÞÀ½
+    void FixedUpdate() //1ï¿½Ê¿ï¿½ 50ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
-        //ÁÂ¿ì¿òÁ÷ÀÓÀÌ¸é (h,0) »óÇÏ¸é (0,v) ´ë°¢¼± ¾ÈµÊ
+        //ï¿½Â¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ (h,0) ï¿½ï¿½ï¿½Ï¸ï¿½ (0,v) ï¿½ë°¢ï¿½ï¿½ ï¿½Èµï¿½
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
         rigid.velocity = moveVec * Speed;
 
@@ -111,33 +120,32 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    //item È¹µæ È¹µæÇÑ ÆÄ¹ÖÁ¸Àº ¾îµÎ¿öÁü
+    //item È¹ï¿½ï¿½ È¹ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î¿ï¿½ï¿½ï¿½
     void getItem()
     {
         int item = 3;
         //farmClean.gameObject.SetActive(true);
         //farm.gameObject.SetActive(false);
-        Debug.Log("itemÈ¹µæ" + item);
+        Debug.Log("itemÈ¹ï¿½ï¿½" + item);
     }
 
-    //ÇÔÁ¤¿¡ ´êÀ¸¸é ¿À´ø ¹æÇâÀ¸·Î Æ¨°ÜÁü
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ¨ï¿½ï¿½ï¿½ï¿½
     void getBack()
     {
         rigid.position = isHorizonMove ? 
             new Vector2(rigid.position.x - 2f * h, rigid.position.y) : new Vector2(rigid.position.x, rigid.position.y - 2f * v);
     }
 
-    //ÇÔÁ¤¿¡ ´ê¾Ò´ÂÁö Collision Ã¼Å©
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´ï¿½ï¿½ï¿½ Collision Ã¼Å©
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Trap")
         {
             isblocked = true;
         }
-
     }
 
-    //ÆÄ¹ÖÁ¸ µé¾î°¡¸é ÆÄ¹Ö ½ÃÀÛ (ÀÌ¹Ì ÆÄ¹ÖµÈ °÷Àº ÆÄ¹Ö ºÒ°¡´É)
+    //ï¿½Ä¹ï¿½ï¿½ï¿½ ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½Ä¹ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½Ì¹ï¿½ ï¿½Ä¹Öµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¹ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½)
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Farming")
@@ -146,7 +154,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    //ÆÄ¹ÖÁ¸ ³ª°¡¸é Ä«¿îÆ® ¸®¼Â
+    //ï¿½Ä¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Farming")

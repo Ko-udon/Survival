@@ -17,6 +17,8 @@ TagManager:
   - Booty
   - Home
   - EnemyBlock
+  - EnemyType_1
+  - EnemyType_2
   layers:
   - Default
   - TransparentFX

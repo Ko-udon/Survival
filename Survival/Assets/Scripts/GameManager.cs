@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public static PlayerCharacter player;
 
+   
+
     public GameObject Player;
 
     const int MAX_SIZE = 16;
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        hp = 50;
+        hp = 80;
         mt = 50;
         air=100;
         

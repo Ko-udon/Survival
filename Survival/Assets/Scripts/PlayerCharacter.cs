@@ -9,6 +9,8 @@ public class PlayerCharacter : MonoBehaviour
     public PlayerCharacter player;
 
     public GameObject playerUI;
+
+    public int enemyType;
     public float Hp;
     public float Mt;
     public float totalAir;
@@ -244,23 +246,31 @@ public class PlayerCharacter : MonoBehaviour
             isRun = true;
         }
 
-        else if (other.gameObject.tag=="EnemyCheck")
+        else if (other.gameObject.tag=="EnemyType_1")
         {
+            enemyType=1;
             isBattle=true;
-            SceneManager.LoadScene("Battle");
+            //SceneManager.LoadScene("Battle");
+        }
+
+        else if (other.gameObject.tag=="EnemyType_2")
+        {
+            enemyType=2;
+            isBattle=true;
+            //SceneManager.LoadScene("Battle");
         }
 
         else if(other.gameObject.tag=="EnemyBlock")
         {
             isWin=true;
-            SceneManager.LoadScene("Outside");
+            //SceneManager.LoadScene("Outside");
         }
 
         else if(other.gameObject.tag=="Home")
         {
-            //isHome=true;
+            isHome=true;
 
-            SceneManager.LoadScene("Home");
+            //SceneManager.LoadScene("Home");
         }
 
         else if(other.gameObject.tag=="trap")
@@ -313,21 +323,23 @@ public class PlayerCharacter : MonoBehaviour
     {
         Move();
         Dead();
-        decreaseAir();
+        //decreaseAir();
         
 
         if(SceneManager.GetActiveScene().name=="Battle"){
             if(GameObject.FindGameObjectWithTag("Enemy")!=null){
                 enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
             }
+            decreaseAir();
             playerUI.SetActive(true);
             rigid.gravityScale=1;
         }
 
 
         if(SceneManager.GetActiveScene().name=="Outside"){
-            playerUI.SetActive(false);
             
+            playerUI.SetActive(false);
+            decreaseAir();
             rigid.gravityScale=0;
             
         }

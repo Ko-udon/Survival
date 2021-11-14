@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: items
+  exp: 10
   player: {fileID: 0}
   enemy: {fileID: 0}
