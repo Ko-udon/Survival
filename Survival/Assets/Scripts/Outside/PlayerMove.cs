@@ -9,8 +9,8 @@ public class PlayerMove : MonoBehaviour
     public bool isFarmDone;
     public bool isblocked;
     private int farmingTimer;
-    //public GameObject farm;
-    //public GameObject farmEnd;
+   /// public GameObject farm;
+   /// public GameObject farmClean;
     //public GameObject AIR;
 
     Rigidbody2D rigid;
@@ -24,8 +24,6 @@ public class PlayerMove : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
-        //farmEnd.gameObject.SetActive(false);
 
         maxSpeed = 1.0f;
 
@@ -43,11 +41,11 @@ public class PlayerMove : MonoBehaviour
         //Speed ¸ØÃß´Â°Å
         if (Input.GetButton("Horizontal"))
         {
-            rigid.velocity = new Vector2(0, rigid.velocity.y);
+            rigid.velocity = new Vector2(0, 0);
         }
         else if (Input.GetButton("Vertical"))
         {
-            rigid.velocity = new Vector2(rigid.velocity.x, 0);
+            rigid.velocity = new Vector2(0, 0);
         }
 
         //Direction Sprite
@@ -61,7 +59,6 @@ public class PlayerMove : MonoBehaviour
             if (rigid.velocity.normalized.x == 0)
             {
                 anim.SetBool("isWalking", false);
-
             }
             else
             {
@@ -126,17 +123,17 @@ public class PlayerMove : MonoBehaviour
     void getItem()
     {
         int item = 3;
-        //farmEnd.gameObject.SetActive(true);
+        //farmClean.gameObject.SetActive(true);
         //farm.gameObject.SetActive(false);
         Debug.Log("itemÈ¹µæ" + item);
     }
     void getBack()
     {
-        rigid.position = new Vector2(rigid.position.x - 2.5f, rigid.position.y);
+        rigid.position = new Vector2(rigid.position.x - 3f, rigid.position.y);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "trap")
+        if (collision.gameObject.tag == "Trap")
         {
             isblocked = true;
         }
@@ -144,14 +141,14 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "farm")
+        if (collision.gameObject.tag == "Farming")
         {
             if (!isFarmDone) isFarming = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "farm")
+        if (collision.gameObject.tag == "Farming")
         {
             isFarming = false;
             farmingTimer = 0;

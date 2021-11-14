@@ -832,10 +832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3900fbeeff61cc40b27982e63012c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayText: {fileID: 0}
-  timeText: {fileID: 0}
-  HPGauge: {fileID: 0}
-  MTGauge: {fileID: 0}
+  dayText: {fileID: 97393729}
+  timeText: {fileID: 597687179}
+  HPGauge: {fileID: 558057417}
+  MTGauge: {fileID: 1700380105}
 --- !u!1 &156904039
 GameObject:
   m_ObjectHideFlags: 0
