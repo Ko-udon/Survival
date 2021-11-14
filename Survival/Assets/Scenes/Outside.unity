@@ -177,7 +177,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.5
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -22663,7 +22663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07bb9db7fc065de47a71e2f0e09cf434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2115355853}
 --- !u!1 &1220076571
 GameObject:
   m_ObjectHideFlags: 0
@@ -35371,6 +35371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6057485506843599408, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d35f95909f14bac4fa9650ea8d02e038, type: 2}
     - target: {fileID: 6057485506843599409, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
       propertyPath: maxSpeed
       value: 5
@@ -35421,6 +35425,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6057485506843599410, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057485506843599411, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057485506843599411, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6057485506843599421, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
@@ -36095,12 +36107,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55b97edf5c697e41956d69c766a0904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0
+  Speed: 0
   isFarming: 0
   isFarmDone: 0
   isblocked: 0
-  farm: {fileID: 2038816459}
-  farmClean: {fileID: 1507214981}
+--- !u!114 &2115355853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6057485506843599422, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}
+  m_PrefabInstance: {fileID: 2034425763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115355849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b429fb29a3df827499535421421932e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2115355856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6057485506843599410, guid: 2f961c92ca26bfa4bacf659daeb821c0, type: 3}

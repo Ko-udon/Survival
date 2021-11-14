@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float maxSpeed;
+    public float Speed;
     public bool isFarming;
     public bool isFarmDone;
     public bool isblocked;
@@ -17,6 +17,9 @@ public class PlayerMove : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator anim;
 
+    float h;
+    float v;
+    bool isHorizonMove;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
-        maxSpeed = 1.0f;
+        Speed = 3.0f;
 
         isFarming = false;
         isblocked = false;
@@ -38,49 +41,56 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Speed 멈추는거
-        if (Input.GetButton("Horizontal"))
+        //Move Value
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+
+        //Check Button Down & Up
+        bool hDown = Input.GetButtonDown("Horizontal");
+        bool vDown = Input.GetButtonDown("Vertical");
+        bool hUp = Input.GetButtonUp("Horizontal");
+        bool vUp = Input.GetButtonUp("Vertical");
+
+        //Check Horizontal Move
+        if (hDown)
+            isHorizonMove = true;
+        else if (vDown)
+            isHorizonMove = false;
+        else if (hUp || vUp)
+            isHorizonMove = h != 0;
+
+        //Animation
+        if (anim.GetInteger("hAxisRaw") != h)
         {
-            rigid.velocity = new Vector2(0, 0);
+            anim.SetBool("isChange", true);
+            anim.SetInteger("hAxisRaw", (int)h);
         }
-        else if (Input.GetButton("Vertical"))
+        else if (anim.GetInteger("vAxisRaw") != v)
         {
-            rigid.velocity = new Vector2(0, 0);
+            anim.SetBool("isChange", true);
+            anim.SetInteger("vAxisRaw", (int)v);
         }
+        else
+            anim.SetBool("isChange", false);
 
-        //Direction Sprite
-        if (Input.GetButton("Horizontal"))
-        {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-        }
-
-        if (Input.GetButtonUp("Horizontal"))
-
-            if (rigid.velocity.normalized.x == 0)
-            {
-                anim.SetBool("isWalking", false);
-            }
-            else
-            {
-                anim.SetBool("isWalking", true);
-            }
-
+        //Trap에 의해 막혔는지 체크
         if (isblocked)
         {
             getBack();
             isblocked = false;
         }
+
+        //Farming 타일에 Player 있는지 체크
         if (isFarming)
         {
-            if (farmingTimer > 3000)
+            if (farmingTimer > 300)
             {
-                Invoke("getItem", 3);
+                Invoke("getItem", 2);
                 isFarming = false;
                 isFarmDone = true;
                 farmingTimer = 0;
 
             }
-
             else
             {
                 farmingTimer++;
@@ -93,33 +103,15 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate() //1초에 50번 정도 받음
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float w = Input.GetAxisRaw("Vertical");
+        //좌우움직임이면 (h,0) 상하면 (0,v) 대각선 안됨
+        Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
+        rigid.velocity = moveVec * Speed;
 
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-        rigid.AddForce(Vector2.up * w, ForceMode2D.Impulse);
-
-
-        if (rigid.velocity.x > maxSpeed) // Right Max Speed
-        {
-            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-        }
-        else if (rigid.velocity.x < maxSpeed * (-1)) // left Max Speed
-        {
-            rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
-        }
-        else if (rigid.velocity.y < maxSpeed * (-1)) // left Max Speed
-        {
-            rigid.velocity = new Vector2(rigid.velocity.x, maxSpeed * (-1));
-        }
-        else if (rigid.velocity.y > maxSpeed) // Right Max Speed
-        {
-            rigid.velocity = new Vector2(rigid.velocity.x, maxSpeed);
-        }
+        
     }
 
 
-
+    //item 획득 획득한 파밍존은 어두워짐
     void getItem()
     {
         int item = 3;
@@ -127,10 +119,15 @@ public class PlayerMove : MonoBehaviour
         //farm.gameObject.SetActive(false);
         Debug.Log("item획득" + item);
     }
+
+    //함정에 닿으면 오던 방향으로 튕겨짐
     void getBack()
     {
-        rigid.position = new Vector2(rigid.position.x - 3f, rigid.position.y);
+        rigid.position = isHorizonMove ? 
+            new Vector2(rigid.position.x - 2f * h, rigid.position.y) : new Vector2(rigid.position.x, rigid.position.y - 2f * v);
     }
+
+    //함정에 닿았는지 Collision 체크
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Trap")
@@ -139,6 +136,8 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
+
+    //파밍존 들어가면 파밍 시작 (이미 파밍된 곳은 파밍 불가능)
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Farming")
@@ -146,6 +145,8 @@ public class PlayerMove : MonoBehaviour
             if (!isFarmDone) isFarming = true;
         }
     }
+
+    //파밍존 나가면 카운트 리셋
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Farming")
