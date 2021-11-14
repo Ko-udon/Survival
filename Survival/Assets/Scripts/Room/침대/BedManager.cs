@@ -13,16 +13,15 @@ public class BedManager : MonoBehaviour
 
     void Update()
     {
-        string time = GameManager.gameManager.time.ToString("00.00");
-        time = time.Replace(".", " : ");
-        transform.GetChild(0).GetComponent<Text>().text = "침대에서 주무시겠습니까?\n\n남은시간: " + time + "\nHp, MT 회복량: " + (int)(GameManager.gameManager.time / 2);
+        string time = (GameManager.gameManager.time / 60) + " : " + (GameManager.gameManager.time % 60).ToString("00");
+        transform.GetChild(0).GetComponent<Text>().text = "침대에서 주무시겠습니까?\n\n남은시간: " + time + "\nHp, MT 회복량: " + (GameManager.gameManager.time / 2 / 60);
     }
 
     public void OnYesClicked()
     {
-        GameManager.gameManager.hp += (GameManager.gameManager.time / 2);
-        GameManager.gameManager.mt += (GameManager.gameManager.time / 2);
-        GameManager.gameManager.time = 24;
+        GameManager.gameManager.hp += (GameManager.gameManager.time / 2 / 60);
+        GameManager.gameManager.mt += (GameManager.gameManager.time / 2 / 60);
+        GameManager.gameManager.time = 0;
         OnNoClicked();
     }
 

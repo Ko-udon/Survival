@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public float hp;
     public float mt;
     public float air;
-    public float time;
+    public int time;
     public int day;
 
     public List<Sprite> item_images;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         player.Mt=mt;
         player.Air=air;
 
-        time = 6;
+        time = 300;
         day = 1;
 
         name_image.Add("AAA", item_images[0]);
@@ -133,12 +133,7 @@ public class GameManager : MonoBehaviour
         if(time <= 0)
         {
             day++;
-            time = 24;
-        }
-
-        if(time % 1 >= 0.6)
-        {
-            time += 0.4f;
+            time += 1440;
         }
 
         if(hp > 100)
@@ -183,6 +178,39 @@ public class GameManager : MonoBehaviour
             if (head_inventory.Count + hand_inventory.Count + body_inventory.Count + shoes_inventory.Count < MAX_SIZE)
             {
                 inventory.Add(name);
+                if(inventory.Equals(head_inventory))
+                {
+                    if(equip_hand != "")
+                    {
+                        equip_hand_index--;
+                    }
+                    if(equip_body != "")
+                    {
+                        equip_body_index--;
+                    }
+                    if (equip_shoes != "")
+                    {
+                        equip_shoes_index--;
+                    }
+                }
+                else if(inventory.Equals(hand_inventory))
+                {
+                    if (equip_body != "")
+                    {
+                        equip_body_index--;
+                    }
+                    if (equip_shoes != "")
+                    {
+                        equip_shoes_index--;
+                    }
+                }
+                else if(inventory.Equals(body_inventory))
+                {
+                    if (equip_shoes != "")
+                    {
+                        equip_shoes_index--;
+                    }
+                }
                 return "succes";
             }
             else

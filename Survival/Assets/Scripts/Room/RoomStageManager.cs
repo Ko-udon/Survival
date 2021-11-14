@@ -9,8 +9,7 @@ public class RoomStageManager : MonoBehaviour
     public GameObject CraftWindow;
     public GameObject HangerWindow;
     public GameObject BedWindow;
-
-    public GameObject Door;
+    public GameObject DoorWindow;
 
     void Start()
     {
@@ -24,16 +23,9 @@ public class RoomStageManager : MonoBehaviour
 
     public void OnClicked(GameObject window)
     {
-        if (!InventoryWindow.activeSelf && !CraftWindow.activeSelf && !HangerWindow.activeSelf && !BedWindow.activeSelf)
+        if (!InventoryWindow.activeSelf && !CraftWindow.activeSelf && !HangerWindow.activeSelf && !BedWindow.activeSelf && !DoorWindow.activeSelf)
         {
-            if (window == Door)
-            {
-                SceneManager.LoadScene("Outside");
-            }
-            else
-            {
-                window.SetActive(true);
-            }
+            window.SetActive(true);
         }
     }
 }

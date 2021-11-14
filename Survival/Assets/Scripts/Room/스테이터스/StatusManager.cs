@@ -27,9 +27,7 @@ public class StatusManager : MonoBehaviour
         }
         else
         {
-            string time = GameManager.gameManager.time.ToString("00.00");
-            time = time.Replace(".", " : ");
-            timeText.text = time;
+            timeText.text = (GameManager.gameManager.time / 60) + " : " + (GameManager.gameManager.time % 60).ToString("00");
         }
         HPGauge.fillAmount = GameManager.gameManager.hp / 100;
         MTGauge.fillAmount = GameManager.gameManager.mt / 100;
