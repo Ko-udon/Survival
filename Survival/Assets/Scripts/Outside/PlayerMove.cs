@@ -126,7 +126,7 @@ public class PlayerMove : MonoBehaviour
         int item = 3;
         //farmClean.gameObject.SetActive(true);
         //farm.gameObject.SetActive(false);
-        Debug.Log("itemȹ��" + item);
+        Debug.Log("item111" + item);
     }
 
     //������ ������ ���� �������� ƨ����
