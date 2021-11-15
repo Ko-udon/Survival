@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
         {
             mt = 100;
         }
-
+        
         
     }
 

@@ -50,10 +50,11 @@ public class BattleGameManager : MonoBehaviour
             SceneManager.LoadScene("Outside");
         }
 
-        if(player.isWin==true){
-            
-            player.isBattle=false;
+        if(player.endBattle==true){
+            player.endBattle=false;
             player.isWin=false;
+            player.isBattle=false;
+            Debug.Log("win");
             SceneManager.LoadScene("Outside");
         }
     }

@@ -24,7 +24,7 @@ public class PlayerCharacter : MonoBehaviour
     public int critical;
     public int speed;
 
-    private bool isDead;
+    public bool isDead;
     public bool isRun;
     public bool isAttack;
     public bool isCritical;
@@ -33,6 +33,8 @@ public class PlayerCharacter : MonoBehaviour
     public bool isWin;
     public bool isHome;
 
+    public bool endBattle;
+
     public int exp;
 
     public string booty_item;
@@ -40,8 +42,11 @@ public class PlayerCharacter : MonoBehaviour
 
     public Image HpBar;
     public Text damage_player_text;
+    public Text causeDeathText;
 
     Rigidbody2D rigid;
+
+    CapsuleCollider2D capsuleCol;
     public EnemyCharacter enemy;
     // Start is called before the first frame update
 
@@ -70,6 +75,7 @@ public class PlayerCharacter : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         rigid = GetComponent<Rigidbody2D>();
+        capsuleCol=GetComponent<CapsuleCollider2D>();
         AtkDamage = power;
         canMove = true;
         isAttack = true;
@@ -96,28 +102,45 @@ public class PlayerCharacter : MonoBehaviour
     {
         
     }
-    void GetVictoryReward()
+    public void getVictoryReward()
     {
-
+        exp+=enemy.exp;
+        booty_item=enemy.booty_item;
+        Debug.Log("경험치");
+        Debug.Log(exp);
+        Debug.Log("전리품");
+        Debug.Log(booty_item);
     }
 
-    void GetRunPenalty()
+    void getRunPenalty()
     {
-
+        Mt=Mt-5;
     }
 
     void decreaseAir()
     {
         Air -= Time.deltaTime;
     }
-    void Dead()
+    void checkDead()
     {
-        if ((Hp <= 0)||(Mt <= 0)||(Air<=0))
+        if (Hp <= 0)
         {
             isDead = true;
-            Time.timeScale=0;
-            gameObject.SetActive(false);
+            //Time.timeScale=0;
+            StartCoroutine("showDeathText","체력");
+            //gameObject.SetActive(false);
             //Destroy(gameObject);
+        }
+        else if(Mt<=0){
+            isDead=true;
+            StartCoroutine("showDeathText","멘탈");
+        }
+        else if(Air<=0){
+            isDead=true;
+            
+            StartCoroutine("showDeathText","공기");
+            
+            
         }
     }
     void checkAttack()
@@ -159,6 +182,24 @@ public class PlayerCharacter : MonoBehaviour
         //damage_enemy_text.gameObject.SetActive(false);
 
     }
+    IEnumerator showDeathText(string cause)
+    {
+        causeDeathText.gameObject.SetActive(true);
+        causeDeathText.text=cause+"로 인해 사망하였습니다!....";
+        canMove=false;
+        //isTrigger 비활성화 및 이동 제한
+        capsuleCol.isTrigger=true;
+        rigid.constraints = RigidbodyConstraints2D.FreezePositionY; 
+        rigid.constraints = RigidbodyConstraints2D.FreezePositionX; 
+        gameObject.GetComponent<PlayerMove>().enabled=false;
+
+        yield return new WaitForSeconds(4.0f);
+        causeDeathText.gameObject.SetActive(false);
+        
+        gameObject.SetActive(false);
+        
+    }
+
     void GetDamage()
     {
         if (enemy.isAttack == true)
@@ -244,6 +285,7 @@ public class PlayerCharacter : MonoBehaviour
         else if (other.gameObject.tag == "RunTrigger")
         {
             isRun = true;
+            getRunPenalty();
         }
 
         else if (other.gameObject.tag=="EnemyType_1")
@@ -262,7 +304,8 @@ public class PlayerCharacter : MonoBehaviour
 
         else if(other.gameObject.tag=="EnemyBlock")
         {
-            isWin=true;
+            endBattle=true;
+            //isWin=true;
             //SceneManager.LoadScene("Outside");
         }
 
@@ -322,11 +365,12 @@ public class PlayerCharacter : MonoBehaviour
     void Update()
     {
         Move();
-        Dead();
+        checkDead();
         //decreaseAir();
         
 
         if(SceneManager.GetActiveScene().name=="Battle"){
+            gameObject.GetComponent<PlayerMove>().enabled=false;
             if(GameObject.FindGameObjectWithTag("Enemy")!=null){
                 enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
             }
@@ -337,7 +381,7 @@ public class PlayerCharacter : MonoBehaviour
 
 
         if(SceneManager.GetActiveScene().name=="Outside"){
-            
+            gameObject.GetComponent<PlayerMove>().enabled=true;
             playerUI.SetActive(false);
             decreaseAir();
             rigid.gravityScale=0;
@@ -349,7 +393,7 @@ public class PlayerCharacter : MonoBehaviour
             
             rigid.gravityScale=0;
         }
-
+        
 
 
 

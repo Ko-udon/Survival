@@ -16,8 +16,6 @@ public class EnemyCharacter : MonoBehaviour
     public int avoid;
     public int critical;
     public int speed;
-
-    public int exp;
     
     private bool isDead;
     private bool isRun;
@@ -31,8 +29,10 @@ public class EnemyCharacter : MonoBehaviour
     public Image HPbar;
     public Text damage_enemy_text;
 
-    public GameObject booty;
+    //public GameObject booty;
     public string booty_item;
+    public int exp;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -53,7 +53,8 @@ public class EnemyCharacter : MonoBehaviour
         if (Hp <= 0)
         {
             isDead = true;
-            Instantiate(booty,new Vector2(gameObject.transform.position.x+1,gameObject.transform.position.y),Quaternion.identity);
+            //Instantiate(booty,new Vector2(gameObject.transform.position.x+1,gameObject.transform.position.y),Quaternion.identity);
+            player.getVictoryReward();
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }

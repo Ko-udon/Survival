@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -42,13 +41,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(SceneManager.GetActiveScene().name=="Battle"){
-        //     gameObject.GetComponent<PlayerMove>().enabled=false;
-        // }
-
-        // if(SceneManager.GetActiveScene().name=="Battle"){
-        //     gameObject.GetComponent<PlayerMove>().enabled=true;
-        // }
+        
 
         //Move Value
         h = Input.GetAxisRaw("Horizontal");
