@@ -238,8 +238,7 @@ public class GameManager : MonoBehaviour
     {
         if(inventory.ContainsKey(name))
         {
-            //�Է¹��� �̸��� ���� ��� ȿ�� ����
-            Debug.Log(name + " use");
+            GameManager.gameManager.hp += 10;
             return deleteInventory(inventory, name, 1);
         }
         else
@@ -344,22 +343,34 @@ public class GameManager : MonoBehaviour
             if(equip_head == name)
             {
                 equip_head = "";
-                equip_head_index = -1;
+                if(equip_head_index == index)
+                {
+                    equip_head_index = -1;
+                }
             }
             else if(equip_hand == name)
             {
                 equip_hand = "";
-                equip_hand_index = -1;
+                if (equip_hand_index == index)
+                {
+                    equip_hand_index = -1;
+                }
             }
             else if(equip_body == name)
             {
                 equip_body = "";
-                equip_body_index = -1;
+                if (equip_body_index == index)
+                {
+                    equip_body_index = -1;
+                }
             }
             else if (equip_shoes == name)
             {
                 equip_shoes = "";
-                equip_shoes_index = -1;
+                if (equip_shoes_index == index)
+                {
+                    equip_shoes_index = -1;
+                }
             }
             inventory.Remove(name);
 
