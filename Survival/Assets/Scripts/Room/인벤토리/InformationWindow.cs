@@ -110,7 +110,15 @@ public class InformationWindow : MonoBehaviour
                 break;
 
             case "Ingred":
-                GameManager.gameManager.deleteInventory(GameManager.gameManager.ingred_inventory, this.transform.GetChild(1).GetComponent<Text>().text, 1);
+                if(GameManager.gameManager.recipe_inventory.Contains(this.transform.GetChild(1).GetComponent<Text>().text))
+                {
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.recipe_inventory, this.transform.GetChild(1).GetComponent<Text>().text);
+                }
+                else
+                {
+                    GameManager.gameManager.deleteInventory(GameManager.gameManager.ingred_inventory, this.transform.GetChild(1).GetComponent<Text>().text, 1);
+                }
+                
                 break;
         }
 

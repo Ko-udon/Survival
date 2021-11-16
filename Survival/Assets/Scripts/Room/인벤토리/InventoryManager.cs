@@ -132,6 +132,17 @@ public class InventoryManager : MonoBehaviour
                     transform.GetChild(i).gameObject.SetActive(false);
                 }
                 int ing = 0;
+                foreach (string name in GameManager.gameManager.recipe_inventory)
+                {
+
+                    transform.GetChild(ing).gameObject.SetActive(true);
+                    transform.GetChild(ing).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
+                    transform.GetChild(ing).GetComponent<ItemInfo>().item_name = name;
+                    transform.GetChild(ing).GetComponent<ItemInfo>().state = inventory_state;
+                    transform.GetChild(ing).GetChild(0).GetComponent<Text>().text = "";
+
+                    ing++;
+                }
                 foreach (KeyValuePair<string, int> name in GameManager.gameManager.ingred_inventory)
                 {
                     

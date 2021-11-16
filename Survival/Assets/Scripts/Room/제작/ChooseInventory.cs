@@ -23,15 +23,32 @@ public class ChooseInventory : MonoBehaviour
             transform.GetChild(i).gameObject.SetActive(false);
         }
         int ing = 0;
-        foreach (KeyValuePair<string, int> name in GameManager.gameManager.ingred_inventory)
+
+        if(craftManager.buttonNum == 0)
         {
+            foreach (string name in GameManager.gameManager.recipe_inventory)
+            {
 
-            transform.GetChild(ing).gameObject.SetActive(true);
-            transform.GetChild(ing).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name.Key];
-            transform.GetChild(ing).GetChild(0).GetComponent<Text>().text = name.Value.ToString();
-            transform.GetChild(ing).name = name.Key;
+                transform.GetChild(ing).gameObject.SetActive(true);
+                transform.GetChild(ing).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name];
+                transform.GetChild(ing).GetChild(0).GetComponent<Text>().text = "";
+                transform.GetChild(ing).name = name;
 
-            ing++;
+                ing++;
+            }
+        }
+        else
+        {
+            foreach (KeyValuePair<string, int> name in GameManager.gameManager.ingred_inventory)
+            {
+
+                transform.GetChild(ing).gameObject.SetActive(true);
+                transform.GetChild(ing).GetComponent<Image>().sprite = GameManager.gameManager.name_image[name.Key];
+                transform.GetChild(ing).GetChild(0).GetComponent<Text>().text = name.Value.ToString();
+                transform.GetChild(ing).name = name.Key;
+
+                ing++;
+            }
         }
     }
 
@@ -39,6 +56,7 @@ public class ChooseInventory : MonoBehaviour
     {
         backgroundButton.SetActive(true);
         useWindow.SetActive(true);
+        useWindow.transform.GetChild(0).GetComponent<Text>().text = GameManager.gameManager.name_info[item.name];
         selectItem = item.name;
     }
 
@@ -49,10 +67,20 @@ public class ChooseInventory : MonoBehaviour
         if(craftManager.buttonNum == 0)
         {
             craftManager.select_list[craftManager.buttonNum] = selectItem;
-            craftManager.select_list[1] = "HHH";
-            craftManager.select_list[2] = "JJJ";
-            craftManager.select_list[3] = "III";
-            craftManager.select_list[4] = "LLL";
+            if(selectItem == "HP 회복 물약 레시피")
+            {
+                craftManager.select_list[1] = "사과";
+                craftManager.select_list[2] = "당근";
+                craftManager.select_list[3] = "";
+                craftManager.select_list[4] = "";
+            }
+            else if(selectItem == "MT 회복 물약 레시피")
+            {
+                craftManager.select_list[1] = "버섯";
+                craftManager.select_list[2] = "다이아몬드";
+                craftManager.select_list[3] = "나무";
+                craftManager.select_list[4] = "";
+            }
         }
         else
         {

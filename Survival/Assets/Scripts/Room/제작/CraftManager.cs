@@ -132,7 +132,22 @@ public class CraftManager : MonoBehaviour
                 GameManager.gameManager.deleteInventory(GameManager.gameManager.ingred_inventory, select_list[i], craft_num);
                 
             }
-            string isSucces = GameManager.gameManager.addInventory(GameManager.gameManager.expend_inventory, "CCC", craft_num);
+
+            select_list.Sort(1, 4, Comparer<string>.Default);
+
+            string isSucces;
+            if (select_list[1] == "" && select_list[2] == "" && select_list[3] == "당근" && select_list[4] == "사과")
+            {
+                isSucces = GameManager.gameManager.addInventory(GameManager.gameManager.expend_inventory, "HP 회복 물약", craft_num);
+            }
+            else if(select_list[1] == "" && select_list[2] == "나무" && select_list[3] == "다이아몬드" && select_list[4] == "버섯")
+            {
+                isSucces = GameManager.gameManager.addInventory(GameManager.gameManager.expend_inventory, "MT 회복 물약", craft_num);
+            }
+            else
+            {
+                isSucces = "notCraft";
+            }
            
 
             craft_num = 1;
@@ -147,9 +162,13 @@ public class CraftManager : MonoBehaviour
             {
                 window.transform.GetChild(0).GetComponent<Text>().text = "제작 성공!";
             }
-            else
+            else if(isSucces == "fail")
             {
                 window.transform.GetChild(0).GetComponent<Text>().text = "인벤토리 공간이 부족하여 제작에 실패했습니다.";
+            }
+            else if(isSucces == "notCraft")
+            {
+                window.transform.GetChild(0).GetComponent<Text>().text = "제작 실패!\n사용한 재료들은 사라졌습니다.";
             }
         }
     }

@@ -41,6 +41,7 @@ public class ItemInfo : MonoBehaviour
         info_window.transform.GetComponent<InformationWindow>().index = index;
         info_window.transform.GetChild(0).GetComponent<Image>().sprite = this.GetComponent<Image>().sprite;
         info_window.transform.GetChild(1).GetComponent<Text>().text = this.item_name;
+        info_window.transform.GetChild(2).GetComponent<Text>().text = GameManager.gameManager.name_info[this.item_name];
 
         if (state == "Equip" && transform.GetChild(0).GetComponent<Text>().text != "E")
         {
@@ -57,6 +58,7 @@ public class ItemInfo : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_head];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_head;
+                    equip_window.transform.GetChild(2).GetComponent<Text>().text = GameManager.gameManager.name_info[GameManager.gameManager.equip_head];
                 }
             }
             else if(GameManager.gameManager.hand_inventory.Contains(item_name))
@@ -69,6 +71,7 @@ public class ItemInfo : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_hand];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_hand;
+                    equip_window.transform.GetChild(2).GetComponent<Text>().text = GameManager.gameManager.name_info[GameManager.gameManager.equip_hand];
                 }
             }
             else if (GameManager.gameManager.body_inventory.Contains(item_name))
@@ -81,6 +84,7 @@ public class ItemInfo : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_body];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_body;
+                    equip_window.transform.GetChild(2).GetComponent<Text>().text = GameManager.gameManager.name_info[GameManager.gameManager.equip_body];
                 }
             }
             else if (GameManager.gameManager.shoes_inventory.Contains(item_name))
@@ -93,6 +97,7 @@ public class ItemInfo : MonoBehaviour
                 {
                     equip_window.transform.GetChild(0).GetComponent<Image>().sprite = GameManager.gameManager.name_image[GameManager.gameManager.equip_shoes];
                     equip_window.transform.GetChild(1).GetComponent<Text>().text = GameManager.gameManager.equip_shoes;
+                    equip_window.transform.GetChild(2).GetComponent<Text>().text = GameManager.gameManager.name_info[GameManager.gameManager.equip_shoes];
                 }
             }
         }
