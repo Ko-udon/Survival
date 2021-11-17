@@ -46,7 +46,7 @@ public class ItemInfo : MonoBehaviour
         if (state == "Equip" && transform.GetChild(0).GetComponent<Text>().text != "E")
         {
             equip_window.SetActive(true);
-            equip_window.transform.position = new Vector2(this.transform.position.x - 456, this.transform.position.y);
+            equip_window.transform.position = new Vector2(this.transform.position.x - 471, this.transform.position.y);
 
             if(GameManager.gameManager.head_inventory.Contains(item_name))
             {

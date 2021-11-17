@@ -28,4 +28,14 @@ public class RoomStageManager : MonoBehaviour
             window.SetActive(true);
         }
     }
+
+    public void OnPressed(GameObject text)
+    {
+        text.transform.position = new Vector2(text.transform.position.x, text.transform.position.y - 20);
+    }
+
+    public void OnRealesed(GameObject text)
+    {
+        text.transform.position = new Vector2(text.transform.position.x, text.transform.position.y + 20);
+    }
 }

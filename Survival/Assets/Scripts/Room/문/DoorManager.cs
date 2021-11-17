@@ -19,12 +19,10 @@ public class DoorManager : MonoBehaviour
         if(GameManager.gameManager.time < 360)
         {
             transform.GetChild(0).GetComponent<Text>().text = "남은 시간이 6시간 미만이므로 밖으로 나갈 수 없습니다.";
-            yesButton.GetComponent<Button>().interactable = false;
         }
         else
         {
             transform.GetChild(0).GetComponent<Text>().text = "밖으로 나가시겠습니까?";
-            yesButton.GetComponent<Button>().interactable = true;
         }
         
     }
@@ -32,7 +30,10 @@ public class DoorManager : MonoBehaviour
     public void OnYesCilcked()
     {
         OnNoClicked();
-        SceneManager.LoadScene("Outside");
+        if(GameManager.gameManager.time >= 360)
+        {
+            SceneManager.LoadScene("Outside");
+        }
     }
 
     public void OnNoClicked()

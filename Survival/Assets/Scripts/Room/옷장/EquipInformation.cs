@@ -34,7 +34,7 @@ public class EquipInformation : MonoBehaviour
         equip_window.SetActive(true);
 
         info_window.transform.position = this.transform.position;
-        equip_window.transform.position = new Vector2(this.transform.position.x - 456, this.transform.position.y);
+        equip_window.transform.position = new Vector2(this.transform.position.x - 471, this.transform.position.y);
 
         info_window.transform.GetChild(0).GetComponent<Image>().sprite = this.GetComponent<Image>().sprite;
         info_window.transform.GetChild(1).GetComponent<Text>().text = this.item_name;
