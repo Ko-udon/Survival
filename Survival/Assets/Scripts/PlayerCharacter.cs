@@ -30,7 +30,6 @@ public class PlayerCharacter : MonoBehaviour
     public bool isCritical;
     public bool canMove;
     public bool isBattle;
-    public bool isWin;
     public bool isHome;
 
     public bool endBattle;
@@ -48,6 +47,10 @@ public class PlayerCharacter : MonoBehaviour
 
     CapsuleCollider2D capsuleCol;
     public EnemyCharacter enemy;
+
+    
+    public bool isWin;
+    public int enemyCount;
     // Start is called before the first frame update
 
 
@@ -81,7 +84,7 @@ public class PlayerCharacter : MonoBehaviour
         isAttack = true;
 
         //playerMove
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
         //farmEnd.gameObject.SetActive(false);
@@ -93,6 +96,10 @@ public class PlayerCharacter : MonoBehaviour
         isFarmDone = false;
         farmingTimer = 0;
         
+
+        //수정...
+        
+        
     }
     void Start()
     {
@@ -102,6 +109,8 @@ public class PlayerCharacter : MonoBehaviour
     {
         exp+=enemy.exp;
         booty_item=enemy.booty_item;
+        isWin=true;
+        
         Debug.Log("경험치");
         Debug.Log(exp);
         Debug.Log("전리품");
@@ -287,35 +296,56 @@ public class PlayerCharacter : MonoBehaviour
         else if (other.gameObject.tag == "RunTrigger")
         {
             isRun = true;
+            isWin=false;
             getRunPenalty();
         }
 
         else if (other.gameObject.tag=="EnemyType_1")
         {
+            
             enemyType=1;
+            
+            enemyCount++;
+
             isBattle=true;
-            //SceneManager.LoadScene("Battle");
+            
+
+            //전투시 오른쪽 방향
+            //anim.SetInteger("hAxisRaw",1);
+            //anim.SetInteger("hAxisRaw",-1);
+            //anim.SetBool("isChange",false);
+
+            //this.spriteRenderer.sprite=rightSprite;
+            
         }
 
         else if (other.gameObject.tag=="EnemyType_2")
         {
+            //this.spriteRenderer.sprite=rightSprite;
             enemyType=2;
+            
+            enemyCount++;
+
             isBattle=true;
-            //SceneManager.LoadScene("Battle");
+            // anim.SetInteger("hAxisRaw",1);
+            // anim.SetInteger("hAxisRaw",-1);
+            // anim.SetBool("isChange",false);
+            //this.spriteRenderer.sprite=rightSprite;
+            
         }
 
         else if(other.gameObject.tag=="EnemyBlock")
         {
             endBattle=true;
-            //isWin=true;
-            //SceneManager.LoadScene("Outside");
+            isWin=true;
+            
         }
 
         else if(other.gameObject.tag=="Home")
         {
             isHome=true;
 
-            //SceneManager.LoadScene("Home");
+            
         }
 
         else if(other.gameObject.tag=="trap")
@@ -373,6 +403,7 @@ public class PlayerCharacter : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name=="Battle"){
             gameObject.GetComponent<PlayerMove>().enabled=false;
+            
             if(GameObject.FindGameObjectWithTag("Enemy")!=null){
                 enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
             }

@@ -499,6 +499,7 @@ MonoBehaviour:
   damage_player_text: {fileID: 8300453586797351755}
   causeDeathText: {fileID: 2819711271004183500}
   enemy: {fileID: 0}
+  rightSprite: {fileID: 21300000, guid: 3f88515ae97f56a45b5d61f949b99296, type: 3}
   maxSpeed: 0
   isFarming: 0
   isFarmDone: 0

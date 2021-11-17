@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
 
     public Text player_mt_text;
     public Text player_hp_text;
+
+    public Text reward_text;
+    public Image rewardImage;
     public Image Airbar;
     public Text timerTxt;
     public float time = 59f;
@@ -53,5 +56,24 @@ public class UIManager : MonoBehaviour
         Timer();
 
         Airbar.fillAmount = player.Air / 100;
+
+        
+        if(player.isWin==true)
+        {
+            StartCoroutine("showRewardUI");
+            
+        }
+    }
+
+    IEnumerator showRewardUI()
+    {
+        yield return new WaitForSeconds(1.0f);
+        rewardImage.gameObject.SetActive(true);
+        reward_text.text="경험치: "+player.exp.ToString()+" 전리품:"+player.booty_item;
+        yield return new WaitForSeconds(2.0f);
+        
+        rewardImage.gameObject.SetActive(false);
+        player.isWin=false;
+
     }
 }

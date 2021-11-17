@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     bool isHorizonMove;
     bool isblocked;
 
+  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,8 @@ public class EnemyAI : MonoBehaviour
             getBack();
             isblocked = false;
         }
+
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
