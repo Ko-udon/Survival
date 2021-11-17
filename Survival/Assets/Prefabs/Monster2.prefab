@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3110808865580814525}
   - component: {fileID: 3110808865580814497}
   - component: {fileID: 1287991422893839317}
+  - component: {fileID: 172928360871484114}
+  - component: {fileID: 8446355330493764483}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: EnemyType_2
@@ -105,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &3110808865580814497
 Animator:
   serializedVersion: 3
@@ -167,3 +169,38 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &172928360871484114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110808865580814522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6c2210d9db778040b1d3518410ca044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!195 &8446355330493764483
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110808865580814522}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.3046875
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.3828125
+  m_BaseOffset: 1.1914062
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

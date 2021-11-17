@@ -80,10 +80,6 @@ public class PlayerCharacter : MonoBehaviour
         canMove = true;
         isAttack = true;
 
-        
-
-
-
         //playerMove
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -262,6 +258,12 @@ public class PlayerCharacter : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "trap")
+        {
+            isblocked = true;
+        }
+
+
         if (other.gameObject.tag == "Enemy")
         {
             checkAttack();
@@ -394,37 +396,6 @@ public class PlayerCharacter : MonoBehaviour
             rigid.gravityScale=0;
         }
         
-
-
-
-        // //playerMove
-        // if (Input.GetButton("Horizontal"))
-        // {
-        //     rigid.velocity = new Vector2(0, rigid.velocity.y);
-        // }
-        // else if (Input.GetButton("Vertical"))
-        // {
-        //     rigid.velocity = new Vector2(rigid.velocity.x, 0);
-        // }
-
-        // //Direction Sprite
-        // if (Input.GetButton("Horizontal"))
-        // {
-        //     spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-        // }
-
-        // if (Input.GetButtonUp("Horizontal"))
-
-        //     if (rigid.velocity.normalized.x == 0)
-        //     {
-        //         anim.SetBool("isWalking", false);
-
-        //     }
-        //     else
-        //     {
-        //         anim.SetBool("isWalking", true);
-        //     }
-
         if (isblocked)
         {
             getBack();
@@ -463,14 +434,8 @@ public class PlayerCharacter : MonoBehaviour
     {
         rigid.position = new Vector2(rigid.position.x - 2.5f, rigid.position.y);
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.tag == "trap")
-    //     {
-    //         isblocked = true;
-    //     }
 
-    // }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "farm")

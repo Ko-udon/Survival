@@ -41,8 +41,6 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         //Move Value
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
@@ -75,14 +73,14 @@ public class PlayerMove : MonoBehaviour
         else
             anim.SetBool("isChange", false);
 
-        //Trap�� ���� �������� üũ
+        //Check player on trap
         if (isblocked)
         {
             getBack();
             isblocked = false;
         }
 
-        //Farming Ÿ�Ͽ� Player �ִ��� üũ
+        //Check player on farming zone
         if (isFarming)
         {
             if (farmingTimer > 300)
@@ -103,9 +101,9 @@ public class PlayerMove : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate() //1�ʿ� 50�� ���� ����
+    void FixedUpdate() //50times per second
     {
-        //�¿�������̸� (h,0) ���ϸ� (0,v) �밢�� �ȵ�
+        //left,right(Horizental) (h,0) up,down(Vertical) (0,v) Can't move daegaksun 
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
         rigid.velocity = moveVec * Speed;
 
@@ -113,7 +111,7 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    //item ȹ�� ȹ���� �Ĺ����� ��ο���
+    //Geting item 
     void getItem()
     {
         int item = 3;
@@ -122,14 +120,14 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("item111" + item);
     }
 
-    //������ ������ ���� �������� ƨ����
+    //When player on trap, it make move back 1 tiles
     void getBack()
     {
         rigid.position = isHorizonMove ? 
             new Vector2(rigid.position.x - 2f * h, rigid.position.y) : new Vector2(rigid.position.x, rigid.position.y - 2f * v);
     }
 
-    //������ ��Ҵ��� Collision üũ
+    //Collison
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Trap")
