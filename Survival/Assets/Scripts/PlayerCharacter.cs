@@ -21,7 +21,7 @@ public class PlayerCharacter : MonoBehaviour
     public int defense;
     public int accuracy;
     public int avoid;
-    public int critical;
+    public float critical;
     public int speed;
 
     public bool isDead;
@@ -40,7 +40,11 @@ public class PlayerCharacter : MonoBehaviour
     
 
     public Image HpBar;
-    public Text damage_player_text;
+    public Text normalDamageText;
+
+    public Text criticalDamageText;
+    public Text missText;
+
     public Text causeDeathText;
 
     Rigidbody2D rigid;
@@ -50,7 +54,10 @@ public class PlayerCharacter : MonoBehaviour
 
     
     public bool isWin;
+    public bool killenemy;
     public int enemyCount;
+
+    public int killCount;
     // Start is called before the first frame update
 
 
@@ -109,12 +116,13 @@ public class PlayerCharacter : MonoBehaviour
     {
         exp+=enemy.exp;
         booty_item=enemy.booty_item;
+        killCount++;
+        killenemy=true;
         isWin=true;
-        
-        Debug.Log("경험치");
-        Debug.Log(exp);
-        Debug.Log("전리품");
-        Debug.Log(booty_item);
+        // Debug.Log("경험치");
+        // Debug.Log(exp);
+        // Debug.Log("전리품");
+        // Debug.Log(booty_item);
     }
 
     void getRunPenalty()
@@ -150,43 +158,61 @@ public class PlayerCharacter : MonoBehaviour
     }
     void checkAttack()
     {
-        int check=1;
-        //check = (accuracy - avoid + 30) / 100 * ((int)Air / totalAir);
+        float check=1;
+        check = (accuracy - enemy.avoid + 30) / 100 * ((int)Air / totalAir)*100; //%연산을 위한 *100
         
-        if (check <= 0)
-        {
-            isAttack = false;
+        
+        int tmp=Random.Range(1,101);  //1~100
+
+        if(tmp<=check){
+            isAttack=true;
         }
-        else
-        {
-            isAttack = true;
+        else if(tmp>check){
+            isAttack=false;
         }
     }
 
     void checkCritical()
     {
         float check;
-        check = (critical / 100) * (totalAir / Air);
-        if (check >= 1)
-        {
-            isCritical = true;
-        }
-        else
-        {
-            isCritical = false;
-        }
+        check = (critical / 100)*(totalAir / Air)*100;  //%연산을 위한 *100
+        //Debug.Log((int)check); 10%
 
+        int tmp=Random.Range(1,101);  //1~100
+
+        if(tmp<=check){
+            isCritical=true;
+        }
+        else if(tmp>check){
+            isCritical=false;
+        }
+        
     }
-    IEnumerator destroy_text()
+    IEnumerator textDamage(int damage)
     {
 
-        damage_player_text.gameObject.SetActive(true);
-        damage_player_text.text = "-" + (enemy.AtkDamage - defense).ToString() + "\n";
+        normalDamageText.gameObject.SetActive(true);
+        normalDamageText.text = "-" + damage.ToString() + "\n";
         yield return new WaitForSeconds(1.0f);
-        damage_player_text.gameObject.SetActive(false);
-        //damage_enemy_text.gameObject.SetActive(false);
-
+        normalDamageText.gameObject.SetActive(false);   
     }
+    IEnumerator textMiss()
+    {
+        missText.gameObject.SetActive(true);
+        missText.text="Miss";
+        yield return new WaitForSeconds(1.0f);
+        missText.gameObject.SetActive(false);
+    }
+
+    IEnumerator textCritical(int damage)
+    {
+        criticalDamageText.gameObject.SetActive(true);
+        criticalDamageText.text="-"+damage.ToString()+"\n";
+        yield return new WaitForSeconds(1.0f);
+        criticalDamageText.gameObject.SetActive(false);
+    }
+
+
     IEnumerator showDeathText(string cause)
     {
         causeDeathText.gameObject.SetActive(true);
@@ -213,35 +239,50 @@ public class PlayerCharacter : MonoBehaviour
             {
                 if((enemy.AtkDamage - defense) <= 0)
                 {
-                    //Hp = Hp;
+                    //공격도 맞고 크리티컬이지만 방어력이 높아 데미지0인 경우
+                    int damage=0;
                     HpBar.fillAmount = (float)Hp / 100;
                     /*rigid.AddForce(new Vector2(0,enemy.speed * 20));*/
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
                 else
                 {
-                    Hp = Hp - (enemy.AtkDamage - defense);
+                    //공격도 맞고 크리티컬 데미지 입은 경우
+                    //(enemy.AtkDamage - defense)
+                    int damage=enemy.AtkDamage-defense;
+                    Hp = Hp - damage;
                     HpBar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textCritical",damage);
                 }
                
             }
             else
             {
+                //공격은 맞고 크리티컬 데미지는 아니지만 방어력이 높아 데미지0인 경우
                 if ((enemy.AtkDamage - defense) <= 0)
                 {
                     //Hp = Hp;
+                    int damage=0;
                     HpBar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
                 else
                 {
-                    Hp = Hp - (enemy.AtkDamage - defense);
+                    //공격은 맞고 크리티컬 데미지는 아닌 경우
+                    int damage=enemy.AtkDamage-defense;
+                    Hp = Hp - damage;
                     HpBar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
             }
         }
+        else 
+        //공격을 회피한 경우
+        {
+            StartCoroutine("textMiss");
+
+        }
+
         Nulkback();
 
     }
@@ -297,6 +338,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             isRun = true;
             isWin=false;
+            killCount=0;
             getRunPenalty();
         }
 
@@ -333,11 +375,13 @@ public class PlayerCharacter : MonoBehaviour
             //this.spriteRenderer.sprite=rightSprite;
             
         }
+        
 
         else if(other.gameObject.tag=="EnemyBlock")
         {
             endBattle=true;
-            isWin=true;
+            killCount=0;
+            //isWin=true;
             
         }
 

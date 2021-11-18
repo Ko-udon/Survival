@@ -19,6 +19,7 @@ TagManager:
   - EnemyBlock
   - EnemyType_1
   - EnemyType_2
+  - EnemyType_3
   layers:
   - Default
   - TransparentFX

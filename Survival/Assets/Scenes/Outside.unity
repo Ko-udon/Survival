@@ -22875,7 +22875,7 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyList: []
   enemy: {fileID: 0}
-  enemyCount: 2
+  enemyCount: 3
 --- !u!1 &1220076571
 GameObject:
   m_ObjectHideFlags: 0

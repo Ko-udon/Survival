@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     PlayerCharacter player;
+    //EnemyCharacter enemy;
+
+    SpriteRenderer enemySprite;
     //public int player_hp;
     //public int player_mt;
     public int player_air;
@@ -14,9 +17,22 @@ public class UIManager : MonoBehaviour
     public Text player_mt_text;
     public Text player_hp_text;
 
-    public Text reward_text;
-    public Image rewardImage;
+
+
+    // public Text reward_text;
+    // public Image rewardImage;
     public Image Airbar;
+
+    // public Image monsterImage;
+    // public Text monsterCountText;
+
+    // public Image bootyImage;
+    // public Text bootyCountText;
+    // public Text bootyText;
+
+    public Image reward_1;
+    public Image reward_2;
+
     public Text timerTxt;
     public float time = 59f;
     private float selectCountdown;
@@ -24,6 +40,9 @@ public class UIManager : MonoBehaviour
     void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerCharacter>();
+        
+        
+
         selectCountdown = time;
 
 
@@ -44,7 +63,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
     }
 
     // Update is called once per frame
@@ -68,12 +87,20 @@ public class UIManager : MonoBehaviour
     IEnumerator showRewardUI()
     {
         yield return new WaitForSeconds(1.0f);
-        rewardImage.gameObject.SetActive(true);
-        reward_text.text="경험치: "+player.exp.ToString()+" 전리품:"+player.booty_item;
-        yield return new WaitForSeconds(2.0f);
-        
-        rewardImage.gameObject.SetActive(false);
         player.isWin=false;
+
+        if(player.enemyType==1){
+            reward_1.gameObject.SetActive(true);
+            yield return new WaitForSeconds(2.0f);        
+            reward_1.gameObject.SetActive(false);
+        }
+        else if(player.enemyType==2){
+            reward_2.gameObject.SetActive(true);
+            yield return new WaitForSeconds(2.0f);        
+            reward_2.gameObject.SetActive(false);
+        }
+
+        
 
     }
 }

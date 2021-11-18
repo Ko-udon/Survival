@@ -67,6 +67,7 @@ public class BattleGameManager : MonoBehaviour
 
         if(player.endBattle==true){
             player.endBattle=false;
+            player.isWin=false;
             //player.isWin=false;
             player.isBattle=false;
             Debug.Log("win");

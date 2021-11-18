@@ -33,17 +33,22 @@ public class OutsideManager : MonoBehaviour
 
     void CheckEnemy()
     {
-        if(player.isWin==true)
+        if(player.killenemy==true)
         {
-            //win
-            int type=player.enemyType;
             for(int j=0;j<enemyCount;j++)
                 {
-                    if(enemyList[j].tag=="EnemyType_"+type.ToString()){
-                            Destroy(enemyList[player.enemyType-1]);
+                    if(enemyList[j].tag=="EnemyType_"+player.enemyType.ToString()){
+                            DestroyImmediate(enemyList[j]);
                         }
                 }
+
+            player.killenemy=false;
+            // //win
+            // int type=player.enemyType;
+            
         }
+
+        player.killenemy=false;
           
         
     }
@@ -53,6 +58,7 @@ public class OutsideManager : MonoBehaviour
     {
         
         CheckEnemy();
+        player.isWin=false;
 
     }
 

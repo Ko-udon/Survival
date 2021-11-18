@@ -27,7 +27,12 @@ public class EnemyCharacter : MonoBehaviour
     Rigidbody2D rigid;
     PlayerCharacter player;
     public Image HPbar;
-    public Text damage_enemy_text;
+    public Image monsterImage;
+    public Text damageText;
+    public Text missText;
+    public Text criticalDamageText;
+
+
 
     //public GameObject booty;
     public string booty_item;
@@ -59,16 +64,72 @@ public class EnemyCharacter : MonoBehaviour
             //Destroy(gameObject);
         }
     }
-    IEnumerator destroy_text()
+    void checkAttack()
+    {
+        float check;
+        if((accuracy - player.avoid + 30)>=100){
+            //무조건 공격 성공
+            check = 100;
+        }
+
+        else{
+            check = (accuracy - player.avoid + 30) % 100;
+        }
+        
+        
+        int tmp=Random.Range(1,101);  //1~100
+
+        if(tmp<=check){
+            isAttack=true;
+        }
+        else if(tmp>check){
+            isAttack=false;
+        }
+    }
+
+    void checkCritical()
+    {
+        float check;
+        
+        check = critical;
+
+        int tmp=Random.Range(1,101);  //1~100
+
+        if(tmp<=check){
+            isCritical=true;
+        }
+        else if(tmp>check){
+            isCritical=false;
+        }
+        
+    }
+
+    IEnumerator textDamage()
     {
 
-        damage_enemy_text.gameObject.SetActive(true);
-        damage_enemy_text.text = "-" + (player.AtkDamage - defense).ToString() + "\n";
+        damageText.gameObject.SetActive(true);
+        damageText.text = "-" + (player.AtkDamage - defense).ToString() + "\n";
         yield return new WaitForSeconds(1.0f);
-        damage_enemy_text.gameObject.SetActive(false);
+        damageText.gameObject.SetActive(false);
         //damage_enemy_text.gameObject.SetActive(false);
 
     }
+    IEnumerator textMiss()
+    {
+        missText.gameObject.SetActive(true);
+        missText.text="Miss";
+        yield return new WaitForSeconds(1.0f);
+        missText.gameObject.SetActive(false);
+    }
+
+    IEnumerator textCritical(int damage)
+    {
+        criticalDamageText.gameObject.SetActive(true);
+        criticalDamageText.text="-"+damage.ToString()+"\n";
+        yield return new WaitForSeconds(1.0f);
+        criticalDamageText.gameObject.SetActive(false);
+    }
+
     IEnumerator StopMove()
     {
         canMove = false;
@@ -91,16 +152,19 @@ public class EnemyCharacter : MonoBehaviour
             {
                 if ((player.AtkDamage - defense) <= 0)
                 {
-                    //Hp = Hp;
+                    //공격도 맞고 크리티컬이지만 방어력이 높아 데미지0인 경우
+                    int damage=0;
                     HPbar.fillAmount = (float)Hp / 100;
-                    
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
                 else
                 {
-                    Hp = Hp - (player.AtkDamage - defense);
+                    //공격도 맞고 크리티컬 데미지 입은 경우
+                    //(enemy.AtkDamage - defense)
+                    int damage=player.AtkDamage-defense;
+                    Hp = Hp - damage;
                     HPbar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textCritical",damage);
                 }
 
             }
@@ -109,21 +173,28 @@ public class EnemyCharacter : MonoBehaviour
             {
                 if ((player.AtkDamage - defense) <= 0)
                 {
-                    //Hp = Hp;
+                    int damage=0;
                     HPbar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
                 else
                 {
-                    Hp = Hp - (player.AtkDamage - defense);
+                    int damage=player.AtkDamage-defense;
+                    Hp = Hp - damage;
                     HPbar.fillAmount = (float)Hp / 100;
-                    StartCoroutine("destroy_text");
+                    StartCoroutine("textDamage",damage);
                 }
             }
                         
             //Hp = Hp - (player.AtkDamage - defense);
             /*Hp -= 100;
             HPbar.fillAmount = (float)Hp / 100;*/
+
+        }
+        else 
+        //공격을 회피한 경우
+        {
+            StartCoroutine("textMiss");
 
         }
         Nulkback();
@@ -134,8 +205,21 @@ public class EnemyCharacter : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            isAttack = true;
-            //rigid.AddForce(Vector3.right * player.speed * 20);
+            checkAttack();
+            checkCritical();
+           if (isAttack == true)
+            {
+                if (isCritical == true)
+                {
+                    AtkDamage = (int)(power * 1.5);
+                    
+                }
+                else
+                {
+                    AtkDamage = power;
+                   
+                }
+            }
             GetDamage();
 
         }
