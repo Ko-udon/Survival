@@ -31,6 +31,7 @@ public class PlayerCharacter : MonoBehaviour
     public bool canMove;
     public bool isBattle;
     public bool isHome;
+    public bool isReward;
 
     public bool endBattle;
 
@@ -119,6 +120,7 @@ public class PlayerCharacter : MonoBehaviour
         killCount++;
         killenemy=true;
         isWin=true;
+        isReward=true;
         // Debug.Log("경험치");
         // Debug.Log(exp);
         // Debug.Log("전리품");

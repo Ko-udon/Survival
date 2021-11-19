@@ -10,6 +10,7 @@ public class BattleGameManager : MonoBehaviour
 
     Animator playerAnim;
     EnemyCharacter enemy;
+    
 
     public GameObject enemy_1;
     public GameObject enemy_2;
@@ -32,6 +33,7 @@ public class BattleGameManager : MonoBehaviour
         //enemy=GameObject.FindWithTag("Enemy").GetComponent<EnemyCharacter>();
         //set player pos and sprite
         player.transform.position=new Vector2(-6,-2);
+        player.isReward=false;
         
 
         switch(player.enemyType)
@@ -67,7 +69,7 @@ public class BattleGameManager : MonoBehaviour
 
         if(player.endBattle==true){
             player.endBattle=false;
-            player.isWin=false;
+            //player.isWin=false;
             //player.isWin=false;
             player.isBattle=false;
             Debug.Log("win");

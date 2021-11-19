@@ -188,6 +188,7 @@ public class GameManager : MonoBehaviour
         {
             mt = 100;
         }
+        AddReward();
         
         
     }
@@ -478,4 +479,15 @@ public class GameManager : MonoBehaviour
             return "fail";
         }
     }
+
+    void AddReward()
+    {
+        if(player.isReward==true)
+        {
+            addInventory(ingred_inventory,"사과",2);
+            player.isReward=false;
+        }
+    }
+
+
 }
