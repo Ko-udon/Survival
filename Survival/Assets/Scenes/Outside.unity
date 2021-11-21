@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 97269543}
   - component: {fileID: 97269542}
+  - component: {fileID: 97269544}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -251,6 +252,32 @@ Transform:
   m_Father: {fileID: 1756372946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &97269544
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97269541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7421876, y: 1.7502294}
+    newSize: {x: 1.7421876, y: 1.7502294}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7421876, y: 1.7502294}
+  m_EdgeRadius: 0
 --- !u!1 &150558334
 GameObject:
   m_ObjectHideFlags: 0
@@ -22886,6 +22913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220076573}
   - component: {fileID: 1220076572}
+  - component: {fileID: 1220076574}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Farming
@@ -22958,6 +22986,32 @@ Transform:
   m_Father: {fileID: 1712508252}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1220076574
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220076571}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0.014585018}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.7265625, y: 1.7736697}
+    newSize: {x: 2.21, y: 2.2702973}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.9435177, y: 3.9614544}
+  m_EdgeRadius: 0
 --- !u!1001 &1338200710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83259,6 +83313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032566513}
   - component: {fileID: 2032566512}
+  - component: {fileID: 2032566514}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -83331,6 +83386,32 @@ Transform:
   m_Father: {fileID: 1437971431}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2032566514
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032566511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008900642, y: -0.026702166}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1328125, y: 1.5470777}
+    newSize: {x: 2.1328125, y: 1.5470777}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.001974, y: 3.91468}
+  m_EdgeRadius: 0
 --- !u!1 &2071879117
 GameObject:
   m_ObjectHideFlags: 0
