@@ -33,22 +33,35 @@ public class OutsideManager : MonoBehaviour
 
     void CheckEnemy()
     {
-        if(player.killenemy==true)
+        // if(player.killenemy==true)
+        // {
+        //     for(int j=0;j<enemyCount;j++)
+        //         {
+        //             if(enemyList[j].tag=="EnemyType_"+player.enemyType.ToString()){
+        //                     Destroy(enemyList[j]);
+        //                 }
+        //         }
+
+        //     player.killenemy=false;
+        //     // //win
+        //     // int type=player.enemyType;
+            
+        // }
+
+        // player.killenemy=false;
+
+        for(int i=0;i<player.met_enemy_list.Count;i++)
         {
             for(int j=0;j<enemyCount;j++)
+            {
+                if(enemyList[j].tag=="EnemyType_"+player.met_enemy_list[i].ToString()&
+                (player.enemy_kill_list[i]==1))
                 {
-                    if(enemyList[j].tag=="EnemyType_"+player.enemyType.ToString()){
-                            DestroyImmediate(enemyList[j]);
-                        }
+                    Destroy(enemyList[j]);
                 }
 
-            player.killenemy=false;
-            // //win
-            // int type=player.enemyType;
-            
+            }
         }
-
-        player.killenemy=false;
           
         
     }
@@ -58,6 +71,7 @@ public class OutsideManager : MonoBehaviour
     {
         
         CheckEnemy();
+        SetPlayerPos();
         player.isWin=false;
 
     }
@@ -71,17 +85,28 @@ public class OutsideManager : MonoBehaviour
         }
     }
 
+    void SetPlayerPos()
+    {
+        player.transform.position=player.playerPos;
+    }
+
+    void SetPlayerPosHome()
+    {
+        player.playerPos=new Vector2(-8,-2);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(player.isHome==true){
             player.isHome=false;
-            
+            SetPlayerPosHome();
             SceneManager.LoadScene("Home");
         }
 
         if(player.isBattle==true){
             player.isBattle=false;
+            player.SavePlayerPos(2,1);
             SceneManager.LoadScene("Battle");
         }
 

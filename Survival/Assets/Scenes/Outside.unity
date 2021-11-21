@@ -22902,7 +22902,7 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyList: []
   enemy: {fileID: 0}
-  enemyCount: 3
+  enemyCount: 2
 --- !u!1 &1220076571
 GameObject:
   m_ObjectHideFlags: 0
@@ -83516,11 +83516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2404837932631945717, guid: fc2e0f44b612d174880248282f9558f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.61
+      value: -16.42
       objectReference: {fileID: 0}
     - target: {fileID: 2404837932631945717, guid: fc2e0f44b612d174880248282f9558f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.42
+      value: 11.81
       objectReference: {fileID: 0}
     - target: {fileID: 2404837932631945717, guid: fc2e0f44b612d174880248282f9558f0, type: 3}
       propertyPath: m_LocalPosition.z

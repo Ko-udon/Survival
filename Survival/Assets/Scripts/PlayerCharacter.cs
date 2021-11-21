@@ -8,6 +8,9 @@ public class PlayerCharacter : MonoBehaviour
 {
     public static PlayerCharacter player;
 
+    public List<int> met_enemy_list;
+    public List<int> enemy_kill_list;
+
     public GameObject playerUI;
 
     public int enemyType;
@@ -59,6 +62,8 @@ public class PlayerCharacter : MonoBehaviour
     public int enemyCount;
 
     public int killCount;
+
+    public Vector2 playerPos;
     // Start is called before the first frame update
 
 
@@ -120,6 +125,7 @@ public class PlayerCharacter : MonoBehaviour
         killCount++;
         killenemy=true;
         isWin=true;
+        enemy_kill_list.Add(1);
         isReward=true;
         // Debug.Log("경험치");
         // Debug.Log(exp);
@@ -130,6 +136,7 @@ public class PlayerCharacter : MonoBehaviour
     void getRunPenalty()
     {
         Mt=Mt-5;
+        enemy_kill_list.Add(0);
     }
 
     void decreaseAir()
@@ -352,14 +359,8 @@ public class PlayerCharacter : MonoBehaviour
             enemyCount++;
 
             isBattle=true;
-            
+            met_enemy_list.Add(1);
 
-            //전투시 오른쪽 방향
-            //anim.SetInteger("hAxisRaw",1);
-            //anim.SetInteger("hAxisRaw",-1);
-            //anim.SetBool("isChange",false);
-
-            //this.spriteRenderer.sprite=rightSprite;
             
         }
 
@@ -371,10 +372,8 @@ public class PlayerCharacter : MonoBehaviour
             enemyCount++;
 
             isBattle=true;
-            // anim.SetInteger("hAxisRaw",1);
-            // anim.SetInteger("hAxisRaw",-1);
-            // anim.SetBool("isChange",false);
-            //this.spriteRenderer.sprite=rightSprite;
+            met_enemy_list.Add(2);
+
             
         }
         
@@ -435,8 +434,11 @@ public class PlayerCharacter : MonoBehaviour
             }
             
         }
+    }
 
-
+    public void SavePlayerPos(float xpos, float ypos)
+    {
+        playerPos=new Vector2(player.transform.position.x+xpos,player.transform.position.y+ypos);
     }
 
     // Update is called once per frame

@@ -9,20 +9,22 @@ public class DoorManager : MonoBehaviour
     public GameObject canvas;
     public GameObject yesButton;
 
+    //public PlayerCharacter player;
+
     void Start()
     {
-        
+        //player=GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
     }
 
     void Update()
     {
         if(GameManager.gameManager.time < 360)
         {
-            transform.GetChild(0).GetComponent<Text>().text = "³²Àº ½Ã°£ÀÌ 6½Ã°£ ¹Ì¸¸ÀÌ¹Ç·Î ¹ÛÀ¸·Î ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+            transform.GetChild(0).GetComponent<Text>().text = "ë‚¨ì€ ì‹œê°„ì´ 6ì‹œê°„ ë¯¸ë§Œì´ë¯€ë¡œ ë‚˜ê°ˆ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
         }
         else
         {
-            transform.GetChild(0).GetComponent<Text>().text = "¹ÛÀ¸·Î ³ª°¡½Ã°Ú½À´Ï±î?";
+            transform.GetChild(0).GetComponent<Text>().text = "ë°–ìœ¼ë¡œ ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?";
         }
         
     }
@@ -32,6 +34,7 @@ public class DoorManager : MonoBehaviour
         OnNoClicked();
         if(GameManager.gameManager.time >= 360)
         {
+            //player.transform.position= new Vector2(-8,-2);
             SceneManager.LoadScene("Outside");
         }
     }
