@@ -146,6 +146,11 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (Hp <= 0)
         {
+            
+            //player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+            Invisible(0.4f*Time.deltaTime);
+           
+           
             isDead = true;
             //Time.timeScale=0;
             StartCoroutine("showDeathText","체력");
@@ -153,11 +158,15 @@ public class PlayerCharacter : MonoBehaviour
             //Destroy(gameObject);
         }
         else if(Mt<=0){
-            isDead=true;
+            //player.transform.rotation = new Quaternion(0, 0, 45, 0);
+            Invisible(0.2f);
+            isDead =true;
             StartCoroutine("showDeathText","멘탈");
         }
         else if(Air<=0){
-            isDead=true;
+            //player.transform.rotation = new Quaternion(0, 0, 45, 0);
+            Invisible(0.2f);
+            isDead =true;
             
             StartCoroutine("showDeathText","공기");
             
@@ -298,6 +307,11 @@ public class PlayerCharacter : MonoBehaviour
     void PlayerAvoid()
     {
 
+    }
+
+    void Invisible(float i)
+    {
+        player.spriteRenderer.color = new Color(255, 255, 255, player.spriteRenderer.color.a - i);
     }
 
     IEnumerator StopMove()
@@ -450,13 +464,23 @@ public class PlayerCharacter : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name=="Battle"){
             gameObject.GetComponent<PlayerMove>().enabled=false;
+            if(isDead==true)
+            {
+                rigid.gravityScale = -1.5f;
+                playerUI.SetActive(false);
+            }
+            else
+            {
+                rigid.gravityScale = 1;
+                playerUI.SetActive(true);
+            }
             
             if(GameObject.FindGameObjectWithTag("Enemy")!=null){
                 enemy=GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyCharacter>();
             }
             decreaseAir();
-            playerUI.SetActive(true);
-            rigid.gravityScale=1;
+            
+            
         }
 
 
