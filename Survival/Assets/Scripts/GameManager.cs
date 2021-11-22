@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public static PlayerCharacter player;
 
-   
-
     public GameObject Player;
 
     const int MAX_SIZE = 16;

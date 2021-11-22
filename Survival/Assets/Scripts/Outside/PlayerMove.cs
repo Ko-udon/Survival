@@ -81,7 +81,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         //Check player on farming zone
-        if (isFarming)
+        /*if (isFarming)
         {
             if (farmingTimer > 300)
             {
@@ -96,7 +96,7 @@ public class PlayerMove : MonoBehaviour
                 farmingTimer++;
                 Debug.Log(farmingTimer);
             }
-        }
+        }*/
     }
 
 
@@ -135,7 +135,7 @@ public class PlayerMove : MonoBehaviour
             isblocked = true;
         }
     }
-
+    /*
     //�Ĺ��� ���� �Ĺ� ���� (�̹� �Ĺֵ� ���� �Ĺ� �Ұ���)
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -153,5 +153,5 @@ public class PlayerMove : MonoBehaviour
             isFarming = false;
             farmingTimer = 0;
         }
-    }
+    }*/
 }

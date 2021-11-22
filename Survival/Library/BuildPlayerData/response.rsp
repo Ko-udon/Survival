@@ -10,6 +10,7 @@
 -a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PlayerScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll"
 -a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PlayerScriptAssemblies\Unity.2D.Animation.Runtime.dll"
 -a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PlayerScriptAssemblies\Unity.2D.Common.Runtime.dll"
+-a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PlayerScriptAssemblies\NavMeshComponents.dll"
 -a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PlayerScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll"
 -a="E:\Personnel\Study\2021_02\TeamProject\Survival\Survival\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"
 -s="D:\Program Files\2020.3.18f1\Editor\Data\Managed\UnityEngine"

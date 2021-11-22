@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator anim;
 
+    public bool isPlayerFound;
     float h;
     float v;
     bool isHorizonMove;
@@ -33,7 +34,6 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
         /*
         h = rigid.velocity.x;
         v = rigid.velocity.y;
@@ -47,9 +47,15 @@ public class EnemyAI : MonoBehaviour
         {
             getBack();
             isblocked = false;
+            isHorizonMove = true;
         }
 
         
+    }
+    void FixedUpdate()
+    {
+        if (isPlayerFound) agent.SetDestination(target.position);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

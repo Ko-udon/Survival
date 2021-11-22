@@ -66,7 +66,6 @@ public class PlayerCharacter : MonoBehaviour
     public Vector2 playerPos;
     // Start is called before the first frame update
 
-
     //playerMove
 
     public float maxSpeed;
