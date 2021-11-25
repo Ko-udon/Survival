@@ -12,6 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     public List<int> enemy_kill_list;
 
     public GameObject playerUI;
+    public GameObject farmingUI;
 
     public int enemyType;
     public float Hp;
@@ -44,6 +45,8 @@ public class PlayerCharacter : MonoBehaviour
     
 
     public Image HpBar;
+    public Image FarmingBar;
+
     public Text normalDamageText;
 
     public Text criticalDamageText;
@@ -459,6 +462,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         Move();
         checkDead();
+        Farming();
         //decreaseAir();
         
 
@@ -511,13 +515,14 @@ public class PlayerCharacter : MonoBehaviour
                 isFarming = false;
                 isFarmDone = true;
                 farmingTimer = 0;
+                Debug.Log("아이템 획득");
 
             }
 
             else
             {
                 farmingTimer++;
-                Debug.Log(farmingTimer);
+                //Debug.Log(farmingTimer);
             }
         }
 
@@ -551,6 +556,23 @@ public class PlayerCharacter : MonoBehaviour
         {
             isFarming = false;
             farmingTimer = 0;
+        }
+    }
+
+  
+    
+    public void Farming()
+    {
+        if(isFarming==true)
+        {
+            //StartCoroutine("FarmingUI");
+            farmingUI.SetActive(true);
+            FarmingBar.fillAmount = FarmingBar.fillAmount + Time.deltaTime * 0.5f;
+        }
+        else
+        {
+            farmingUI.SetActive(false);
+            FarmingBar.fillAmount = 0;
         }
     }
 }

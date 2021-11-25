@@ -23,6 +23,10 @@ public class TileManager : MonoBehaviour
         farmingTimer = 0;
 
     }
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -51,6 +55,7 @@ public class TileManager : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             if (!isFarmDone) isFarming = true;
+            player.isFarming = true;
         }
     }
 
@@ -60,6 +65,7 @@ public class TileManager : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isFarming = false;
+            player.isFarming = false;
             farmingTimer = 0;
         }
     }
