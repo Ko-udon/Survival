@@ -20,6 +20,7 @@ TagManager:
   - EnemyType_1
   - EnemyType_2
   - EnemyType_3
+  - EnemyZone
   layers:
   - Default
   - TransparentFX

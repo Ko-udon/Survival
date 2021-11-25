@@ -29,7 +29,7 @@ public class TileManager : MonoBehaviour
     {
         if (isFarming)
         {
-            if (farmingTimer > 300)
+            if (farmingTimer > 300 * Time.deltaTime)
             {
                 Invoke("getItem", 2);
                 isFarming = false;
@@ -72,14 +72,17 @@ public class TileManager : MonoBehaviour
         {
             case "Mushroom":
                 gameManager.addInventory(gameManager.ingred_inventory, "버섯", 5);
+
                 break;
             case "Wood":
                 gameManager.addInventory(gameManager.ingred_inventory, "나무", 5);
+
                 break;
             case "Apple":
                 gameManager.addInventory(gameManager.ingred_inventory, "사과", 5);
+
                 break;
         }
-        Debug.Log(name );
+        Debug.Log(name);
     }
 }

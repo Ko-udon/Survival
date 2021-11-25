@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     Animator anim;
+    PlayerMove player;
 
     public bool isPlayerFound;
     float h;
@@ -24,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
         agent = GetComponent<NavMeshAgent>();
         rigid = GetComponent<Rigidbody2D>();
 
@@ -43,6 +45,12 @@ public class EnemyAI : MonoBehaviour
             isHorizonMove = false;
         */
         //Check player on trap
+        if (player.isEnemyZone)
+        {
+            isPlayerFound = true;
+        }
+        else isPlayerFound = false;
+
         if (isblocked)
         {
             getBack();

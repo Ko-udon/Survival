@@ -49,6 +49,7 @@ public class Virtualjoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         Debug.Log(inputDirection.x + " . " + inputDirection.y);
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,3 +65,4 @@ public class Virtualjoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 }
+

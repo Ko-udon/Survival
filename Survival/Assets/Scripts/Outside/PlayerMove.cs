@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public bool isFarming;
     public bool isFarmDone;
     public bool isblocked;
+    public bool isEnemyZone;
     private int farmingTimer;
     // public GameObject farm;
     // public GameObject farmClean;
@@ -41,9 +43,74 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+
+
+        //Check Button Down & Up
+        bool hDown = Input.GetButtonDown("Horizontal");
+        bool vDown = Input.GetButtonDown("Vertical");
+        bool hUp = Input.GetButtonUp("Horizontal");
+        bool vUp = Input.GetButtonUp("Vertical");
+
+        //Check Horizontal Move
+        if (hDown)
+            isHorizonMove = true;
+        else if (vDown)
+            isHorizonMove = false;
+        else if (hUp || vUp)
+            isHorizonMove = h != 0;
+
+        //Animation
+        if (anim.GetInteger("hAxisRaw") != h)
+        {
+            anim.SetBool("isChange", false);
+            anim.SetInteger("hAxisRaw", (int)h);
+        }
+        else if (anim.GetInteger("vAxisRaw") != v)
+        {
+            anim.SetBool("isChange", false);
+            anim.SetInteger("vAxisRaw", (int)v);
+        }
+        else
+            anim.SetBool("isChange", true);
+        //Check player on trap
+        if (isblocked)
+        {
+            getBack();
+            isblocked = false;
+        }
+
+        //Check player on farming zone
+        /*if (isFarming)
+        {
+            if (farmingTimer > 300)
+            {
+                Invoke("getItem", 2);
+                isFarming = false;
+                isFarmDone = true;
+                farmingTimer = 0;
+
+            }
+            else
+            {
+                farmingTimer++;
+                Debug.Log(farmingTimer);
+            }
+        }*/
+    }
+
+    private void Move(Vector2 inputDirection)
+    {
+        /*
+        Vector2 moveInput = inputDirection;
+
+        bool isMove = moveInput.magnitude != 0;
+        */
         //Move Value
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
+
 
         //Check Button Down & Up
         bool hDown = Input.GetButtonDown("Horizontal");
@@ -72,31 +139,7 @@ public class PlayerMove : MonoBehaviour
         }
         else
             anim.SetBool("isChange", false);
-
-        //Check player on trap
-        if (isblocked)
-        {
-            getBack();
-            isblocked = false;
-        }
-
-        //Check player on farming zone
-        /*if (isFarming)
-        {
-            if (farmingTimer > 300)
-            {
-                Invoke("getItem", 2);
-                isFarming = false;
-                isFarmDone = true;
-                farmingTimer = 0;
-
-            }
-            else
-            {
-                farmingTimer++;
-                Debug.Log(farmingTimer);
-            }
-        }*/
+           
     }
 
 
@@ -135,23 +178,21 @@ public class PlayerMove : MonoBehaviour
             isblocked = true;
         }
     }
-    /*
-    //�Ĺ��� ���� �Ĺ� ���� (�̹� �Ĺֵ� ���� �Ĺ� �Ұ���)
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Farming")
+        if (collision.gameObject.tag == "EnemyZone")
         {
-            if (!isFarmDone) isFarming = true;
+            if (!isEnemyZone) isEnemyZone = true;
         }
     }
 
-    //�Ĺ��� ������ ī��Ʈ ����
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Farming")
+        if (collision.gameObject.tag == "EnemyZone")
         {
-            isFarming = false;
-            farmingTimer = 0;
+            isEnemyZone = false;
         }
-    }*/
+    }
 }
