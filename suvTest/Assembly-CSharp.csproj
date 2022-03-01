@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\Script\Turret.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
@@ -63,13 +60,16 @@
     <Compile Include="Assets\Script\PoisonGenerator.cs" />
     <Compile Include="Assets\Script\Taunt.cs" />
     <Compile Include="Assets\Script\KnockBack.cs" />
+    <Compile Include="Assets\Script\UI\SkillActivateBtn.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\Script\UI\Joystick.cs" />
     <Compile Include="Assets\Script\Water.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Script\Ball.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\Script\UI\MoveForwardBtn.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Script\Nautilus.cs" />
     <Compile Include="Assets\Script\Poison.cs" />
@@ -77,9 +77,8 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Script\EnemyController.cs" />
-    <Compile Include="Assets\Script\UI\MoveForwardBtn.cs" />
-    <Compile Include="Assets\Script\UI\Joystick.cs" />
-    <Compile Include="Assets\Script\UI\SkillActivateBtn.cs" />
+    <Compile Include="Assets\Script\UI\Joystick2.cs" />
+    <Compile Include="Assets\Script\UI\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
