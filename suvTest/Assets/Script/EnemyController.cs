@@ -8,6 +8,12 @@ public class EnemyController : MonoBehaviour
     private Vector3 target;
     private Material material;
 
+    public GameObject bullet;
+    public Transform front;
+    public float atkSpeed;
+    private bool isDelay;
+    
+
     private bool isGround;
     private bool isStiff;
 
@@ -26,6 +32,8 @@ public class EnemyController : MonoBehaviour
         isGround = true;
         isStiff = false;
         Hp = 100;
+        
+
     }
 
     // Update is called once per frame
@@ -59,7 +67,23 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
+                    if (attackRange > 3)
+                    {
+                        if (isDelay == false)
+                        {
+                            isDelay = true;
+                            StartCoroutine("RangeAttack");
+                        }
+              
+
+                    }
+                    else
+                    {
+                        //근거리의 경우
+                    }
                     //이동을 멈추고 공격
+                   
+
                 }
             }
         }
@@ -111,4 +135,13 @@ public class EnemyController : MonoBehaviour
         gameObject.GetComponent<Rigidbody>().AddForce(new Vector3((transform.position.x - target.x) * x, y, (transform.position.z - target.z) * z), ForceMode.Impulse);
         isGround = false;
     }
+
+    public IEnumerator RangeAttack()
+    {   
+      
+        GameObject Bullet = Instantiate(bullet, front.position, front.rotation);
+        yield return new WaitForSeconds(atkSpeed);
+        isDelay = false;
+    }
+
 }

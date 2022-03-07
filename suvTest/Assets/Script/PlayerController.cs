@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float hp;
 
     void Start()
     {
@@ -33,5 +34,10 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0, 0, -Time.deltaTime * speed);
 
         }
+    }
+
+    public void GetDamage(float atk)
+    {
+        hp = hp - atk;
     }
 }

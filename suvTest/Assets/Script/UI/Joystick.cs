@@ -8,10 +8,10 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 {
     bool btTouch = false;
 
-    Transform player;
+    public Transform player;
 
-    RectTransform rectBack;
-    RectTransform rectJoystick;
+    public RectTransform rectBack;
+    public RectTransform rectJoystick;
     float radius;
 
     private Vector3 value;
@@ -20,10 +20,10 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").transform;
+        //player = GameObject.Find("Player").transform;
 
-        rectBack = transform.Find("JoystickBack").GetComponent<RectTransform>();
-        rectJoystick = transform.Find("JoystickBack/Joystick").GetComponent<RectTransform>();
+        //rectBack = transform.Find("JoystickBack").GetComponent<RectTransform>();
+        //rectJoystick = transform.Find("JoystickBack/Joystick").GetComponent<RectTransform>();
         radius = rectBack.rect.width * 0.5f;
     }
 
