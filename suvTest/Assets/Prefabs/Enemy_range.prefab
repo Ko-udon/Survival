@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3722623219904576030, guid: 691748b93bbed4b41a4a4e7ceddd31a8, type: 3}
   front: {fileID: 2158870686254681303}
-  atkSpeed: 1.5
+  atkSpeed: 2.5
   speed: 6
   Hp: 100
   attackRange: 7

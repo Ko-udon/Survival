@@ -21,9 +21,9 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector3.forward * bulletSpeed);
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.name == "Player")
+        if (collision.CompareTag ("Player"))
         {
             player.GetDamage(damage);
             Destroy(gameObject);
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
         
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
