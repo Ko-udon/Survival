@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float hp;
 
+    public GameObject arrowPrefab;
+
     void Start()
     {
         
@@ -34,6 +36,12 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0, 0, -Time.deltaTime * speed);
 
         }
+    }
+
+    public void HitEffect(Vector3 hitPos)
+    {
+        GameObject arrow = Instantiate(arrowPrefab, transform);
+        arrow.GetComponent<HitArrow>().target = hitPos;
     }
 
     public void GetDamage(float atk)

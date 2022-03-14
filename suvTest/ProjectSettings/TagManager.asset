@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ball
   - Turret
+  - FxTemporaire
+  - Bullet
   layers:
   - Default
   - TransparentFX

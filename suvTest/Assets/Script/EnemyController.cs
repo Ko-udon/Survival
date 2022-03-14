@@ -59,9 +59,10 @@ public class EnemyController : MonoBehaviour
         {
             if(isGround && !isStiff)
             {
-                if((target - transform.position).magnitude > attackRange)
+                transform.LookAt(target);
+                if ((target - transform.position).magnitude > attackRange)
                 {
-                    transform.LookAt(target);
+                    
                     Vector3 dir = (target - transform.position).normalized;
                     transform.position += new Vector3(dir.x, 0, dir.z) * speed * Time.deltaTime;
                 }

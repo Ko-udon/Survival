@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
         if (collision.CompareTag ("Player"))
         {
             player.GetDamage(damage);
+            player.HitEffect(this.gameObject.transform.position);
             Destroy(gameObject);
         }
         
