@@ -61,6 +61,7 @@
     <Compile Include="Assets\Script\UI\UIController.cs" />
     <Compile Include="Assets\Script\Taunt.cs" />
     <Compile Include="Assets\Script\KnockBack.cs" />
+    <Compile Include="Assets\Script\UI\TouchArea.cs" />
     <Compile Include="Assets\Script\UI\SkillActivateBtn.cs" />
     <Compile Include="Assets\Script\UI\MoveBackBtn.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
@@ -85,7 +86,14 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Script\EnemyController.cs" />
-    <Compile Include="Assets\Script\UI\TouchArea.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Script\UI\DynamicJoystick_ko.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
