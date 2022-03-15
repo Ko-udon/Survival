@@ -12,7 +12,7 @@ public class Joystick2 : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoin
 
     public Transform player;
     float m_fRadius;
-    float m_fSqr = 0f;
+    //float m_fSqr = 0f;
 
     Vector3 vecMove;
 

@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public float hp;
 
     public GameObject arrowPrefab;
+    public GameObject playerCharacter;
+
+
+    //UI관련
+    
+
 
     void Start()
     {
@@ -16,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        CheckHP();
+
         if(Input.GetKey(KeyCode.D))
         {
             transform.Translate(Time.deltaTime * speed, 0, 0);
@@ -47,5 +55,13 @@ public class PlayerController : MonoBehaviour
     public void GetDamage(float atk)
     {
         hp = hp - atk;
+    }
+    public void CheckHP()
+    {
+        if (hp < 0)
+        {
+            //gameObject.SetActive(false);
+            playerCharacter.SetActive(false);
+        }
     }
 }

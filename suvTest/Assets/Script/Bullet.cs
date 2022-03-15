@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         Destroy(gameObject, 5.0f);
     }
 
