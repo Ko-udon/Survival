@@ -5,19 +5,21 @@ using UnityEngine;
 public class MoveForwardBtn : MonoBehaviour
 {
  
-    PlayerController player; 
+    PlayerController player;
+    public Transform player_pos;
     bool btDown = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerController>();    
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(btDown)
+        if (btDown)
         {
             player.transform.Translate(0, 0, Time.deltaTime * player.speed);
         }
@@ -36,5 +38,6 @@ public class MoveForwardBtn : MonoBehaviour
     public void BtnDown()
     {
         btDown = true;
+        player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
     }
 }

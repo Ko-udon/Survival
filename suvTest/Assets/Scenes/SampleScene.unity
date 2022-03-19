@@ -1583,6 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f595f04c36fcff74a959f54e875f47cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_pos: {fileID: 1356459425}
 --- !u!114 &763591975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,7 +3095,7 @@ MonoBehaviour:
   speed: 10
   hp: 500
   arrowPrefab: {fileID: 1581362779928783701, guid: 166ca75096175984e8591a448fefea0c, type: 3}
-  playerCharacter: {fileID: 0}
+  playerCharacter: {fileID: 1356459424}
 --- !u!1 &1267246585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,6 +4179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07f9e9fc3a0fe74c9399ba60d4c9227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_pos: {fileID: 1356459425}
+  test: 0
 --- !u!114 &1875962253
 MonoBehaviour:
   m_ObjectHideFlags: 0
