@@ -6,13 +6,12 @@ public class EnemyController : MonoBehaviour
 {
     private GameObject player;
     private Vector3 target;
-    private Material material;
+    private Animator ani;
 
     public GameObject bullet;
     public Transform front;
     public float atkSpeed;
     private bool isDelay;
-    
 
     private bool isGround;
     private bool isStiff;
@@ -22,18 +21,20 @@ public class EnemyController : MonoBehaviour
     public float attackRange;
 
     public bool isPosion;
+    private float atkCooltime;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        material = gameObject.GetComponent<Renderer>().material;
+        //material = gameObject.GetComponent<Renderer>().material;
+        ani = GetComponent<Animator>();
 
         isPosion = false;
         isGround = true;
         isStiff = false;
         Hp = 100;
-        
 
+        atkCooltime = 0;
     }
 
     // Update is called once per frame
@@ -62,13 +63,18 @@ public class EnemyController : MonoBehaviour
                 transform.LookAt(target);
                 if ((target - transform.position).magnitude > attackRange)
                 {
-                    
-                    Vector3 dir = (target - transform.position).normalized;
-                    transform.position += new Vector3(dir.x, 0, dir.z) * speed * Time.deltaTime;
+                    ani.SetBool("move", true);
+
+                    if (ani.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                    {
+                        Vector3 dir = (target - transform.position).normalized;
+                        transform.position += new Vector3(dir.x, 0, dir.z) * speed * Time.deltaTime;
+                    }
                 }
                 else
                 {
-                    if (attackRange > 3)
+                    ani.SetBool("move", false);
+                    if (attackRange > 3)  //원거리
                     {
                         if (isDelay == false)
                         {
@@ -78,9 +84,15 @@ public class EnemyController : MonoBehaviour
               
 
                     }
-                    else
+                    else  //근거리
                     {
-                        //근거리의 경우
+                        atkCooltime -= Time.deltaTime;
+
+                        if(atkCooltime < 0)
+                        {
+                            ani.SetTrigger("attack");
+                            atkCooltime = atkSpeed;
+                        }
                     }
                     //이동을 멈추고 공격
                    
@@ -90,10 +102,17 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject);
+            ani.SetBool("death", true);
+
+            if(ani.GetCurrentAnimatorStateInfo(0).normalizedTime > ani.GetCurrentAnimatorStateInfo(0).length)
+            {
+                Destroy(this.gameObject);
+            }
+            
+            
         }
 
-        material.SetColor("_Color", new Color(1, 1 - (0.01f * Hp), 1 - (0.01f * Hp)));
+        //material.SetColor("_Color", new Color(1, 1 - (0.01f * Hp), 1 - (0.01f * Hp)));
 
         if(transform.position.y < -10)
         {
@@ -121,7 +140,7 @@ public class EnemyController : MonoBehaviour
     public IEnumerator Stiff(float time)
     {
         isStiff = true;
-
+        ani.SetTrigger("hit");
         while (time > 0)
         {
             time -= Time.deltaTime;
@@ -138,11 +157,21 @@ public class EnemyController : MonoBehaviour
     }
 
     public IEnumerator RangeAttack()
-    {   
-      
-        GameObject Bullet = Instantiate(bullet, front.position, front.rotation);
-        yield return new WaitForSeconds(atkSpeed);
+    {
+        ani.SetTrigger("attack");
+        yield return new WaitForSeconds(0.7f);
+
+        if (ani.GetCurrentAnimatorStateInfo(0).IsName("Shout"))
+        {
+            GameObject Bullet = Instantiate(bullet, front.position, front.rotation);
+            yield return new WaitForSeconds(atkSpeed);
+        }
         isDelay = false;
     }
 
+    public IEnumerator CloseAttack()
+    {
+        ani.SetTrigger("attack");
+        yield return new WaitForSeconds(atkSpeed);
+    }
 }
