@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    private float time;
+    public float time;
     
     void Start()
     {
-        time = 2.5f;
+        //time = 2.5f;
     }
 
     

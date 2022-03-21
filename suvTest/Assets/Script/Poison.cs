@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Poison : MonoBehaviour
 {
-    private float time;
+    public float time;
+    private float cooltime;
     private List<Collider> enemy;
     private SphereCollider range;
 
@@ -12,7 +13,7 @@ public class Poison : MonoBehaviour
 
     void Start()
     {
-        time = 3.0f;
+        cooltime = 3.0f;
         enemy = new List<Collider>();
         range = GetComponent<SphereCollider>();
 
@@ -22,11 +23,18 @@ public class Poison : MonoBehaviour
     void Update()
     {
         time -= Time.deltaTime;
+        cooltime -= Time.deltaTime;
 
         if(time < 0)
         {
+            gameObject.transform.parent.GetComponent<EnemyController>().isPosion = false;
+            Destroy(gameObject);
+        }
+
+        if(cooltime < 0)
+        {
             StartCoroutine(Visible());
-            time = 3.0f;
+            cooltime = 3.0f;
         }
     }
 
@@ -44,9 +52,6 @@ public class Poison : MonoBehaviour
                 GameObject poison = Instantiate(poisonPrefab, other.gameObject.transform.position, other.gameObject.transform.rotation, other.gameObject.transform) as GameObject;
             }
         }
-
-        gameObject.transform.parent.GetComponent<EnemyController>().isPosion = false;
-        Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other)

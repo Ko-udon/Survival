@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour
 
         if(turret.Length > 0)
         {
-            target = new Vector3(turret[0].transform.position.x, 0, turret[0].transform.position.z);
+            target = new Vector3(turret[0].transform.position.x, transform.position.y, turret[0].transform.position.z);
         }
         else
         {
@@ -152,7 +152,7 @@ public class EnemyController : MonoBehaviour
 
     public void KnockBack(float x, float y, float z)
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3((transform.position.x - target.x) * x, y, (transform.position.z - target.z) * z), ForceMode.Impulse);
+        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3((transform.position.x - target.x) * x, y, (transform.position.z - target.z) * z), ForceMode.VelocityChange);
         isGround = false;
     }
 

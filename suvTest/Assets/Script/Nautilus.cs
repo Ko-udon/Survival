@@ -11,10 +11,12 @@ public class Nautilus : MonoBehaviour
     public GameObject water;
 
     private float time;
+    private float damage;
 
     void Start()
     {
         time = 4.0f;
+        damage = 25;
         player = GameObject.FindGameObjectWithTag("Player");
         enemy = new List<Collider>();
         range = GetComponent<SphereCollider>();
@@ -43,6 +45,7 @@ public class Nautilus : MonoBehaviour
         {
             int rand = Random.Range(0, enemy.Count);
             GameObject effect = Instantiate(water, player.transform.position, water.transform.rotation);
+            effect.GetComponent<Water>().damage = damage;
             Vector3 start = new Vector3(player.transform.position.x, 0, player.transform.position.z);
             Vector3 end = new Vector3(enemy[rand].gameObject.transform.position.x, 0, enemy[rand].gameObject.transform.position.z);
             StartCoroutine(Attack(effect, start, end));
@@ -72,5 +75,10 @@ public class Nautilus : MonoBehaviour
                 enemy.Add(other);
             }
         }
+    }
+
+    public void UpdateLV(int level)
+    {
+        damage = 25 * level;
     }
 }

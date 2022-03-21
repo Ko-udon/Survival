@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float damage;
+
     void Start()
     {
         
@@ -20,7 +21,7 @@ public class Water : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            other.gameObject.GetComponent<EnemyController>().Hp -= 25;
+            other.gameObject.GetComponent<EnemyController>().Hp -= damage;
             other.gameObject.GetComponent<EnemyController>().KnockBack(0.5f, 7, 0.5f);
         }
     }

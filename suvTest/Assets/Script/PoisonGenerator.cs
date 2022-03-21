@@ -10,10 +10,12 @@ public class PoisonGenerator : MonoBehaviour
     public GameObject poisonPrefab;
 
     private float time;
+    private float duration;
 
     void Start()
     {
         time = 6.0f;
+        duration = 3.5f;
         enemy = new List<Collider>();
         range = GetComponent<SphereCollider>();
 
@@ -43,6 +45,7 @@ public class PoisonGenerator : MonoBehaviour
             {
                 other.gameObject.GetComponent<EnemyController>().isPosion = true;
                 GameObject poison = Instantiate(poisonPrefab, other.gameObject.transform.position, other.gameObject.transform.rotation, other.gameObject.transform) as GameObject;
+                poison.GetComponent<Poison>().time = duration;
             }
         }
         range.enabled = false;
@@ -57,5 +60,10 @@ public class PoisonGenerator : MonoBehaviour
                 enemy.Add(other);
             }
         }
+    }
+
+    public void UpdateLV(int level)
+    {
+        duration = 3.5f * level;
     }
 }

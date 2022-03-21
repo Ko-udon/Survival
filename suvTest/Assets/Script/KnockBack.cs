@@ -10,12 +10,16 @@ public class KnockBack : MonoBehaviour
     private float time;
     private SphereCollider range;
 
+    private float degree;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         time = 3.0f;
         range = GetComponent<SphereCollider>();
         range.enabled = false;
+
+        degree = 1;
     }
 
     
@@ -51,7 +55,12 @@ public class KnockBack : MonoBehaviour
         if(other.tag == "Enemy")
         {
             float dir = Knockdegree(other.transform.position);
-            other.gameObject.GetComponent<EnemyController>().KnockBack(dir, 7, dir);
+            other.gameObject.GetComponent<EnemyController>().KnockBack(dir * degree, 7, dir * degree);
         }
+    }
+
+    public void UpdateLV(int level)
+    {
+        degree = level;
     }
 }

@@ -5,12 +5,14 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public float speed;
+    public float damage;
 
     private GameObject player;
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        damage = 20;
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class Ball : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            other.gameObject.GetComponent<EnemyController>().Hp -= 20;
+            other.gameObject.GetComponent<EnemyController>().Hp -= damage;
             StartCoroutine(other.gameObject.GetComponent<EnemyController>().Stiff(1.0f));
         }
     }
