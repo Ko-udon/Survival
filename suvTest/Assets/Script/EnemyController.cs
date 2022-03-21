@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    private GameObject player;
+    //private GameObject player;
+    private PlayerController player;
+    //private PlayerController playerController;
     private Vector3 target;
     private Animator ani;
 
@@ -19,13 +21,16 @@ public class EnemyController : MonoBehaviour
     public float speed;
     public float Hp;
     public float attackRange;
+    public float attackDamage=10f;
 
     public bool isPosion;
     private float atkCooltime;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        //playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //material = gameObject.GetComponent<Renderer>().material;
         ani = GetComponent<Animator>();
 
@@ -74,7 +79,7 @@ public class EnemyController : MonoBehaviour
                 else
                 {
                     ani.SetBool("move", false);
-                    if (attackRange > 3)  //¿ø°Å¸®
+                    if (attackRange > 3)  //ï¿½ï¿½ï¿½Å¸ï¿½
                     {
                         if (isDelay == false)
                         {
@@ -84,7 +89,7 @@ public class EnemyController : MonoBehaviour
               
 
                     }
-                    else  //±Ù°Å¸®
+                    else  //ï¿½Ù°Å¸ï¿½
                     {
                         atkCooltime -= Time.deltaTime;
 
@@ -94,7 +99,7 @@ public class EnemyController : MonoBehaviour
                             atkCooltime = atkSpeed;
                         }
                     }
-                    //ÀÌµ¿À» ¸ØÃß°í °ø°Ý
+                    //ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½
                    
 
                 }
