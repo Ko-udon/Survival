@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     //UI관련
 
 
+    //Animation
+    public Animation anim;
+    public bool isIdle;
+
 
     void Start()
     {
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         CheckHP();
 
         if(Input.GetKey(KeyCode.D))
@@ -57,6 +62,16 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(0, 0, -Time.deltaTime * speed);
 
+        }
+
+        //Animations
+        if (isIdle == false)
+        {
+            anim.Play("Running");
+        }
+        else if (isIdle == true)
+        {
+            anim.Play("Idle");
         }
     }
 

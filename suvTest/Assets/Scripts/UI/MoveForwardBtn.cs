@@ -34,10 +34,12 @@ public class MoveForwardBtn : MonoBehaviour
     public void BtnUp()
     {
         btDown = false;
+        player.isIdle = true;
     }
     public void BtnDown()
     {
         btDown = true;
         player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
+        player.isIdle = false;
     }
 }
