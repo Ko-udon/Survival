@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
     private Vector3 target;
     private Animator ani;
+    public CloseWeapon closeAttack;
 
     public GameObject bullet;
     public Transform front;
@@ -28,6 +29,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         //material = gameObject.GetComponent<Renderer>().material;
         ani = GetComponent<Animator>();
+        closeAttack = GetComponentInChildren<CloseWeapon>();
 
         isPosion = false;
         isGround = true;
@@ -64,6 +66,10 @@ public class EnemyController : MonoBehaviour
                 if ((target - transform.position).magnitude > attackRange)
                 {
                     ani.SetBool("move", true);
+                    if(closeAttack != null)
+                    {
+                        closeAttack.AttackUnable();
+                    }
 
                     if (ani.GetCurrentAnimatorStateInfo(0).IsName("Run"))
                     {
@@ -74,6 +80,7 @@ public class EnemyController : MonoBehaviour
                 else
                 {
                     ani.SetBool("move", false);
+
                     if (attackRange > 3)  //¿ø°Å¸®
                     {
                         if (isDelay == false)
@@ -91,6 +98,7 @@ public class EnemyController : MonoBehaviour
                         if(atkCooltime < 0)
                         {
                             ani.SetTrigger("attack");
+                            closeAttack.AttackAble();
                             atkCooltime = atkSpeed;
                         }
                     }
@@ -103,8 +111,12 @@ public class EnemyController : MonoBehaviour
         else
         {
             ani.SetBool("death", true);
+            if (closeAttack != null)
+            {
+                closeAttack.AttackUnable();
+            }
 
-            if(ani.GetCurrentAnimatorStateInfo(0).normalizedTime > ani.GetCurrentAnimatorStateInfo(0).length)
+            if (ani.GetCurrentAnimatorStateInfo(0).normalizedTime > ani.GetCurrentAnimatorStateInfo(0).length)
             {
                 Destroy(this.gameObject);
             }

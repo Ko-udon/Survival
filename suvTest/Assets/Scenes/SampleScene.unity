@@ -1324,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315328911198, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315336320220, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -3589,7 +3589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315328911198, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315336320220, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -4715,7 +4715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315328911198, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002038315336320220, guid: 1b0b6af2c375d3a479637ef3352317e0, type: 3}
       propertyPath: m_ApplyRootMotion
