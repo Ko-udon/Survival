@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 103667604166629943}
   - component: {fileID: 5437309564839216583}
   m_Layer: 8
-  m_Name: Cube
+  m_Name: MinimapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1119,6 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5790658c3f7d1c447915dec8c69fad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeAttack: {fileID: 0}
   bullet: {fileID: 3722623219904576030, guid: 691748b93bbed4b41a4a4e7ceddd31a8, type: 3}
   front: {fileID: 8002038316034523346}
   atkSpeed: 2.5
