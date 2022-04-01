@@ -17,9 +17,9 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - floor
   - Minimap
-  - 
+  - MinimapFog
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Minimap
+    uniqueID: 2421553391
     locked: 0
