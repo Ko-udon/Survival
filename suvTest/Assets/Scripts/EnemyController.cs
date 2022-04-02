@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private GameObject player;
+    private PlayerController PlayerController;
     private Vector3 target;
     private Animator ani;
     public CloseWeapon closeAttack;
@@ -24,9 +25,12 @@ public class EnemyController : MonoBehaviour
     public bool isPosion;
     private float atkCooltime;
 
+    public int enemytExp;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //material = gameObject.GetComponent<Renderer>().material;
         ani = GetComponent<Animator>();
         closeAttack = GetComponentInChildren<CloseWeapon>();
@@ -81,7 +85,7 @@ public class EnemyController : MonoBehaviour
                 {
                     ani.SetBool("move", false);
 
-                    if (attackRange > 3)  //¿ø°Å¸®
+                    if (attackRange > 3)  //ï¿½ï¿½ï¿½Å¸ï¿½
                     {
                         if (isDelay == false)
                         {
@@ -91,7 +95,7 @@ public class EnemyController : MonoBehaviour
               
 
                     }
-                    else  //±Ù°Å¸®
+                    else  //ï¿½Ù°Å¸ï¿½
                     {
                         atkCooltime -= Time.deltaTime;
 
@@ -102,7 +106,7 @@ public class EnemyController : MonoBehaviour
                             atkCooltime = atkSpeed;
                         }
                     }
-                    //ÀÌµ¿À» ¸ØÃß°í °ø°Ý
+                    //ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½
                    
 
                 }
@@ -111,6 +115,7 @@ public class EnemyController : MonoBehaviour
         else
         {
             ani.SetBool("death", true);
+            
             if (closeAttack != null)
             {
                 closeAttack.AttackUnable();
@@ -118,6 +123,7 @@ public class EnemyController : MonoBehaviour
 
             if (ani.GetCurrentAnimatorStateInfo(0).normalizedTime > ani.GetCurrentAnimatorStateInfo(0).length)
             {
+                PlayerController.SetExp(enemytExp);  //do once
                 Destroy(this.gameObject);
             }
             

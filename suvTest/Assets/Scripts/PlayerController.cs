@@ -16,13 +16,18 @@ public class PlayerController : MonoBehaviour
     public GameObject skill_Nautilus;
     public GameObject skill_Virus;
 
+    public int Level=0;
+    public int exp=0;
+    public List<int> expList;
+
+
     public int ballLV;
     public int knockbackLV;
     public int tauntLV;
     public int nautilusLV;
     public int virusLV;
     //UI관련
-
+    UIController ui;
 
     //Animation
     public Animation anim;
@@ -36,6 +41,8 @@ public class PlayerController : MonoBehaviour
         tauntLV = 0;
         nautilusLV = 0;
         virusLV = 0;
+
+        ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
     }
 
     void Update()
@@ -84,6 +91,7 @@ public class PlayerController : MonoBehaviour
     public void GetDamage(float atk)
     {
         hp = hp - atk;
+        ui.PlayerHpBar();
     }
     public void CheckHP()
     {
@@ -91,6 +99,23 @@ public class PlayerController : MonoBehaviour
         {
             //gameObject.SetActive(false);
             playerCharacter.SetActive(false);
+        }
+    }
+
+    public void SetExp(int expAmount)
+    {
+        exp += expAmount;
+        ui.SetExp();
+        ui.PlayerExpBar();
+       
+        if (exp >= expList[Level])
+        {
+            Level++;
+            exp = 0;
+            ui.ResetPlayerExpBar();
+            ui.SetLevel();
+            ui.SetExp();
+            //ui.PlayerExpBar();
         }
     }
 

@@ -1127,6 +1127,7 @@ MonoBehaviour:
   Hp: 100
   attackRange: 7
   isPosion: 0
+  enemytExp: 50
 --- !u!1 &8002038315328911200
 GameObject:
   m_ObjectHideFlags: 0

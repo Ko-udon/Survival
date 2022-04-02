@@ -9,6 +9,7 @@ TagManager:
   - Turret
   - FxTemporaire
   - Bullet
+  - UIController
   layers:
   - Default
   - TransparentFX
