@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public int Level=0;
     public int exp=0;
     public List<int> expList;
+    public GameObject effectLvUp;
 
 
     public int ballLV;
@@ -111,6 +112,8 @@ public class PlayerController : MonoBehaviour
         if (exp >= expList[Level])
         {
             Level++;
+            //GameObject effect = Instantiate(effectLvUp, new Vector3(transform.position.x,transform.position.y-1,transform.position.z), effectLvUp.transform.rotation);
+            effectLvUp.SetActive(true);
             exp = 0;
             ui.ResetPlayerExpBar();
             ui.SetLevel();
