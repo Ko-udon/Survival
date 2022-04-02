@@ -19,8 +19,8 @@ TagManager:
   - 
   - floor
   - Minimap
-  - MinimapFog
-  - 
+  - MinimapFogMain
+  - MinimapFogSecond
   - 
   - 
   - 
