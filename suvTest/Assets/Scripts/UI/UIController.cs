@@ -11,19 +11,24 @@ public class UIController : MonoBehaviour
     public Image expBar;
     public Text expText;
     public Text levelText;
+    public Text hpText;
+
 
     private float playerHp;
-    private float playerStartHp;
+    private float playerTotalHp;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        playerStartHp = player.hp;
+        playerTotalHp = player.hp;
         expText.text = player.exp.ToString() + "/" + player.expList[player.Level].ToString(); 
         levelText.text = "Lv." + player.Level.ToString();
 
+
+        //debug
+        hpText.text = player.hp.ToString();
     }
 
     // Update is called once per frame
@@ -39,8 +44,18 @@ public class UIController : MonoBehaviour
     }
     public void PlayerHpBar()
     {
+
+        if (player.hp > playerTotalHp)
+        {
+            playerTotalHp = player.hp;
+
+        }
+
         playerHp = player.hp;
-        hpBar.fillAmount = playerHp / playerStartHp;
+        hpBar.fillAmount = playerHp / playerTotalHp;
+
+
+        hpText.text = playerHp.ToString();
         
     }
     public void PlayerExpBar()

@@ -111,7 +111,8 @@ public class PlayerController : MonoBehaviour
        
         if (exp >= expList[Level])
         {
-            Level++;
+           
+            LevelUp();
             //GameObject effect = Instantiate(effectLvUp, new Vector3(transform.position.x,transform.position.y-1,transform.position.z), effectLvUp.transform.rotation);
             effectLvUp.SetActive(true);
             exp = 0;
@@ -122,6 +123,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //set player status up in here
+    public void LevelUp()
+    {
+        Level++;
+        hp += 100;
+    }
+    public void Heal(float amount)
+    {
+        hp += amount;
+        ui.PlayerHpBar();
+    }
     public void GetSkill(string type)
     {
         switch(type)
