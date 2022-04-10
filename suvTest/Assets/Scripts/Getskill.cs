@@ -15,9 +15,11 @@ public class Getskill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 target = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+        /*Vector3 target = new Vector3(player.transform.position.x, 0, player.transform.position.z);
 
-        transform.LookAt(target);
+        transform.LookAt(target);*/
+
+        transform.rotation = player.transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)

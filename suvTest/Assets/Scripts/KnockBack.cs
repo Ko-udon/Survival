@@ -11,6 +11,7 @@ public class KnockBack : MonoBehaviour
     private SphereCollider range;
 
     private float degree;
+    private int level;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class KnockBack : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        this.level = level;
         degree = level;
     }
 }

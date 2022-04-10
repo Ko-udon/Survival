@@ -12,6 +12,7 @@ public class Nautilus : MonoBehaviour
 
     private float time;
     private float damage;
+    private int level;
 
     void Start()
     {
@@ -79,6 +80,7 @@ public class Nautilus : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        this.level = level;
         damage = 25 * level;
     }
 }

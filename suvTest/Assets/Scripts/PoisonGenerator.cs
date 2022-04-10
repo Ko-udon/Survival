@@ -11,6 +11,7 @@ public class PoisonGenerator : MonoBehaviour
 
     private float time;
     private float duration;
+    private int level;
 
     void Start()
     {
@@ -64,6 +65,7 @@ public class PoisonGenerator : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        this.level = level;
         duration = 3.5f * level;
     }
 }

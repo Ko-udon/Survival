@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
         isPosion = false;
         isGround = true;
         isStiff = false;
+        isDelay = false;
         Hp = 100;
 
         atkCooltime = 0;
@@ -66,8 +67,12 @@ public class EnemyController : MonoBehaviour
         {
             if(isGround && !isStiff)
             {
-                transform.LookAt(target);
-                if ((target - transform.position).magnitude > attackRange)
+                if(!isDelay)
+                {
+                    LookAtSmooth();
+                }
+
+                if ((target - transform.position).magnitude > attackRange && !isDelay)
                 {
                     ani.SetBool("move", true);
                     if(closeAttack != null)
@@ -87,12 +92,22 @@ public class EnemyController : MonoBehaviour
 
                     if (attackRange > 3)  //���Ÿ�
                     {
-                        if (isDelay == false)
+                        atkCooltime -= Time.deltaTime;
+                        if (atkCooltime < 0)
+                        {
+                            StartCoroutine("RangeAttack");
+                            atkCooltime = atkSpeed;
+                        }
+
+                        if (ani.GetCurrentAnimatorStateInfo(0).IsName("Shout"))
                         {
                             isDelay = true;
-                            StartCoroutine("RangeAttack");
                         }
-              
+                        else
+                        {
+                            isDelay = false;
+                        }
+
 
                     }
                     else  //�ٰŸ�
@@ -104,6 +119,15 @@ public class EnemyController : MonoBehaviour
                             ani.SetTrigger("attack");
                             closeAttack.AttackAble();
                             atkCooltime = atkSpeed;
+                        }
+
+                        if(ani.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+                        {
+                            isDelay = true;
+                        }
+                        else
+                        {
+                            isDelay = false;
                         }
                     }
                     //�̵��� ���߰� ����
@@ -182,14 +206,21 @@ public class EnemyController : MonoBehaviour
         if (ani.GetCurrentAnimatorStateInfo(0).IsName("Shout"))
         {
             GameObject Bullet = Instantiate(bullet, front.position, front.rotation);
-            yield return new WaitForSeconds(atkSpeed);
         }
-        isDelay = false;
     }
 
     public IEnumerator CloseAttack()
     {
         ani.SetTrigger("attack");
         yield return new WaitForSeconds(atkSpeed);
+    }
+
+    public void LookAtSmooth()
+    {
+        Quaternion originalRot = transform.rotation;
+        transform.LookAt(target);
+        Quaternion newRot = transform.rotation;
+        transform.rotation = originalRot;
+        transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 7 * Time.deltaTime);
     }
 }

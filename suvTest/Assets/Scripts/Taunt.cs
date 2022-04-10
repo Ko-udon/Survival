@@ -9,6 +9,7 @@ public class Taunt : MonoBehaviour
 
     public float coolTime;
     private float duration;
+    private int level;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class Taunt : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        this.level = level;
         duration = 2.5f * level;
     }
 }

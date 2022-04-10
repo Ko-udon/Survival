@@ -6,6 +6,8 @@ public class BallController : MonoBehaviour
 {
     private List<GameObject> ballList;
 
+    private int level;
+
     void Start()
     {
         ballList = new List<GameObject>();
@@ -26,6 +28,7 @@ public class BallController : MonoBehaviour
     {
         foreach(GameObject ball in ballList)
         {
+            this.level = level;
             ball.GetComponent<Ball>().damage = 20 * level;
         }
     }
