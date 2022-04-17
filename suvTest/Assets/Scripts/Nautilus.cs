@@ -13,11 +13,13 @@ public class Nautilus : MonoBehaviour
     private float time;
     private float damage;
     private int level;
+    private int repeat;
 
     void Start()
     {
         time = 4.0f;
         damage = 25;
+        repeat = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         enemy = new List<Collider>();
         range = GetComponent<SphereCollider>();
@@ -44,12 +46,26 @@ public class Nautilus : MonoBehaviour
 
         if(enemy.Count != 0)
         {
-            int rand = Random.Range(0, enemy.Count);
-            GameObject effect = Instantiate(water, player.transform.position, water.transform.rotation);
-            effect.GetComponent<Water>().damage = damage;
-            Vector3 start = new Vector3(player.transform.position.x, 0, player.transform.position.z);
-            Vector3 end = new Vector3(enemy[rand].gameObject.transform.position.x, 0, enemy[rand].gameObject.transform.position.z);
-            StartCoroutine(Attack(effect, start, end));
+            int repeatCount;
+            if(repeat > enemy.Count)
+            {
+                repeatCount = enemy.Count;
+            }
+            else
+            {
+                repeatCount = repeat;
+            }
+
+            for(int i = 0; i < repeatCount; i++)
+            {
+                int rand = Random.Range(0, enemy.Count);
+                GameObject effect = Instantiate(water, player.transform.position, water.transform.rotation);
+                effect.GetComponent<Water>().damage = damage;
+                Vector3 start = new Vector3(player.transform.position.x, -1, player.transform.position.z);
+                Vector3 end = new Vector3(enemy[rand].gameObject.transform.position.x, -1, enemy[rand].gameObject.transform.position.z);
+                StartCoroutine(Attack(effect, start, end));
+            }
+            
             range.enabled = false;
         }
     }
@@ -80,6 +96,19 @@ public class Nautilus : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level == 1)
+        {
+            repeat = 1;
+        }
+        else if(level == 3)
+        {
+            repeat = 2;
+        }
+        else if(level == 5)
+        {
+            repeat = 3;
+        }
+
         this.level = level;
         damage = 25 * level;
     }

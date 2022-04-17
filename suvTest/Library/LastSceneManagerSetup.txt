@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/SampleScenes/SciFi_Industrial_Decor_PrefabLayout.unity
+- path: Assets/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

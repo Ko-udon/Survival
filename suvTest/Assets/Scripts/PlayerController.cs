@@ -143,6 +143,7 @@ public class PlayerController : MonoBehaviour
                 if(ballLV == 1)
                 {
                     skill_Ball.SetActive(true);
+                    skill_Ball.GetComponent<BallController>().UpdateLV(ballLV);
                 }
                 else
                 {
@@ -155,6 +156,7 @@ public class PlayerController : MonoBehaviour
                 if (knockbackLV == 1)
                 {
                     skill_KnockBack.SetActive(true);
+                    skill_KnockBack.GetComponent<KnockBack>().UpdateLV(knockbackLV);
                 }
                 else
                 {
@@ -167,6 +169,7 @@ public class PlayerController : MonoBehaviour
                 if (tauntLV == 1)
                 {
                     skill_Taunt.SetActive(true);
+                    skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
                 }
                 else
                 {
@@ -179,6 +182,7 @@ public class PlayerController : MonoBehaviour
                 if (nautilusLV == 1)
                 {
                     skill_Nautilus.SetActive(true);
+                    skill_Nautilus.GetComponent<Nautilus>().UpdateLV(nautilusLV);
                 }
                 else
                 {
@@ -191,6 +195,7 @@ public class PlayerController : MonoBehaviour
                 if (virusLV == 1)
                 {
                     skill_Virus.SetActive(true);
+                    skill_Virus.GetComponent<PoisonGenerator>().UpdateLV(virusLV);
                 }
                 else
                 {
