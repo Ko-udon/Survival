@@ -12,6 +12,7 @@ public class DynamicJoystick_ko : MonoBehaviour
     void Start()
     {
         controller = this.GetComponent<Joystick>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
     }
 

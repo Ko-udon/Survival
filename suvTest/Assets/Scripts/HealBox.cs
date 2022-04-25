@@ -13,7 +13,7 @@ public class HealBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
     }
 
