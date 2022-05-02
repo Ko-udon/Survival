@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public string charName;
     public float speed;
     public float hp;
+
+    public List<string> ownSkill;
 
     public GameObject arrowPrefab;
     public GameObject playerCharacter;
@@ -15,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject skill_Taunt;
     public GameObject skill_Nautilus;
     public GameObject skill_Virus;
+
+    public GameObject skillChangeUI;
 
     public int Level=0;
     public int exp=0;
@@ -44,6 +49,8 @@ public class PlayerController : MonoBehaviour
         virusLV = 0;
 
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
+
+        InitSkill(charName);
     }
 
     void Update()
@@ -59,6 +66,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-Time.deltaTime * speed, 0, 0);
+            
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -134,14 +142,71 @@ public class PlayerController : MonoBehaviour
         hp += amount;
         ui.PlayerHpBar();
     }
+
+    private void InitSkill(string name)
+    {
+        switch(name)
+        {
+            case "Fire":
+                GetSkill("Ball");
+                break;
+
+            case "Earth":
+                GetSkill("KnockBack");
+                break;
+        }
+    }
+
+    public void DeleteSkill(string type)
+    {
+        switch (type)
+        {
+            case "Ball":
+                ownSkill.Remove(type);
+                ballLV = 0;
+                skill_Ball.SetActive(false);
+                break;
+
+            case "KnockBack":
+                ownSkill.Remove(type);
+                knockbackLV = 0;
+                skill_KnockBack.SetActive(false);
+                break;
+
+            case "Taunt":
+                ownSkill.Remove(type);
+                tauntLV = 0;
+                skill_Taunt.SetActive(false);
+                break;
+
+            case "Nautilus":
+                ownSkill.Remove(type);
+                nautilusLV = 0;
+                skill_Nautilus.SetActive(false);
+                break;
+
+            case "Virus":
+                ownSkill.Remove(type);
+                virusLV = 0;
+                skill_Virus.SetActive(false);
+                break;
+        }
+    }
+
     public void GetSkill(string type)
     {
-        switch(type)
+        if (!ownSkill.Contains(type) && ownSkill.Count == 3)
+        {
+            skillChangeUI.SetActive(true);
+        }
+
+        switch (type)
         {
             case "Ball":
                 ballLV++;
-                if(ballLV == 1)
+                if (ballLV == 1)
                 {
+                    ownSkill.Add(type);
                     skill_Ball.SetActive(true);
                     skill_Ball.GetComponent<BallController>().UpdateLV(ballLV);
                 }
@@ -155,6 +220,7 @@ public class PlayerController : MonoBehaviour
                 knockbackLV++;
                 if (knockbackLV == 1)
                 {
+                    ownSkill.Add(type);
                     skill_KnockBack.SetActive(true);
                     skill_KnockBack.GetComponent<KnockBack>().UpdateLV(knockbackLV);
                 }
@@ -168,6 +234,7 @@ public class PlayerController : MonoBehaviour
                 tauntLV++;
                 if (tauntLV == 1)
                 {
+                    ownSkill.Add(type);
                     skill_Taunt.SetActive(true);
                     skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
                 }
@@ -181,6 +248,7 @@ public class PlayerController : MonoBehaviour
                 nautilusLV++;
                 if (nautilusLV == 1)
                 {
+                    ownSkill.Add(type);
                     skill_Nautilus.SetActive(true);
                     skill_Nautilus.GetComponent<Nautilus>().UpdateLV(nautilusLV);
                 }
@@ -194,6 +262,7 @@ public class PlayerController : MonoBehaviour
                 virusLV++;
                 if (virusLV == 1)
                 {
+                    ownSkill.Add(type);
                     skill_Virus.SetActive(true);
                     skill_Virus.GetComponent<PoisonGenerator>().UpdateLV(virusLV);
                 }
