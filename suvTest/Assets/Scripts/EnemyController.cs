@@ -56,6 +56,7 @@ public class EnemyController : MonoBehaviour
         else
         {
             target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+
         }
 
         if(isPosion)
