@@ -5,6 +5,7 @@ using UnityEngine;
 public class Taunt : MonoBehaviour
 {
     public GameObject tauntPrefab;
+    public List<float> durationByLV;
     private GameObject player;
 
     public float coolTime;
@@ -33,7 +34,12 @@ public class Taunt : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level > durationByLV.Count)
+        {
+            return;
+        }
+
         this.level = level;
-        duration = 2.5f * level;
+        duration = durationByLV[this.level - 1];
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public List<GameObject> ballList;
+    public List<float> speedByLV;
+    public List<float> damageByLV;
+
 
     private int level;
 
@@ -25,6 +28,12 @@ public class BallController : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level > damageByLV.Count)
+        {
+            return;
+        }
+
+
         if(level == 1)
         {
             ballList[0].SetActive(true);
@@ -45,7 +54,8 @@ public class BallController : MonoBehaviour
         foreach(GameObject ball in ballList)
         {
             this.level = level;
-            ball.GetComponent<Ball>().damage = 20 * level;
+            ball.GetComponent<Ball>().speed = speedByLV[this.level - 1];
+            ball.GetComponent<Ball>().damage = damageByLV[this.level - 1];
         }
 
         InitBall();

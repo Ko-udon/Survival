@@ -5,6 +5,7 @@ using UnityEngine;
 public class KnockBack : MonoBehaviour
 {
     public GameObject effect;
+    public List<float> degreeByLV;
 
     private GameObject player;
     private float time;
@@ -62,7 +63,12 @@ public class KnockBack : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level > degreeByLV.Count)
+        {
+            return;
+        }
+
         this.level = level;
-        degree = level;
+        degree = degreeByLV[this.level - 1];
     }
 }

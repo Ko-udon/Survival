@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        damage = 20;
+        //damage = 20;
     }
 
     void Update()

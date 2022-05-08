@@ -8,6 +8,7 @@ public class Nautilus : MonoBehaviour
     private SphereCollider range;
     private GameObject player;
 
+    public List<float> damageByLV;
     public GameObject water;
 
     private float time;
@@ -96,6 +97,11 @@ public class Nautilus : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level > damageByLV.Count)
+        {
+            return;
+        }
+
         if(level == 1)
         {
             repeat = 1;
@@ -110,6 +116,6 @@ public class Nautilus : MonoBehaviour
         }
 
         this.level = level;
-        damage = 25 * level;
+        damage = damageByLV[this.level - 1];
     }
 }

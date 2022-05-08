@@ -7,6 +7,7 @@ public class PoisonGenerator : MonoBehaviour
     private List<Collider> enemy;
     private SphereCollider range;
 
+    public List<float> durationByLV;
     public GameObject poisonPrefab;
 
     private float time;
@@ -65,7 +66,12 @@ public class PoisonGenerator : MonoBehaviour
 
     public void UpdateLV(int level)
     {
+        if(level > durationByLV.Count)
+        {
+            return;
+        }
+
         this.level = level;
-        duration = 3.5f * level;
+        duration = durationByLV[this.level - 1];
     }
 }

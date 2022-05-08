@@ -609,6 +609,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tauntPrefab: {fileID: 4745579507085714092, guid: fcd7cf3c659695e429106831b6c7bc1c, type: 3}
+  durationByLV:
+  - 2.5
+  - 5
+  - 7.5
+  - 10
+  - 12.5
   coolTime: 5
 --- !u!4 &131124627 stripped
 Transform:
@@ -1287,6 +1293,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tauntPrefab: {fileID: 4745579507085714092, guid: fcd7cf3c659695e429106831b6c7bc1c, type: 3}
+  durationByLV:
+  - 2.5
+  - 5
+  - 7.5
+  - 10
+  - 12.5
   coolTime: 5
 --- !u!4 &334476592 stripped
 Transform:
@@ -2337,6 +2349,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 100000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
+  degreeByLV:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 --- !u!135 &587859883
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4779,6 +4797,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 100000, guid: 352304b7fbe11f445970df6ae36e6227, type: 3}
+  degreeByLV:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 --- !u!1 &1055092355
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,7 +5230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1117782128
 Transform:
   m_ObjectHideFlags: 0
@@ -5800,7 +5824,7 @@ MonoBehaviour:
   skill_Taunt: {fileID: 324906010}
   skill_Nautilus: {fileID: 1551582402}
   skill_Virus: {fileID: 2043978044}
-  skillChangeUI: {fileID: 0}
+  skillChangeUI: {fileID: 305877717}
   Level: 0
   exp: 0
   expList: 64000000c8000000900100002003000040060000800c000000190000003200000064000000c8000000c8000000c8000000c8000000c8000000c8000000c80000
@@ -6299,6 +6323,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aff4d0bfe6ce94c97f74be51eb8c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageByLV:
+  - 25
+  - 50
+  - 75
+  - 100
+  - 125
   water: {fileID: 4800152615672640059, guid: 16f4057e7599d9e469f19e50a13ce17c, type: 3}
 --- !u!1 &1307000134
 GameObject:
@@ -6319,7 +6349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1307000135
 Transform:
   m_ObjectHideFlags: 0
@@ -6543,6 +6573,18 @@ MonoBehaviour:
   - {fileID: 1117782127}
   - {fileID: 1307000134}
   - {fileID: 1945611808}
+  speedByLV:
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  damageByLV:
+  - 20
+  - 40
+  - 60
+  - 80
+  - 100
 --- !u!1 &1326756417
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,6 +6795,18 @@ MonoBehaviour:
   - {fileID: 644510468}
   - {fileID: 1173917501}
   - {fileID: 361298799}
+  speedByLV:
+  - 500
+  - 500
+  - 500
+  - 500
+  - 500
+  damageByLV:
+  - 20
+  - 40
+  - 60
+  - 80
+  - 100
 --- !u!4 &1362484170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2771677985197229947, guid: f883eb98e5050e042a82100a7b9d1e2d, type: 3}
@@ -7344,6 +7398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52aff4d0bfe6ce94c97f74be51eb8c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageByLV:
+  - 25
+  - 50
+  - 75
+  - 100
+  - 125
   water: {fileID: 4800152615672640059, guid: 16f4057e7599d9e469f19e50a13ce17c, type: 3}
 --- !u!1001 &1571909740
 PrefabInstance:
@@ -7454,7 +7514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1577340484
 Transform:
   m_ObjectHideFlags: 0
@@ -7748,6 +7808,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16889cde0bf91614c9f3955c8117e9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationByLV:
+  - 3.5
+  - 7
+  - 10.5
+  - 14
+  - 17.5
   poisonPrefab: {fileID: 5168757600176915403, guid: 58537691f15232049a5e4017b05034e1, type: 3}
 --- !u!4 &1729585884
 Transform:
@@ -8440,7 +8506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1945611809
 Transform:
   m_ObjectHideFlags: 0
@@ -9175,6 +9241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16889cde0bf91614c9f3955c8117e9fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationByLV:
+  - 3.5
+  - 7
+  - 10.5
+  - 14
+  - 17.5
   poisonPrefab: {fileID: 5168757600176915403, guid: 58537691f15232049a5e4017b05034e1, type: 3}
 --- !u!135 &2043978047
 SphereCollider:
