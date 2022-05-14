@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     //var
 
     public int playerCharacterType;
+    public Dictionary<string, bool> characterDic = new Dictionary<string, bool>() { {"Earth",false },{"Fire",true }, { "Water", false }
+    ,{"Light",false },{"Dark",false }};
+
     private void Awake()
     {
         if (gameManager == null)

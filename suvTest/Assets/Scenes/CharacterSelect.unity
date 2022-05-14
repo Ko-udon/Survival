@@ -254,6 +254,7 @@ MonoBehaviour:
   anim: {fileID: 25296244}
   num: 0
   characterType: 0
+  characterName: 
   mesh: {fileID: 0}
 --- !u!1001 &305691592
 PrefabInstance:
@@ -386,6 +387,7 @@ MonoBehaviour:
   anim: {fileID: 305691595}
   num: 0
   characterType: 0
+  characterName: 
   mesh: {fileID: 0}
 --- !u!1 &336658339
 GameObject:
@@ -530,6 +532,7 @@ MonoBehaviour:
   anim: {fileID: 888159477}
   num: 3
   characterType: 1
+  characterName: Fire
   mesh: {fileID: 1713569073}
 --- !u!136 &485061609
 CapsuleCollider:
@@ -644,6 +647,7 @@ MonoBehaviour:
   anim: {fileID: 1670669816}
   num: 2
   characterType: 1
+  characterName: Fire
   mesh: {fileID: 1699119712}
 --- !u!136 &502901430
 CapsuleCollider:
@@ -911,7 +915,7 @@ Animation:
   m_GameObject: {fileID: 565609861}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: -203655887218126122, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
+  m_Animation: {fileID: 1827226128182048838, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
   m_Animations:
   - {fileID: -203655887218126122, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
   - {fileID: 1827226128182048838, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
@@ -1038,7 +1042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC120\uD0DD"
 --- !u!222 &779488179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1183,6 +1187,7 @@ MonoBehaviour:
   anim: {fileID: 888159477}
   num: 0
   characterType: 0
+  characterName: 
   mesh: {fileID: 0}
 --- !u!1 &1141739774
 GameObject:
@@ -1234,6 +1239,7 @@ MonoBehaviour:
   anim: {fileID: 305691595}
   num: 4
   characterType: 1
+  characterName: Fire
   mesh: {fileID: 850873729}
 --- !u!136 &1141739777
 CapsuleCollider:
@@ -1517,6 +1523,7 @@ MonoBehaviour:
   anim: {fileID: 565609862}
   num: 0
   characterType: 0
+  characterName: Earth
   mesh: {fileID: 565609863}
 --- !u!136 &1386868907
 CapsuleCollider:
@@ -1616,6 +1623,7 @@ MonoBehaviour:
   anim: {fileID: 25296244}
   num: 1
   characterType: 1
+  characterName: Fire
   mesh: {fileID: 2085017138}
 --- !u!136 &1455379491
 CapsuleCollider:
@@ -1826,6 +1834,7 @@ MonoBehaviour:
   anim: {fileID: 1670669816}
   num: 0
   characterType: 0
+  characterName: 
   mesh: {fileID: 0}
 --- !u!1 &1699119712 stripped
 GameObject:
@@ -1851,7 +1860,7 @@ GameObject:
   - component: {fileID: 1802951638}
   - component: {fileID: 1802951641}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SelectBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

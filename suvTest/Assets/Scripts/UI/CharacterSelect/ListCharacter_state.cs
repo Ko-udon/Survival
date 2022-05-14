@@ -4,27 +4,41 @@ using UnityEngine;
 
 public class ListCharacter_state : MonoBehaviour
 {
+    GameManager gameManager;
+
     CharacterList characterList;
     public Animation anim;
 
     public int num;
     public int characterType;
+    public string characterName;
     public GameObject mesh;
     private Material material;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
         //anim = gameObject.GetComponent<Animation>();
         //material = GetComponentInChildren<Renderer>().material;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         material = mesh.GetComponent<Renderer>().material;
         characterList = GameObject.Find("CharacterList").GetComponent<CharacterList>();
+        
         if (num==0)
         {
-            material.color = Color.white;
-            anim.Play("Idle");
-            Debug.Log("Start");
+            if(gameManager.characterDic[characterName]==true)
+            {
+                material.color = Color.white;
+                anim.Play("Running");
+                Debug.Log("Start");
+            }
+            else
+            {
+                material.color = Color.black;
+            }
+            
         }
         else
         {
@@ -60,13 +74,21 @@ public class ListCharacter_state : MonoBehaviour
         //
         if (num == 0)
         {
-            material.color = Color.white;
-            anim.Play("Idle");
+            if(gameManager.characterDic[characterName] == true)
+            {
+                material.color = Color.white;
+                anim.Play("Running");
+            }
+            else
+            {
+                material.color = Color.black;
+            }
+                
         }
         else if (num != 0)
         {
             material.color = Color.black;
-            anim.Stop("Idle");
+            anim.Stop("Running");
         }
         //StartCoroutine(ListCharacterMoveLeft());
 
