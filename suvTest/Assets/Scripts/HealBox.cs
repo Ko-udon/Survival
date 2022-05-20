@@ -10,6 +10,7 @@ public class HealBox : MonoBehaviour
     UIController ui;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class HealBox : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             player.Heal(healAmount);
+
             gameObject.SetActive(false);
         }
     }

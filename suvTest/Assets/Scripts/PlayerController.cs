@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public string charName;
     public float speed;
     public float hp;
+    public float code;
 
     public List<string> ownSkill;
 
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public int virusLV;
     //UI관련
     UIController ui;
+    StatusBattery statusBt;
 
     //Animation
     public Animation anim;
@@ -89,6 +91,9 @@ public class PlayerController : MonoBehaviour
         {
             anim.Play("Idle");
         }
+
+        //Status
+        
     }
 
     public void HitEffect(Vector3 hitPos)
