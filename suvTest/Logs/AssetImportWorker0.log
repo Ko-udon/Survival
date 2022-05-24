@@ -15,11 +15,11 @@ C:/Young/Survival/suvTest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53807
+57291
 Successfully changed project path to: C:/Young/Survival/suvTest
 C:/Young/Survival/suvTest
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 62.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 329.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002509 seconds.
+Registered in 0.006702 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 53.99 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 195.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.159 seconds
+- Completed reload, in  2.707 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1159ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (2708ms)
+		BeginReloadAssembly (182ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (411ms)
-			LoadAssemblies (60ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1048ms)
+			LoadAssemblies (175ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (140ms)
+			SetupTypeCache (309ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (168ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (531ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (54ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (68ms)
-				ProcessInitializeOnLoadMethodAttributes (25ms)
+				RefreshPlugins (196ms)
+				BeforeProcessingInitializeOnLoad (39ms)
+				ProcessInitializeOnLoadAttributes (188ms)
+				ProcessInitializeOnLoadMethodAttributes (101ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008346 seconds.
+Registered in 0.036034 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.161 seconds
+- Completed reload, in  2.441 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1163ms)
-		BeginReloadAssembly (143ms)
+	ReloadAssembly (2445ms)
+		BeginReloadAssembly (472ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (953ms)
-			LoadAssemblies (116ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1804ms)
+			LoadAssemblies (319ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (304ms)
+			SetupTypeCache (545ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (374ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (726ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (103ms)
-				ProcessInitializeOnLoadAttributes (247ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (214ms)
+				ProcessInitializeOnLoadAttributes (478ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.94 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1884 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.7 MB.
-System memory in use after: 89.8 MB.
+Unloading 1891 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.8 MB.
+System memory in use after: 94.8 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2333.
-Total: 2.981300 ms (FindLiveObjects: 0.174700 ms CreateObjectMapping: 0.061400 ms MarkObjects: 2.659500 ms  DeleteObjects: 0.084800 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2341.
+Total: 8.140400 ms (FindLiveObjects: 0.539600 ms CreateObjectMapping: 0.283500 ms MarkObjects: 7.130700 ms  DeleteObjects: 0.183500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,201 +132,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/New Avatar Mask.mask
-  artifactKey: Guid(d83b1ab032103a74ea02615a5cfb113b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/About/New Avatar Mask.mask using Guid(d83b1ab032103a74ea02615a5cfb113b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f829a0e524654741dffe11b0cf573c1b') in 0.049463 seconds 
-  Import took 0.052225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.056866 seconds.
-  path: Assets/Scenes/CharacterSelect.unity
-  artifactKey: Guid(9e935a7aca2347b4d91be748eff0ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/CharacterSelect.unity using Guid(9e935a7aca2347b4d91be748eff0ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb3d2bfaf39afa9166497f923c9d0a0') in 0.004409 seconds 
-  Import took 0.008658 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004822 seconds.
-  path: Assets/Scenes/CharacterSelect.unity
-  artifactKey: Guid(9e935a7aca2347b4d91be748eff0ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/CharacterSelect.unity using Guid(9e935a7aca2347b4d91be748eff0ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb3d2bfaf39afa9166497f923c9d0a0') in 0.012183 seconds 
-  Import took 0.016134 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36050.613725 seconds.
-  path: Assets/TWD/FreeButtonSet/Fonts/Poppins-Bold.ttf
-  artifactKey: Guid(f4c99a340a6e6504aa6e992b7a253612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Fonts/Poppins-Bold.ttf using Guid(f4c99a340a6e6504aa6e992b7a253612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6788c4d5eca3e17e1c1b6b0b4547edd4') in 0.188064 seconds 
-  Import took 0.231432 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/TWD/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf
-  artifactKey: Guid(d1fe0bc1ac9782f4c8f875e1a7cea6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf using Guid(d1fe0bc1ac9782f4c8f875e1a7cea6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9440c91509c99eb90a3f9c937446ffe2') in 0.020320 seconds 
-  Import took 0.023192 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000388 seconds.
-  path: Assets/TWD/FreeButtonSet/Fonts/Poppins-Bold.ttf
-  artifactKey: Guid(f4c99a340a6e6504aa6e992b7a253612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Fonts/Poppins-Bold.ttf using Guid(f4c99a340a6e6504aa6e992b7a253612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6788c4d5eca3e17e1c1b6b0b4547edd4') in 0.020732 seconds 
-  Import took 0.023560 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/TWD/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf
-  artifactKey: Guid(d1fe0bc1ac9782f4c8f875e1a7cea6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Fonts/Poppins-MediumItalic.ttf using Guid(d1fe0bc1ac9782f4c8f875e1a7cea6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9440c91509c99eb90a3f9c937446ffe2') in 0.018595 seconds 
-  Import took 0.021588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3841.157466 seconds.
-  path: Assets/Assets/그림1.png
-  artifactKey: Guid(61d7471d34e4a6747b78b6078ade448a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/그림1.png using Guid(61d7471d34e4a6747b78b6078ade448a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db2e8b0376f98a381a796b645ed759e') in 0.060129 seconds 
-  Import took 0.064454 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/Assets/그림2.png
-  artifactKey: Guid(f67a679b8a32fed4c96a187bd63ebcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/그림2.png using Guid(f67a679b8a32fed4c96a187bd63ebcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45bf2315166381acfc5a94aa49bb9d91') in 0.025780 seconds 
-  Import took 0.028502 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001165 seconds.
-  path: Assets/Assets/그림2.png
-  artifactKey: Guid(f67a679b8a32fed4c96a187bd63ebcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets/그림2.png using Guid(f67a679b8a32fed4c96a187bd63ebcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45bf2315166381acfc5a94aa49bb9d91') in 0.018587 seconds 
-  Import took 0.021882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.157453 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/256x256/x.png
-  artifactKey: Guid(e839e6693c344ad40a5952853a891866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/256x256/x.png using Guid(e839e6693c344ad40a5952853a891866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a47abeef662bcbda26a25d0886be3e7') in 0.025507 seconds 
-  Import took 0.030396 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/64x64/x.png
-  artifactKey: Guid(f83e9462d8dbe654b9dc1ea2294dba0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/64x64/x.png using Guid(f83e9462d8dbe654b9dc1ea2294dba0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed5d795a64b4e3dd98d2a4b0c9c5004') in 0.015828 seconds 
-  Import took 0.018755 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000462 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/128x128/x.png
-  artifactKey: Guid(321dfcc1c12d7cf42b0037754b1cdf9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/128x128/x.png using Guid(321dfcc1c12d7cf42b0037754b1cdf9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45079d44e7627cde09c540776812dad3') in 0.020187 seconds 
-  Import took 0.023440 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000714 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/32x32/x.png
-  artifactKey: Guid(9aeac1c0750d43d498b7e62859763888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/32x32/x.png using Guid(9aeac1c0750d43d498b7e62859763888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2e0ddbebeb2cfd7d49787b7ab654360') in 0.016729 seconds 
-  Import took 0.020339 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.657205 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/128x128/user.png
-  artifactKey: Guid(3b902f226593c084fba20ed761508616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/128x128/user.png using Guid(3b902f226593c084fba20ed761508616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68f45da25aab98a133f2cdf0d8b3fcf8') in 0.013558 seconds 
-  Import took 0.016897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/32x32/user.png
-  artifactKey: Guid(cf47eab53a70c424aad053f375a5f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/32x32/user.png using Guid(cf47eab53a70c424aad053f375a5f2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74652cb12a6936971951b429ddb91d02') in 0.026099 seconds 
-  Import took 0.029241 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000401 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/64x64/user.png
-  artifactKey: Guid(ca09d89e4979d814d87dd1e020aa41e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/64x64/user.png using Guid(ca09d89e4979d814d87dd1e020aa41e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25bf9a951e11a532f3d1cb280ccd5a07') in 0.021281 seconds 
-  Import took 0.024631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000322 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/256x256/user.png
-  artifactKey: Guid(c78d369807d13294aa60a37e1092dc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/256x256/user.png using Guid(c78d369807d13294aa60a37e1092dc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b38096e1b6b0fb2edd6dca5fb1ae16') in 0.022549 seconds 
-  Import took 0.025572 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.781070 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/other/universal_panel_30.png
-  artifactKey: Guid(0b6605e33662e954eb4ff8943ef1c809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/other/universal_panel_30.png using Guid(0b6605e33662e954eb4ff8943ef1c809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2ae951ca2ce6d04d9c71c9c5574c27') in 0.013793 seconds 
-  Import took 0.017210 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/other/universal_panel_40.png
-  artifactKey: Guid(8174901dff2facb4583e976f866ae424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/other/universal_panel_40.png using Guid(8174901dff2facb4583e976f866ae424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04a33545eb0f7f4972cdd370adea13a') in 0.029986 seconds 
-  Import took 0.032681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000934 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/other/universal_panel_40.png
-  artifactKey: Guid(8174901dff2facb4583e976f866ae424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/other/universal_panel_40.png using Guid(8174901dff2facb4583e976f866ae424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04a33545eb0f7f4972cdd370adea13a') in 0.016128 seconds 
-  Import took 0.019921 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008051 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/other/universal_panel_10.png
-  artifactKey: Guid(3973caf801ba6864d98890213e90590b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/other/universal_panel_10.png using Guid(3973caf801ba6864d98890213e90590b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7abd11e993aa91825ba68e5f1c230bd') in 0.018197 seconds 
-  Import took 0.021723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000374 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/other/universal_panel_20.png
-  artifactKey: Guid(953de0a59c3f3c7498ecb7496a450d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/other/universal_panel_20.png using Guid(953de0a59c3f3c7498ecb7496a450d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61b554f070351a763670e077c318cd3f') in 0.018281 seconds 
-  Import took 0.022090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.291245 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/256x256/star.png
-  artifactKey: Guid(b6a757f6793cb0148a905bea74154284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/256x256/star.png using Guid(b6a757f6793cb0148a905bea74154284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc577ef8e654c8898e2f365f1a9bfdd') in 0.016643 seconds 
-  Import took 0.020855 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/TWD/FreeButtonSet/Textures/icons/64x64/star.png
-  artifactKey: Guid(2d2d75d383dae9b40b9b53a931127253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TWD/FreeButtonSet/Textures/icons/64x64/star.png using Guid(2d2d75d383dae9b40b9b53a931127253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b4fb27d9d008db08ef23d8dab794bb') in 0.016181 seconds 
-  Import took 0.019354 seconds .
+  path: Assets/MedievalFantasy
+  artifactKey: Guid(a1fbfadf4aa435c47ac2220e17d0f125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy using Guid(a1fbfadf4aa435c47ac2220e17d0f125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6369ec8b92daa748fdda5336a867c5ec') in 0.019269 seconds 
+  Import took 0.028903 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
