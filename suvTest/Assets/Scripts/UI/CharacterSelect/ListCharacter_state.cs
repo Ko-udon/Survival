@@ -13,8 +13,10 @@ public class ListCharacter_state : MonoBehaviour
     public int characterType;
     public string characterName;
     public GameObject mesh;
+    public SkinnedMeshRenderer ms;
     private Material material;
-
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +26,31 @@ public class ListCharacter_state : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         material = mesh.GetComponent<Renderer>().material;
+        ms = mesh.GetComponent<SkinnedMeshRenderer>();
+        
         characterList = GameObject.Find("CharacterList").GetComponent<CharacterList>();
         
         if (num==0)
         {
             if(gameManager.characterDic[characterName]==true)
             {
-                material.color = Color.white;
+                
                 anim.Play("Running");
                 Debug.Log("Start");
             }
             else
             {
-                material.color = Color.black;
+                ms.enabled = true;
+                //material.color = Color.black;  //¿·±Ë
+                
             }
             
         }
         else
         {
-            material.color = Color.black;
+            ms.enabled = false;
+            //material.color = Color.black;
+
         }
 
 
@@ -59,7 +67,7 @@ public class ListCharacter_state : MonoBehaviour
     {
         if (num == 0)
         {
-            num = 4;
+            num = 1;
             characterList.characterList[num] = this;
             this.transform.localPosition = characterList.listPos[4];
         }
@@ -71,23 +79,16 @@ public class ListCharacter_state : MonoBehaviour
 
         }
 
-        //
         if (num == 0)
         {
-            if(gameManager.characterDic[characterName] == true)
-            {
-                material.color = Color.white;
-                anim.Play("Running");
-            }
-            else
-            {
-                material.color = Color.black;
-            }
-                
+            //material.color = Color.white;
+            ms.enabled = true;
+            anim.Play("Running");
         }
         else if (num != 0)
         {
-            material.color = Color.black;
+            //material.color = Color.black;
+            ms.enabled = false;
             anim.Stop("Running");
         }
         //StartCoroutine(ListCharacterMoveLeft());
@@ -101,7 +102,7 @@ public class ListCharacter_state : MonoBehaviour
 
     public void characterRotationRight()
     {
-        if (num == 4)
+        if (num == 1)
         {
             num = 0;
             characterList.characterList[num] = this;
@@ -118,13 +119,15 @@ public class ListCharacter_state : MonoBehaviour
         //
         if (num == 0)
         {
-            material.color = Color.white;
-            anim.Play("Idle");
+            //material.color = Color.white;
+            ms.enabled = true;
+            anim.Play("Running");
         }
         else if (num != 0)
         {
-            material.color = Color.black;
-            anim.Stop("Idle");
+            //material.color = Color.black;
+            ms.enabled = false;
+            anim.Stop("Running");
         }
 
 

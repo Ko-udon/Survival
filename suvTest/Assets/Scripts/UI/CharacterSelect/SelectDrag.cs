@@ -24,6 +24,23 @@ public class SelectDrag : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
         //Debug.Log(beginDragPos);
 
     }
+    public void ClickLeft()
+    {
+        listCharacterState_0.characterRotationLeft();
+        listCharacterState_1.characterRotationLeft();
+        //listCharacterState_2.characterRotationLeft();
+        //listCharacterState_3.characterRotationLeft();
+        //listCharacterState_4.characterRotationLeft();
+
+    }
+    public void ClickRight()
+    {
+        listCharacterState_0.characterRotationRight();
+        listCharacterState_1.characterRotationRight();
+        //listCharacterState_2.characterRotationRight();
+        //listCharacterState_3.characterRotationRight();
+        //listCharacterState_4.characterRotationRight();
+    }
 
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -36,18 +53,18 @@ public class SelectDrag : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
             Debug.Log("Left");
             listCharacterState_0.characterRotationLeft();
             listCharacterState_1.characterRotationLeft();
-            listCharacterState_2.characterRotationLeft();
-            listCharacterState_3.characterRotationLeft();
-            listCharacterState_4.characterRotationLeft();
+            //listCharacterState_2.characterRotationLeft();
+            //listCharacterState_3.characterRotationLeft();
+            //listCharacterState_4.characterRotationLeft();
         }
         else if ((endDragPos.x > beginDragPos.x) & (minus > dragValue))
         {
             Debug.Log("Right");
             listCharacterState_0.characterRotationRight();
             listCharacterState_1.characterRotationRight();
-            listCharacterState_2.characterRotationRight();
-            listCharacterState_3.characterRotationRight();
-            listCharacterState_4.characterRotationRight();
+            //listCharacterState_2.characterRotationRight();
+            //listCharacterState_3.characterRotationRight();
+            //listCharacterState_4.characterRotationRight();
             // Debug.Log(minus);
         }
         else
@@ -59,9 +76,9 @@ public class SelectDrag : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
     {
         listCharacterState_0 = GameObject.Find("character_0").GetComponent<ListCharacter_state>();
         listCharacterState_1 = GameObject.Find("character_1").GetComponent<ListCharacter_state>();
-        listCharacterState_2 = GameObject.Find("character_2").GetComponent<ListCharacter_state>();
-        listCharacterState_3 = GameObject.Find("character_3").GetComponent<ListCharacter_state>();
-        listCharacterState_4 = GameObject.Find("character_4").GetComponent<ListCharacter_state>();
+        //listCharacterState_2 = GameObject.Find("character_2").GetComponent<ListCharacter_state>();
+        //listCharacterState_3 = GameObject.Find("character_3").GetComponent<ListCharacter_state>();
+        //listCharacterState_4 = GameObject.Find("character_4").GetComponent<ListCharacter_state>();
 
     }
 

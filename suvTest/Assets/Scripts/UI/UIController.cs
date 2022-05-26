@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     PlayerController player;
-    public Image GameOverImg;
+    public GameObject GameOverImg;
     public Image hpBar;
     public Image expBar;
     public Text expText;
@@ -29,6 +29,7 @@ public class UIController : MonoBehaviour
 
         //debug
         expBar.fillAmount = 0;
+        hpBar.fillAmount = 1;
         hpText.text = player.hp.ToString();
     }
 
