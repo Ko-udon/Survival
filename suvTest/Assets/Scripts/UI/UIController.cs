@@ -28,6 +28,7 @@ public class UIController : MonoBehaviour
 
 
         //debug
+        expBar.fillAmount = 0;
         hpText.text = player.hp.ToString();
     }
 

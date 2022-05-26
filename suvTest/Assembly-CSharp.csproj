@@ -53,10 +53,11 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\CircleSlider.cs" />
     <Compile Include="Assets\Scripts\CloseWeapon.cs" />
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -75,7 +76,10 @@
     <Compile Include="Assets\Scripts\UI\SkillActivateBtn.cs" />
     <Compile Include="Assets\Scripts\UI\MoveBackBtn.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SliderRunTo1.cs" />
     <Compile Include="Assets\Scripts\UI\Joystick_ko.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\JustRotate.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\PressedBtn.cs" />
     <Compile Include="Assets\Scripts\Getskill.cs" />
     <Compile Include="Assets\AssetStoreOriginals\_SNAPS_PrototypingAssets\About\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelect\SelectDrag.cs" />
@@ -88,6 +92,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\EnemyControllerRange.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SimpleProgress1.cs" />
     <Compile Include="Assets\Scripts\UI\Joystick2.cs" />
     <Compile Include="Assets\Scripts\UI\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\SkillChange.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Scripts\UI\MoveForwardBtn.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelect\CharacterList.cs" />
+    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SliderValuePass.cs" />
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
@@ -113,12 +119,6 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\SkillGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\StatusBattery.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\CircleSlider.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\JustRotate.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SliderValuePass.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SimpleProgress1.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\SliderRunTo1.cs" />
-    <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\PressedBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
