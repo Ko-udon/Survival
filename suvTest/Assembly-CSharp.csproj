@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\HealBox.cs" />
     <Compile Include="Assets\Scripts\UI\DynamicJoystick_ko.cs" />
     <Compile Include="Assets\Scripts\HitArrow.cs" />
+    <Compile Include="Assets\Assets\Beautiful Progress Bar Free - CYKO\Scripts\SliderScripts.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Scripts\UI\MoveForwardBtn.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterSelect\CharacterList.cs" />
