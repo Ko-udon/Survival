@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     //UI관련
     UIController ui;
     StatusBattery statusBt;
+    Rigidbody rigidbody;
 
     //Animation
     public Animation anim;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
         nautilusLV = 0;
         virusLV = 0;
 
+        rigidbody = GetComponent<Rigidbody>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
 
         InitSkill(charName);
@@ -57,7 +59,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
         CheckHP();
 
         if(Input.GetKey(KeyCode.D))

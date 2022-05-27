@@ -28,7 +28,7 @@ public class Poison : MonoBehaviour
         if(time < 0)
         {
             gameObject.transform.parent.GetComponent<EnemyController>().isPosion = false;
-            Destroy(gameObject);
+            EndingEffect();
         }
 
         if(cooltime < 0)
@@ -63,5 +63,17 @@ public class Poison : MonoBehaviour
                 enemy.Add(other);
             }
         }
+    }
+
+    private void EndingEffect()
+    {
+        ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
+        main.loop = false;
+
+        main = transform.GetChild(0).GetComponent<ParticleSystem>().main;
+        main.loop = false;
+
+        main = transform.GetChild(0).GetChild(0).GetComponent<ParticleSystem>().main;
+        main.loop = false;
     }
 }
