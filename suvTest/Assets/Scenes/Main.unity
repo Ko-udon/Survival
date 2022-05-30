@@ -529,7 +529,7 @@ MonoBehaviour:
   rectBack: {fileID: 58180059}
   rectJoystick: {fileID: 224665724}
   player: {fileID: 1198982526}
-  Speed: 5
+  Speed: 15
 --- !u!1 &77178170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,7 +2039,6 @@ GameObject:
   - component: {fileID: 412172660}
   - component: {fileID: 412172659}
   - component: {fileID: 412172658}
-  - component: {fileID: 412172657}
   m_Layer: 0
   m_Name: FirePlayer
   m_TagString: Player
@@ -2047,22 +2046,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &412172657
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412172656}
-  serializedVersion: 2
-  m_Mass: 30
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &412172658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,8 +2058,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfbb00159d6f48bf08047d8606b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: 1
   charName: Fire
   speed: 10
+  rotSpeed: 30
   hp: 500
   code: 0
   ownSkill: []
@@ -2099,19 +2084,23 @@ MonoBehaviour:
   virusLV: 0
   anim: {fileID: 336408267}
   isIdle: 1
---- !u!136 &412172659
-CapsuleCollider:
+--- !u!143 &412172659
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412172656}
-  m_Material: {fileID: 13400000, guid: 579a92e26404b974da65fac5b5e08305, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
+  serializedVersion: 2
   m_Height: 2
-  m_Direction: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &412172660
 MeshRenderer:
@@ -7025,6 +7014,7 @@ GameObject:
   - component: {fileID: 1064827795}
   - component: {fileID: 1064827794}
   - component: {fileID: 1064827793}
+  - component: {fileID: 1064827797}
   m_Layer: 7
   m_Name: floor
   m_TagString: Untagged
@@ -7109,6 +7099,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1064827797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064827792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1080436619
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,7 +7896,6 @@ GameObject:
   - component: {fileID: 1198982524}
   - component: {fileID: 1198982523}
   - component: {fileID: 1198982528}
-  - component: {fileID: 1198982527}
   m_Layer: 0
   m_Name: EarthPlayer
   m_TagString: Player
@@ -7901,19 +7903,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!136 &1198982523
-CapsuleCollider:
+--- !u!143 &1198982523
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198982522}
-  m_Material: {fileID: 13400000, guid: 579a92e26404b974da65fac5b5e08305, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
+  serializedVersion: 2
   m_Height: 2
-  m_Direction: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1198982524
 MeshRenderer:
@@ -7982,22 +7988,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1198982527
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198982522}
-  serializedVersion: 2
-  m_Mass: 30
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &1198982528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8010,8 +8000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfbb00159d6f48bf08047d8606b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: 0
   charName: Earth
   speed: 10
+  rotSpeed: 30
   hp: 500
   code: 0
   ownSkill: []

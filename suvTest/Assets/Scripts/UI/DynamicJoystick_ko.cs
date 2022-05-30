@@ -21,7 +21,7 @@ public class DynamicJoystick_ko : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 moveDir = Vector2.up * controller.Horizontal;
-        player.transform.Rotate(moveDir * Time.fixedDeltaTime *playerController.speed);
+        player.transform.Rotate(moveDir * Time.fixedDeltaTime * playerController.rotSpeed);
     }
     // Update is called once per frame
     void Update()

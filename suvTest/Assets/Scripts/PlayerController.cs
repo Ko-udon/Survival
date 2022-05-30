@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool test;
+
     public string charName;
     public float speed;
+    public float rotSpeed;
     public float hp;
     public float code;
+    private int dir;
 
     public List<string> ownSkill;
 
@@ -37,6 +41,7 @@ public class PlayerController : MonoBehaviour
     UIController ui;
     StatusBattery statusBt;
     Rigidbody rigidbody;
+    CharacterController collider;
 
     //Animation
     public Animation anim;
@@ -53,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
         rigidbody = GetComponent<Rigidbody>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
+        collider = GetComponent<CharacterController>();
 
         InitSkill(charName);
     }
@@ -61,26 +67,41 @@ public class PlayerController : MonoBehaviour
     {
         CheckHP();
 
-        if(Input.GetKey(KeyCode.D))
+        if(!test)
         {
-            transform.Translate(Time.deltaTime * speed, 0, 0);
+            CharacterMove();
         }
-
-        if (Input.GetKey(KeyCode.A))
+        else
         {
-            transform.Translate(-Time.deltaTime * speed, 0, 0);
-            
-        }
+            Vector3 direc;
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(0, 0, Time.deltaTime * speed);
-        }
+            if (Input.GetKey(KeyCode.D))
+            {
+                //transform.Translate(Time.deltaTime * speed, 0, 0);
+                direc = transform.right;
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -Time.deltaTime * speed);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                //transform.Translate(-Time.deltaTime * speed, 0, 0);
+                direc = -transform.right;
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                //transform.Translate(0, 0, Time.deltaTime * speed);
+                direc = transform.forward;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                //transform.Translate(0, 0, -Time.deltaTime * speed);
+                direc = -transform.forward;
+            }
+            else
+            {
+                direc = Vector3.zero;
+            }
 
+            collider.SimpleMove(direc * speed);
         }
 
         //Animations
@@ -95,6 +116,16 @@ public class PlayerController : MonoBehaviour
 
         //Status
         
+    }
+
+    private void CharacterMove()
+    {
+        collider.SimpleMove(transform.forward * speed * dir);
+    }
+
+    public void ChangeDir(int dir)
+    {
+        this.dir = dir;
     }
 
     public void HitEffect(Vector3 hitPos)

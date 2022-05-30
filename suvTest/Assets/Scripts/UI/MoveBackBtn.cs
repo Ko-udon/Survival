@@ -22,10 +22,10 @@ public class MoveBackBtn : MonoBehaviour
     void Update()
     {
         test = player.transform.localEulerAngles.y;
-        if (btDown)
+        /*if (btDown)
         {
             player.transform.Translate(0, 0, Time.deltaTime * -player.speed);
-        }
+        }*/
     }
 
     /*public void MoveForward()
@@ -38,12 +38,13 @@ public class MoveBackBtn : MonoBehaviour
     {
         btDown = false;
         player.isIdle = true;
+        player.ChangeDir(0);
     }
     public void BtnDown()
     {
         btDown = true;
         player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y+180, 0);
         player.isIdle = false;
-
+        player.ChangeDir(-1);
     }
 }

@@ -19,10 +19,11 @@ public class MoveForwardBtn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (btDown)
+        /*if (btDown)
         {
             player.transform.Translate(0, 0, Time.deltaTime * player.speed);
-        }
+            
+        }*/
     }
 
     /*public void MoveForward()
@@ -35,11 +36,13 @@ public class MoveForwardBtn : MonoBehaviour
     {
         btDown = false;
         player.isIdle = true;
+        player.ChangeDir(0);
     }
     public void BtnDown()
     {
         btDown = true;
         player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
         player.isIdle = false;
+        player.ChangeDir(1);
     }
 }
