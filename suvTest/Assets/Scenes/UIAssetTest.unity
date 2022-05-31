@@ -2557,8 +2557,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfbb00159d6f48bf08047d8606b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: 0
   charName: Fire
   speed: 10
+  rotSpeed: 0
   hp: 500
   code: 0
   ownSkill: []
@@ -4720,6 +4722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1200188033974773, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45808941d5d702548a8881ddaf386606, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c1c16d5a550ce0429fd5c6673dd1f30, type: 3}
       propertyPath: m_Name
       value: EarthCharacter
@@ -7541,7 +7547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdd0314d44595d4281b1cb0601a63b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverImg: {fileID: 824941511}
+  GameOverImg: {fileID: 0}
   hpBar: {fileID: 0}
   expBar: {fileID: 884608766}
   expText: {fileID: 761355780}
@@ -8591,8 +8597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfbb00159d6f48bf08047d8606b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: 0
   charName: Earth
   speed: 10
+  rotSpeed: 0
   hp: 500
   code: 0
   ownSkill: []
