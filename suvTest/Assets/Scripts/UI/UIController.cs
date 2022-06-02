@@ -36,8 +36,8 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //PlayerHpBar();
-        //PlayerExpBar();
+        PlayerHpBar();
+        PlayerExpBar();
         if (player.hp < 0)
         {
             GameOverImg.gameObject.SetActive(true);
@@ -57,7 +57,7 @@ public class UIController : MonoBehaviour
         hpBar.fillAmount = playerHp / playerTotalHp;
 
 
-        hpText.text = playerHp.ToString();
+        hpText.text = playerHp.ToString() + "/" + playerTotalHp.ToString();
         
     }
     public void PlayerExpBar()

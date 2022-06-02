@@ -10,6 +10,7 @@ TagManager:
   - FxTemporaire
   - Bullet
   - UIController
+  - Player_view
   layers:
   - Default
   - TransparentFX

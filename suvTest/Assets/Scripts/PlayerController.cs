@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         collider.SimpleMove(transform.forward * speed * dir);
     }
-
+    
     public void ChangeDir(int dir)
     {
         this.dir = dir;

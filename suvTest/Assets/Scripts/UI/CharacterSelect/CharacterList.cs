@@ -10,10 +10,12 @@ public class CharacterList : MonoBehaviour
 
     //public Dictionary<GameObject, string> characterList2;
     public List<Vector3> listPos;
+    
 
 
     void Start()
     {
+        
         for(int i=0;i<characterList.Count;i++)
         {
             if(i!=0)
@@ -21,6 +23,7 @@ public class CharacterList : MonoBehaviour
                 characterList[i].SetActive(false);
             }
         }
+        
     }
 
     // Update is called once per frame
@@ -37,12 +40,15 @@ public class CharacterList : MonoBehaviour
     public void SetFirstCharacter()
     {
         characterList[0].gameObject.SetActive(true);
+        
         ListCharacter_state anim = characterList[0].GetComponent<ListCharacter_state>();
         anim.playAnim();
+        
     }
 
     public void rotateLeft()
     {
+
         characterList[0].SetActive(false);
         GameObject tmp = characterList[0];
         string tmp_s = characterNameList[0];
@@ -62,6 +68,7 @@ public class CharacterList : MonoBehaviour
 
 
         }
+        
         SetFirstCharacter();
     }
     public void rotateRight()
@@ -84,7 +91,7 @@ public class CharacterList : MonoBehaviour
 
 
         }
-
+        
         SetFirstCharacter();
     }
 }

@@ -6,14 +6,16 @@ public class MoveForwardBtn : MonoBehaviour
 {
  
     PlayerController player;
-    public Transform player_pos;
+    public Transform player_view;
     bool btDown = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();    
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        player_view = GameObject.FindGameObjectWithTag("Player_view").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -40,8 +42,12 @@ public class MoveForwardBtn : MonoBehaviour
     }
     public void BtnDown()
     {
+        
+       
         btDown = true;
-        player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
+        player_view.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
+        Debug.Log(player.transform.localEulerAngles.y);
+    
         player.isIdle = false;
         player.ChangeDir(1);
     }

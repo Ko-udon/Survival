@@ -10,7 +10,10 @@ public class CharacterSelectBtn : MonoBehaviour
     CharacterList characterList;
     ListCharacter_state listCharacter_state;
 
-    private Button btn;
+    public Button btn;
+
+    public GameObject locked;
+    public GameObject unlocked;
     
 
     // Start is called before the first frame update
@@ -29,10 +32,14 @@ public class CharacterSelectBtn : MonoBehaviour
         if (gameManager.characterDic[characterList.characterNameList[0]] == true)
         {
             btn.interactable = true;
+            unlocked.SetActive(true);
+            locked.SetActive(false);
         }
         else
         {
             btn.interactable = false;
+            unlocked.SetActive(false);
+            locked.SetActive(true);
         }
 
 
@@ -40,6 +47,7 @@ public class CharacterSelectBtn : MonoBehaviour
     public void OnClick()
     {
         gameManager.playerCharacterType = characterList.select();
+
         SceneManager.LoadScene("Main");
     }
     

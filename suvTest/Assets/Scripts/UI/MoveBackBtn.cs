@@ -6,7 +6,7 @@ public class MoveBackBtn : MonoBehaviour
 {
     PlayerController player;
 
-    public Transform player_pos;
+    public Transform player_view;
     public float test;
     
     bool btDown = false;
@@ -16,6 +16,7 @@ public class MoveBackBtn : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player_view = GameObject.FindGameObjectWithTag("Player_view").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -42,8 +43,10 @@ public class MoveBackBtn : MonoBehaviour
     }
     public void BtnDown()
     {
+       
+        
         btDown = true;
-        player_pos.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y+180, 0);
+        player_view.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y + 180, 0);
         player.isIdle = false;
         player.ChangeDir(-1);
     }
