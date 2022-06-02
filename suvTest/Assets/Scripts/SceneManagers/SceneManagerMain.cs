@@ -8,7 +8,7 @@ public class SceneManagerMain : MonoBehaviour
     public List<GameObject> characterList;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         spawnPlayer(gameManager.playerCharacterType);
@@ -20,13 +20,13 @@ public class SceneManagerMain : MonoBehaviour
     {
         
     }
-    void spawnPlayer(int type)
+    void spawnPlayer(string type)
     {
-        if(type==0)
+        if(type=="Earth")
         {
             characterList[0].SetActive(true);
         }
-        else if(type==1)
+        else if(type=="Fire")
         {
             characterList[1].SetActive(true);
         }

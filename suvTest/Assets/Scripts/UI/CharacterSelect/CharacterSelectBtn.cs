@@ -25,8 +25,8 @@ public class CharacterSelectBtn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        listCharacter_state = characterList.characterList[0];
-        if(gameManager.characterDic[listCharacter_state.characterName]==true)
+        
+        if (gameManager.characterDic[characterList.characterNameList[0]] == true)
         {
             btn.interactable = true;
         }
