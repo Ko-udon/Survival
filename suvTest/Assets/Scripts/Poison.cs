@@ -70,10 +70,16 @@ public class Poison : MonoBehaviour
         ParticleSystem.MainModule main = GetComponent<ParticleSystem>().main;
         main.loop = false;
 
-        main = transform.GetChild(0).GetComponent<ParticleSystem>().main;
-        main.loop = false;
+        if(transform.childCount != 0)
+        {
+            main = transform.GetChild(0).GetComponent<ParticleSystem>().main;
+            main.loop = false; 
 
-        main = transform.GetChild(0).GetChild(0).GetComponent<ParticleSystem>().main;
-        main.loop = false;
+            if(transform.GetChild(0).childCount != 0)
+            {
+                main = transform.GetChild(0).GetChild(0).GetComponent<ParticleSystem>().main;
+                main.loop = false;
+            }
+        }
     }
 }

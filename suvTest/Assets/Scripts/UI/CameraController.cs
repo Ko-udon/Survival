@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float cameraSpeed = 5.0f;
-    public GameObject player;
+    private GameObject player;
 
-    public float offsetX;
-    public float offsetY;
-    public float offsetZ;
+    private float maxDir;
+    RaycastHit hit;
 
-    public float DelayTime;
-
-
-    // Start is called before the first frame update
     void Start()
     {
-
-
+        player = transform.parent.gameObject;
+        maxDir = (transform.position - player.transform.position).magnitude;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 dir =
-            new Vector3(player.transform.position.x + offsetX,
-            player.transform.position.y + offsetY,
-            player.transform.position.z + offsetZ);
+        //transform.LookAt(player.transform);
 
-        transform.position = dir;
-        //transform.position = Vector3.Lerp(transform.position, dir, Time.deltaTime*DelayTime);
+        if (Physics.Raycast(player.transform.position, (transform.position - player.transform.position).normalized, out hit, maxDir))
+        {
+            if(hit.transform.gameObject.tag == "Object")
+            {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, transform.localPosition + Vector3.forward, Time.deltaTime * 10);
+                transform.position = hit.point;
+            }
+            else
+            {
+                transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0, 2, -3.5f), Time.deltaTime * 5);
+            }
+        }
+        
     }
 }
