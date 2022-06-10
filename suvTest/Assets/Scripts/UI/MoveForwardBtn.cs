@@ -46,7 +46,7 @@ public class MoveForwardBtn : MonoBehaviour
        
         btDown = true;
         player_view.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
-        Debug.Log(player.transform.localEulerAngles.y);
+        //Debug.Log(player.transform.localEulerAngles.y);
     
         player.isIdle = false;
         player.ChangeDir(1);

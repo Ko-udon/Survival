@@ -25,7 +25,7 @@ public class SkillList : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < 3; i++)
+        /*for(int i = 0; i < 3; i++)
         {
             if(player.ownSkill.Count >= i + 1)
             {
@@ -38,7 +38,7 @@ public class SkillList : MonoBehaviour
                 transform.GetChild(i).GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
             }
-        }
+        }*/
         
 
     }
