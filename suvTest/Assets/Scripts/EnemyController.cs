@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public Transform front;
     public float atkSpeed;
-    private bool isDelay;
+    public bool isDelay;
 
     private bool isGround;
     private bool isStiff;
@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject[] turret = GameObject.FindGameObjectsWithTag("Turret");
+        /*GameObject[] turret = GameObject.FindGameObjectsWithTag("Turret");
 
         if(turret.Length > 0)
         {
@@ -57,15 +57,25 @@ public class EnemyController : MonoBehaviour
         {
             target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
 
-        }
+        }*/
 
-        if(isPosion)
+        target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+
+        if (isPosion)
         {
             Hp -= 20 * Time.deltaTime;
         }
 
         if(Hp > 0)
         {
+            if(isStiff)
+            {
+                if(ani.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                {
+                    isStiff = false;
+                }
+            }
+
             if(isGround && !isStiff)
             {
                 if(!isDelay)
@@ -81,7 +91,7 @@ public class EnemyController : MonoBehaviour
                         closeAttack.AttackUnable();
                     }
 
-                    if (ani.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+                    if (ani.GetCurrentAnimatorStateInfo(0).IsName("Run") || ani.GetCurrentAnimatorStateInfo(0).IsName("Move"))
                     {
                         Vector3 dir = (target - transform.position).normalized;
                         transform.position += new Vector3(dir.x, 0, dir.z) * speed * Time.deltaTime;

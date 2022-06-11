@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
         if (Physics.Raycast(player.transform.position, (transform.position - player.transform.position).normalized, out hit, maxDir))
         {
-            if(hit.transform.gameObject.tag == "Object")
+            if(hit.transform.gameObject.tag == "Object" || hit.transform.gameObject.tag == "floor")
             {
                 transform.localPosition = Vector3.Lerp(transform.localPosition, transform.localPosition + Vector3.forward, Time.deltaTime * 10);
                 transform.position = hit.point;

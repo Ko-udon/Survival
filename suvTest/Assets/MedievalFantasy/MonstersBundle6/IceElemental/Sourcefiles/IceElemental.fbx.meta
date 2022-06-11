@@ -1,68 +1,182 @@
 fileFormatVersion: 2
 guid: 2430b2d4f8544f749a00d93b3c5675cb
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: ArmLower_L
-    100004: ArmLower_R
-    100006: ArmUpper_L
-    100008: ArmUpper_R
-    100010: Cloth
-    100012: Elemental
-    100014: Finger1_L
-    100016: Finger1_R
-    100018: Hand_L
-    100020: Hand_R
-    100022: Head
-    100024: Hip
-    100026: //RootNode
-    100028: Neck
-    100030: Shoulder_L
-    100032: Shoulder_R
-    100034: Spine
-    100036: Thumb1_L
-    100038: Thumb1_R
-    100040: Thumb2_L
-    100042: Thumb2_R
-    100044: warrior_weapon
-    400000: Armature
-    400002: ArmLower_L
-    400004: ArmLower_R
-    400006: ArmUpper_L
-    400008: ArmUpper_R
-    400010: Cloth
-    400012: Elemental
-    400014: Finger1_L
-    400016: Finger1_R
-    400018: Hand_L
-    400020: Hand_R
-    400022: Head
-    400024: Hip
-    400026: //RootNode
-    400028: Neck
-    400030: Shoulder_L
-    400032: Shoulder_R
-    400034: Spine
-    400036: Thumb1_L
-    400038: Thumb1_R
-    400040: Thumb2_L
-    400042: Thumb2_R
-    400044: warrior_weapon
-    2100000: elemental_material
-    4300000: warrior_weapon
-    4300002: Elemental
-    7400000: Default Take
-    7400002: Attack
-    7400004: Death
-    7400006: Idle
-    7400008: Move
-    9500000: //RootNode
-    13700000: Elemental
-    13700002: warrior_weapon
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: ArmLower_L
+  - first:
+      1: 100004
+    second: ArmLower_R
+  - first:
+      1: 100006
+    second: ArmUpper_L
+  - first:
+      1: 100008
+    second: ArmUpper_R
+  - first:
+      1: 100010
+    second: Cloth
+  - first:
+      1: 100012
+    second: Elemental
+  - first:
+      1: 100014
+    second: Finger1_L
+  - first:
+      1: 100016
+    second: Finger1_R
+  - first:
+      1: 100018
+    second: Hand_L
+  - first:
+      1: 100020
+    second: Hand_R
+  - first:
+      1: 100022
+    second: Head
+  - first:
+      1: 100024
+    second: Hip
+  - first:
+      1: 100026
+    second: //RootNode
+  - first:
+      1: 100028
+    second: Neck
+  - first:
+      1: 100030
+    second: Shoulder_L
+  - first:
+      1: 100032
+    second: Shoulder_R
+  - first:
+      1: 100034
+    second: Spine
+  - first:
+      1: 100036
+    second: Thumb1_L
+  - first:
+      1: 100038
+    second: Thumb1_R
+  - first:
+      1: 100040
+    second: Thumb2_L
+  - first:
+      1: 100042
+    second: Thumb2_R
+  - first:
+      1: 100044
+    second: warrior_weapon
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: ArmLower_L
+  - first:
+      4: 400004
+    second: ArmLower_R
+  - first:
+      4: 400006
+    second: ArmUpper_L
+  - first:
+      4: 400008
+    second: ArmUpper_R
+  - first:
+      4: 400010
+    second: Cloth
+  - first:
+      4: 400012
+    second: Elemental
+  - first:
+      4: 400014
+    second: Finger1_L
+  - first:
+      4: 400016
+    second: Finger1_R
+  - first:
+      4: 400018
+    second: Hand_L
+  - first:
+      4: 400020
+    second: Hand_R
+  - first:
+      4: 400022
+    second: Head
+  - first:
+      4: 400024
+    second: Hip
+  - first:
+      4: 400026
+    second: //RootNode
+  - first:
+      4: 400028
+    second: Neck
+  - first:
+      4: 400030
+    second: Shoulder_L
+  - first:
+      4: 400032
+    second: Shoulder_R
+  - first:
+      4: 400034
+    second: Spine
+  - first:
+      4: 400036
+    second: Thumb1_L
+  - first:
+      4: 400038
+    second: Thumb1_R
+  - first:
+      4: 400040
+    second: Thumb2_L
+  - first:
+      4: 400042
+    second: Thumb2_R
+  - first:
+      4: 400044
+    second: warrior_weapon
+  - first:
+      21: 2100000
+    second: elemental_material
+  - first:
+      43: 4300000
+    second: warrior_weapon
+  - first:
+      43: 4300002
+    second: Elemental
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Attack
+  - first:
+      74: 7400004
+    second: Death
+  - first:
+      74: 7400006
+    second: Idle
+  - first:
+      74: 7400008
+    second: Move
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Elemental
+  - first:
+      137: 13700002
+    second: warrior_weapon
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -91,6 +205,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Attack
+      internalID: 0
       firstFrame: -1
       lastFrame: 49
       wrapMode: 0
@@ -99,7 +214,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -119,6 +234,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: -1
       lastFrame: 49
       wrapMode: 0
@@ -147,6 +263,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 39
       wrapMode: 0
@@ -175,6 +292,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Move
       takeName: Move
+      internalID: 0
       firstFrame: -1
       lastFrame: 19
       wrapMode: 0
@@ -207,25 +325,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
@@ -234,10 +359,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -247,13 +372,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

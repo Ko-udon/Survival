@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         if(other.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyController>().Hp -= damage;
-            StartCoroutine(other.gameObject.GetComponent<EnemyController>().Stiff(1.0f));
+            StartCoroutine(other.gameObject.GetComponent<EnemyController>().Stiff(0.3f));
         }
     }
 }

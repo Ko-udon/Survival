@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     StatusBattery statusBt;
     Rigidbody rigidbody;
     CharacterController collider;
+    SkillList skillIcon;
 
     //Animation
     public Animation anim;
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
         collider = GetComponent<CharacterController>();
+        skillIcon = FindObjectOfType<SkillList>();
 
         InitSkill(charName);
     }
@@ -309,7 +311,31 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
         }
+        skillIcon.BGAni(ownSkill.BinarySearch(type));
     }
 
+    public int GetSkillLV(string type)
+    {
+        switch (type)
+        {
+            case "Ball":
+                return ballLV;
+
+            case "KnockBack":
+                return knockbackLV;
+
+            case "Taunt":
+                return tauntLV;
+
+            case "Nautilus":
+                return nautilusLV;
+
+            case "Virus":
+                return virusLV;
+
+            default:
+                return 0;
+        }
+    }
     
 }

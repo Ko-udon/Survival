@@ -1,61 +1,161 @@
 fileFormatVersion: 2
 guid: 21179522d6635f14d8ae3cb2c1d6665a
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Arm_L
-    100002: Arm_R
-    100004: Armature
-    100006: ArmLower_L
-    100008: ArmLower_R
-    100010: Chest
-    100012: Creature
-    100014: Foot_L
-    100016: Foot_R
-    100018: Hand_L
-    100020: Hand_R
-    100022: Head
-    100024: Hip
-    100026: //RootNode
-    100028: Jaw
-    100030: LegLower_L
-    100032: LegLower_R
-    100034: LegUpper_L
-    100036: LegUpper_R
-    100038: Neck
-    400000: Arm_L
-    400002: Arm_R
-    400004: Armature
-    400006: ArmLower_L
-    400008: ArmLower_R
-    400010: Chest
-    400012: Creature
-    400014: Foot_L
-    400016: Foot_R
-    400018: Hand_L
-    400020: Hand_R
-    400022: Head
-    400024: Hip
-    400026: //RootNode
-    400028: Jaw
-    400030: LegLower_L
-    400032: LegLower_R
-    400034: LegUpper_L
-    400036: LegUpper_R
-    400038: Neck
-    2100000: creature_material
-    4300000: Creature
-    7400000: Default Take
-    7400002: Attack1
-    7400004: Attack2
-    7400006: Death
-    7400008: Idle
-    7400010: Move
-    9500000: //RootNode
-    13700000: Creature
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_L
+  - first:
+      1: 100002
+    second: Arm_R
+  - first:
+      1: 100004
+    second: Armature
+  - first:
+      1: 100006
+    second: ArmLower_L
+  - first:
+      1: 100008
+    second: ArmLower_R
+  - first:
+      1: 100010
+    second: Chest
+  - first:
+      1: 100012
+    second: Creature
+  - first:
+      1: 100014
+    second: Foot_L
+  - first:
+      1: 100016
+    second: Foot_R
+  - first:
+      1: 100018
+    second: Hand_L
+  - first:
+      1: 100020
+    second: Hand_R
+  - first:
+      1: 100022
+    second: Head
+  - first:
+      1: 100024
+    second: Hip
+  - first:
+      1: 100026
+    second: //RootNode
+  - first:
+      1: 100028
+    second: Jaw
+  - first:
+      1: 100030
+    second: LegLower_L
+  - first:
+      1: 100032
+    second: LegLower_R
+  - first:
+      1: 100034
+    second: LegUpper_L
+  - first:
+      1: 100036
+    second: LegUpper_R
+  - first:
+      1: 100038
+    second: Neck
+  - first:
+      4: 400000
+    second: Arm_L
+  - first:
+      4: 400002
+    second: Arm_R
+  - first:
+      4: 400004
+    second: Armature
+  - first:
+      4: 400006
+    second: ArmLower_L
+  - first:
+      4: 400008
+    second: ArmLower_R
+  - first:
+      4: 400010
+    second: Chest
+  - first:
+      4: 400012
+    second: Creature
+  - first:
+      4: 400014
+    second: Foot_L
+  - first:
+      4: 400016
+    second: Foot_R
+  - first:
+      4: 400018
+    second: Hand_L
+  - first:
+      4: 400020
+    second: Hand_R
+  - first:
+      4: 400022
+    second: Head
+  - first:
+      4: 400024
+    second: Hip
+  - first:
+      4: 400026
+    second: //RootNode
+  - first:
+      4: 400028
+    second: Jaw
+  - first:
+      4: 400030
+    second: LegLower_L
+  - first:
+      4: 400032
+    second: LegLower_R
+  - first:
+      4: 400034
+    second: LegUpper_L
+  - first:
+      4: 400036
+    second: LegUpper_R
+  - first:
+      4: 400038
+    second: Neck
+  - first:
+      21: 2100000
+    second: creature_material
+  - first:
+      43: 4300000
+    second: Creature
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Attack1
+  - first:
+      74: 7400004
+    second: Attack2
+  - first:
+      74: 7400006
+    second: Death
+  - first:
+      74: 7400008
+    second: Idle
+  - first:
+      74: 7400010
+    second: Move
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Creature
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -84,6 +184,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack1
       takeName: Attack1
+      internalID: 0
       firstFrame: -1
       lastFrame: 49
       wrapMode: 0
@@ -92,7 +193,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -112,6 +213,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack2
       takeName: Attack2
+      internalID: 0
       firstFrame: -1
       lastFrame: 29
       wrapMode: 0
@@ -140,6 +242,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: -1
       lastFrame: 39
       wrapMode: 0
@@ -168,6 +271,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: -1
       lastFrame: 199
       wrapMode: 0
@@ -196,6 +300,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Move
       takeName: Move
+      internalID: 0
       firstFrame: -1
       lastFrame: 29
       wrapMode: 0
@@ -228,25 +333,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.75
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 45
     normalImportMode: 1
@@ -255,10 +367,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -268,13 +380,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

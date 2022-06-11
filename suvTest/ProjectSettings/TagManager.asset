@@ -12,6 +12,7 @@ TagManager:
   - UIController
   - Player_view
   - Object
+  - floor
   layers:
   - Default
   - TransparentFX
