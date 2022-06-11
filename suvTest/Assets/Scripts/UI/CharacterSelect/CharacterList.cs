@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class CharacterList : MonoBehaviour
 {
+    [System.Serializable]
+    public struct BgmType
+    {
+        public string name;
+        public AudioClip audio;
+    }
+
     // Start is called before the first frame update
     public List<GameObject> characterList;
     public List<string> characterNameList;
+    
+    public BgmType[] BgmList;
+
+    AudioSource audio;
 
     //public Dictionary<GameObject, string> characterList2;
     public List<Vector3> listPos;
@@ -15,7 +26,8 @@ public class CharacterList : MonoBehaviour
 
     void Start()
     {
-        
+        audio = this.GetComponent<AudioSource>();
+
         for(int i=0;i<characterList.Count;i++)
         {
             if(i!=0)
@@ -33,6 +45,17 @@ public class CharacterList : MonoBehaviour
     }
     public string select()
     {
+        if(characterNameList[0]=="Earth")
+        {
+            audio.clip = BgmList[0].audio;
+        }
+        else if(characterNameList[0]=="Fire")
+        {
+            audio.clip = BgmList[1].audio;
+        }
+
+        audio.Play();
+        
         return characterNameList[0];
         //return characterList[0].characterType;
     }

@@ -9,6 +9,7 @@ public class CharacterSelectBtn : MonoBehaviour
     GameManager gameManager;
     CharacterList characterList;
     ListCharacter_state listCharacter_state;
+    AudioSource audio;
 
     public Button btn;
 
@@ -22,7 +23,7 @@ public class CharacterSelectBtn : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         characterList = GameObject.Find("CharacterList").GetComponent<CharacterList>();
         btn = this.GetComponent<Button>();
-
+        audio = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,8 +47,13 @@ public class CharacterSelectBtn : MonoBehaviour
     }
     public void OnClick()
     {
+        audio.Play();
         gameManager.playerCharacterType = characterList.select();
 
+        Invoke("SceneMove", 2.0f);
+    }
+    private void SceneMove()
+    {
         SceneManager.LoadScene("Main");
     }
     

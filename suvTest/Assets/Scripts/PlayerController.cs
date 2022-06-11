@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
     public bool isIdle;
 
 
+    //sound
+    AudioSource audio;
+    public AudioClip hitsound;
+
     void Start()
     {
         ballLV = 0;
@@ -60,6 +64,7 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
         collider = GetComponent<CharacterController>();
+        audio = this.GetComponent<AudioSource>();
         skillIcon = FindObjectOfType<SkillList>();
 
         InitSkill(charName);
@@ -138,6 +143,8 @@ public class PlayerController : MonoBehaviour
 
     public void GetDamage(float atk)
     {
+        audio.clip = hitsound;
+        audio.Play();
         hp = hp - atk;
         ui.PlayerHpBar();
     }

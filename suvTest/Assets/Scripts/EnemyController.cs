@@ -26,6 +26,7 @@ public class EnemyController : MonoBehaviour
     private float atkCooltime;
 
     public int enemytExp;
+    AudioSource audio;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class EnemyController : MonoBehaviour
         PlayerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //material = gameObject.GetComponent<Renderer>().material;
         ani = GetComponent<Animator>();
+        audio = this.GetComponent<AudioSource>();
         closeAttack = GetComponentInChildren<CloseWeapon>();
 
         isPosion = false;
@@ -194,6 +196,7 @@ public class EnemyController : MonoBehaviour
     {
         isStiff = true;
         ani.SetTrigger("hit");
+        audio.Play();
         while (time > 0)
         {
             time -= Time.deltaTime;
