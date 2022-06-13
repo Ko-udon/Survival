@@ -177,7 +177,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name == "floor")
+        if(collision.collider.tag == "floor")
         {
             isGround = true;
         }

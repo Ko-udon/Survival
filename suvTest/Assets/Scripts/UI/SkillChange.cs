@@ -7,6 +7,7 @@ public class SkillChange : MonoBehaviour
 {
     public int index;
     private PlayerController player;
+    SkillList skillIcon;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class SkillChange : MonoBehaviour
     private void OnEnable()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        skillIcon = FindObjectOfType<SkillList>();
         Time.timeScale = 0;
     }
 
@@ -28,6 +30,10 @@ public class SkillChange : MonoBehaviour
     {
         player.DeleteSkill(player.ownSkill[index]);
         Time.timeScale = 1;
+        if (index != 3)
+        {
+            skillIcon.BGAni(2);
+        }
         transform.parent.gameObject.SetActive(false);
     }
 }

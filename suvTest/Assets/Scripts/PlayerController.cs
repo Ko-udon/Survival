@@ -318,7 +318,12 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
         }
-        skillIcon.BGAni(ownSkill.BinarySearch(type));
+
+        if(ownSkill.Count <= 3)
+        {
+            skillIcon.BGAni(ownSkill.IndexOf(type));
+        }
+        
     }
 
     public int GetSkillLV(string type)
