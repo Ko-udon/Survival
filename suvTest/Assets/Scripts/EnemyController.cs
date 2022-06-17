@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*GameObject[] turret = GameObject.FindGameObjectsWithTag("Turret");
+        GameObject[] turret = GameObject.FindGameObjectsWithTag("Turret");
 
         if(turret.Length > 0)
         {
@@ -59,9 +59,7 @@ public class EnemyController : MonoBehaviour
         {
             target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
 
-        }*/
-
-        target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        }
 
         if (isPosion)
         {
@@ -158,7 +156,7 @@ public class EnemyController : MonoBehaviour
                 closeAttack.AttackUnable();
             }
 
-            if (ani.GetCurrentAnimatorStateInfo(0).normalizedTime > ani.GetCurrentAnimatorStateInfo(0).length)
+            if (ani.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
             {
                 PlayerController.SetExp(enemytExp);  //do once
                 Destroy(this.gameObject);

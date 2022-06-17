@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4967890283206748349, guid: 69fbc83a6c336d7448bd8bf17443d783, type: 3}
+  m_Sprite: {fileID: -1156647010294377379, guid: 4a3e22a113a024949bdabd8a4154285a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1000
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2248188295806067416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillType: Virus
+  img: {fileID: 0}
 --- !u!82 &-8859211825209074717
 AudioSource:
   m_ObjectHideFlags: 0

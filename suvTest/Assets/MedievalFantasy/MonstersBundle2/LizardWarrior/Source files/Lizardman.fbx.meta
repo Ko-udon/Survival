@@ -1,98 +1,272 @@
 fileFormatVersion: 2
 guid: b99f78161f752434f9767fd59e575aca
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Arm_L
-    100002: Arm_R
-    100004: Armature
-    100006: Belt
-    100008: Bracelet
-    100010: Chest
-    100012: Club
-    100014: Collar
-    100016: Foot_L
-    100018: Foot_R
-    100020: ForeArm_L
-    100022: ForeArm_R
-    100024: Hand_L
-    100026: Hand_R
-    100028: Head
-    100030: Hip
-    100032: Leg_L
-    100034: Leg_R
-    100036: Lizard_body
-    100038: //RootNode
-    100040: Neck
-    100042: Shield
-    100044: Shoulder_L
-    100046: Shoulder_R
-    100048: Spine
-    100050: Tail
-    100052: Tail_001
-    100054: Tail_002
-    100056: Thigh_L
-    100058: Thigh_R
-    100060: Vest
-    400000: Arm_L
-    400002: Arm_R
-    400004: Armature
-    400006: Belt
-    400008: Bracelet
-    400010: Chest
-    400012: Club
-    400014: Collar
-    400016: Foot_L
-    400018: Foot_R
-    400020: ForeArm_L
-    400022: ForeArm_R
-    400024: Hand_L
-    400026: Hand_R
-    400028: Head
-    400030: Hip
-    400032: Leg_L
-    400034: Leg_R
-    400036: Lizard_body
-    400038: //RootNode
-    400040: Neck
-    400042: Shield
-    400044: Shoulder_L
-    400046: Shoulder_R
-    400048: Spine
-    400050: Tail
-    400052: Tail_001
-    400054: Tail_002
-    400056: Thigh_L
-    400058: Thigh_R
-    400060: Vest
-    2100000: Palette_002__Palette_png
-    2100002: Skin_002__Palette_png
-    2100004: Palette_002__Palette_png_002
-    2100006: Palette_002__Palette_png_001
-    4300000: Belt
-    4300002: Bracelet
-    4300004: Collar
-    4300006: Vest
-    4300008: Lizard_body
-    4300010: Club
-    4300012: Shield
-    7400000: Default Take
-    7400002: Attack
-    7400004: Death
-    7400006: Idle
-    7400008: Walk
-    7400010: Walk2
-    9500000: //RootNode
-    13700000: Belt
-    13700002: Bracelet
-    13700004: Club
-    13700006: Collar
-    13700008: Lizard_body
-    13700010: Shield
-    13700012: Vest
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_L
+  - first:
+      1: 100002
+    second: Arm_R
+  - first:
+      1: 100004
+    second: Armature
+  - first:
+      1: 100006
+    second: Belt
+  - first:
+      1: 100008
+    second: Bracelet
+  - first:
+      1: 100010
+    second: Chest
+  - first:
+      1: 100012
+    second: Club
+  - first:
+      1: 100014
+    second: Collar
+  - first:
+      1: 100016
+    second: Foot_L
+  - first:
+      1: 100018
+    second: Foot_R
+  - first:
+      1: 100020
+    second: ForeArm_L
+  - first:
+      1: 100022
+    second: ForeArm_R
+  - first:
+      1: 100024
+    second: Hand_L
+  - first:
+      1: 100026
+    second: Hand_R
+  - first:
+      1: 100028
+    second: Head
+  - first:
+      1: 100030
+    second: Hip
+  - first:
+      1: 100032
+    second: Leg_L
+  - first:
+      1: 100034
+    second: Leg_R
+  - first:
+      1: 100036
+    second: Lizard_body
+  - first:
+      1: 100038
+    second: //RootNode
+  - first:
+      1: 100040
+    second: Neck
+  - first:
+      1: 100042
+    second: Shield
+  - first:
+      1: 100044
+    second: Shoulder_L
+  - first:
+      1: 100046
+    second: Shoulder_R
+  - first:
+      1: 100048
+    second: Spine
+  - first:
+      1: 100050
+    second: Tail
+  - first:
+      1: 100052
+    second: Tail_001
+  - first:
+      1: 100054
+    second: Tail_002
+  - first:
+      1: 100056
+    second: Thigh_L
+  - first:
+      1: 100058
+    second: Thigh_R
+  - first:
+      1: 100060
+    second: Vest
+  - first:
+      4: 400000
+    second: Arm_L
+  - first:
+      4: 400002
+    second: Arm_R
+  - first:
+      4: 400004
+    second: Armature
+  - first:
+      4: 400006
+    second: Belt
+  - first:
+      4: 400008
+    second: Bracelet
+  - first:
+      4: 400010
+    second: Chest
+  - first:
+      4: 400012
+    second: Club
+  - first:
+      4: 400014
+    second: Collar
+  - first:
+      4: 400016
+    second: Foot_L
+  - first:
+      4: 400018
+    second: Foot_R
+  - first:
+      4: 400020
+    second: ForeArm_L
+  - first:
+      4: 400022
+    second: ForeArm_R
+  - first:
+      4: 400024
+    second: Hand_L
+  - first:
+      4: 400026
+    second: Hand_R
+  - first:
+      4: 400028
+    second: Head
+  - first:
+      4: 400030
+    second: Hip
+  - first:
+      4: 400032
+    second: Leg_L
+  - first:
+      4: 400034
+    second: Leg_R
+  - first:
+      4: 400036
+    second: Lizard_body
+  - first:
+      4: 400038
+    second: //RootNode
+  - first:
+      4: 400040
+    second: Neck
+  - first:
+      4: 400042
+    second: Shield
+  - first:
+      4: 400044
+    second: Shoulder_L
+  - first:
+      4: 400046
+    second: Shoulder_R
+  - first:
+      4: 400048
+    second: Spine
+  - first:
+      4: 400050
+    second: Tail
+  - first:
+      4: 400052
+    second: Tail_001
+  - first:
+      4: 400054
+    second: Tail_002
+  - first:
+      4: 400056
+    second: Thigh_L
+  - first:
+      4: 400058
+    second: Thigh_R
+  - first:
+      4: 400060
+    second: Vest
+  - first:
+      21: 2100000
+    second: Palette_002__Palette_png
+  - first:
+      21: 2100002
+    second: Skin_002__Palette_png
+  - first:
+      21: 2100004
+    second: Palette_002__Palette_png_002
+  - first:
+      21: 2100006
+    second: Palette_002__Palette_png_001
+  - first:
+      43: 4300000
+    second: Belt
+  - first:
+      43: 4300002
+    second: Bracelet
+  - first:
+      43: 4300004
+    second: Collar
+  - first:
+      43: 4300006
+    second: Vest
+  - first:
+      43: 4300008
+    second: Lizard_body
+  - first:
+      43: 4300010
+    second: Club
+  - first:
+      43: 4300012
+    second: Shield
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Attack
+  - first:
+      74: 7400004
+    second: Death
+  - first:
+      74: 7400006
+    second: Idle
+  - first:
+      74: 7400008
+    second: Walk
+  - first:
+      74: 7400010
+    second: Walk2
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Belt
+  - first:
+      137: 13700002
+    second: Bracelet
+  - first:
+      137: 13700004
+    second: Club
+  - first:
+      137: 13700006
+    second: Collar
+  - first:
+      137: 13700008
+    second: Lizard_body
+  - first:
+      137: 13700010
+    second: Shield
+  - first:
+      137: 13700012
+    second: Vest
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -121,6 +295,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack
       takeName: Attack
+      internalID: 0
       firstFrame: -1
       lastFrame: 32
       wrapMode: 0
@@ -129,7 +304,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -149,6 +324,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Death
+      internalID: 0
       firstFrame: -1
       lastFrame: 53
       wrapMode: 0
@@ -177,6 +353,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: -1
       lastFrame: 39
       wrapMode: 0
@@ -205,6 +382,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Walk
+      internalID: 0
       firstFrame: -1
       lastFrame: 29
       wrapMode: 0
@@ -233,6 +411,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk2
       takeName: Walk2
+      internalID: 0
       firstFrame: -1
       lastFrame: 29
       wrapMode: 0
@@ -265,25 +444,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 0
-    previousCalculatedGlobalScale: 0.14
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 86
     normalImportMode: 1
@@ -292,10 +478,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -305,13 +491,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.14
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

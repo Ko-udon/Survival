@@ -85,7 +85,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1000
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &265372672243757873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillType: Ball
+  img: {fileID: 0}
 --- !u!82 &2909607838002022702
 AudioSource:
   m_ObjectHideFlags: 0
@@ -290,7 +291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1431954004539668169, guid: 69fbc83a6c336d7448bd8bf17443d783, type: 3}
+  m_Sprite: {fileID: 1864531330957447837, guid: 4a3e22a113a024949bdabd8a4154285a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
