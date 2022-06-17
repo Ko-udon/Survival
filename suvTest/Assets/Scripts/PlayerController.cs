@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
     }
     public void CheckHP()
     {
-        if (hp < 0)
+        if (hp <= 0)
         {
             //gameObject.SetActive(false);
             playerCharacter.SetActive(false);

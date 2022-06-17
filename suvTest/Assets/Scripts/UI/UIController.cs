@@ -38,7 +38,7 @@ public class UIController : MonoBehaviour
     {
         PlayerHpBar();
         PlayerExpBar();
-        if (player.hp < 0)
+        if (player.hp <= 0)
         {
             GameOverImg.gameObject.SetActive(true);
         }
