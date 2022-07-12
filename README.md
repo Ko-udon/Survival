@@ -17,8 +17,8 @@
   + ### 개발 형태
     + #### 팀 프로젝트
   + ### 개발 인원 및 역할
-    + #### 상명대학교 게임학과 18학번 강은영 - <img alt="프로그래머" src ="https://img.shields.io/badge/프로그래머(UI)-5C2D91.svg?&style=for-the-badge&logo=VisualStudio&logoColor=white"/>
-    + #### 상명대학교 게임학과 17학번 고동우 - <img alt="프로그래머" src ="https://img.shields.io/badge/프로그래머(맵)-5C2D91.svg?&style=for-the-badge&logo=VisualStudio&logoColor=white"/>
+    + #### 상명대학교 게임학과 18학번 강은영 - <img alt="프로그래머" src ="https://img.shields.io/badge/프로그래머(프론트엔드)-5C2D91.svg?&style=for-the-badge&logo=VisualStudio&logoColor=white"/>
+    + #### 상명대학교 게임학과 17학번 고동우 - <img alt="프로그래머" src ="https://img.shields.io/badge/프로그래머(맵, )-5C2D91.svg?&style=for-the-badge&logo=VisualStudio&logoColor=white"/>
     + #### 상명대학교 게임학과 18학번 김미한 - <img alt="아트 디자이너" src ="https://img.shields.io/badge/아트 디자이너-31A8FF.svg?&style=for-the-badge&logo=AdobePhotoshop&logoColor=black"/>
     + #### 상명대학교 게임학과 19학번 이석호 - <img alt="기획자" src ="https://img.shields.io/badge/기획자-2B579A.svg?&style=for-the-badge&logo=MicrosoftWord&logoColor=white"/>
     + #### 상명대학교 게임학과 19학번 이정빈 - <img alt="프로그래머" src ="https://img.shields.io/badge/프로그래머(전투)-5C2D91.svg?&style=for-the-badge&logo=VisualStudio&logoColor=white"/>
