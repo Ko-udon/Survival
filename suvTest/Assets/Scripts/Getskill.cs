@@ -9,11 +9,18 @@ public class Getskill : MonoBehaviour
     private GameObject player;
     AudioSource audio;
     public Image img;
+
+
+   
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audio = this.GetComponent<AudioSource>();
         img = this.GetComponentInChildren<Image>();
+
+        
+
     }
 
     // Update is called once per frame
@@ -30,6 +37,8 @@ public class Getskill : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            
+
             audio.Play();
             img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
             other.GetComponent<PlayerController>().GetSkill(skillType);

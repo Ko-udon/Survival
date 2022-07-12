@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class SkillList : MonoBehaviour
 {
     private PlayerController player;
+    private skillExplain skillexplain_1;
+    private skillExplain skillexplain_2;
+    private skillExplain skillexplain_3;
 
     public List<Sprite> imageList;
 
@@ -20,6 +23,8 @@ public class SkillList : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        
+
 
         skillList_1 = new Dictionary<string, Sprite>();
         skillList_1.Add("Ball", imageList[0]);
@@ -76,6 +81,7 @@ public class SkillList : MonoBehaviour
             {
                 switch(player.GetSkillLV(player.ownSkill[i]))
                 {
+
                     case 1:
                         skillIcon[i].sprite = skillList_1[player.ownSkill[i]];
                         break;
