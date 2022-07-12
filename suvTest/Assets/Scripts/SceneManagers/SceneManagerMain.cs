@@ -31,4 +31,9 @@ public class SceneManagerMain : MonoBehaviour
             characterList[1].SetActive(true);
         }
     }
+
+    public void OnPauseClicked(GameObject menu)
+    {
+        menu.SetActive(true);
+    }
 }
