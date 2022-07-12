@@ -1,7 +1,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/69952837/178149182-b7c37c04-185d-402c-82ef-69669028d3b4.png"></p>
 
 <div align="center">
-  <H1>Survivor(3D)</H1>
+  <H1>Survivor</H1>
 </div>
 
 + ## **게임 개요**
