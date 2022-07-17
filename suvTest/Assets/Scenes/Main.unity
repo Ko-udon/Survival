@@ -1254,7 +1254,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 31e9027949eff3b40a1e5d085e0a9935, type: 3}
+    m_Font: {fileID: 12800000, guid: f4c99a340a6e6504aa6e992b7a253612, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 31e9027949eff3b40a1e5d085e0a9935, type: 3}
+    m_Font: {fileID: 12800000, guid: f4c99a340a6e6504aa6e992b7a253612, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -8151,7 +8151,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 31e9027949eff3b40a1e5d085e0a9935, type: 3}
+    m_Font: {fileID: 12800000, guid: f4c99a340a6e6504aa6e992b7a253612, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -16456,7 +16456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7730c688ea4f0849a3183ef26fe0421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillImg: {fileID: 0}
+  skillSprite: {fileID: 0}
   skillText: {fileID: 503204038}
   skillExplainBox: {fileID: 980219319}
 --- !u!114 &1064406679
@@ -18116,7 +18116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7730c688ea4f0849a3183ef26fe0421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillImg: {fileID: 0}
+  skillSprite: {fileID: 0}
   skillText: {fileID: 138781623}
   skillExplainBox: {fileID: 1558699116}
 --- !u!114 &1197905689
@@ -31095,7 +31095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -410, y: -210}
+  m_AnchoredPosition: {x: -409.5, y: -210}
   m_SizeDelta: {x: 910.26, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845734629
@@ -32914,7 +32914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1943536299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33907,7 +33907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7730c688ea4f0849a3183ef26fe0421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillImg: {fileID: 0}
+  skillSprite: {fileID: 0}
   skillText: {fileID: 241766460}
   skillExplainBox: {fileID: 1943536298}
 --- !u!114 &2007920662

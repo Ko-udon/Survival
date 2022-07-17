@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class skillExplain : MonoBehaviour
 {
-    public Sprite skillImg;
+    public Sprite skillSprite;
+    private Image skillImg;
     public Text skillText;
 
     public GameObject skillExplainBox;
@@ -16,7 +18,8 @@ public class skillExplain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        skillImg = this.GetComponent<Image>().sprite;
+        skillSprite = this.GetComponent<Image>().sprite;
+        skillImg = this.GetComponent<Image>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
        
     }
@@ -25,32 +28,33 @@ public class skillExplain : MonoBehaviour
     public void checkSkillChangeImgUI()
     {
         
-        skillImg = this.GetComponent<Image>().sprite;
+        skillSprite = this.GetComponent<Image>().sprite;
         //Debug.Log(skillImg.name);
-        if(skillImg==null)
+        if(skillSprite==null)
         {
-
+            skillImg.raycastTarget = false;
         }
         else
         {
-            if (skillImg.name.Contains("Ball"))
+            skillImg.raycastTarget = true;
+            if (skillSprite.name.Contains("Ball"))
             {
 
                 skillText.text = "스킬 공Lv"+player.ballLV.ToString()+": 주위를 돌며 자동으로 공격해주는 공을 소환(+레벨에 따른 상세 설명 추가)";
             }
-            else if (skillImg.name.Contains("KnockBack"))
+            else if (skillSprite.name.Contains("KnockBack"))
             {
                 skillText.text = "스킬 넉백Lv" + player.knockbackLV.ToString() + ": 일정 간격으로 폭발을 일으켜 주위의 적을 밀처낸다";
             }
-            else if (skillImg.name.Contains("Nautilus"))
+            else if (skillSprite.name.Contains("Nautilus"))
             {
                 skillText.text = "스킬 노틸러스Lv" + player.nautilusLV.ToString() + ": 일정 간격으로 적을 추적하는 물줄기를 발사한다";
             }
-            else if (skillImg.name.Contains("Taunt"))
+            else if (skillSprite.name.Contains("Taunt"))
             {
                 skillText.text = "스킬 도발LV" + player.tauntLV.ToString() + ": 적들이 공격하는 도발물체를 생성한다";
             }
-            else if (skillImg.name.Contains("Virus"))
+            else if (skillSprite.name.Contains("Virus"))
             {
                 skillText.text = "스킬 바이러스Lv" + player.virusLV.ToString() + ": 적들에게 서서히 데미지를 주는 독을 뿌린다";
             }
