@@ -23,7 +23,7 @@ public class SkillChange : MonoBehaviour
 
     void Update()
     {
-        transform.GetChild(0).GetComponent<Text>().text = player.ownSkill[index];
+        transform.GetChild(0).GetComponent<Image>().sprite = skillIcon.GetSprite(player.ownSkill[index]);
     }
 
     public void OnClicked()
