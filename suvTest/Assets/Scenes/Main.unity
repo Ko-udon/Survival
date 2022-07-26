@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d9908400975d44b908a1f198861826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefeb: {fileID: 2725237280784886117, guid: 2f6a27c0e9f735444853f85203d60826, type: 3}
+  enemyPrefeb: {fileID: 4117071639178309749, guid: fe6a8d6584f204040b0859cb653fc0be, type: 3}
   rangeEnemy: {fileID: 6987413859592030843, guid: 9c181a0c54224924482f2d52642e034b, type: 3}
 --- !u!1001 &175069408
 PrefabInstance:

@@ -29,7 +29,6 @@ public class SelectDrag : MonoBehaviour//,IPointerUpHandler,IPointerDownHandler
         //listCharacterState_2 = GameObject.Find("character_2").GetComponent<ListCharacter_state>();
         //listCharacterState_3 = GameObject.Find("character_3").GetComponent<ListCharacter_state>();
         //listCharacterState_4 = GameObject.Find("character_4").GetComponent<ListCharacter_state>();
-
     }
 
     public void OnPointerDown(PointerEventData eventData)
