@@ -9,6 +9,7 @@ public class Getskill : MonoBehaviour
     private GameObject player;
     AudioSource audio;
     public Image img;
+    public ParticleSystem particle;
 
 
    
@@ -17,7 +18,7 @@ public class Getskill : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audio = this.GetComponent<AudioSource>();
-        img = this.GetComponentInChildren<Image>();
+        //img = this.GetComponentInChildren<Image>();
 
         
 
@@ -40,7 +41,8 @@ public class Getskill : MonoBehaviour
             
 
             audio.Play();
-            img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
+            particle.Play();
+            //img.color = new Color(img.color.r, img.color.g, img.color.b, 0f);
             other.GetComponent<PlayerController>().GetSkill(skillType);
             Invoke("Delay", 0.2f);
             //Destroy(this.gameObject);
