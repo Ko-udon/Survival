@@ -13,6 +13,10 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject settingButton;
     public GameObject skillButton;
+
+    public GameObject scroll;
+
+    private Scrollbar scrollBar;
     private void OnEnable()
     {
         Time.timeScale = 0;
@@ -22,13 +26,13 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        
+        scrollBar = scroll.GetComponent<Scrollbar>();
     }
 
     
     void Update()
     {
-        
+        scrollBar.size = 0.1f;
     }
 
     void ChangeMenu()
@@ -45,6 +49,7 @@ public class PauseMenu : MonoBehaviour
             case "Skills":
                 skillMenu.SetActive(true);
                 settingMenu.SetActive(false);
+                scrollBar.value = 1;
                 ButtonAble(skillButton);
                 ButtonDisable(settingButton);
                 break;
@@ -71,14 +76,20 @@ public class PauseMenu : MonoBehaviour
 
     public void OnSettingsClicked()
     {
-        state = "Settings";
-        ChangeMenu();
+        if(state != "Settings")
+        {
+            state = "Settings";
+            ChangeMenu();
+        }
     }
 
     public void OnSkillsClicked()
     {
-        state = "Skills";
-        ChangeMenu();
+        if(state != "Skills")
+        {
+            state = "Skills";
+            ChangeMenu();
+        }
     }
 
     public void OnCloseClicked()
