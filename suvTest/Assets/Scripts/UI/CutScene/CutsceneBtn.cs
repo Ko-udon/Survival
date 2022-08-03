@@ -12,12 +12,12 @@ public class CutsceneBtn : MonoBehaviour
     public string nextScene;
     public List<Image> sceneList;
     public int cnt=0;
-
+    CutsceneTextBox cutSceneTextBox;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cutSceneTextBox = GameObject.Find("TextBox").GetComponent<CutsceneTextBox>();
     }
 
     // Update is called once per frame
@@ -39,6 +39,8 @@ public class CutsceneBtn : MonoBehaviour
 
             sceneList[cnt + 1].gameObject.SetActive(false);
         }
+        cutSceneTextBox.textCount = 0;
+        cutSceneTextBox.OnClick();
     }
     public void OnClickRight()
     {
@@ -55,6 +57,9 @@ public class CutsceneBtn : MonoBehaviour
             sceneList[cnt - 1].gameObject.SetActive(false);
 
         }
+        cutSceneTextBox.textCount = 0;
+        cutSceneTextBox.OnClick();
+
     }
 
   
