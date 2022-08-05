@@ -7,6 +7,7 @@ public class SkillExplane : MonoBehaviour
 {
     public string skillName;
     private int skillLV;
+    public int index;
 
     public GameObject name;
     public GameObject icon;
@@ -21,7 +22,7 @@ public class SkillExplane : MonoBehaviour
     private void OnEnable()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        skillLV = player.GetSkillLV(skillName);
+        skillLV = player.maxLV[index];
         if(skillLV == 0)
         {
             name.GetComponent<Text>().text = "πÃ»πµÊ Ω∫≈≥";

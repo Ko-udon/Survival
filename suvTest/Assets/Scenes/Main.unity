@@ -6955,6 +6955,7 @@ MonoBehaviour:
   tauntLV: 0
   nautilusLV: 0
   virusLV: 0
+  maxLV: 
   anim: {fileID: 336408267}
   isIdle: 1
   hitsound: {fileID: 8300000, guid: 314281e7fdd252d488ec03a41f9bdea8, type: 3}
@@ -17233,6 +17234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Nautilus
+  index: 2
   name: {fileID: 1165226118}
   icon: {fileID: 905014089}
   explane: {fileID: 337504651}
@@ -20240,6 +20242,7 @@ MonoBehaviour:
   tauntLV: 0
   nautilusLV: 0
   virusLV: 0
+  maxLV: 
   anim: {fileID: 691002999}
   isIdle: 1
   hitsound: {fileID: 8300000, guid: b44caf8ffbcbc7c4f89aa16995671604, type: 3}
@@ -27389,6 +27392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Virus
+  index: 4
   name: {fileID: 1618796540}
   icon: {fileID: 1582947369}
   explane: {fileID: 647108289}
@@ -34838,6 +34842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Ball
+  index: 0
   name: {fileID: 1285649989}
   icon: {fileID: 508467958}
   explane: {fileID: 2083986158}
@@ -36239,6 +36244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: KnockBack
+  index: 1
   name: {fileID: 1600580125}
   icon: {fileID: 50564883}
   explane: {fileID: 1215504021}
@@ -37057,6 +37063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: Taunt
+  index: 3
   name: {fileID: 1300072821}
   icon: {fileID: 194937871}
   explane: {fileID: 1282169061}

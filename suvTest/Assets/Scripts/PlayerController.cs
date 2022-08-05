@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     public int tauntLV;
     public int nautilusLV;
     public int virusLV;
+
+    public List<int> maxLV;
+
     //UI관련
     UIController ui;
     StatusBattery statusBt;
@@ -60,6 +63,11 @@ public class PlayerController : MonoBehaviour
         tauntLV = 0;
         nautilusLV = 0;
         virusLV = 0;
+
+        for(int i = 0; i < 5; i++)
+        {
+            maxLV.Add(0);
+        }
 
         rigidbody = GetComponent<Rigidbody>();
         ui = GameObject.FindGameObjectWithTag("UIController").GetComponent<UIController>();
@@ -260,6 +268,11 @@ public class PlayerController : MonoBehaviour
                 {
                     skill_Ball.GetComponent<BallController>().UpdateLV(ballLV);
                 }
+
+                if(ballLV > maxLV[0])
+                {
+                    maxLV[0] = ballLV;
+                }
                 break;
 
             case "KnockBack":
@@ -274,19 +287,10 @@ public class PlayerController : MonoBehaviour
                 {
                     skill_KnockBack.GetComponent<KnockBack>().UpdateLV(knockbackLV);
                 }
-                break;
 
-            case "Taunt":
-                tauntLV++;
-                if (tauntLV == 1)
+                if (knockbackLV > maxLV[1])
                 {
-                    ownSkill.Add(type);
-                    skill_Taunt.SetActive(true);
-                    skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
-                }
-                else
-                {
-                    skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
+                    maxLV[1] = knockbackLV;
                 }
                 break;
 
@@ -302,6 +306,30 @@ public class PlayerController : MonoBehaviour
                 {
                     skill_Nautilus.GetComponent<Nautilus>().UpdateLV(nautilusLV);
                 }
+
+                if (nautilusLV > maxLV[2])
+                {
+                    maxLV[2] = nautilusLV;
+                }
+                break;
+
+            case "Taunt":
+                tauntLV++;
+                if (tauntLV == 1)
+                {
+                    ownSkill.Add(type);
+                    skill_Taunt.SetActive(true);
+                    skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
+                }
+                else
+                {
+                    skill_Taunt.GetComponent<Taunt>().UpdateLV(tauntLV);
+                }
+
+                if (tauntLV > maxLV[3])
+                {
+                    maxLV[3] = tauntLV;
+                }
                 break;
 
             case "Virus":
@@ -315,6 +343,11 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     skill_Virus.GetComponent<PoisonGenerator>().UpdateLV(virusLV);
+                }
+
+                if (virusLV > maxLV[4])
+                {
+                    maxLV[4] = virusLV;
                 }
                 break;
         }

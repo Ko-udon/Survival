@@ -17,11 +17,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject scroll;
 
     private Scrollbar scrollBar;
+
+    private List<GameObject> ableUI;
     private void OnEnable()
     {
         Time.timeScale = 0;
         state = "Settings";
         ChangeMenu();
+        DisableOther();
+    }
+
+    private void OnDisable()
+    {
+        EnableOther();
     }
 
     void Start()
@@ -106,5 +114,28 @@ public class PauseMenu : MonoBehaviour
     public void OnMainClicked()
     {
         SceneManager.LoadScene("StartScene");
+    }
+
+    public void DisableOther()
+    {
+        ableUI = new List<GameObject>();
+        for (int i = 0; i < transform.parent.transform.childCount; i++)
+        {
+            GameObject ui = transform.parent.transform.GetChild(i).gameObject;
+            if (ui != this.gameObject && ui.activeSelf)
+            {
+                ableUI.Add(ui);
+                ui.SetActive(false);
+            }
+        }
+    }
+
+    public void EnableOther()
+    {
+        foreach(GameObject ui in ableUI)
+        {
+            ui.SetActive(true);
+        }
+        ableUI.Clear();
     }
 }
