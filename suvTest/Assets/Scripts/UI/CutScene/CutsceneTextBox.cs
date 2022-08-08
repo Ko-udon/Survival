@@ -14,7 +14,7 @@ public class CutsceneTextBox : MonoBehaviour
     public List<string> messageList_1;
     public List<string> messageList_2;
     public int textCount;
-    public int sceneLastText;
+    
 
 
     Coroutine col;
@@ -28,6 +28,9 @@ public class CutsceneTextBox : MonoBehaviour
         //StartCoroutine(Typing(m_TypingText, messageList, m_Speed,0));
         //clickRightBtn = transform.GetChild(0).GetComponent<CutsceneBtn>();
         clickRightBtn = GameObject.Find("Background").GetComponent<CutsceneBtn>();
+        col = StartCoroutine(Typing(m_TypingText, messageList_0, m_Speed, textCount));
+        textCount++;
+
 
     }
 
@@ -40,7 +43,9 @@ public class CutsceneTextBox : MonoBehaviour
     {
         if(count==messageList.Count)
         {
+            //해당 씬의 모든 텍스트를 출력했다면
             clickRightBtn.OnClickRight();
+
         }
         else
         {
@@ -60,23 +65,29 @@ public class CutsceneTextBox : MonoBehaviour
         {
             StopCoroutine(col);
         }
-        if(clickRightBtn.cnt==0)
+        if (clickRightBtn.cnt == 0)
         {
+
             col = StartCoroutine(Typing(m_TypingText, messageList_0, m_Speed, textCount));
             textCount++;
         }
         else if (clickRightBtn.cnt == 1)
         {
+            
             col = StartCoroutine(Typing(m_TypingText, messageList_1, m_Speed, textCount));
-            textCount++;
+            //textCount++;
         }
         else if (clickRightBtn.cnt == 2)
         {
             col = StartCoroutine(Typing(m_TypingText, messageList_2, m_Speed, textCount));
             textCount++;
         }
-
-
+        else if (clickRightBtn.cnt == 3)
+        {
+            Debug.Log("세번째 씬");
+            //clickRightBtn.OnClickRight();
+        }
+      
 
 
 

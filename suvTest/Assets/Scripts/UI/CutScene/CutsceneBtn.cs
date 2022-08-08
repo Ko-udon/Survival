@@ -47,7 +47,9 @@ public class CutsceneBtn : MonoBehaviour
         
         if(cnt==sceneList.Count-1)
         {
-            moveNextScene();
+            //마지막 씬일 경우
+            
+            StartCoroutine(waitTimetoScene());
         }
         else
         {
@@ -56,16 +58,27 @@ public class CutsceneBtn : MonoBehaviour
 
             sceneList[cnt - 1].gameObject.SetActive(false);
 
+            if(cnt == sceneList.Count - 1)
+            {
+                StartCoroutine(waitTimetoScene());
+            }
+
         }
         cutSceneTextBox.textCount = 0;
         cutSceneTextBox.OnClick();
 
     }
+    IEnumerator waitTimetoScene()
+    {
 
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(nextScene);
+    }
   
 
     public void moveNextScene()
     {
+
         SceneManager.LoadScene(nextScene);
     }
 
