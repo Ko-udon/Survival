@@ -1655,7 +1655,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 2231
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -15082,8 +15082,8 @@ GameObject:
   - component: {fileID: 903221098}
   - component: {fileID: 903221100}
   - component: {fileID: 903221099}
-  m_Layer: 9
-  m_Name: MinimapIco_current
+  m_Layer: 11
+  m_Name: MinimapIcon_current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15097,7 +15097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903221097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.008000004, z: 0}
+  m_LocalPosition: {x: 0, y: 0.00008, z: 0}
   m_LocalScale: {x: 0.1, y: 0, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1571909741}
@@ -21198,7 +21198,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2560
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 6bc3d54f8ba0a664abaaa66c7034500c, type: 2}
   m_TargetDisplay: 0

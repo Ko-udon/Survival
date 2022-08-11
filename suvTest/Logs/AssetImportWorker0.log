@@ -15,11 +15,11 @@ C:/Young/Survival/suvTest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56325
+49252
 Successfully changed project path to: C:/Young/Survival/suvTest
 C:/Young/Survival/suvTest
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 139.19 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 267.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002611 seconds.
+Registered in 0.005544 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 92.16 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 244.13 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.639 seconds
+- Completed reload, in  6.025 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2640ms)
-		BeginReloadAssembly (54ms)
+	ReloadAssembly (6025ms)
+		BeginReloadAssembly (147ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (479ms)
-			LoadAssemblies (51ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (1193ms)
+			LoadAssemblies (138ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (153ms)
+			SetupTypeCache (363ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (215ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (521ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (92ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (75ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (244ms)
+				BeforeProcessingInitializeOnLoad (29ms)
+				ProcessInitializeOnLoadAttributes (161ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007516 seconds.
+Registered in 0.016351 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.141 seconds
+- Completed reload, in  2.305 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1144ms)
-		BeginReloadAssembly (151ms)
+	ReloadAssembly (2308ms)
+		BeginReloadAssembly (354ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (916ms)
-			LoadAssemblies (122ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1756ms)
+			LoadAssemblies (261ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (335ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (315ms)
+			SetupTypeCache (545ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (708ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (208ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (203ms)
+				ProcessInitializeOnLoadAttributes (457ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (20ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.68 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 3.25 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2059 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.4 MB.
-System memory in use after: 129.2 MB.
+System memory in use before: 134.3 MB.
+System memory in use after: 129.1 MB.
 
 Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2474.
-Total: 8.588200 ms (FindLiveObjects: 0.318700 ms CreateObjectMapping: 0.112500 ms MarkObjects: 3.192900 ms  DeleteObjects: 4.961900 ms)
+Total: 30.229200 ms (FindLiveObjects: 0.674500 ms CreateObjectMapping: 0.338700 ms MarkObjects: 11.049800 ms  DeleteObjects: 18.162000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,788 +132,261 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/UI/일시정지_스킬창_스킬칸.png
-  artifactKey: Guid(81a5a380ed4aafe4fa9f2a390c626bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/일시정지_스킬창_스킬칸.png using Guid(81a5a380ed4aafe4fa9f2a390c626bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a908b7c7779c245119485676cada71ff') in 0.147245 seconds 
-  Import took 0.152832 seconds .
+  path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar.mat
+  artifactKey: Guid(26c880ce3c053d04982d2c8e435fdb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar.mat using Guid(26c880ce3c053d04982d2c8e435fdb95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9357def730a272348b2071bec1e26c03') in 0.324887 seconds 
+  Import took 0.332615 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1397.825611 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations
-  artifactKey: Guid(342df75aaddde6342976a8e86770da5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations using Guid(342df75aaddde6342976a8e86770da5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0f5bb74275be4b9d3281fc6e71173e') in 0.010078 seconds 
-  Import took 0.014393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.077399 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Btn_Direction.png
-  artifactKey: Guid(56e956d14397ba4449147532a01d6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Btn_Direction.png using Guid(56e956d14397ba4449147532a01d6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c041bc99ccbbb83232c26ddf4066e715') in 0.054696 seconds 
-  Import took 0.059699 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_AtackTarget.png
-  artifactKey: Guid(b670a0d130bc79b4c95eb9ec63550609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_AtackTarget.png using Guid(b670a0d130bc79b4c95eb9ec63550609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31d4b078a1c82743dbd6d237181a342') in 0.039929 seconds 
-  Import took 0.046462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000432 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Blood.png
-  artifactKey: Guid(976ed94aea0f64e48b332958fbf4dc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Blood.png using Guid(976ed94aea0f64e48b332958fbf4dc30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '870728c28f3c66939fd958e3698905c5') in 0.107693 seconds 
-  Import took 0.112208 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowBlue.png
-  artifactKey: Guid(41fbc4fafa673d04bb66fa1bdf1d44d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowBlue.png using Guid(41fbc4fafa673d04bb66fa1bdf1d44d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1760f70f2495f085bc3d2dbc88fe9304') in 0.037251 seconds 
-  Import took 0.042729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShow.png
-  artifactKey: Guid(cebd119eb823d414f89df552285ad41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShow.png using Guid(cebd119eb823d414f89df552285ad41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0376d905581a0483ff82c5594170f60') in 0.083598 seconds 
-  Import took 0.090240 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/BulletShowBg.png
-  artifactKey: Guid(25c6f8265313c294ead4e19d4e793aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/BulletShowBg.png using Guid(25c6f8265313c294ead4e19d4e793aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ced273830ddcdee5a5d0ce1949342185') in 0.032664 seconds 
-  Import took 0.040115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000382 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowCyan.png
-  artifactKey: Guid(52d369333c5e2f54aa2817c766767324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowCyan.png using Guid(52d369333c5e2f54aa2817c766767324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b7c353139e20d4630ba3a174071e6c') in 0.085469 seconds 
-  Import took 0.093212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000430 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Btn_Direction.png
-  artifactKey: Guid(56e956d14397ba4449147532a01d6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Btn_Direction.png using Guid(56e956d14397ba4449147532a01d6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c041bc99ccbbb83232c26ddf4066e715') in 0.043984 seconds 
-  Import took 0.050253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Hot2.png
-  artifactKey: Guid(a29a68acdb7b9074b843cd683521d28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Hot2.png using Guid(a29a68acdb7b9074b843cd683521d28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87dff067e1c2b3bc620b5564df540b9f') in 0.034846 seconds 
-  Import took 0.041878 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Direction_Highlight.png
-  artifactKey: Guid(c77853c127924fe4b973151ff5672994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Direction_Highlight.png using Guid(c77853c127924fe4b973151ff5672994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08fd7405576ecaf7b9c7428e425033f6') in 0.046919 seconds 
-  Import took 0.053982 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowGreen.png
-  artifactKey: Guid(66f803e24ab78cf4f9c5f0879b83a53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowGreen.png using Guid(66f803e24ab78cf4f9c5f0879b83a53b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185a0ab710b46601da98c61732305e0c') in 0.045203 seconds 
-  Import took 0.051717 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000478 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Hot1.png
-  artifactKey: Guid(b393328eb2df7024ea6030ec9613ae3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Hot1.png using Guid(b393328eb2df7024ea6030ec9613ae3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2387d594e7a0a34a16a4b41cadf3dbb') in 0.040608 seconds 
-  Import took 0.046939 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_DistanceTarget.png
-  artifactKey: Guid(755a23ab7d954da4ba07060c537a99fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_DistanceTarget.png using Guid(755a23ab7d954da4ba07060c537a99fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fdbd383d3b52aea293c113b8848bcc2') in 0.035609 seconds 
-  Import took 0.044204 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_EmitLlight.png
-  artifactKey: Guid(74f5835b84c6041468fe6d513b06b2ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_EmitLlight.png using Guid(74f5835b84c6041468fe6d513b06b2ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2665d001a7409a6872b6c0e6bf435041') in 0.064301 seconds 
-  Import took 0.071164 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Capability_bg.png
-  artifactKey: Guid(e0110a2709ae1104aadda0f35e71eb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Capability_bg.png using Guid(e0110a2709ae1104aadda0f35e71eb87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9577d6efb930b2a638a51ea1769af9a') in 0.033677 seconds 
-  Import took 0.039462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.091923 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowOrange.png
-  artifactKey: Guid(be8584e54b2d0974988f7180d2830912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowOrange.png using Guid(be8584e54b2d0974988f7180d2830912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a2e978141975039fcd61e7625d419b') in 0.024754 seconds 
-  Import took 0.029999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowYellow.png
-  artifactKey: Guid(db2be58b6996bb34dbeff86b231fddee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowYellow.png using Guid(db2be58b6996bb34dbeff86b231fddee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516fdef74734b410f69fafcd03945e58') in 0.037776 seconds 
-  Import took 0.044642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowPurple.png
-  artifactKey: Guid(92086d7c4384438408060577016e71c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowPurple.png using Guid(92086d7c4384438408060577016e71c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baab2d6a5c0767262e25954ef1bb4f60') in 0.047876 seconds 
-  Import took 0.055999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000711 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_New.png
-  artifactKey: Guid(74fda05c5840c3c4a80bbd25bae77236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_New.png using Guid(74fda05c5840c3c4a80bbd25bae77236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7210576752019bdc387dbfa3562a92a') in 0.055412 seconds 
-  Import took 0.066099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000447 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowRed.png
-  artifactKey: Guid(e822e688ee7da5f48bd4826e83f4e6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_ItemShowRed.png using Guid(e822e688ee7da5f48bd4826e83f4e6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e1a2cfc26c560ac033227272dfb82c4') in 0.043509 seconds 
-  Import took 0.053947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000452 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_NewLevelLight.png
-  artifactKey: Guid(393c51fb8644619438bbe8fc9e5779be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_NewLevelLight.png using Guid(393c51fb8644619438bbe8fc9e5779be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8d5eb6d48b1cd425011a07e91c9058') in 0.054450 seconds 
-  Import took 0.063868 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005491 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_NewLevelLight.png
-  artifactKey: Guid(393c51fb8644619438bbe8fc9e5779be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_NewLevelLight.png using Guid(393c51fb8644619438bbe8fc9e5779be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8d5eb6d48b1cd425011a07e91c9058') in 0.029317 seconds 
-  Import took 0.038034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.029943 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_PointTip.png
-  artifactKey: Guid(6f48e4659c41fb04187a526e4fcd92da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_PointTip.png using Guid(6f48e4659c41fb04187a526e4fcd92da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7fd03e2e02bc3dc1cabf0688be09afe') in 0.054313 seconds 
-  Import took 0.059038 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Target.png
-  artifactKey: Guid(c7cfc389a67362a4f8c29bae7ba21389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Target.png using Guid(c7cfc389a67362a4f8c29bae7ba21389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7035c17be9ee9a114e7770fb5456f070') in 0.033170 seconds 
-  Import took 0.038206 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000419 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_StageLight.png
-  artifactKey: Guid(e9f0ce4290c8d2744a093d1096a83091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_StageLight.png using Guid(e9f0ce4290c8d2744a093d1096a83091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20bfa36a32fb952551ae5ad23b29f7eb') in 0.040487 seconds 
-  Import took 0.047025 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000375 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Sale.png
-  artifactKey: Guid(faece4753e3169b40b9bc0947335b428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Sale.png using Guid(faece4753e3169b40b9bc0947335b428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d276db118c34c5f10a72f6e09fbeb3') in 0.051875 seconds 
-  Import took 0.059002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_StageLine.png
-  artifactKey: Guid(7fb868bb5931ec04982b2148f81e0a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_StageLine.png using Guid(7fb868bb5931ec04982b2148f81e0a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea1b578e6f76334af9a420a87c691b85') in 0.038271 seconds 
-  Import took 0.045156 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000572 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Sale.png
-  artifactKey: Guid(faece4753e3169b40b9bc0947335b428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Sale.png using Guid(faece4753e3169b40b9bc0947335b428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d276db118c34c5f10a72f6e09fbeb3') in 0.028409 seconds 
-  Import took 0.035111 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_TargetLight.png
-  artifactKey: Guid(f49ce1a1667372549a95ce06060e738e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_TargetLight.png using Guid(f49ce1a1667372549a95ce06060e738e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62134bc31ba1114a07ac8c4a5d6588c8') in 0.060397 seconds 
-  Import took 0.066978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000665 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_PointTip.png
-  artifactKey: Guid(6f48e4659c41fb04187a526e4fcd92da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_PointTip.png using Guid(6f48e4659c41fb04187a526e4fcd92da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7fd03e2e02bc3dc1cabf0688be09afe') in 0.019470 seconds 
-  Import took 0.025685 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Skill.png
-  artifactKey: Guid(7ba0cadd7431b50439dcdda4fb1ce8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Skill.png using Guid(7ba0cadd7431b50439dcdda4fb1ce8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bb0fe96f43ee0ecdfd2f1ef104eb3fa') in 0.084939 seconds 
-  Import took 0.090877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Stage.png
-  artifactKey: Guid(046744e3dd39e30488ea5aa9d4ec4f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_Stage.png using Guid(046744e3dd39e30488ea5aa9d4ec4f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1410e97091b25afadc10d5225119d574') in 0.039350 seconds 
-  Import took 0.043963 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000450 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_TargetWhite.png
-  artifactKey: Guid(ccbe12ff350878a4aa37f5681be519d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Decorations/Icon_TargetWhite.png using Guid(ccbe12ff350878a4aa37f5681be519d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec3565cac894d6b23f32e2c74a3e3326') in 0.061003 seconds 
-  Import took 0.067642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.316293 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options
-  artifactKey: Guid(2e6bc68091ab6fb4e8dcfe77054f9c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options using Guid(2e6bc68091ab6fb4e8dcfe77054f9c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2defccd5698c40b91308f7d0acd0d1b') in 0.018589 seconds 
-  Import took 0.022875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Cyan.png
-  artifactKey: Guid(0633fcdb93fdfa643b89ea81550fd75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Cyan.png using Guid(0633fcdb93fdfa643b89ea81550fd75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067d071db169c286db728df92b939f3b') in 0.036443 seconds 
-  Import took 0.040609 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_CpBg.png
-  artifactKey: Guid(f6131476130c2344994620add7204889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_CpBg.png using Guid(f6131476130c2344994620add7204889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98b27c96afc8eb7bf2df01e5b4feb685') in 0.079121 seconds 
-  Import took 0.084980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000792 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_CpTitle.png
-  artifactKey: Guid(bfc4a4dcc4102c14fb9670a0de828969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_CpTitle.png using Guid(bfc4a4dcc4102c14fb9670a0de828969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0567027219076a170fa6a10e658f2bf') in 0.043580 seconds 
-  Import took 0.052584 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000591 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Blue.png
-  artifactKey: Guid(644ecd3d7486de34893a65e33d1a75d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Blue.png using Guid(644ecd3d7486de34893a65e33d1a75d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2adb6b6a940f71657a4c217e8d0a2244') in 0.050174 seconds 
-  Import took 0.058605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000715 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Green.png
-  artifactKey: Guid(c148e1df0de631d43bb9a3b4d8faaedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Green.png using Guid(c148e1df0de631d43bb9a3b4d8faaedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f675366754d1ddcbf72d17c0ec16a476') in 0.029897 seconds 
-  Import took 0.037759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.043812 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Green.png
-  artifactKey: Guid(c148e1df0de631d43bb9a3b4d8faaedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Green.png using Guid(c148e1df0de631d43bb9a3b4d8faaedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f675366754d1ddcbf72d17c0ec16a476') in 0.020738 seconds 
-  Import took 0.025651 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.287577 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Purple.png
-  artifactKey: Guid(349f73fdfa97efb4487304f5f94de91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Purple.png using Guid(349f73fdfa97efb4487304f5f94de91c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5eb9bc30a1b7bcac4684b87fcac9bce') in 0.027748 seconds 
-  Import took 0.032099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000384 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Yellow.png
-  artifactKey: Guid(231abc2576038d548a638d2de7db8452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Yellow.png using Guid(231abc2576038d548a638d2de7db8452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '420834f13c44ec4ee121595763d127e1') in 0.036142 seconds 
-  Import took 0.041048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_GradeBlack.png
-  artifactKey: Guid(98594e0ea094d2d4c8b557be21a88040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_GradeBlack.png using Guid(98594e0ea094d2d4c8b557be21a88040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fe6fa70babadd249443737c38541c02') in 0.067328 seconds 
-  Import took 0.074603 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Red.png
-  artifactKey: Guid(3f88f64069b722c47b44d3870d5daa8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Red.png using Guid(3f88f64069b722c47b44d3870d5daa8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89311b04590df78a75d404a0709cbd98') in 0.051272 seconds 
-  Import took 0.059877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000809 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Silver.png
-  artifactKey: Guid(b10a2228ddb96d945a9f2c3480ad68fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_Grade0Silver.png using Guid(b10a2228ddb96d945a9f2c3480ad68fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff7da58cce697da200f83257cc44fa4f') in 0.052778 seconds 
-  Import took 0.060950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LevelStar_gray.png
-  artifactKey: Guid(70fe5d4846ea9e54f8975a9897604efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LevelStar_gray.png using Guid(70fe5d4846ea9e54f8975a9897604efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5589e5d041d2922cf3d1a226edab1b5b') in 0.040963 seconds 
-  Import took 0.048306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.039094 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LevelStar_light.png
-  artifactKey: Guid(fce26e07ea952cf4c8f99ce507a9a5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LevelStar_light.png using Guid(fce26e07ea952cf4c8f99ce507a9a5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7569f2bd07d41e40e4d361a95aeeea1e') in 0.032951 seconds 
-  Import took 0.038973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LifeGray.png
-  artifactKey: Guid(9228f8235babb8345b39493f4bc1f912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LifeGray.png using Guid(9228f8235babb8345b39493f4bc1f912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df3b648049f093d5a6c3b046483e2ba4') in 0.031869 seconds 
-  Import took 0.035858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_ScoreBgRed.png
-  artifactKey: Guid(59522e7f99044b44cb5ce1b3393147e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_ScoreBgRed.png using Guid(59522e7f99044b44cb5ce1b3393147e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5032c076ff32c0155de790059b438fec') in 0.050162 seconds 
-  Import took 0.056994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000628 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LifeLight.png
-  artifactKey: Guid(ba4e15c836d7aa944b1dbb0c844002a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LifeLight.png using Guid(ba4e15c836d7aa944b1dbb0c844002a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a35527934f87595daaa8c6d526e8703') in 0.036039 seconds 
-  Import took 0.041273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_ScoreBgCyan.png
-  artifactKey: Guid(0f882d21c943a994682466220a699440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_ScoreBgCyan.png using Guid(0f882d21c943a994682466220a699440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a1c3cf296d4541c1d2d25d644952f71') in 0.048346 seconds 
-  Import took 0.053691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LvBg.png
-  artifactKey: Guid(a26e9dfe00080c64785dc1a6dd812223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_LvBg.png using Guid(a26e9dfe00080c64785dc1a6dd812223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70fae72db2f29b56d66bf03c1429eb36') in 0.031137 seconds 
-  Import took 0.037642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.297989 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_VictoryStar_gray.png
-  artifactKey: Guid(807d67646790c9046827af425c7e6612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_VictoryStar_gray.png using Guid(807d67646790c9046827af425c7e6612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2920c6f244311678f75621038326cae6') in 0.037659 seconds 
-  Import took 0.042239 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1 Line.png
-  artifactKey: Guid(c59ad215f8d20fe4baf7623d6da638cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1 Line.png using Guid(c59ad215f8d20fe4baf7623d6da638cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b1c415d8186ce00fd1e17c212c9aa6') in 0.031090 seconds 
-  Import took 0.035256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_WeaponStarGray.png
-  artifactKey: Guid(eb8dbf56efc8a3f4286850cc3eeeb2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_WeaponStarGray.png using Guid(eb8dbf56efc8a3f4286850cc3eeeb2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da73fff3660e509d1e3d631e1d68a55') in 0.064005 seconds 
-  Import took 0.068843 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_WeaponStarLight.png
-  artifactKey: Guid(28ed41382f561e9409121799dc5902b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_WeaponStarLight.png using Guid(28ed41382f561e9409121799dc5902b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe03f1ad2909bcc8b7a5f1b41706d6a4') in 0.058880 seconds 
-  Import took 0.065075 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_VictoryStar_light.png
-  artifactKey: Guid(8e6f8b9b47909134091b144b3d105e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Icon_VictoryStar_light.png using Guid(8e6f8b9b47909134091b144b3d105e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9079429d42f01d21700dc1c78acac537') in 0.048463 seconds 
-  Import took 0.057174 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000576 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1_n.png
-  artifactKey: Guid(8a8591b312540af4fb2130d3f90c8e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1_n.png using Guid(8a8591b312540af4fb2130d3f90c8e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0a566b02581e0ba317ae9a03b4a646c') in 0.046065 seconds 
-  Import took 0.055827 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.193176 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1_s .png
-  artifactKey: Guid(c98b136e2341ed34b94dd8a6d20523c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1_s .png using Guid(c98b136e2341ed34b94dd8a6d20523c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117181f4fdee459c9827908c04bbcead') in 0.028074 seconds 
-  Import took 0.032964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Email_n.png
-  artifactKey: Guid(f8c8268f3c35f9f4b96c716911e58c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Email_n.png using Guid(f8c8268f3c35f9f4b96c716911e58c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe024f65901a76e34e8b0e218ac7bf96') in 0.033301 seconds 
-  Import took 0.038478 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000527 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Password_n.png
-  artifactKey: Guid(0136aeb209e166949935ce2fc493fc4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Password_n.png using Guid(0136aeb209e166949935ce2fc493fc4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62636d53f2cdb9a20f97bb7fb3daa21') in 0.052941 seconds 
-  Import took 0.059814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_n.png
-  artifactKey: Guid(897a99f04f5b36542a1cfce5ee8b2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_n.png using Guid(897a99f04f5b36542a1cfce5ee8b2d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd76bd53dd747a2dff9203bfa8dcdf1b9') in 0.047191 seconds 
-  Import took 0.051754 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Email_s.png
-  artifactKey: Guid(d498f637bc3b86742bc2f68c5438703c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Email_s.png using Guid(d498f637bc3b86742bc2f68c5438703c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e5799aca2031cdfd87eb40aede9f47') in 0.044760 seconds 
-  Import took 0.051476 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000508 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Password_p.png
-  artifactKey: Guid(c706aeb80ba77814fa6e5fe60892b3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1Password_p.png using Guid(c706aeb80ba77814fa6e5fe60892b3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb1bdc973b69fd3ebfcce906404cadc9') in 0.048320 seconds 
-  Import took 0.054879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.338778 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_s .png
-  artifactKey: Guid(baf272e955b3ace4283fb26a9a5eb962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_s .png using Guid(baf272e955b3ace4283fb26a9a5eb962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'befcaab63412c8e0261ec195a6b9686a') in 0.030299 seconds 
-  Import took 0.036035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000514 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName2_n.png
-  artifactKey: Guid(1f6c9c5a619979347adfb02c7f778e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName2_n.png using Guid(1f6c9c5a619979347adfb02c7f778e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd391121ea7b9e657d7a9ebc91e55cdd6') in 0.031955 seconds 
-  Import took 0.037178 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000552 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName1_p.png
-  artifactKey: Guid(3d01f6dd58c7b134081b0eb2bb821c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName1_p.png using Guid(3d01f6dd58c7b134081b0eb2bb821c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45b831324a40e7b316b59b95ccd4e8c') in 0.047466 seconds 
-  Import took 0.052085 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName1_n.png
-  artifactKey: Guid(89dbb93965588ea46890a8ea2fa61a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName1_n.png using Guid(89dbb93965588ea46890a8ea2fa61a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328cf1aae1bf86de56c138a45c6d4510') in 0.039662 seconds 
-  Import took 0.046936 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000624 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName2_p.png
-  artifactKey: Guid(7d35addd40222dd439c67f1d29d50367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/InputName2_p.png using Guid(7d35addd40222dd439c67f1d29d50367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0197d62f62f7cf148898badd123eb28') in 0.036520 seconds 
-  Import took 0.043140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000341 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_s .png
-  artifactKey: Guid(baf272e955b3ace4283fb26a9a5eb962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/Options/Input1User_s .png using Guid(baf272e955b3ace4283fb26a9a5eb962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'befcaab63412c8e0261ec195a6b9686a') in 0.020310 seconds 
-  Import took 0.025708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.936086 seconds.
-  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/SciFiBgs(2K)
-  artifactKey: Guid(777d55c7747bfcc40a260838c1cb961b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V2 Pro(Cyan)/Textures/DemoScene_Cyan/SciFiBgs(2K) using Guid(777d55c7747bfcc40a260838c1cb961b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f3f0556e174083b376bf1ea907ef000') in 0.012049 seconds 
-  Import took 0.016213 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 110.580180 seconds.
-  path: Assets/GameSound.mixer
-  artifactKey: Guid(6d29f65538f5cab49b3c86561ff8fb31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameSound.mixer using Guid(6d29f65538f5cab49b3c86561ff8fb31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfb7deb99e9a8e6b46432e1661f9a24') in 0.018491 seconds 
-  Import took 0.022943 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.451069 seconds.
-  path: Assets/Fonts/DungGeunMo.ttf
-  artifactKey: Guid(8fa885a40dac96a4ba801a719599de04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/DungGeunMo.ttf using Guid(8fa885a40dac96a4ba801a719599de04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f310c3ad0ec258f4fb0d6203a8f894d') in 0.126622 seconds 
-  Import took 0.132867 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000512 seconds.
-  path: Assets/TextMesh Pro/Fonts/Maplestory Bold.ttf
-  artifactKey: Guid(16abb708d92b6bc4fb06d3009e006378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/Maplestory Bold.ttf using Guid(16abb708d92b6bc4fb06d3009e006378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70891c369d59cc5354a1c778794b494a') in 0.034404 seconds 
-  Import took 0.041091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000402 seconds.
-  path: Assets/TextMesh Pro/Fonts/Maplestory Light.ttf
-  artifactKey: Guid(b9eb9365b2d7e9248a53276543b0046d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/Maplestory Light.ttf using Guid(b9eb9365b2d7e9248a53276543b0046d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84bb28f8b6886251393ad2b8a7dd58b7') in 0.072302 seconds 
-  Import took 0.079534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000629 seconds.
-  path: Assets/Fonts/LAB_Dgital.ttf
-  artifactKey: Guid(d4cb928136240a842a30d5834e98e6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/LAB_Dgital.ttf using Guid(d4cb928136240a842a30d5834e98e6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490009a736d32e8e37f202f88cbef750') in 0.057463 seconds 
-  Import took 0.064351 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000597 seconds.
-  path: Assets/Fonts/DungGeunMo.ttf
-  artifactKey: Guid(8fa885a40dac96a4ba801a719599de04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fonts/DungGeunMo.ttf using Guid(8fa885a40dac96a4ba801a719599de04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f310c3ad0ec258f4fb0d6203a8f894d') in 0.046468 seconds 
-  Import took 0.055368 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 125.627419 seconds.
-  path: Assets/SCI-FI UI Pack Pro
-  artifactKey: Guid(43744c706f6df634cbc5d801e0b3d715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SCI-FI UI Pack Pro using Guid(43744c706f6df634cbc5d801e0b3d715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12bfbb80ec90e22278a116f32048cbfb') in 0.008852 seconds 
-  Import took 0.012772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 185.522735 seconds.
-  path: Assets/Minimaps/RenderTextures
-  artifactKey: Guid(fad902d8598a24b4d8b05c854f1ad8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/RenderTextures using Guid(fad902d8598a24b4d8b05c854f1ad8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05b93a72b1af56d06776da5bf70bd1d') in 0.012416 seconds 
-  Import took 0.016140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.120732 seconds.
-  path: Assets/Minimaps/Materials
-  artifactKey: Guid(a3d6294e003d32846b776c5e0a846106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials using Guid(a3d6294e003d32846b776c5e0a846106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9813c8fc84a26970e41e7cf6ced7ce17') in 0.010419 seconds 
-  Import took 0.015179 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.062243 seconds.
-  path: Assets/Minimaps/Materials/blue.mat
-  artifactKey: Guid(c812e994084e69240831463d3065e8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/blue.mat using Guid(c812e994084e69240831463d3065e8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfb617f1e9995729b33f7bad7307f0c') in 0.126702 seconds 
-  Import took 0.130904 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Minimaps/Materials/circle.mat
-  artifactKey: Guid(b70b7acb5765fac44ba0dfaf26f8b335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/circle.mat using Guid(b70b7acb5765fac44ba0dfaf26f8b335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a27028737f276bb72a32cfc7cc8aa6') in 0.208225 seconds 
-  Import took 0.213335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Minimaps/Materials/red.mat
-  artifactKey: Guid(d142a2020011c5247a1dee896f1ff5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/red.mat using Guid(d142a2020011c5247a1dee896f1ff5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e66114ce1dc8e5b2aca6cea64a4514') in 0.033412 seconds 
-  Import took 0.037616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Minimaps/Materials/green.mat
-  artifactKey: Guid(7b714b5a28a412f4791e1fdfc0985881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/green.mat using Guid(7b714b5a28a412f4791e1fdfc0985881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ac341e825c6b554729ac9f3804b5d11') in 0.108655 seconds 
-  Import took 0.113499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/Minimaps/Materials/Minimap_stage1-복구됨.mat
-  artifactKey: Guid(a4eb8f1647aa490469fab58a17b88639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/Minimap_stage1-복구됨.mat using Guid(a4eb8f1647aa490469fab58a17b88639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6bbcc534cdfba2371b77186ef61884') in 0.135062 seconds 
-  Import took 0.140799 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Minimaps/Materials/Fog.mat
-  artifactKey: Guid(e0e1ebad5f064184cbac5e242a1aa9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/Fog.mat using Guid(e0e1ebad5f064184cbac5e242a1aa9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d9e98027e0a1a764de872972ef6408') in 0.046546 seconds 
-  Import took 0.052633 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013259 seconds.
-  path: Assets/Minimaps/Materials/Fog.mat
-  artifactKey: Guid(e0e1ebad5f064184cbac5e242a1aa9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Materials/Fog.mat using Guid(e0e1ebad5f064184cbac5e242a1aa9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d9e98027e0a1a764de872972ef6408') in 0.038671 seconds 
-  Import took 0.045977 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.322297 seconds.
-  path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_ElectricBolt_Add.mat
-  artifactKey: Guid(9c36c09a0f6dd93458248f001ebce5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_ElectricBolt_Add.mat using Guid(9c36c09a0f6dd93458248f001ebce5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1ac3768bd5860543a28f6c3d3e34de3') in 0.039878 seconds 
-  Import took 0.045365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar 1.mat
-  artifactKey: Guid(f90925fc377bf5047a0321ca649bc8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar 1.mat using Guid(f90925fc377bf5047a0321ca649bc8b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ff939fbe20ec88cedf3639c314ea427') in 0.062188 seconds 
-  Import took 0.066990 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_Sparkles_Add.mat
-  artifactKey: Guid(f70f45ac7c9fb644c9a039b7d3aab297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_Sparkles_Add.mat using Guid(f70f45ac7c9fb644c9a039b7d3aab297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd116d6cb351646ef1d4323ee82dd91a1') in 0.109357 seconds 
-  Import took 0.114815 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_ElectricBolt_Add.mat
-  artifactKey: Guid(9c36c09a0f6dd93458248f001ebce5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_ElectricBolt_Add.mat using Guid(9c36c09a0f6dd93458248f001ebce5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1ac3768bd5860543a28f6c3d3e34de3') in 0.068056 seconds 
-  Import took 0.077471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000662 seconds.
+  Time since last request: 0.000396 seconds.
   path: Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar 2.mat
   artifactKey: Guid(bb9d9063b0a66b148aa93e183c0e2e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar 2.mat using Guid(bb9d9063b0a66b148aa93e183c0e2e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b532493c262684647b69bcdaeeba3cca') in 0.092127 seconds 
-  Import took 0.100302 seconds .
+Start importing Assets/JMO Assets/Cartoon FX/Materials/Electric/CFX_YellowStar 2.mat using Guid(bb9d9063b0a66b148aa93e183c0e2e95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd677e96a56bd4bac408d848ddbe37a29') in 0.034778 seconds 
+  Import took 0.042116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5447.248870 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a676d663856ca5e372ba7f2981aaead2') in 0.024341 seconds 
+  Import took 0.031536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030417 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a676d663856ca5e372ba7f2981aaead2') in 0.009070 seconds 
+  Import took 0.014750 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.029172 seconds.
+Registered in 0.010803 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.26 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.562 seconds
+- Completed reload, in  1.397 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1563ms)
-		BeginReloadAssembly (200ms)
+	ReloadAssembly (1398ms)
+		BeginReloadAssembly (183ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (65ms)
-		EndReloadAssembly (1222ms)
-			LoadAssemblies (208ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1119ms)
+			LoadAssemblies (161ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (426ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (397ms)
+			SetupTypeCache (337ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (448ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (317ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.2 MB.
+System memory in use after: 116.9 MB.
+
+Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 2516.
+Total: 9.863500 ms (FindLiveObjects: 0.333600 ms CreateObjectMapping: 0.114600 ms MarkObjects: 2.580900 ms  DeleteObjects: 6.832800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 308.854905 seconds.
+  path: Assets/Minimaps/Shaders
+  artifactKey: Guid(7e74034fd137b9a43bfa0c4299f36fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Minimaps/Shaders using Guid(7e74034fd137b9a43bfa0c4299f36fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212d464adc999a84071a2f6ec65a5b13') in 0.023458 seconds 
+  Import took 0.029821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005158 seconds.
+  path: Assets/Minimaps/Shaders
+  artifactKey: Guid(7e74034fd137b9a43bfa0c4299f36fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Minimaps/Shaders using Guid(7e74034fd137b9a43bfa0c4299f36fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212d464adc999a84071a2f6ec65a5b13') in 0.005332 seconds 
+  Import took 0.011598 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013046 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.671 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1672ms)
+		BeginReloadAssembly (217ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (75ms)
+		EndReloadAssembly (1338ms)
+			LoadAssemblies (223ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (488ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (428ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (113ms)
-				ProcessInitializeOnLoadAttributes (259ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (283ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.2 MB.
+System memory in use after: 117.0 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2518.
+Total: 10.927400 ms (FindLiveObjects: 0.379200 ms CreateObjectMapping: 0.156200 ms MarkObjects: 4.104600 ms  DeleteObjects: 6.284900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014189 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.337 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1338ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1097ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (396ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (348ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (221ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.15 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.1 MB.
+System memory in use after: 117.0 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 10.198500 ms (FindLiveObjects: 0.423500 ms CreateObjectMapping: 0.179300 ms MarkObjects: 4.226400 ms  DeleteObjects: 5.367600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.023301 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.164 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (953ms)
+			LoadAssemblies (131ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (307ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (337ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (222ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
@@ -922,11 +395,1002 @@ Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform
 Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 122.4 MB.
-System memory in use after: 117.2 MB.
+System memory in use before: 122.2 MB.
+System memory in use after: 117.0 MB.
 
-Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2586.
-Total: 9.462800 ms (FindLiveObjects: 0.311600 ms CreateObjectMapping: 0.082000 ms MarkObjects: 3.187700 ms  DeleteObjects: 5.879800 ms)
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2522.
+Total: 10.483200 ms (FindLiveObjects: 0.472000 ms CreateObjectMapping: 0.180100 ms MarkObjects: 3.856000 ms  DeleteObjects: 5.973500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 493.804828 seconds.
+  path: Assets/Materials/circle.mat
+  artifactKey: Guid(b840fb9bc2ce9104ba80d59b5ecc9108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/circle.mat using Guid(b840fb9bc2ce9104ba80d59b5ecc9108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c58cf8e8f30b3732c50fd8f16d8d87') in 0.337349 seconds 
+  Import took 0.345218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_Corner_1.fbx
+  artifactKey: Guid(70cabed7543e3314f90ecbb9af106545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_Corner_1.fbx using Guid(70cabed7543e3314f90ecbb9af106545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '934768951b84c326ad2202bec57ed42e') in 0.613478 seconds 
+  Import took 0.619333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Darker.mat
+  artifactKey: Guid(ca63e1d0575d9eb4ab8e24dac32b51d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Darker.mat using Guid(ca63e1d0575d9eb4ab8e24dac32b51d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38602e2c8faef5a22313e2e3dac58e41') in 0.045821 seconds 
+  Import took 0.051991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Materials/enemy.mat
+  artifactKey: Guid(975c8c34a21712748835b0ddb8b34ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/enemy.mat using Guid(975c8c34a21712748835b0ddb8b34ba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cb452f57399aab73bb90dfb86090f8') in 0.057074 seconds 
+  Import took 0.063392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73bfc51c5222557aa47c55c3d1b82acd') in 0.155222 seconds 
+  Import took 0.160700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_18x18_Lower_1.fbx
+  artifactKey: Guid(431762cbfc902f94a95f131456444f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_18x18_Lower_1.fbx using Guid(431762cbfc902f94a95f131456444f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29460556cb78402d00cdb7abc717883d') in 0.224368 seconds 
+  Import took 0.240735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000631 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle9/BeeQueen/Sourcefiles/BeeQueen.fbx
+  artifactKey: Guid(e46b3a059729320448139a5a3d87a87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle9/BeeQueen/Sourcefiles/BeeQueen.fbx using Guid(e46b3a059729320448139a5a3d87a87c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d64b091efd3bab19b68cbd5d8a76de') in 0.120523 seconds 
+  Import took 0.129905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_3.fbx
+  artifactKey: Guid(e8475ffc2b3778f42af13c8f76fe4c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_3.fbx using Guid(e8475ffc2b3778f42af13c8f76fe4c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff8f3fa865e3e60c1a5ec0c906a59f1') in 0.271346 seconds 
+  Import took 0.277095 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_3.fbx
+  artifactKey: Guid(57b268b5c16002d49a3b07090808d964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_3.fbx using Guid(57b268b5c16002d49a3b07090808d964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab2b5710961c966fb4e6d0eb0b5822e') in 0.202491 seconds 
+  Import took 0.208507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_18x18_1.fbx
+  artifactKey: Guid(9c810156ff8546f469eb0f0b8f67f023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_18x18_1.fbx using Guid(9c810156ff8546f469eb0f0b8f67f023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac1f957402924a2ae2bbcc0d78183f2') in 0.254384 seconds 
+  Import took 0.271584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000512 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle3/Nightmare/Source files/Nightmare.fbx
+  artifactKey: Guid(4f60e0959eb4b7b4599a0ee6750cd2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle3/Nightmare/Source files/Nightmare.fbx using Guid(4f60e0959eb4b7b4599a0ee6750cd2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc2a36c8a278ab97c9bec0457529a11a') in 0.107997 seconds 
+  Import took 0.117164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle10/SwampTroll/Sourcefiles/Model.fbx
+  artifactKey: Guid(f32c963a977723e49804a373bd51343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle10/SwampTroll/Sourcefiles/Model.fbx using Guid(f32c963a977723e49804a373bd51343f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b624749e18f3d7540286f55303466d2') in 0.094545 seconds 
+  Import took 0.102445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle10/SwampCrawler/Sourcefiles/SwampCrawler.fbx
+  artifactKey: Guid(5e4522202d2ede947a32b8beec80fecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle10/SwampCrawler/Sourcefiles/SwampCrawler.fbx using Guid(5e4522202d2ede947a32b8beec80fecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd797fa0a409b4762c95fe41e473aaea8') in 0.053702 seconds 
+  Import took 0.059231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Dark.mat
+  artifactKey: Guid(651d0db5a5db31a4e8ea67cb0bb4bdca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Dark.mat using Guid(651d0db5a5db31a4e8ea67cb0bb4bdca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d8559932e4d0fc8a2276c8e7af0003') in 0.025213 seconds 
+  Import took 0.029653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle5/LavaGolem/Sourcefiles/LavaGolem.fbx
+  artifactKey: Guid(1346f5c815504074e93e538364a30561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle5/LavaGolem/Sourcefiles/LavaGolem.fbx using Guid(1346f5c815504074e93e538364a30561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8aab853d2aa158653081f99eaf30a3d') in 0.056162 seconds 
+  Import took 0.061350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Assets/Joystick Pack/Examples/Ground.mat
+  artifactKey: Guid(c569c280f0eb52a49a7b2a6b8b0cbcf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Joystick Pack/Examples/Ground.mat using Guid(c569c280f0eb52a49a7b2a6b8b0cbcf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd03f178a31c8ce46cbf8a22a21c1ce') in 0.035775 seconds 
+  Import took 0.041413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle10/SwampHopper/Sourcefiles/SwampHopper.fbx
+  artifactKey: Guid(41d80bfed04d48b4391b4fff71343d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle10/SwampHopper/Sourcefiles/SwampHopper.fbx using Guid(41d80bfed04d48b4391b4fff71343d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e060f4602da4a30bb466cb8589d36d') in 0.120507 seconds 
+  Import took 0.126799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000404 seconds.
+  path: Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_SmokeParticle_01.mat
+  artifactKey: Guid(293590e58fe523a4f9c979f6005c6ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_SmokeParticle_01.mat using Guid(293590e58fe523a4f9c979f6005c6ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59844d3401048df5e2adb3fcbf21bb0b') in 0.070527 seconds 
+  Import took 0.076519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_6x6_Corner.fbx
+  artifactKey: Guid(73a1e994049efff40856b730fc6d242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_6x6_Corner.fbx using Guid(73a1e994049efff40856b730fc6d242a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741d01657e3804ed22715f12a37ac491') in 0.255669 seconds 
+  Import took 0.260837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000420 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle5/FireElemental/Sourcefiles/FireElemental.fbx
+  artifactKey: Guid(71b0472fafb2bee44a630b95915f099e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle5/FireElemental/Sourcefiles/FireElemental.fbx using Guid(71b0472fafb2bee44a630b95915f099e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666bc4b5b30ed69facc6b8104fabbc79') in 0.100234 seconds 
+  Import took 0.105490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Atlas_1.mat
+  artifactKey: Guid(74277dc3e4bf9884fba62c66af7f73e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Atlas_1.mat using Guid(74277dc3e4bf9884fba62c66af7f73e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adf071b8a736b1ca7a179f1a39af1abf') in 0.093463 seconds 
+  Import took 0.098621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Materials/hp.mat
+  artifactKey: Guid(493af99bb6e2cc24993afdc123c278f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/hp.mat using Guid(493af99bb6e2cc24993afdc123c278f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd08b3eb86cb1fc0375b03256a193f24b') in 0.253907 seconds 
+  Import took 0.267773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Green_snaps002.mat
+  artifactKey: Guid(cff86b3f8014a6e4babecc006d77e004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Green_snaps002.mat using Guid(cff86b3f8014a6e4babecc006d77e004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce1eb9c146d0c80b49a6916848406cde') in 0.042343 seconds 
+  Import took 0.048384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000441 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3198251c9890bf36fad63e0bc6164fe6') in 0.158848 seconds 
+  Import took 0.166656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/LightBlue_snaps002.mat
+  artifactKey: Guid(4b600b0043b600a42a640a24ab4dea01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/LightBlue_snaps002.mat using Guid(4b600b0043b600a42a640a24ab4dea01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02dbd9f121c21b3be1b2c04a2d96710b') in 0.041998 seconds 
+  Import took 0.048487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle7/IceHound/Sourcefiles/IceHound.fbx
+  artifactKey: Guid(f9dddae4a2de5794e8f7c48f68ae6654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle7/IceHound/Sourcefiles/IceHound.fbx using Guid(f9dddae4a2de5794e8f7c48f68ae6654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89dc1085cb78cd8cf7c7cfc855ca48f2') in 0.079065 seconds 
+  Import took 0.087881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5_1.fbx
+  artifactKey: Guid(88507f97b41dc364d8d24fdb1c947ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5_1.fbx using Guid(88507f97b41dc364d8d24fdb1c947ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfca42b562855b74495ffbd74577c1c') in 0.236377 seconds 
+  Import took 0.252189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482a362b8fe5ce36b302051eaf90a735') in 0.183973 seconds 
+  Import took 0.189543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_Desert.mat
+  artifactKey: Guid(e5379d621b2307940b0e35cfe56657a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_Desert.mat using Guid(e5379d621b2307940b0e35cfe56657a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b853574eb670405e3aec0f1ffd31ea5') in 0.201932 seconds 
+  Import took 0.208035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_16x18_2.fbx
+  artifactKey: Guid(b6d475752860a51429c71fa8ba5ecb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_16x18_2.fbx using Guid(b6d475752860a51429c71fa8ba5ecb56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab6c27b50a002caa0931259136c7d16') in 0.245277 seconds 
+  Import took 0.259643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki_snaps002.mat
+  artifactKey: Guid(4f6a32ae4320c1d489759d620e71be9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki_snaps002.mat using Guid(4f6a32ae4320c1d489759d620e71be9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '179356315a40d0e4494f25ebf66d6fa2') in 0.037466 seconds 
+  Import took 0.043560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_EntranceDoor_1.fbx
+  artifactKey: Guid(10b87f1faa3f888459ea089dbed79ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_EntranceDoor_1.fbx using Guid(10b87f1faa3f888459ea089dbed79ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a3cb17f41988aeda4be1a0e3628b5c') in 0.451247 seconds 
+  Import took 0.467034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000435 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Tower_1.fbx
+  artifactKey: Guid(69b92d2dac2031b4d9995df2bc270291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Tower_1.fbx using Guid(69b92d2dac2031b4d9995df2bc270291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14812c45761d740dfd951820a56873b1') in 0.172357 seconds 
+  Import took 0.176620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/CUBE - Sci Fi Interiors Pack/Materials/Colour Map 01.mat
+  artifactKey: Guid(c683db0868f7e044fa12d3ae62c04bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CUBE - Sci Fi Interiors Pack/Materials/Colour Map 01.mat using Guid(c683db0868f7e044fa12d3ae62c04bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b6a2098b76c3f8cc71329ec600d7342') in 0.146905 seconds 
+  Import took 0.152215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/GreenBlack_snaps002.mat
+  artifactKey: Guid(38f55b85103d762478d8298d58d90704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/GreenBlack_snaps002.mat using Guid(38f55b85103d762478d8298d58d90704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f783acc222064a91e1e219c112e9a4e') in 0.037089 seconds 
+  Import took 0.044618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 04.mat
+  artifactKey: Guid(769205877f9bd214384d87e7d318fd56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 04.mat using Guid(769205877f9bd214384d87e7d318fd56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18a8ae08840b69e6d52d14cf05d9d23') in 0.111356 seconds 
+  Import took 0.117145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8b7c8c3e3c9a45adbdca63c88707d17') in 0.070871 seconds 
+  Import took 0.076236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5.fbx
+  artifactKey: Guid(9cffe078fac207e4ab1ece3faa7e9f4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5.fbx using Guid(9cffe078fac207e4ab1ece3faa7e9f4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a3402ed1add1e46946949fa967f920') in 0.207585 seconds 
+  Import took 0.212678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_5.fbx
+  artifactKey: Guid(b4dbd053fa5df764584b1045e8a339a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_5.fbx using Guid(b4dbd053fa5df764584b1045e8a339a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46712f54aabf74499641998d469264c2') in 0.163568 seconds 
+  Import took 0.169369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle6/IceGolem/Sourcefiles/IceGolem.fbx
+  artifactKey: Guid(2e521f929675aec498149c9770d735cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle6/IceGolem/Sourcefiles/IceGolem.fbx using Guid(2e521f929675aec498149c9770d735cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b895c4657391dce5c8ca6c6d6d2b34') in 0.095432 seconds 
+  Import took 0.101296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_BlackWhite.mat
+  artifactKey: Guid(4f099161e33b7274dab8d659d1a382a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_BlackWhite.mat using Guid(4f099161e33b7274dab8d659d1a382a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3bba2f7f63264c96bd3df42a97c5cac') in 0.090481 seconds 
+  Import took 0.094630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle4/Cobra/Sourcefiles/Cobra.fbx
+  artifactKey: Guid(b8c2dbc9ee52009439c83244a17dd539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle4/Cobra/Sourcefiles/Cobra.fbx using Guid(b8c2dbc9ee52009439c83244a17dd539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dfd32c8ca0717476aea35dbfdde0418') in 0.082169 seconds 
+  Import took 0.087014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle6/IceDragon/Source files/IceDragon.fbx
+  artifactKey: Guid(f52fd0eb8d7e0de47af33b08cf1e330e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle6/IceDragon/Source files/IceDragon.fbx using Guid(f52fd0eb8d7e0de47af33b08cf1e330e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47edc972e7afc6a7f0b41c73481ddd8e') in 0.083817 seconds 
+  Import took 0.088331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_FireParticle_01.mat
+  artifactKey: Guid(291ee789344cb7f419beb9fb3f14300b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_FireParticle_01.mat using Guid(291ee789344cb7f419beb9fb3f14300b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f71b94a09abefa5be7d72cf196145a10') in 0.026371 seconds 
+  Import took 0.032353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000628 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle5/FireFiend/Sourcefiles/FireFiend.fbx
+  artifactKey: Guid(63a803320bcd5314c9a7db7fb8bd02e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle5/FireFiend/Sourcefiles/FireFiend.fbx using Guid(63a803320bcd5314c9a7db7fb8bd02e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b05c050bf82c4159f20046286ff6f09') in 0.107842 seconds 
+  Import took 0.113858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/LightGray_snaps002.mat
+  artifactKey: Guid(ae2efeea9c901af48b6bb19d9981d5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/LightGray_snaps002.mat using Guid(ae2efeea9c901af48b6bb19d9981d5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e3678fd59592f9746be498d66ab5074') in 0.026793 seconds 
+  Import took 0.032426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_BlueYellow.mat
+  artifactKey: Guid(33a2b105ea82b824db0518fffcc379c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Camo_BlueYellow.mat using Guid(33a2b105ea82b824db0518fffcc379c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7297c65e9bcc9c15748c0ed997421012') in 0.110290 seconds 
+  Import took 0.118135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cylinder_3.fbx
+  artifactKey: Guid(0fe82d7a86bf6a242b10715179d96e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cylinder_3.fbx using Guid(0fe82d7a86bf6a242b10715179d96e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05cdeabb544387ed247c8ac052f5676b') in 0.093053 seconds 
+  Import took 0.097848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cables_1.fbx
+  artifactKey: Guid(a89ee0a913b606c40bee8a64ca1e83bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cables_1.fbx using Guid(a89ee0a913b606c40bee8a64ca1e83bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe5fe1e5516e050461513a89a04cf1f') in 0.161951 seconds 
+  Import took 0.166423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DeepBlue_snaps002.mat
+  artifactKey: Guid(0311cbb0184a51845912c30ec478cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DeepBlue_snaps002.mat using Guid(0311cbb0184a51845912c30ec478cb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16334e736fda5ff39ddf38ec915c881a') in 0.034382 seconds 
+  Import took 0.041588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_1.fbx
+  artifactKey: Guid(766ef3e0368b84f418e67bcece345f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_1.fbx using Guid(766ef3e0368b84f418e67bcece345f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25f1f43a2a646d3831d3fd805a95968') in 0.211292 seconds 
+  Import took 0.229101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000628 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Guns/SM_SR01A.fbx
+  artifactKey: Guid(9425360e01a8af84d95bd7184e6036f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Guns/SM_SR01A.fbx using Guid(9425360e01a8af84d95bd7184e6036f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8e15764f2e7a6a4dfc0fbd481dffb0') in 0.329566 seconds 
+  Import took 0.349189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000655 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle6/IceFiend/Sourcefiles/IceFiend.fbx
+  artifactKey: Guid(29ee69b2a7255ea44bbb97b0aab6ef38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle6/IceFiend/Sourcefiles/IceFiend.fbx using Guid(29ee69b2a7255ea44bbb97b0aab6ef38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05216a8e62214ec4731e1252b0b2687') in 0.103620 seconds 
+  Import took 0.110934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Atlas_Emissive_1.mat
+  artifactKey: Guid(92faf93ba51cf3b418ced9ee3085e14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Atlas_Emissive_1.mat using Guid(92faf93ba51cf3b418ced9ee3085e14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14d74e2dcdd4c95e48b88ce69322e40') in 0.139746 seconds 
+  Import took 0.143958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle3/Giant/Source files/Giant.fbx
+  artifactKey: Guid(3f417e058c59d9b4da64a41850f8591f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle3/Giant/Source files/Giant.fbx using Guid(3f417e058c59d9b4da64a41850f8591f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b1b3976a8577c7889fe492752c5330') in 0.187084 seconds 
+  Import took 0.191938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkCyan_snaps002.mat
+  artifactKey: Guid(9b6f00edc7822ab47b645603f7b615b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkCyan_snaps002.mat using Guid(9b6f00edc7822ab47b645603f7b615b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '008d91bac96b4f0ea7745f3694eb4ecb') in 0.036652 seconds 
+  Import took 0.042275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000438 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle7/IceKing/Sourcefiles/IceKing.fbx
+  artifactKey: Guid(9c4fa3257a18a1a45b28ef038668e9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle7/IceKing/Sourcefiles/IceKing.fbx using Guid(9c4fa3257a18a1a45b28ef038668e9d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8150668289c68e5e52652510a91b6a19') in 0.140237 seconds 
+  Import took 0.146657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 03.mat
+  artifactKey: Guid(48ebcb66ed850934c8fe9197b79f1411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 03.mat using Guid(48ebcb66ed850934c8fe9197b79f1411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83feae155385bb37b93883b1e3fe756b') in 0.106001 seconds 
+  Import took 0.110618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_2.fbx
+  artifactKey: Guid(ef49550b9a4a1774e8961e2d34069d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_2.fbx using Guid(ef49550b9a4a1774e8961e2d34069d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dec4588edad10143b4d00bfd79b0907') in 0.194267 seconds 
+  Import took 0.200840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Pillar_2.fbx
+  artifactKey: Guid(bf68b79844e045645abd7df1a4727a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Pillar_2.fbx using Guid(bf68b79844e045645abd7df1a4727a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651c17bc59a77043cd8be0999e29ae6a') in 0.162887 seconds 
+  Import took 0.168296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle11/Cow/Source files/cow.fbx
+  artifactKey: Guid(8cc2c32a0996bab4793367e4f506765a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle11/Cow/Source files/cow.fbx using Guid(8cc2c32a0996bab4793367e4f506765a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49dca035338317ae0204c51a8e7e4298') in 0.179361 seconds 
+  Import took 0.183536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gray_snaps002.mat
+  artifactKey: Guid(8621dfcb3dbf229428e45425021e0875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gray_snaps002.mat using Guid(8621dfcb3dbf229428e45425021e0875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e241e43c6fee853ca76d37ad0c68a44') in 0.026826 seconds 
+  Import took 0.034401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle2/Ghosts/Source files/Ghosts.fbx
+  artifactKey: Guid(569859e4c317d904bb295c8823e9eb9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle2/Ghosts/Source files/Ghosts.fbx using Guid(569859e4c317d904bb295c8823e9eb9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '083e83c0ed0c644b308bb811b139de0b') in 0.165565 seconds 
+  Import took 0.171093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Damp.mat
+  artifactKey: Guid(4afc0ffccab963644a4b0b22117f129e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Khaki Damp.mat using Guid(4afc0ffccab963644a4b0b22117f129e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '800996bfbd962d64f1575b9cd46d64fd') in 0.032310 seconds 
+  Import took 0.036769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5_End.fbx
+  artifactKey: Guid(6dfda88a3e0f6ed4cbfce65caff70d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x5_End.fbx using Guid(6dfda88a3e0f6ed4cbfce65caff70d4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b3d30238a2ec4b4fcd4f5e813b00df') in 0.199670 seconds 
+  Import took 0.205473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkerGray_snaps002.mat
+  artifactKey: Guid(3d2110dabe6f73043ba4404830e26f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkerGray_snaps002.mat using Guid(3d2110dabe6f73043ba4404830e26f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0fe8245030a47c96494cf68bc50fe06') in 0.034677 seconds 
+  Import took 0.041954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkBlue_snaps002.mat
+  artifactKey: Guid(c2cf96f9bc9ef0143bfb62bd0e47e566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkBlue_snaps002.mat using Guid(c2cf96f9bc9ef0143bfb62bd0e47e566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e97d5413d1c37216fb503b5e526a956f') in 0.066240 seconds 
+  Import took 0.074749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000544 seconds.
+  path: Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 01.mat
+  artifactKey: Guid(7872c95b113c8b64487047231673b3cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 01.mat using Guid(7872c95b113c8b64487047231673b3cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e878dfb4299e45fad398c6b7b72b410') in 0.108176 seconds 
+  Import took 0.114825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000417 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkGray_snaps002.mat
+  artifactKey: Guid(15cb6b096bb78c7479c93c6e26153387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/DarkGray_snaps002.mat using Guid(15cb6b096bb78c7479c93c6e26153387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '462e633f6ea868cf7c2056054ca4c331') in 0.028299 seconds 
+  Import took 0.035893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle11/Fox/Source files/fox.fbx
+  artifactKey: Guid(f93605c5d9f104a4c8c959e6f8d14110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle11/Fox/Source files/fox.fbx using Guid(f93605c5d9f104a4c8c959e6f8d14110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9712de471bb65c2a7e94904cdd31314e') in 0.160176 seconds 
+  Import took 0.169904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle5/InfernalSorceress/Sourcefiles/InfernalSorceress.fbx
+  artifactKey: Guid(d434eaac1b953224eb8a04222c6fc55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle5/InfernalSorceress/Sourcefiles/InfernalSorceress.fbx using Guid(d434eaac1b953224eb8a04222c6fc55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfc8aa69d113c4d1194b2ee29eb935a') in 0.104837 seconds 
+  Import took 0.109611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Black.mat
+  artifactKey: Guid(3d7c581107a76114595926ca998ac34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Materials/M_Black.mat using Guid(3d7c581107a76114595926ca998ac34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd43e8ecd7e91e36d42c629a229bcf7') in 0.024814 seconds 
+  Import took 0.030690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle6/IceCreature/Source files/IceCreature.fbx
+  artifactKey: Guid(21179522d6635f14d8ae3cb2c1d6665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle6/IceCreature/Source files/IceCreature.fbx using Guid(21179522d6635f14d8ae3cb2c1d6665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84bfbbab5b93fcd21fbf6ead54f6b37e') in 0.130670 seconds 
+  Import took 0.139041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_8x8_Corner.fbx
+  artifactKey: Guid(d8dce490347a30742849d40367e8fee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_8x8_Corner.fbx using Guid(d8dce490347a30742849d40367e8fee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6ae7dd8d4ca0f29659c658e61a7f0e') in 0.201494 seconds 
+  Import took 0.207620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 02.mat
+  artifactKey: Guid(9e88a3e36aa650544b4a1c51c8a7661f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CUBE - Sci Fi Interiors Pack/Materials/Ground 02.mat using Guid(9e88a3e36aa650544b4a1c51c8a7661f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a443e893d8aa7893a1b843a95518619') in 0.105050 seconds 
+  Import took 0.110089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_6.fbx
+  artifactKey: Guid(d4a80f8d6fd549846b6adbda7956c1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Props/SM_Machine_6.fbx using Guid(d4a80f8d6fd549846b6adbda7956c1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c0631a09afbb292e73ab12b9d235f7') in 0.155400 seconds 
+  Import took 0.159588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_Glow.mat
+  artifactKey: Guid(234eaa9fd977f9a4bb757721d34c5ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CubeSpace/CubeSpace_Effects/VFX/Materials/Ef_Glow.mat using Guid(234eaa9fd977f9a4bb757721d34c5ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d23c634605f5f2002b8d2de3d557e9') in 0.067333 seconds 
+  Import took 0.075357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle7/IceWarrior/Sourcefiles/IceWarrior.fbx
+  artifactKey: Guid(05123c7fcecd5fe4d9524c1610966d55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle7/IceWarrior/Sourcefiles/IceWarrior.fbx using Guid(05123c7fcecd5fe4d9524c1610966d55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64b5c6c7b16127f93625759e17e1ce5') in 0.097020 seconds 
+  Import took 0.101447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x3_1.fbx
+  artifactKey: Guid(0a810e873cfb80f44aeccd267063fec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Platform_Interior_5x3_1.fbx using Guid(0a810e873cfb80f44aeccd267063fec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf795cb42927fed791b2e38c282390b5') in 0.191999 seconds 
+  Import took 0.196358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gold_snaps002.mat
+  artifactKey: Guid(f6acf520cc3bc374dbffd256f175bd4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/Gold_snaps002.mat using Guid(f6acf520cc3bc374dbffd256f175bd4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '889382363157a97fe34d7374f6fc56f8') in 0.033206 seconds 
+  Import took 0.037877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000604 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cylinder_2.fbx
+  artifactKey: Guid(dd4adba8b3d529142b85b1ee2e116490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Buildings/SM_BuildingExtra_Cylinder_2.fbx using Guid(dd4adba8b3d529142b85b1ee2e116490) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f167633f06dcfe470f13dcc2481dc2aa') in 0.157617 seconds 
+  Import took 0.165528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/MedievalFantasy/MonstersBundle10/SwampOgre/Sourcefiles/SwampOgre.fbx
+  artifactKey: Guid(f99fd7f1a3a75d4409d6b01a0ed27e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MedievalFantasy/MonstersBundle10/SwampOgre/Sourcefiles/SwampOgre.fbx using Guid(f99fd7f1a3a75d4409d6b01a0ed27e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1242c4eca1ef8e41268944b542c78ac2') in 0.128370 seconds 
+  Import took 0.133201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_2.fbx
+  artifactKey: Guid(54df9267d58a50540aabf9be7968eba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_24x24_Lower_2.fbx using Guid(54df9267d58a50540aabf9be7968eba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf7457709f15b4209cc97f88ed3764e') in 0.198771 seconds 
+  Import took 0.203491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_1.fbx
+  artifactKey: Guid(1df308f062c93f342a919c453ec73c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_5x5_1.fbx using Guid(1df308f062c93f342a919c453ec73c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e285eecb3dc0b7c7564653fbd1e81b49') in 0.194669 seconds 
+  Import took 0.200196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/GreenDark_snaps002.mat
+  artifactKey: Guid(6f5b522968a198d40a19799562c3eae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetStoreOriginals/_SNAPS_PrototypingAssets/SciFi_Industrial/Materials/GreenDark_snaps002.mat using Guid(6f5b522968a198d40a19799562c3eae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95fca9dbb4a2e80a65e7aec1b9172c40') in 0.043602 seconds 
+  Import took 0.050771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000529 seconds.
+  path: Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_16x18_1.fbx
+  artifactKey: Guid(0d92b367df4b8ae4191e2d87c1c3965e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cuboom/CB Sci-Fi Pack/Models/Floors and Platforms/SM_Floor_Interior_16x18_1.fbx using Guid(0d92b367df4b8ae4191e2d87c1c3965e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '060fe34453df1635fae7408edb75398d') in 0.190130 seconds 
+  Import took 0.196298 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.032237 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.440 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4441ms)
+		BeginReloadAssembly (1240ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (52ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (224ms)
+		EndReloadAssembly (2449ms)
+			LoadAssemblies (834ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1002ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (119ms)
+			SetupLoadedEditorAssemblies (687ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (196ms)
+				ProcessInitializeOnLoadAttributes (440ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.6 MB.
+System memory in use after: 131.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2531.
+Total: 12.342200 ms (FindLiveObjects: 0.317600 ms CreateObjectMapping: 0.098300 ms MarkObjects: 3.535600 ms  DeleteObjects: 8.389000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011708 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.428 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1428ms)
+		BeginReloadAssembly (212ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (1103ms)
+			LoadAssemblies (134ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (424ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (124ms)
+				ProcessInitializeOnLoadAttributes (267ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.6 MB.
+System memory in use after: 131.4 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2533.
+Total: 8.861100 ms (FindLiveObjects: 0.342900 ms CreateObjectMapping: 0.093100 ms MarkObjects: 2.767300 ms  DeleteObjects: 5.656300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008427 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.682 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1682ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1437ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (467ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (533ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (360ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.6 MB.
+System memory in use after: 131.4 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2535.
+Total: 11.504500 ms (FindLiveObjects: 0.563100 ms CreateObjectMapping: 0.143800 ms MarkObjects: 5.051300 ms  DeleteObjects: 5.744100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017435 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.412 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1413ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1133ms)
+			LoadAssemblies (165ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (336ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (365ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (247ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.5 MB.
+System memory in use after: 131.3 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2537.
+Total: 9.224900 ms (FindLiveObjects: 0.271600 ms CreateObjectMapping: 0.067700 ms MarkObjects: 3.136700 ms  DeleteObjects: 5.747700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7036.477007 seconds.
+  path: Assets/Minimaps/Shaders/FogOfWar.shader
+  artifactKey: Guid(e864de241b6eeeb47b0b586e59d2e59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Minimaps/Shaders/FogOfWar.shader using Guid(e864de241b6eeeb47b0b586e59d2e59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3644aba564fb63738df3e5dbea6f8b85') in 0.045180 seconds 
+  Import took 0.052327 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010379 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.341 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1342ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1114ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (318ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (373ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (248ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1938 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.5 MB.
+System memory in use after: 131.4 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 2539.
+Total: 8.776800 ms (FindLiveObjects: 0.230100 ms CreateObjectMapping: 0.057500 ms MarkObjects: 3.087500 ms  DeleteObjects: 5.400600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

@@ -50,8 +50,8 @@ Shader "Hidden/FogOfWar"
                 // red = 1, blue = 1, alpha = 0;
                 // red = 1, blue = 0, alpha = 0.5;
                 // red = 0, blue = 1, alpha = 1;
-                col.a = 2.0f - col.r * 1.5f - col.b * 0.5f + col.g;
-
+                // col.a = 2.0f - col.r * 1.5f - col.b * 0.5f + col.g;
+                col.a = 2.0f - col.r * 1.5f - col.b * 0.5f;
                 return fixed4(0,0,0,col.a);
             }
             ENDCG
