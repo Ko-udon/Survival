@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnType: 
-  nextScene: CharacterSelect
+  nextScene: Tutorial_1
   sceneList:
   - {fileID: 2114109893}
   - {fileID: 1903924051}

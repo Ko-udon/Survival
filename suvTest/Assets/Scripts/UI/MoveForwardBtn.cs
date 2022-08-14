@@ -9,13 +9,16 @@ public class MoveForwardBtn : MonoBehaviour
     public Transform player_view;
     bool btDown = false;
 
+    tutorial_1Manager tutoManager;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         player_view = GameObject.FindGameObjectWithTag("Player_view").GetComponent<Transform>();
-
+        
+        //tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,15 @@ public class MoveForwardBtn : MonoBehaviour
         btDown = false;
         player.isIdle = true;
         player.ChangeDir(0);
+
+        if(tutoManager!=null)
+        {
+            tutoManager.clickCount++;
+            if (tutoManager.clickCount == 2)
+            {
+                tutoManager.flow_4();
+            }
+        }
     }
     public void BtnDown()
     {

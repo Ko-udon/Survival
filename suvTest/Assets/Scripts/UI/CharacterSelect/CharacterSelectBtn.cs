@@ -15,6 +15,9 @@ public class CharacterSelectBtn : MonoBehaviour
 
     public GameObject locked;
     public GameObject unlocked;
+
+    public string nextScene;
+
     
 
     // Start is called before the first frame update
@@ -54,7 +57,7 @@ public class CharacterSelectBtn : MonoBehaviour
     }
     private void SceneMove()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(nextScene);
     }
     
 }
