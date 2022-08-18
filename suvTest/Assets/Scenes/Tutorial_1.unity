@@ -2329,8 +2329,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManagerMain, Assembly-CSharp
+      - m_Target: {fileID: 1759228579}
+        m_TargetAssemblyTypeName: tutorial_1Manager, Assembly-CSharp
         m_MethodName: OnPauseClicked
         m_Mode: 2
         m_Arguments:
@@ -6504,7 +6504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &662238802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,6 +6517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3def8cebd69e094f90dd564acb71932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCutScene: 0
   playerCharacterType: 1
 --- !u!4 &662238803
 Transform:

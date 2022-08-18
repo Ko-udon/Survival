@@ -129,5 +129,8 @@ AI
         nextStage.SetActive(true);
     }
 
-
+    public void OnPauseClicked(GameObject menu)
+    {
+        menu.SetActive(true);
+    }
 }

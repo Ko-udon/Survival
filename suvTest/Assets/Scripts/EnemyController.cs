@@ -58,7 +58,6 @@ public class EnemyController : MonoBehaviour
         else
         {
             target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-
         }
 
         if (isPosion)
@@ -66,7 +65,11 @@ public class EnemyController : MonoBehaviour
             Hp -= 20 * Time.deltaTime;
         }
 
-        if(Hp > 0)
+        if(GameManager.gameManager.isCutScene)
+        {
+
+        }
+        else if(Hp > 0)
         {
             if(isStiff)
             {

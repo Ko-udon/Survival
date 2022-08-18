@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
     public Animation anim;
     public bool isIdle;
 
-
     //sound
     AudioSource audio;
     public AudioClip hitsound;
@@ -82,7 +81,11 @@ public class PlayerController : MonoBehaviour
     {
         CheckHP();
 
-        if(!test)
+        if(GameManager.gameManager.isCutScene)
+        {
+
+        }
+        else if(!test)
         {
             CharacterMove();
         }

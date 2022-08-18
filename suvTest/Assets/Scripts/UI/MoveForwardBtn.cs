@@ -39,28 +39,32 @@ public class MoveForwardBtn : MonoBehaviour
 
     public void BtnUp()
     {
-        btDown = false;
-        player.isIdle = true;
-        player.ChangeDir(0);
-
-        if(tutoManager!=null)
+        if(!GameManager.gameManager.isCutScene)
         {
-            tutoManager.clickCount++;
-            if (tutoManager.clickCount == 2)
+            btDown = false;
+            player.isIdle = true;
+            player.ChangeDir(0);
+
+            if (tutoManager != null)
             {
-                tutoManager.flow_4();
+                tutoManager.clickCount++;
+                if (tutoManager.clickCount == 2)
+                {
+                    tutoManager.flow_4();
+                }
             }
         }
     }
     public void BtnDown()
     {
-        
-       
-        btDown = true;
-        player_view.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
-        //Debug.Log(player.transform.localEulerAngles.y);
-    
-        player.isIdle = false;
-        player.ChangeDir(1);
+        if (!GameManager.gameManager.isCutScene)
+        {
+            btDown = true;
+            player_view.transform.rotation = Quaternion.Euler(0, player.transform.localEulerAngles.y, 0);
+            //Debug.Log(player.transform.localEulerAngles.y);
+
+            player.isIdle = false;
+            player.ChangeDir(1);
+        }
     }
 }

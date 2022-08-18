@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Scripts\UI\CutScene\CutsceneTextBox.cs" />
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\SCI-FI UI Pack Pro\Common\Scripts\CircleSlider.cs" />
@@ -69,6 +66,7 @@
     <Compile Include="Assets\Scripts\PoisonGenerator.cs" />
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\tutorial_1Manager.cs" />
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Taunt.cs" />
     <Compile Include="Assets\Scripts\UI\ArrowMove.cs" />
@@ -112,6 +110,7 @@
     <Compile Include="Assets\Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\tutorialTextBox.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\SkillExplane.cs" />
     <Compile Include="Assets\Scripts\SpeedBox.cs" />
@@ -130,8 +129,6 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\SkillGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\StatusBattery.cs" />
-    <Compile Include="Assets\Scripts\Tutorial\tutorialTextBox.cs" />
-    <Compile Include="Assets\Scripts\Tutorial\tutorial_1Manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
@@ -504,6 +501,15 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

@@ -7,12 +7,14 @@ public class CutSceneTest : MonoBehaviour
 {
     public GameObject cutSceneCam;
 
+    private PlayerController player;
     private float time;
     private bool start;
 
     void Start()
     {
         start = false;
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -26,15 +28,21 @@ public class CutSceneTest : MonoBehaviour
             {
                 cutSceneCam.SetActive(true);
                 start = true;
+                GameManager.gameManager.isCutScene = true;
             }
             else
             {
                 if(cutSceneCam.GetComponent<PlayableDirector>().state != PlayState.Playing)
                 {
                     cutSceneCam.SetActive(false);
+                    GameManager.gameManager.isCutScene = false;
                 }
             }
         }
-        
+    }
+
+    public void OnPauseClicked(GameObject menu)
+    {
+        menu.SetActive(true);
     }
 }

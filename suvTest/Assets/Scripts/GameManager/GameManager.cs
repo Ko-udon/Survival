@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
+    public bool isCutScene;
     //var
 
     public string playerCharacterType;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isCutScene = false;
     }
 
     // Update is called once per frame
