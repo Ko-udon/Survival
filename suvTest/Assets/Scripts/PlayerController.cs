@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -202,15 +203,18 @@ public class PlayerController : MonoBehaviour
 
     private void InitSkill(string name)
     {
-        switch(name)
+        if(!SceneManager.GetActiveScene().name.Contains("Tutorial"))
         {
-            case "Fire":
-                GetSkill("Ball");
-                break;
+            switch (name)
+            {
+                case "Fire":
+                    GetSkill("Ball");
+                    break;
 
-            case "Earth":
-                GetSkill("KnockBack");
-                break;
+                case "Earth":
+                    GetSkill("KnockBack");
+                    break;
+            }
         }
     }
 

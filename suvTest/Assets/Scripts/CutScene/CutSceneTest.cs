@@ -6,10 +6,13 @@ using UnityEngine.Playables;
 public class CutSceneTest : MonoBehaviour
 {
     public GameObject cutSceneCam;
+    public GameObject mainUI;
 
     private PlayerController player;
     private float time;
     private bool start;
+
+    List<GameObject> ableUI;
 
     void Start()
     {
@@ -28,6 +31,7 @@ public class CutSceneTest : MonoBehaviour
             {
                 cutSceneCam.SetActive(true);
                 start = true;
+                DisableOther();
                 GameManager.gameManager.isCutScene = true;
             }
             else
@@ -35,10 +39,34 @@ public class CutSceneTest : MonoBehaviour
                 if(cutSceneCam.GetComponent<PlayableDirector>().state != PlayState.Playing)
                 {
                     cutSceneCam.SetActive(false);
+                    EnableOther();
                     GameManager.gameManager.isCutScene = false;
                 }
             }
         }
+    }
+
+    public void DisableOther()
+    {
+        ableUI = new List<GameObject>();
+        for (int i = 0; i < mainUI.transform.childCount; i++)
+        {
+            GameObject ui = mainUI.transform.GetChild(i).gameObject;
+            if (ui.activeSelf)
+            {
+                ableUI.Add(ui);
+                ui.SetActive(false);
+            }
+        }
+    }
+
+    public void EnableOther()
+    {
+        foreach (GameObject ui in ableUI)
+        {
+            ui.SetActive(true);
+        }
+        ableUI.Clear();
     }
 
     public void OnPauseClicked(GameObject menu)

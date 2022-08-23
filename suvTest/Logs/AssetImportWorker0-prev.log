@@ -15,11 +15,11 @@ C:/Young/Survival/suvTest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56605
+62566
 Successfully changed project path to: C:/Young/Survival/suvTest
 C:/Young/Survival/suvTest
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 327.62 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 119.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56412
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007222 seconds.
+Registered in 0.002632 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 225.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 104.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.013 seconds
+- Completed reload, in  2.979 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8014ms)
-		BeginReloadAssembly (169ms)
+	ReloadAssembly (2979ms)
+		BeginReloadAssembly (72ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1452ms)
-			LoadAssemblies (162ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (536ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (402ms)
+			SetupTypeCache (172ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (93ms)
-			SetupLoadedEditorAssemblies (683ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (245ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (226ms)
-				BeforeProcessingInitializeOnLoad (42ms)
-				ProcessInitializeOnLoadAttributes (313ms)
-				ProcessInitializeOnLoadMethodAttributes (92ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (105ms)
+				BeforeProcessingInitializeOnLoad (18ms)
+				ProcessInitializeOnLoadAttributes (86ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.028554 seconds.
+Registered in 0.010652 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.809 seconds
+- Completed reload, in  1.197 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3815ms)
-		BeginReloadAssembly (506ms)
+	ReloadAssembly (1200ms)
+		BeginReloadAssembly (166ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (15ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (49ms)
-		EndReloadAssembly (3093ms)
-			LoadAssemblies (371ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (962ms)
+			LoadAssemblies (120ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1174ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (192ms)
-			SetupLoadedEditorAssemblies (1045ms)
+			SetupTypeCache (304ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (386ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (297ms)
-				ProcessInitializeOnLoadAttributes (684ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (30ms)
-				EditorAssembliesLoaded (1ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (262ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 2.92 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2209 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 139.2 MB.
-System memory in use after: 133.9 MB.
+System memory in use before: 139.3 MB.
+System memory in use after: 134.0 MB.
 
 Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 2624.
-Total: 20.298100 ms (FindLiveObjects: 0.682900 ms CreateObjectMapping: 0.308000 ms MarkObjects: 7.816600 ms  DeleteObjects: 11.486800 ms)
+Total: 8.025400 ms (FindLiveObjects: 0.238400 ms CreateObjectMapping: 0.095300 ms MarkObjects: 2.825800 ms  DeleteObjects: 4.864900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,17 +132,561 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Minimaps/Minimap stage1_2차.psd
-  artifactKey: Guid(011534709005d16409dcdb0cf9bb66c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Minimap stage1_2차.psd using Guid(011534709005d16409dcdb0cf9bb66c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68fe4383bcaeb8ace266b63d799b6473') in 0.192325 seconds 
-  Import took 0.202532 seconds .
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031465eb5e3e6147c2ac00d2a72ae179') in 0.019174 seconds 
+  Import took 0.022894 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000474 seconds.
-  path: Assets/Minimaps/Minimap_tutorial1_ver1.png
-  artifactKey: Guid(dd4416d20f19d4d4f97eaf03f1988d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Minimaps/Minimap_tutorial1_ver1.png using Guid(dd4416d20f19d4d4f97eaf03f1988d05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cdc58ef5542c998c5527d2d5bad2926') in 0.081531 seconds 
-  Import took 0.088816 seconds .
+  Time since last request: 26.537212 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3ce9d1ed3a22fe2945a499729ba7aa') in 0.013049 seconds 
+  Import took 0.017839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.590690 seconds.
+  path: Assets/Scenes/StartScene.unity
+  artifactKey: Guid(538fe5a0da710ff4ea98483999f2ef55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartScene.unity using Guid(538fe5a0da710ff4ea98483999f2ef55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5cd250225c41c31912a043a6b7b91e7') in 0.017094 seconds 
+  Import took 0.020833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 134.179776 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous3_n.png
+  artifactKey: Guid(3f998a435ea25bc4da08f2882642618e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous3_n.png using Guid(3f998a435ea25bc4da08f2882642618e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7c7af550ee0ac681b467724abf9385') in 0.149584 seconds 
+  Import took 0.157346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeYellow_p.png
+  artifactKey: Guid(3872f5b5d343d5b4497a1ea08e6efaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeYellow_p.png using Guid(3872f5b5d343d5b4497a1ea08e6efaa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7766ed6619e56d18e840fced8cd4b73') in 0.077933 seconds 
+  Import took 0.083774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Purple_n.png
+  artifactKey: Guid(c0a736b01a4f8fb4c8528adf5281f465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Purple_n.png using Guid(c0a736b01a4f8fb4c8528adf5281f465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49dd9e9e316b41341d4dee748ebecb7') in 0.024348 seconds 
+  Import took 0.029076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Green_n.png
+  artifactKey: Guid(8a34fb2331d4b9b45bfea13d392da82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Green_n.png using Guid(8a34fb2331d4b9b45bfea13d392da82c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfdf7e81e571b62847ee4fff257af044') in 0.087111 seconds 
+  Import took 0.092211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Purple_n.png
+  artifactKey: Guid(b300a562548b7ca46ac126a4f2c2d46f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Purple_n.png using Guid(b300a562548b7ca46ac126a4f2c2d46f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba04c09dfb74b9681e714bf99148a3bc') in 0.080540 seconds 
+  Import took 0.086480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Orange_p.png
+  artifactKey: Guid(cafeebb9564df6d46b1d9587107d7ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Orange_p.png using Guid(cafeebb9564df6d46b1d9587107d7ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0826e1c9cbd668d18bab21f6cd3a6e2d') in 0.037107 seconds 
+  Import took 0.042917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Green_p.png
+  artifactKey: Guid(3a3046c11a3bdbb40af7c1b823a75466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Green_p.png using Guid(3a3046c11a3bdbb40af7c1b823a75466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ae1914ddd80c1b4b2dcaaea2ff5a67') in 0.043732 seconds 
+  Import took 0.049576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Red_n.png
+  artifactKey: Guid(f04a152a8fe84654284ac45d919f5b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Red_n.png using Guid(f04a152a8fe84654284ac45d919f5b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac31ae9418718b6b889f26e7986bdccc') in 0.072187 seconds 
+  Import took 0.079280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Yellow_p.png
+  artifactKey: Guid(33d501f412e7fef4ba226f3e5c581083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Yellow_p.png using Guid(33d501f412e7fef4ba226f3e5c581083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34726f802a6b3a57c5f515bcf0a4e113') in 0.069783 seconds 
+  Import took 0.074595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Green_n.png
+  artifactKey: Guid(1bac79c77b29d3e4f908f91ff0c427f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Green_n.png using Guid(1bac79c77b29d3e4f908f91ff0c427f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09a33a6cfcf53d35c9b5f98ca42ad3c6') in 0.064650 seconds 
+  Import took 0.070767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_h.png
+  artifactKey: Guid(2aa4e48e96b62e44381ff5c0ec364041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_h.png using Guid(2aa4e48e96b62e44381ff5c0ec364041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae14c9b9f3cc4c4c26e28e56092b739') in 0.068816 seconds 
+  Import took 0.075671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Cyan_p.png
+  artifactKey: Guid(477c71ed50a38984fb90982b4d10a9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Cyan_p.png using Guid(477c71ed50a38984fb90982b4d10a9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf1e34496175ecb91c6d4e3391c55e87') in 0.063372 seconds 
+  Import took 0.069826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Red_p.png
+  artifactKey: Guid(9f57dd20be98ffa4f977549538ceb37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Red_p.png using Guid(9f57dd20be98ffa4f977549538ceb37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97638696307fb1647926d31616a7be0a') in 0.063792 seconds 
+  Import took 0.069114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Yellow_n.png
+  artifactKey: Guid(cd52c7896e29954439b138d3834a3b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Yellow_n.png using Guid(cd52c7896e29954439b138d3834a3b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9b4b3150241e971d935dc4623352c5') in 0.070636 seconds 
+  Import took 0.078879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Gray_p.png
+  artifactKey: Guid(bf1057074253b7145a15dd6e1474dfae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Gray_p.png using Guid(bf1057074253b7145a15dd6e1474dfae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cea7b66d7ad835773f9bcf5bc4981f0') in 0.063695 seconds 
+  Import took 0.071054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000793 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle04Yellow_p.png
+  artifactKey: Guid(494860e02c0cfb148b138398e7d6c4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle04Yellow_p.png using Guid(494860e02c0cfb148b138398e7d6c4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d6be7b208cc5ba14b37532c5d8549a') in 0.058503 seconds 
+  Import took 0.065419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous4_n.png
+  artifactKey: Guid(8bc70f9d61e21954ba2298e9104be499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous4_n.png using Guid(8bc70f9d61e21954ba2298e9104be499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9663b8fc1da1ec652397d543b15aaa2') in 0.066940 seconds 
+  Import took 0.073060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Blue_P.png
+  artifactKey: Guid(3cd999bf95ca90d44bf10746a9eac74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Blue_P.png using Guid(3cd999bf95ca90d44bf10746a9eac74e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5ffd4eaed257f8652e68373fc7d54a0') in 0.068526 seconds 
+  Import took 0.072928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle04Yellow_n.png
+  artifactKey: Guid(20638c1e49843204ba69a87d486b3cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle04Yellow_n.png using Guid(20638c1e49843204ba69a87d486b3cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4baf0c71972937b4702da3d8c121358d') in 0.060706 seconds 
+  Import took 0.064328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeYellow_n.png
+  artifactKey: Guid(4c3c9efed7b00ed479e3afeb04883e33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeYellow_n.png using Guid(4c3c9efed7b00ed479e3afeb04883e33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d48d6e5e845125e20755ddd0ebc0e2f') in 0.061131 seconds 
+  Import took 0.064693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Blue_n.png
+  artifactKey: Guid(3c72b6b554671bd4482d6e7c8bc94ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Blue_n.png using Guid(3c72b6b554671bd4482d6e7c8bc94ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '196eb0709516f7c3c627881bb9e05c95') in 0.063901 seconds 
+  Import took 0.067596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle03Blue_n.png
+  artifactKey: Guid(12c01298c5be9274caadac6ec1d37289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle03Blue_n.png using Guid(12c01298c5be9274caadac6ec1d37289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e7ac719f93a8df5d21b5f2612c14046') in 0.077537 seconds 
+  Import took 0.082281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous3_p.png
+  artifactKey: Guid(28888ea3d50075a4287fdfe74d7e7b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous3_p.png using Guid(28888ea3d50075a4287fdfe74d7e7b02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2d03b6d1d48a25a273efc986f2e366') in 0.020820 seconds 
+  Import took 0.027002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_n.png
+  artifactKey: Guid(554c805b32990d34d8ba4e91db80c213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_n.png using Guid(554c805b32990d34d8ba4e91db80c213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52ff23824b8c7e4956f5c974200079af') in 0.063580 seconds 
+  Import took 0.070613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000470 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle03Blue_p.png
+  artifactKey: Guid(32b4b6b2e89818c46b0eebeb18ee6ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle03Blue_p.png using Guid(32b4b6b2e89818c46b0eebeb18ee6ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f396a562aaa7ac4feb405b465e2a7fe7') in 0.042371 seconds 
+  Import took 0.050467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000494 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Blue_n.png
+  artifactKey: Guid(6f6a3278ffe7b114f9131be6f4856dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Blue_n.png using Guid(6f6a3278ffe7b114f9131be6f4856dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9073541073bf5909953625dc3aedf1') in 0.055499 seconds 
+  Import took 0.062961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Red_p.png
+  artifactKey: Guid(4a08f2f4b45196944b9ea2d664afe60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Red_p.png using Guid(4a08f2f4b45196944b9ea2d664afe60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cc5ccc08ac21a56a1c4c57fa87d5a17') in 0.035142 seconds 
+  Import took 0.040796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle05Blue_n.png
+  artifactKey: Guid(d1a59a62ecb559749b964021504d1f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle05Blue_n.png using Guid(d1a59a62ecb559749b964021504d1f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd02aa6f052e8eb799239852bdc4de8') in 0.066069 seconds 
+  Import took 0.071742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Cyan_n.png
+  artifactKey: Guid(d4dcfbe1a33e93e47800aa25ba676829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Cyan_n.png using Guid(d4dcfbe1a33e93e47800aa25ba676829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed45a3dbb04089c4e76604bccb1fee8') in 0.042062 seconds 
+  Import took 0.048400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_n.png
+  artifactKey: Guid(1f4f4e458cab4ce4e97c666a8181c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_n.png using Guid(1f4f4e458cab4ce4e97c666a8181c803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1435d453727d5c287022e6e18226f7c8') in 0.034339 seconds 
+  Import took 0.041214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RandomName_p.png
+  artifactKey: Guid(0a0e8b77995712440b383e4244987681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RandomName_p.png using Guid(0a0e8b77995712440b383e4244987681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f85e23f64ff250dfd7291b0e08ec76af') in 0.057781 seconds 
+  Import took 0.065819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_p.png
+  artifactKey: Guid(78cb618a0b7d418439475c308dd98bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_p.png using Guid(78cb618a0b7d418439475c308dd98bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6689e86ddce0397ca1ee85a5654c9fb') in 0.044683 seconds 
+  Import took 0.053658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000608 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Purple_p.png
+  artifactKey: Guid(be14b30586ad787499c7b5727253b9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Purple_p.png using Guid(be14b30586ad787499c7b5727253b9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0297ea81e72a228f7544cba266f88bcb') in 0.040637 seconds 
+  Import took 0.048171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Gray_n.png
+  artifactKey: Guid(1d8616556e33cfb49aabf581153f5776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Gray_n.png using Guid(1d8616556e33cfb49aabf581153f5776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c7ee2509fb811dcfcef1d3b23c8b86') in 0.053566 seconds 
+  Import took 0.058939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Cyan_n.png
+  artifactKey: Guid(74a7507bd011bf044b22c75c4fbb7c54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Cyan_n.png using Guid(74a7507bd011bf044b22c75c4fbb7c54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27e065dabd393ccabdbf2b26e7a651f') in 0.045931 seconds 
+  Import took 0.051764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Yellow_n.png
+  artifactKey: Guid(ca41fb588414a3848aacdd644e1e2630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Yellow_n.png using Guid(ca41fb588414a3848aacdd644e1e2630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '829d8a88f390176d7f8e19da547f0ac4') in 0.034502 seconds 
+  Import took 0.039913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Yellow_p.png
+  artifactKey: Guid(847349b5a39a7b844a854bece79488f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Yellow_p.png using Guid(847349b5a39a7b844a854bece79488f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a4df513a715e67f31946da4dbe78c7') in 0.053206 seconds 
+  Import took 0.058363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Cyan_p.png
+  artifactKey: Guid(a86dcdf1e28370444b76474e8694a065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Cyan_p.png using Guid(a86dcdf1e28370444b76474e8694a065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9ee5bc0a62456bb9b5510018d4c0d2') in 0.018608 seconds 
+  Import took 0.021680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Orange_n.png
+  artifactKey: Guid(a0695cbe482f4b9459531f2d2eaaabce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Orange_n.png using Guid(a0695cbe482f4b9459531f2d2eaaabce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39f7c53c47478e12d49263aac355d72') in 0.019624 seconds 
+  Import took 0.022905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Gray_p.png
+  artifactKey: Guid(25e39bc671c824f4d9b047a3d392c505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Gray_p.png using Guid(25e39bc671c824f4d9b047a3d392c505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a43f7ab4646f2d8d68b876b7b25c319e') in 0.020778 seconds 
+  Import took 0.024736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Blue_p.png
+  artifactKey: Guid(b92547002c49c964e8e31f4ae1a0cb57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Blue_p.png using Guid(b92547002c49c964e8e31f4ae1a0cb57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20539410452e151118e9bd57061bca0') in 0.019157 seconds 
+  Import took 0.022533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeBlue_p.png
+  artifactKey: Guid(0d1234f1e6e54aa4f8012677a4ad6f9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeBlue_p.png using Guid(0d1234f1e6e54aa4f8012677a4ad6f9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758d78cf7ade224fdae5595001a11c08') in 0.019511 seconds 
+  Import took 0.023338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Orange_p.png
+  artifactKey: Guid(bfbdd4d3d0ca3874fb7b43b080d8729d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Orange_p.png using Guid(bfbdd4d3d0ca3874fb7b43b080d8729d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '320e9b996f38396a3ff62b0add3f9d8b') in 0.017757 seconds 
+  Import took 0.021445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Purple_p.png
+  artifactKey: Guid(f1c2168c0bd981c45bc4ca0ca8551e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Purple_p.png using Guid(f1c2168c0bd981c45bc4ca0ca8551e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8148a6c213b0a31591d6cd7be295b69f') in 0.018952 seconds 
+  Import took 0.022151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous4_p.png
+  artifactKey: Guid(e14cae66c862a4e45b709dc3be6ee0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Previous4_p.png using Guid(e14cae66c862a4e45b709dc3be6ee0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7a8e315b156b5e8cfc006fb4da213bf') in 0.018305 seconds 
+  Import took 0.021674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle05Blue_p.png
+  artifactKey: Guid(24a5f99a0abc89542bdee74419f89ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle05Blue_p.png using Guid(24a5f99a0abc89542bdee74419f89ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05b47fc006c14aa75c35f2c54ca8b6b9') in 0.029828 seconds 
+  Import took 0.033912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000343 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RandomName_n.png
+  artifactKey: Guid(3a542bf2756c0324b8c8cb04aee8d62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RandomName_n.png using Guid(3a542bf2756c0324b8c8cb04aee8d62c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f10eb24b812fd4155d72c6a6e989ad') in 0.021101 seconds 
+  Import took 0.025230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Red_n.png
+  artifactKey: Guid(2ff201c0129b4e943a1d86f6f7824959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Red_n.png using Guid(2ff201c0129b4e943a1d86f6f7824959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '214e030bdfea511ac20989c972858a84') in 0.032081 seconds 
+  Import took 0.036374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_h.png
+  artifactKey: Guid(4e9efcb34552d55429bc9cc4bdacf849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousBlue_h.png using Guid(4e9efcb34552d55429bc9cc4bdacf849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a8f1e3ece3f54d69f95d6b25cf0a14a') in 0.021123 seconds 
+  Import took 0.025894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Gray_n.png
+  artifactKey: Guid(9a56fed36b757894893ad238dc328837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle01Gray_n.png using Guid(9a56fed36b757894893ad238dc328837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abea4d7833302b9305f1761b336e2966') in 0.021351 seconds 
+  Import took 0.026085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_p.png
+  artifactKey: Guid(1c2fc1ee0a35e5749a054b10185feef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Components/Textures/Component01/Btn_PreviousCyan_p.png using Guid(1c2fc1ee0a35e5749a054b10185feef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756b23989bf7a1e86c4977641d4834b6') in 0.020095 seconds 
+  Import took 0.023528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Orange_n.png
+  artifactKey: Guid(1967f9c3c29c5e64997da60a0375b809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Orange_n.png using Guid(1967f9c3c29c5e64997da60a0375b809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4cc8a21ff2be86908efc58e675f24fd') in 0.022384 seconds 
+  Import took 0.025979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Green_p.png
+  artifactKey: Guid(66bdb098bd5dc6540b830663b8a4c7ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_Rectangle02Green_p.png using Guid(66bdb098bd5dc6540b830663b8a4c7ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6ca0ba30f51e5d620295c844397ca6') in 0.023625 seconds 
+  Import took 0.027814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeBlue_n.png
+  artifactKey: Guid(08fd3b3e83d7ee54f83241336e27239c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SCI-FI UI Pack Pro/SCI-FI UI Pack_V1 Pro(Blue)/Textures/DemoScene_Blue/Buttons/Btn_RechargeBlue_n.png using Guid(08fd3b3e83d7ee54f83241336e27239c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da2ce23a95d06720b576827d9c45dd98') in 0.023164 seconds 
+  Import took 0.027240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.889481 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a17cb68859fa79cb888eedc13bb91f1') in 0.004986 seconds 
+  Import took 0.010083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000530 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a17cb68859fa79cb888eedc13bb91f1') in 0.006421 seconds 
+  Import took 0.011472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.700815 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada8a1e7dbe035154ab55b33f75756a1') in 0.004316 seconds 
+  Import took 0.009136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002625 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada8a1e7dbe035154ab55b33f75756a1') in 0.005979 seconds 
+  Import took 0.011487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.388987 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a40114bd7a5d3db5d62056268d948a') in 0.005491 seconds 
+  Import took 0.011460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001380 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a40114bd7a5d3db5d62056268d948a') in 0.006024 seconds 
+  Import took 0.012722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.247181 seconds.
+  path: Assets/Scenes/StartScene.unity
+  artifactKey: Guid(538fe5a0da710ff4ea98483999f2ef55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/StartScene.unity using Guid(538fe5a0da710ff4ea98483999f2ef55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c74796e3d6bdb614c6766b204f3deb') in 0.003976 seconds 
+  Import took 0.009753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.918595 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb7aa25b54d0d3e96f5baf0e5b7891e') in 0.005223 seconds 
+  Import took 0.009929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.017491 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d576654848abea4419ef11a6c3ebfe4') in 0.005431 seconds 
+  Import took 0.012192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001377 seconds.
+  path: Assets/Scenes/Tutorial_1.unity
+  artifactKey: Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_1.unity using Guid(15a03f71c977aab4b8a5c63fc6b5d2a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d576654848abea4419ef11a6c3ebfe4') in 0.006462 seconds 
+  Import took 0.013066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.112485 seconds.
+  path: Assets/Scenes/Tutorial_2.unity
+  artifactKey: Guid(f7d681bed9bc4b94ebefee926b87774b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_2.unity using Guid(f7d681bed9bc4b94ebefee926b87774b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e786c1cbdb35f0616aad3ecef05eb3') in 0.009629 seconds 
+  Import took 0.014826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.404903 seconds.
+  path: Assets/Minimaps/Minimap stage1_2차.psd
+  artifactKey: Guid(011534709005d16409dcdb0cf9bb66c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Minimaps/Minimap stage1_2차.psd using Guid(011534709005d16409dcdb0cf9bb66c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6410c4aafb5821a229e2477bfa0fa2b7') in 0.021383 seconds 
+  Import took 0.026451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Minimaps/Minimap_tutorial2_ver1.png
+  artifactKey: Guid(1526a1ee543425b408a341c11c709835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Minimaps/Minimap_tutorial2_ver1.png using Guid(1526a1ee543425b408a341c11c709835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939cab412f91d505f34c8657a523be03') in 0.023570 seconds 
+  Import took 0.027276 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
