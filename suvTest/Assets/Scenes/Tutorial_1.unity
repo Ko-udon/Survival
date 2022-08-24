@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TypingText: {fileID: 2097303659}
-  m_Speed: 0.02
+  m_Speed: 0.001
   messageList_0:
   - "-\uACFC\uD559\uC790-                                                               
     \uADF8\uB7FC \uC5B4\uB514 \uC798 \uC791\uB3D9\uD558\uB098 \uBCFC\uAE4C?"
@@ -17381,6 +17381,7 @@ MonoBehaviour:
   flowCount: 0
   tutoTextBoxGameObj: {fileID: 1246556571}
   horizontalAxisController: {fileID: 1277422204}
+  horizontalAxisControllerParent: {fileID: 1890794128}
   forwardController: {fileID: 372437526}
   backController: {fileID: 1659031136}
   nextStage: {fileID: 1160845238}
@@ -18748,6 +18749,10 @@ PrefabInstance:
     - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Name
       value: MoveController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135886326569738825, guid: 56fae09712773584fb63896d473a98ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8135886327475159576, guid: 56fae09712773584fb63896d473a98ee, type: 3}
       propertyPath: m_Type

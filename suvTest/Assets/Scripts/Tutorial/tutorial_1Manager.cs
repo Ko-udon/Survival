@@ -7,6 +7,8 @@ public class tutorial_1Manager : MonoBehaviour
     public int flowCount;
     public GameObject tutoTextBoxGameObj;
     public GameObject horizontalAxisController;
+    public GameObject horizontalAxisControllerParent;
+
     public GameObject forwardController;
     public GameObject backController;
     public GameObject nextStage;
@@ -23,16 +25,19 @@ public class tutorial_1Manager : MonoBehaviour
         tutoTextBoxGameObj.SetActive(true);
         tutoTextBox = GameObject.Find("tutoTextBox").GetComponent<tutorialTextBox>();
 
+
     }
     IEnumerator delay()
     {
-        yield return new WaitForSeconds(0.9f);
+        
+        yield return new WaitForSeconds(0.5f);
         horizontalAxisController.SetActive(false);
+        
     }
     IEnumerator delay2()
     {
-        yield return new WaitForSeconds(0.9f);
-        if(showCount<=2)
+        
+        /*if(showCount<=2)
         {
             backController.SetActive(true);
             forwardController.SetActive(true);
@@ -41,8 +46,22 @@ public class tutorial_1Manager : MonoBehaviour
         {
             backController.SetActive(false);
             forwardController.SetActive(false);
-        }
+        }*/
         
+        backController.SetActive(true);
+        forwardController.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        
+        backController.SetActive(false);
+        forwardController.SetActive(false);
+        if(showCount==1)
+        {
+            forwardController.SetActive(true);
+            backController.SetActive(true);
+        }
+       
+        
+
     }
 
 
@@ -50,7 +69,7 @@ public class tutorial_1Manager : MonoBehaviour
 
     public void showHorizontalController()
     {
-        if(showCount>=4)
+        if(showCount>=2)
         {
             CancelInvoke("showHorizontalController");
             showCount = 0;
@@ -61,16 +80,18 @@ public class tutorial_1Manager : MonoBehaviour
     }
     public void showForwardBackController()
     {
-        if (showCount >= 4)
+        if (showCount >= 3)
         {
             
             CancelInvoke("showForwardBackController");
             showCount = 0;
+            forwardController.SetActive(true);
+            backController.SetActive(true);
+
         }
-        forwardController.SetActive(true);
-        backController.SetActive(true);
         StartCoroutine(delay2());
         showCount++;
+
     }
 
 
@@ -85,7 +106,14 @@ public class tutorial_1Manager : MonoBehaviour
     public void flow_1()
     {
         tutoTextBoxGameObj.SetActive(false);
+
+        horizontalAxisControllerParent.SetActive(true);
+
+
         InvokeRepeating("showHorizontalController", 0.5f, 1);
+
+
+
     }
     
 

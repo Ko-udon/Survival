@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DynamicJoystick : Joystick
 {
@@ -16,6 +17,10 @@ public class DynamicJoystick : Joystick
         MoveThreshold = moveThreshold;
         base.Start();
         background.gameObject.SetActive(false);
+        if(SceneManager.GetActiveScene().name=="Tutorial_1")
+        {
+            tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
+        }
         //tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
 
     }

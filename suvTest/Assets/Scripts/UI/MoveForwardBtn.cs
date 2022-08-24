@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveForwardBtn : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class MoveForwardBtn : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         player_view = GameObject.FindGameObjectWithTag("Player_view").GetComponent<Transform>();
-        
+        if (SceneManager.GetActiveScene().name == "Tutorial_1")
+        {
+            tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
+        }
         //tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
     }
 
