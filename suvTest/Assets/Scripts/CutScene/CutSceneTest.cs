@@ -7,6 +7,7 @@ public class CutSceneTest : MonoBehaviour
 {
     public GameObject cutSceneCam;
     public GameObject mainUI;
+    public TextController text;
 
     private PlayerController player;
     private float time;
@@ -18,12 +19,14 @@ public class CutSceneTest : MonoBehaviour
     {
         start = false;
         player = FindObjectOfType<PlayerController>();
+
+        StartCoroutine(PlayingcutScene());
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        /*time += Time.deltaTime;
 
         if(time > 5)
         {
@@ -43,7 +46,25 @@ public class CutSceneTest : MonoBehaviour
                     GameManager.gameManager.isCutScene = false;
                 }
             }
+        }*/
+    }
+
+    public IEnumerator PlayingcutScene()
+    {
+        yield return StartCoroutine(text.WriteText(text.textFile));
+
+        cutSceneCam.SetActive(true);
+        DisableOther();
+
+        while(cutSceneCam.GetComponent<PlayableDirector>().state == PlayState.Playing)
+        {
+            Debug.Log(cutSceneCam.GetComponent<PlayableDirector>().state);
+            yield return null;
         }
+
+        cutSceneCam.SetActive(false);
+        EnableOther();
+        GameManager.gameManager.isCutScene = false;
     }
 
     public void DisableOther()

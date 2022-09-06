@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
         if(GameManager.gameManager.isCutScene)
         {
-
+            collider.SimpleMove(Vector3.zero);
         }
         else if(!test)
         {
