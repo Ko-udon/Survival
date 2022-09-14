@@ -51,19 +51,22 @@ public class CutSceneTest : MonoBehaviour
 
     public IEnumerator PlayingcutScene()
     {
-        yield return StartCoroutine(text.WriteText(text.textFile));
+        yield return StartCoroutine(text.WriteText(text.textFile_1));
 
         cutSceneCam.SetActive(true);
         DisableOther();
 
         while(cutSceneCam.GetComponent<PlayableDirector>().state == PlayState.Playing)
         {
-            Debug.Log(cutSceneCam.GetComponent<PlayableDirector>().state);
+            //Debug.Log(cutSceneCam.GetComponent<PlayableDirector>().state);
             yield return null;
         }
 
         cutSceneCam.SetActive(false);
         EnableOther();
+
+        yield return StartCoroutine(text.WriteText(text.textFile_2));
+
         GameManager.gameManager.isCutScene = false;
     }
 

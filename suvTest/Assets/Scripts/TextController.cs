@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
-    public TextAsset textFile;
+    public TextAsset textFile_1;
+    public TextAsset textFile_2;
+    public Text name;
+    public Text textUI;
 
     private Image backGround;
-    private Text textUI;
     private bool isTouch;
 
     void Start()
     {
         backGround = transform.parent.GetComponent<Image>();
-        textUI = GetComponent<Text>();
-        textUI.text = "";
         isTouch = false;
     }
 
@@ -47,14 +47,28 @@ public class TextController : MonoBehaviour
         for(int i = 0; i < message.Length; i++)
         {
             textUI.text = "";
+            name.text = "";
             isTouch = false;
 
-            for(a = 0; textUI.text != message[i]; a++)
+            switch(message[i][0])
+            {
+                case 'A':
+                    name.text = "AI";
+                    break;
+
+                case 'P':
+                    name.text = "°úÇÐÀÚ";
+                    break;
+            }
+
+            string messageTemp = message[i].Substring(2);
+
+            for(a = 2; textUI.text != messageTemp; a++)
             {
                 textUI.text += message[i][a];
                 if(isTouch)
                 {
-                    textUI.text = message[i];
+                    textUI.text = messageTemp;
                     isTouch = false;
                 }
                 yield return new WaitForSeconds(0.1f);
@@ -64,6 +78,7 @@ public class TextController : MonoBehaviour
         }
 
         textUI.text = "";
+        name.text = "";
     }
 
     bool nextMessage()
