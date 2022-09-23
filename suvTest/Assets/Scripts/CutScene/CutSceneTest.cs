@@ -8,6 +8,7 @@ public class CutSceneTest : MonoBehaviour
     public GameObject cutSceneCam;
     public GameObject mainUI;
     public TextController text;
+    public List<GameObject> characterList;
 
     private PlayerController player;
     private float time;
@@ -19,6 +20,7 @@ public class CutSceneTest : MonoBehaviour
     {
         start = false;
         player = FindObjectOfType<PlayerController>();
+        spawnPlayer(GameManager.gameManager.playerCharacterType);
 
         StartCoroutine(PlayingcutScene());
     }
@@ -47,6 +49,18 @@ public class CutSceneTest : MonoBehaviour
                 }
             }
         }*/
+    }
+
+    void spawnPlayer(string type)
+    {
+        if (type == "Earth")
+        {
+            characterList[0].SetActive(true);
+        }
+        else if (type == "Fire")
+        {
+            characterList[1].SetActive(true);
+        }
     }
 
     public IEnumerator PlayingcutScene()

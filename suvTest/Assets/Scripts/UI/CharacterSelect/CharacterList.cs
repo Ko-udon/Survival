@@ -48,6 +48,7 @@ public class CharacterList : MonoBehaviour
         if(characterNameList[0]=="Earth")
         {
             audio.clip = BgmList[0].audio;
+            
         }
         else if(characterNameList[0]=="Fire")
         {
@@ -55,7 +56,8 @@ public class CharacterList : MonoBehaviour
         }
 
         audio.Play();
-        
+
+        GameManager.gameManager.playerCharacterType = characterNameList[0];
         return characterNameList[0];
         //return characterList[0].characterType;
     }

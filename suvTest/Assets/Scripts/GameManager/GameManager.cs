@@ -7,8 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
 
     public bool isCutScene;
+    public bool viewedTutorial;
+    public string lastStage;
     //var
 
+    public string lastCharacter;
     public string playerCharacterType;
     public Dictionary<string, bool> characterDic = new Dictionary<string, bool>() { {"Earth",true },{"Fire",true }, { "Water", false }
     ,{"Light",false },{"Dark",false }};

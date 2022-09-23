@@ -42,7 +42,7 @@ public class skillExplain : MonoBehaviour
 
                 skillText.text = "스킬 공Lv"+player.ballLV.ToString()+": 주위를 돌며 자동으로 공격해주는 공을 소환(+레벨에 따른 상세 설명 추가)";
             }
-            else if (skillSprite.name.Contains("KnockBack"))
+            else if (skillSprite.name.Contains("Knockback"))
             {
                 skillText.text = "스킬 넉백Lv" + player.knockbackLV.ToString() + ": 일정 간격으로 폭발을 일으켜 주위의 적을 밀처낸다";
             }

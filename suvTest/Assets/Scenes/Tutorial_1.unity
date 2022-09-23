@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 0d022ea960dd6704a9696181d6955d4c, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: d823afcf075286f47a5eda95e4225080, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6614,7 +6614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCutScene: 0
-  playerCharacterType: 1
+  viewedTutorial: 0
+  lastStage: 
+  playerCharacterType: Fire
 --- !u!4 &662238803
 Transform:
   m_ObjectHideFlags: 0
@@ -14686,7 +14688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1461754288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17726,6 +17728,9 @@ MonoBehaviour:
   forwardController: {fileID: 372437526}
   backController: {fileID: 1659031136}
   nextStage: {fileID: 1160845238}
+  characterList:
+  - {fileID: 685719241}
+  - {fileID: 1461754287}
   showCount: 0
   clickCount: 0
 --- !u!1 &1776900896

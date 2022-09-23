@@ -12,7 +12,9 @@ public class tutorial_1Manager : MonoBehaviour
     public GameObject forwardController;
     public GameObject backController;
     public GameObject nextStage;
-    
+
+    public List<GameObject> characterList;
+
     public int showCount=0;
     public int clickCount;
     tutorialTextBox tutoTextBox;
@@ -21,7 +23,8 @@ public class tutorial_1Manager : MonoBehaviour
     void Start()
     {
         //col = StartCoroutine(showHorizontalController());
-        
+        spawnPlayer(GameManager.gameManager.playerCharacterType);
+
         tutoTextBoxGameObj.SetActive(true);
         tutoTextBox = GameObject.Find("tutoTextBox").GetComponent<tutorialTextBox>();
 
@@ -160,5 +163,17 @@ AI
     public void OnPauseClicked(GameObject menu)
     {
         menu.SetActive(true);
+    }
+
+    void spawnPlayer(string type)
+    {
+        if (type == "Earth")
+        {
+            characterList[0].SetActive(true);
+        }
+        else if (type == "Fire")
+        {
+            characterList[1].SetActive(true);
+        }
     }
 }
