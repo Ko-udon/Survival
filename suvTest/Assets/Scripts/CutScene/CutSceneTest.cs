@@ -7,6 +7,7 @@ public class CutSceneTest : MonoBehaviour
 {
     public GameObject cutSceneCam;
     public GameObject mainUI;
+    public GameObject stageClear;
     public TextController text;
     public List<GameObject> characterList;
 
@@ -28,27 +29,16 @@ public class CutSceneTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*time += Time.deltaTime;
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if(time > 5)
+        if(enemys.Length == 0)
         {
-            if (!start)
-            {
-                cutSceneCam.SetActive(true);
-                start = true;
-                DisableOther();
-                GameManager.gameManager.isCutScene = true;
-            }
-            else
-            {
-                if(cutSceneCam.GetComponent<PlayableDirector>().state != PlayState.Playing)
-                {
-                    cutSceneCam.SetActive(false);
-                    EnableOther();
-                    GameManager.gameManager.isCutScene = false;
-                }
-            }
-        }*/
+            stageClear.SetActive(true);
+        }
+        else
+        {
+            stageClear.SetActive(false);
+        }
     }
 
     void spawnPlayer(string type)

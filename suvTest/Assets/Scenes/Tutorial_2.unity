@@ -3382,6 +3382,7 @@ MonoBehaviour:
   isCutScene: 0
   viewedTutorial: 0
   lastStage: 
+  lastCharacter: 
   playerCharacterType: Fire
 --- !u!4 &1210816213
 Transform:
@@ -3479,6 +3480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutSceneCam: {fileID: 1552368283}
   mainUI: {fileID: 138315629}
+  stageClear: {fileID: 1950582786}
   text: {fileID: 1700100977}
   characterList:
   - {fileID: 685719241}
@@ -3938,7 +3940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fbfbb00159d6f48bf08047d8606b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 1
+  test: 0
   charName: Fire
   speed: 10
   rotSpeed: 120
@@ -5434,6 +5436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e623ed446739cd49873055216991d13, type: 3}
+--- !u!1 &1950582786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8517676791516726998, guid: 3e623ed446739cd49873055216991d13, type: 3}
+  m_PrefabInstance: {fileID: 1950582785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2022064684
 PrefabInstance:
   m_ObjectHideFlags: 0
