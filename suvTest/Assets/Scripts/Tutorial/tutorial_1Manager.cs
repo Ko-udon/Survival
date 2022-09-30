@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class tutorial_1Manager : MonoBehaviour
 {
@@ -17,17 +18,26 @@ public class tutorial_1Manager : MonoBehaviour
 
     public int showCount=0;
     public int clickCount;
+    
     tutorialTextBox tutoTextBox;
     Coroutine col;
+    Image HorizontalControllerImg;
+    /*Image ForwardControllerImg;
+    Image BackControllerImg;*/
     // Start is called before the first frame update
     void Start()
     {
         //col = StartCoroutine(showHorizontalController());
         spawnPlayer(GameManager.gameManager.playerCharacterType);
+        
+
+
 
         tutoTextBoxGameObj.SetActive(true);
         tutoTextBox = GameObject.Find("tutoTextBox").GetComponent<tutorialTextBox>();
-
+        HorizontalControllerImg = horizontalAxisController.GetComponent<Image>();
+        /*ForwardControllerImg = forwardController.GetComponent<Image>();
+        ForwardControllerImg = backController.GetComponent<Image>();*/
 
     }
     IEnumerator delay()
@@ -72,21 +82,27 @@ public class tutorial_1Manager : MonoBehaviour
 
     public void showHorizontalController()
     {
-        if(showCount>=2)
+       
+
+        if (showCount>=2)
         {
             CancelInvoke("showHorizontalController");
+            
             showCount = 0;
+            
         }
         horizontalAxisController.SetActive(true);
+
         StartCoroutine(delay());
         showCount++;
     }
     public void showForwardBackController()
     {
-        if (showCount >= 3)
+        if (showCount >= 1)
         {
             
             CancelInvoke("showForwardBackController");
+            
             showCount = 0;
             forwardController.SetActive(true);
             backController.SetActive(true);

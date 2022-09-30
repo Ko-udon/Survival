@@ -48,6 +48,10 @@ public class GimicManager : MonoBehaviour
             playerAnswer[0] = null;
             playerAnswer[1] = null;
             playerAnswer[2] = null;
+            RedBox.SetActive(true);
+            GreenBox.SetActive(true);
+            BlueBox.SetActive(true);
+
         }
     
     }

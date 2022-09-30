@@ -17,6 +17,7 @@ public class checkGimicTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gimicManager.addType(type);
+            this.gameObject.SetActive(false);
         }
 
 
