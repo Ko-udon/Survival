@@ -18,6 +18,8 @@ public class tutorial_1Manager : MonoBehaviour
 
     public int showCount=0;
     public int clickCount;
+
+    public bool textPrint;
     
     tutorialTextBox tutoTextBox;
     Coroutine col;
@@ -29,9 +31,6 @@ public class tutorial_1Manager : MonoBehaviour
     {
         //col = StartCoroutine(showHorizontalController());
         spawnPlayer(GameManager.gameManager.playerCharacterType);
-        
-
-
 
         tutoTextBoxGameObj.SetActive(true);
         tutoTextBox = GameObject.Find("tutoTextBox").GetComponent<tutorialTextBox>();
@@ -39,6 +38,7 @@ public class tutorial_1Manager : MonoBehaviour
         /*ForwardControllerImg = forwardController.GetComponent<Image>();
         ForwardControllerImg = backController.GetComponent<Image>();*/
 
+        textPrint = false;
     }
     IEnumerator delay()
     {
@@ -117,8 +117,14 @@ public class tutorial_1Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
+        if(textPrint)
+        {
+            horizontalAxisControllerParent.GetComponent<Image>().raycastTarget = false;
+        }
+        else
+        {
+            horizontalAxisControllerParent.GetComponent<Image>().raycastTarget = true;
+        }
     }
 
     //좌우 시선 변경 버튼 표시

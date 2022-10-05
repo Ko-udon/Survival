@@ -15,6 +15,7 @@ public class tutorialTextBox : MonoBehaviour
     public int textCount;
     public List<int> totalTextNumber;
 
+    private bool isTouch;
 
     Coroutine col;
 
@@ -24,32 +25,48 @@ public class tutorialTextBox : MonoBehaviour
     void Start()
     {
         //this.gameObject.SetActive(true);
+        tutoManager = GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
         col = StartCoroutine(Typing_1(m_TypingText, messageList_0, m_Speed, textCount));
-        tutoManager= GameObject.Find("TutorialManager").GetComponent<tutorial_1Manager>();
 
-
+        isTouch = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            isTouch = true;
+        }
     }
 
     IEnumerator Typing_1(TextMeshProUGUI typingText, List<string> messageList, float speed, int count)
     {
-       
-        for (int i = 0; i < messageList[count].Length; i++)
+        tutoManager.textPrint = true;
+
+        for (int i = 0; typingText.text != messageList[count]; i++)
         {
             typingText.text = messageList[count].Substring(0, i + 1);
-            yield return new WaitForSeconds(speed);
+            if (isTouch)
+            {
+                typingText.text = messageList[count];
+                isTouch = false;
+            }
+            if(messageList[count][i] == ' ')
+            {
+                yield return null;
+            }
+            else
+            {
+                yield return new WaitForSeconds(speed);
+            }
         }
-        yield return new WaitForSeconds(2.0f);
-        
-        
-        
+        yield return new WaitUntil(new System.Func<bool>(nextMessage));
+
         textCount++;
+        isTouch = false;
+
         if (textCount == 3)
         {
             StopCoroutine(col);
@@ -57,24 +74,32 @@ public class tutorialTextBox : MonoBehaviour
             tutoManager.flowCount++;
             tutoManager.flow_1();
             textCount = 0;
-            
+            tutoManager.textPrint = false;
         }
         else
         {
             col = StartCoroutine(Typing_1(m_TypingText, messageList_0, m_Speed, textCount));
-            
         }
     }
     IEnumerator Typing_2(TextMeshProUGUI typingText, List<string> messageList, float speed, int count)
     {
+        tutoManager.textPrint = true;
 
-        for (int i = 0; i < messageList[count].Length; i++)
+        for (int i = 0; typingText.text != messageList[count]; i++)
         {
             typingText.text = messageList[count].Substring(0, i + 1);
+            if (isTouch)
+            {
+                typingText.text = messageList[count];
+                isTouch = false;
+            }
             yield return new WaitForSeconds(speed);
         }
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitUntil(new System.Func<bool>(nextMessage));
+
         textCount++;
+        isTouch = false;
+
         if (textCount == 2)
         {
             StopCoroutine(col);
@@ -82,7 +107,6 @@ public class tutorialTextBox : MonoBehaviour
             tutoManager.flowCount++;
             tutoManager.flow_3();
             textCount = 0;
-
         }
         else
         {
@@ -92,18 +116,26 @@ public class tutorialTextBox : MonoBehaviour
     }
     IEnumerator Typing_3(TextMeshProUGUI typingText, List<string> messageList, float speed, int count)
     {
-
-        for (int i = 0; i < messageList[count].Length; i++)
+        tutoManager.textPrint = true;
+        for (int i = 0; typingText.text != messageList[count]; i++)
         {
             typingText.text = messageList[count].Substring(0, i + 1);
+            if (isTouch)
+            {
+                typingText.text = messageList[count];
+                isTouch = false;
+            }
             yield return new WaitForSeconds(speed);
         }
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitUntil(new System.Func<bool>(nextMessage));
+
+        isTouch = false;
         StopCoroutine(col);
         typingText.text = "";
         tutoManager.flowCount++;
         tutoManager.flow_5();
         textCount = 0;
+        tutoManager.textPrint = false;
     }
 
 
@@ -117,5 +149,8 @@ public class tutorialTextBox : MonoBehaviour
         col = StartCoroutine(Typing_3(m_TypingText, messageList_2, m_Speed, textCount));
     }
 
-
+    bool nextMessage()
+    {
+        return Input.GetMouseButtonDown(0);
+    }
 }

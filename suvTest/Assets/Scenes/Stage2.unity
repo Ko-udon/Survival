@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8352,6 +8352,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8439697368092169675, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 362309643}
+    - target: {fileID: 8439697368092169675, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPauseClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439697368092169675, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManagerMain, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439697368092169675, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1464095375}
     - target: {fileID: 8439697368095984291, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
       propertyPath: m_Name
       value: 'UI '
@@ -8446,6 +8462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+--- !u!1 &1464095375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2630068573304855187, guid: 9abd369c9bd4e084c9631b3657689e41, type: 3}
+  m_PrefabInstance: {fileID: 1464095374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467629724
 GameObject:
   m_ObjectHideFlags: 0
