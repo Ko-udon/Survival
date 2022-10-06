@@ -1120,6 +1120,7 @@ MonoBehaviour:
   isCutScene: 0
   viewedTutorial: 0
   lastStage: 
+  lastCharacter: 
   playerCharacterType: 0
 --- !u!1 &779488176
 GameObject:
@@ -1361,7 +1362,7 @@ MonoBehaviour:
   btn: {fileID: 0}
   locked: {fileID: 1955856431}
   unlocked: {fileID: 173213779}
-  nextScene: Tutorial_1
+  nextScene: CutScene
 --- !u!1 &1247304055
 GameObject:
   m_ObjectHideFlags: 0
