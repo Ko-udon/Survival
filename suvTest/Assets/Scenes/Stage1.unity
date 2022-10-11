@@ -20599,6 +20599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EarthPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 247511213748103584, guid: d4c0a36b81235be4ba59763829fadbc4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 247511213748103588, guid: d4c0a36b81235be4ba59763829fadbc4, type: 3}
       propertyPath: m_RootOrder
       value: 9
